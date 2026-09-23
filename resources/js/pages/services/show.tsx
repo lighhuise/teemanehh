@@ -1,0 +1,368 @@
+import { Head, Link } from '@inertiajs/react';
+import AppLayout from '@/layouts/app-layout';
+import Wrapper from '@/components/ui/misc/wrapper';
+import { ArrowLeft, Play, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import SectionHeading from '@/components/ui/misc/section-heading';
+import { FloatingStatCard } from '@/components/ui/misc/floating-stat-card';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+interface RichTextBlock  { type: 'rich_text';  data: { content: string; max_width?: string; darker_background?: boolean } }
+interface ImageBlock     { type: 'image';      data: { image: string; image_url: string; caption?: string; alt?: string; darker_background?: boolean } }
+interface GalleryBlock   { type: 'gallery';    data: { images: string[]; image_urls: string[]; caption?: string; darker_background?: boolean; heading?: string; subheading?: string; description?: string; } }
+interface VideoBlock     { type: 'video';      data: { url: string; caption?: string; darker_background?: boolean; heading?: string; subheading?: string; description?: string; } }
+interface CtaBlock       { type: 'cta';        data: { heading: string; text?: string; button_label: string; button_url: string; darker_background?: boolean } }
+interface MediaTextBlock { type: 'media_text'; data: { heading?: string; subheading?: string; content?: string; button_label?: string; button_url?: string; images: string[]; image_urls?: string[]; image_position: 'left' | 'right'; stat_card_value?: string; stat_card_label?: string; darker_background?: boolean; } }
+
+type ContentBlock = RichTextBlock | ImageBlock | GalleryBlock | VideoBlock | CtaBlock | MediaTextBlock;
+
+interface Service {
+    id: number;
+    title: string;
+    slug: string;
+    short_description: string | null;
+    description: string | null;
+    featured_image_url: string | null;
+    content_blocks: ContentBlock[];
+}
+
+// ─── Video Embed Helper ───────────────────────────────────────────────────────
+
+function getEmbedUrl(url: string): string | null {
+    try {
+        const u = new URL(url);
+        if (u.hostname.includes('youtube.com') || u.hostname.includes('youtu.be')) {
+            const id = u.searchParams.get('v') ?? u.pathname.split('/').pop();
+            return `https://www.youtube.com/embed/${id}`;
+        }
+        if (u.hostname.includes('vimeo.com')) {
+            const id = u.pathname.split('/').pop();
+            return `https://player.vimeo.com/video/${id}`;
+        }
+    } catch {
+        // invalid URL
+    }
+    return null;
+}
+
+// ─── Block Renderers ──────────────────────────────────────────────────────────
+
+function RichTextRenderer({ data }: { data: RichTextBlock['data'] }) {
+    const maxWidthClass = data.max_width || 'max-w-none';
+    return (
+        <div
+            className={`prose prose-neutral dark:prose-invert mx-auto ${maxWidthClass}
+                       prose-headings:font-black prose-headings:tracking-[0.35px] prose-headings:uppercase prose-headings:text-foreground prose-headings:leading-[1.1]
+                       prose-h1:text-4xl lg:prose-h1:text-5xl
+                       prose-h2:text-4xl lg:prose-h2:text-5xl
+                       prose-h3:text-2xl lg:prose-h3:text-3xl
+                       prose-p:text-lg prose-p:text-muted-foreground prose-p:leading-relaxed
+                       prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+                       prose-blockquote:border-primary prose-blockquote:text-muted-foreground`}
+            dangerouslySetInnerHTML={{ __html: data.content }}
+        />
+    );
+}
+
+function ImageRenderer({ data }: { data: ImageBlock['data'] }) {
+    return (
+        <figure className="overflow-hidden rounded-lg">
+            <img
+                src={data.image_url}
+                alt={data.alt ?? ''}
+                className="w-full object-cover rounded-lg"
+            />
+            {data.caption && (
+                <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
+                    {data.caption}
+                </figcaption>
+            )}
+        </figure>
+    );
+}
+
+function GalleryRenderer({ data }: { data: GalleryBlock['data'] }) {
+    const [lightbox, setLightbox] = useState<number | null>(null);
+    const urls = data.image_urls ?? [];
+
+    const slides = urls.map(url => ({ src: url }));
+
+    return (
+        <div className="space-y-12">
+            {(data.heading || data.subheading || data.description) && (
+                <SectionHeading align="left" label={data.subheading} title={data.heading}>
+                    {data.description && <p className="whitespace-pre-wrap">{data.description}</p>}
+                </SectionHeading>
+            )}
+            <figure>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {urls.map((url, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setLightbox(i)}
+                        className="aspect-square overflow-hidden rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    >
+                        <img
+                            src={url}
+                            alt=""
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </button>
+                ))}
+            </div>
+            {data.caption && (
+                <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
+                    {data.caption}
+                </figcaption>
+            )}
+
+            {/* Lightbox */}
+            <Lightbox
+                open={lightbox !== null}
+                close={() => setLightbox(null)}
+                index={lightbox ?? 0}
+                slides={slides}
+            />
+        </figure>
+        </div>
+    );
+}
+
+function VideoRenderer({ data }: { data: VideoBlock['data'] }) {
+    const embedUrl = getEmbedUrl(data.url);
+
+    return (
+        <div className="space-y-12">
+            {(data.heading || data.subheading || data.description) && (
+                <SectionHeading align="left" label={data.subheading} title={data.heading}>
+                    {data.description && <p className="whitespace-pre-wrap">{data.description}</p>}
+                </SectionHeading>
+            )}
+            <figure>
+                {embedUrl ? (
+                <div className="relative aspect-video rounded-lg overflow-hidden bg-black">
+                    <iframe
+                        src={embedUrl}
+                        title={data.caption ?? 'Video'}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                    />
+                </div>
+            ) : (
+                <a
+                    href={data.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 text-primary hover:underline"
+                >
+                    <Play className="w-5 h-5" />
+                    {data.caption ?? data.url}
+                </a>
+            )}
+            {data.caption && embedUrl && (
+                <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
+                    {data.caption}
+                </figcaption>
+            )}
+        </figure>
+        </div>
+    );
+}
+
+function CtaRenderer({ data }: { data: CtaBlock['data'] }) {
+    return (
+        <div className="bg-muted/40 border border-border rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="flex-1">
+                <h3 className="text-2xl font-black tracking-tighter text-foreground mb-2">
+                    {data.heading}
+                </h3>
+                {data.text && (
+                    <p className="text-muted-foreground leading-relaxed">{data.text}</p>
+                )}
+            </div>
+            <a
+                href={data.button_url}
+                className="shrink-0 inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase text-sm px-6 py-3 rounded-lg shadow-sm hover:shadow transition-all"
+            >
+                {data.button_label}
+                <ArrowRight className="w-4 h-4" />
+            </a>
+        </div>
+    );
+}
+
+function MediaTextRenderer({ data }: { data: MediaTextBlock['data'] }) {
+    const isImageLeft = data.image_position === 'left';
+    const urls = data.image_urls ?? [];
+    const hasMultiple = urls.length > 1;
+
+    return (
+        <div className={`flex flex-col md:flex-row gap-10 md:gap-16 items-center ${isImageLeft ? 'md:flex-row-reverse' : ''}`}>
+            {/* Text Content */}
+            <div className="flex-1 min-w-0 w-full space-y-6">
+                {(data.heading || data.subheading) && (
+                    <SectionHeading align={`left`} label={data.subheading} title={data.heading}/>
+                )}
+                {data.content && (
+                    <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground
+                                    prose-headings:font-black prose-headings:tracking-[0.35px] prose-headings:uppercase prose-headings:text-foreground prose-headings:leading-[1.1]
+                                    prose-h1:text-4xl lg:prose-h1:text-5xl
+                                    prose-h2:text-4xl lg:prose-h2:text-5xl
+                                    prose-h3:text-2xl lg:prose-h3:text-3xl
+                                    prose-p:text-lg prose-p:text-muted-foreground prose-p:leading-relaxed
+                                    prose-a:text-primary hover:prose-a:underline" dangerouslySetInnerHTML={{ __html: data.content }} />
+                )}
+                {data.button_label && data.button_url && (
+                    <a href={data.button_url} className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-lg shadow-sm hover:from-primary/90 hover:to-primary transition-all group">
+                        {data.button_label}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                )}
+            </div>
+
+            {/* Media Content */}
+            <div className="flex-1 min-w-0 w-full h-100 md:h-125 relative group">
+                <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl relative">
+                    {hasMultiple ? (
+                        <Swiper
+                            modules={[Navigation, Pagination]}
+                            navigation
+                            pagination={{ clickable: true }}
+                            loop={true}
+                            className="w-full h-full"
+                            style={{
+                                '--swiper-theme-color': 'var(--primary)',
+                                '--swiper-navigation-size': '24px',
+                                '--swiper-navigation-color': 'white',
+                                '--swiper-pagination-color': 'var(--primary)',
+                                '--swiper-pagination-bullet-inactive-color': 'rgba(255, 255, 255, 0.7)',
+                                '--swiper-pagination-bullet-inactive-opacity': '1',
+                            } as React.CSSProperties}
+                        >
+                            {urls.map((url, i) => (
+                                <SwiperSlide key={i}>
+                                    <img src={url} alt="" className="w-full h-full object-cover" />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    ) : urls.length === 1 ? (
+                        <img src={urls[0]} alt="" className="w-full h-full object-cover" />
+                    ) : (
+                        <div className="w-full h-full bg-muted flex items-center justify-center">
+                            <span className="text-muted-foreground text-sm uppercase tracking-widest">No Image</span>
+                        </div>
+                    )}
+                </div>
+
+                {data.stat_card_value && data.stat_card_label && (
+                    <FloatingStatCard
+                        value={data.stat_card_value}
+                        label={data.stat_card_label}
+                        position={isImageLeft ? 'bottom-right' : 'bottom-left'}
+                    />
+                )}
+            </div>
+        </div>
+    );
+}
+
+function ContentBlock({ block }: { block: ContentBlock }) {
+    switch (block.type) {
+        case 'rich_text': return <RichTextRenderer data={block.data} />;
+        case 'image':     return <ImageRenderer data={block.data} />;
+        case 'gallery':   return <GalleryRenderer data={block.data} />;
+        case 'video':     return <VideoRenderer data={block.data} />;
+        case 'cta':       return <CtaRenderer data={block.data} />;
+        case 'media_text':return <MediaTextRenderer data={block.data} />;
+        default:          return null;
+    }
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+export default function Show({ service }: { service: Service }) {
+    const hasBlocks = service.content_blocks && service.content_blocks.length > 0;
+
+    return (
+        <AppLayout 
+            title={service.title} 
+            description={service.short_description || service.description?.substring(0, 160)}
+            image={service.featured_image_url || undefined}
+        >
+            {/* Hero */}
+            <div className="relative border-b border-border bg-muted/20">
+                {service.featured_image_url && (
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+                        <img
+                            src={service.featured_image_url}
+                            alt=""
+                            className="w-full h-full object-cover opacity-20  blur-xs"
+                        />
+                    </div>
+                )}
+                <Wrapper className="relative py-24 z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                        <div>
+                            <Link
+                                href="/services"
+                                className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-muted-foreground hover:text-primary mb-8 transition-colors gap-2"
+                            >
+                                <ArrowLeft className="h-4 w-4" />
+                                Back to Services
+                            </Link>
+                            <SectionHeading
+                                label="Service Profile"
+                                title={service.title}
+                                align="left"
+                                className="mb-0"
+                            >
+                                {service.description && (
+                                    <div
+                                        className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert text-muted-foreground"
+                                        dangerouslySetInnerHTML={{ __html: service.description }}
+                                    />
+                                )}
+                            </SectionHeading>
+                        </div>
+
+                        {service.featured_image_url && (
+                            <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-2xl">
+                                <img
+                                    src={service.featured_image_url}
+                                    alt={service.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        )}
+                    </div>
+                </Wrapper>
+            </div>
+
+            {/* Content Blocks */}
+            {hasBlocks && (
+                <div className="flex flex-col">
+                    {service.content_blocks.map((block, i) => {
+                        const isDark = block.data.darker_background;
+
+                        return (
+                            <div key={i} className={`w-full py-16 md:py-24 ${isDark ? 'bg-muted border-y border-border' : ''}`}>
+                                <Wrapper>
+                                    <ContentBlock block={block} />
+                                </Wrapper>
+                            </div>
+                        );
+                    })}
+                </div>
+            )}
+        </AppLayout>
+    );
+}
