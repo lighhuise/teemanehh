@@ -1,6 +1,6 @@
 ---
-seo_title: Teemane Cranes | A Cut Above The Rest
-seo_description: Established in 2012, Teemane Cranes delivers crane hire, heavy lifting, rigging and specialised transport across South Africa's most demanding worksites. Up to 440T capacity.
+seo_title: Teemane Heavy Haulage | A Cut Above The Rest
+seo_description: Established in 2012, Teemane Heavy Haulage delivers crane hire, heavy lifting, rigging and specialised transport across South Africa's most demanding worksites. Up to 440T capacity.
 ---
 
 # Page: Home
@@ -33,7 +33,7 @@ Please fill out the content for each block below. If a block requires an image, 
 **Stat Card Label:** Years Combined Experience
 
 **Content (Rich Text):**
-Established in 2012, Teemane Cranes prides itself on countless victories across South Africa's most demanding worksites. From high-stakes projects to complex operations that have redefined what's possible in mobile crane hire.
+Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites. From high-stakes projects to complex operations that have redefined what's possible in mobile crane hire.
 
 Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and more than 100 years of combined management experience, we bring the depth of knowledge, control and capability required to deliver certainty in high-risk environments.
 
@@ -48,7 +48,7 @@ Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and more
 
 **Heading:** SERVICES WE PROVIDE
 **Label:** Our Services
-**Description:** At Teemane Cranes, we deliver total lifting solutions. Our diverse fleet and highly trained team ensure we have the precise equipment and expertise for your unique operational requirements.
+**Description:** At Teemane Heavy Haulage, we deliver total lifting solutions. Our diverse fleet and highly trained team ensure we have the precise equipment and expertise for your unique operational requirements.
 
 ---
 
@@ -61,7 +61,7 @@ Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and more
 **Stat Card Label:** Projects Completed
 
 **Content (Rich Text):**
-With services available for both short- and long-term hire and backed by prompt, professional support, Teemane oversees every stage from initial consultation and detailed site inspections to full project execution.
+With services available for both short- and long-term hire and backed by prompt, professional support, THH oversees every stage from initial consultation and detailed site inspections to full project execution.
 
 For specialised projects, we incorporate advanced lift studies and CAD drawings, allowing us to anticipate challenges and engineer safe, efficient solutions before operations begin. Combined with decades of experience, this defines how the most demanding projects are completed to unmatched standards.
 

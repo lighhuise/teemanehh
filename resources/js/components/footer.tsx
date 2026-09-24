@@ -9,7 +9,7 @@ export default function Footer() {
         <footer className="bg-muted  z-5 text-muted-foreground relative overflow-hidden pt-24 pb-12 border-t-6 border-primary">
             {/* Background Typography */}
             <div className="absolute inset-0 flex items-center justify-center opacity-5 dark:opacity-[1%] pointer-events-none select-none overflow-hidden">
-                <h2 className="text-[20vh] xl:text-[300px] font-black tracking-tighter leading-none whitespace-nowrap text-foreground">TEEMANE</h2>
+                <h2 className="text-[20vh] xl:text-[300px] font-black tracking-tighter leading-none whitespace-nowrap text-foreground">THH</h2>
             </div>
 
             <Wrapper className="relative z-10">
@@ -18,7 +18,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="lg:col-span-4 flex flex-col gap-8">
                         <Link href="/" className="inline-block">
-                            <img src={logoUrl} alt="Teemane Cranes Logo" className="h-16 w-auto" />
+                            <img src={logoUrl} alt="Teemane Heavy Haulage Logo" className="h-16 w-auto" />
                         </Link>
                         <p className="text-muted-foreground leading-relaxed max-w-sm">
                             The only name trusted to perform on South Africa's most demanding worksites. Unmatched excellence in crane hire, heavy lifting and specialised transport since 2012.
@@ -70,7 +70,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-4">
                                 <Mail className="w-6 h-6 text-primary shrink-0" />
-                                <span className="text-muted-foreground">enquiries@teemanecranes.co.za</span>
+                                <span className="text-muted-foreground">enquiries@thh.co.za</span>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +78,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="py-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground font-medium">
-                    <p>&copy; {new Date().getFullYear()} Teemane Cranes. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Teemane Heavy Haulage. All rights reserved.</p>
                     <div className="flex items-center gap-6">
                         <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
                         <Link href="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>

@@ -6,7 +6,7 @@ import { FloatingStatCard } from '@/components/ui/misc/floating-stat-card';
 import SectionHeading from '@/components/ui/misc/section-heading';
 import StatsBar from '@/components/stats-bar';
 // @ts-ignore
-import imgBoat from '@/../images/Teemane-Boat.webp';
+import imgBoat from '@/../images/THH-Boat.webp';
 
 export default function AboutUs() {
     return (
@@ -21,7 +21,7 @@ export default function AboutUs() {
                         align="center"
                         className="mb-16"
                     >
-                        Established in 2012, Teemane Cranes prides itself on countless victories across South Africa's most demanding worksites, from high-stakes projects to complex operations.
+                        Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites, from high-stakes projects to complex operations.
                     </SectionHeading>
                 </Wrapper>
             </div>
@@ -77,7 +77,7 @@ export default function AboutUs() {
                             <div className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
                                 <img
                                     src={imgBoat}
-                                    alt="Teemane Cranes maritime operations"
+                                    alt="Teemane Heavy Haulage maritime operations"
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
@@ -156,4 +156,4 @@ export default function AboutUs() {
     );
 }
 
-AboutUs.layout = (page: React.ReactNode) => <AppLayout title="About Us - Teemane Cranes">{page}</AppLayout>;
+AboutUs.layout = (page: React.ReactNode) => <AppLayout title="About Us">{page}</AppLayout>;

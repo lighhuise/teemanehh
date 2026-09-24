@@ -1,6 +1,6 @@
-# Teemane Cranes — Complete Website & Company Content
+# Teemane Heavy Haulage — Complete Website & Company Content
 
-> Consolidated content extracted from the **Teemane Cranes Company Profile PDF** and the publicly accessible content of **teemanecranes.co.za**. Website content is organised by page/section so it can be reused for a website redesign or content migration.
+> Consolidated content extracted from the **Teemane Heavy Haulage Company Profile PDF** and the publicly accessible content of **thh.co.za**. Website content is organised by page/section so it can be reused for a website redesign or content migration.
 
 ---
 
@@ -32,13 +32,13 @@ Whether you’re lifting heavy machinery, constructing high-rise buildings, or h
 
 ## Who We Are
 
-### Welcome to Teemane Cranes
+### Welcome to Teemane Heavy Haulage
 
-At Teemane Cranes, we pride ourselves on delivering top-notch crane services with a focus on safety, efficiency, and customer satisfaction.
+At Teemane Heavy Haulage, we pride ourselves on delivering top-notch crane services with a focus on safety, efficiency, and customer satisfaction.
 
 ### Our Story
 
-Established in 2012, Teemane Cranes prides itself on countless victories across South Africa’s most demanding worksites, from high-stakes projects to complex operations that have redefined what’s possible in mobile crane hire.
+Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa’s most demanding worksites, from high-stakes projects to complex operations that have redefined what’s possible in mobile crane hire.
 
 Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and a team driven to deliver unmatched results, we stand at the forefront of the sector, leading the projects that continue to shape industries today.
 
@@ -50,11 +50,11 @@ Backed by more than 100 years of combined management experience, we bring the de
 
 # 3. Industries We Serve
 
-Teemane Cranes’ versatile fleet and skilled operators provide essential support across a wide range of industries.
+Teemane Heavy Haulage’ versatile fleet and skilled operators provide essential support across a wide range of industries.
 
 ## Construction & Infrastructure
 
-Teemane supports construction and infrastructure projects with lifting solutions for complex worksites, civil projects, high-rise developments and specialised lifting requirements.
+THH supports construction and infrastructure projects with lifting solutions for complex worksites, civil projects, high-rise developments and specialised lifting requirements.
 
 The company profile further states:
 
@@ -64,7 +64,7 @@ Backed by our versatile fleet and the capability to support both routine and hig
 
 ## Energy & Power
 
-Teemane supports energy and power projects with specialised lifting capabilities.
+THH supports energy and power projects with specialised lifting capabilities.
 
 The company profile specifically highlights renewable energy:
 
@@ -84,7 +84,7 @@ Backed by specialised equipment and the capability to perform in the toughest en
 
 ## Manufacturing & Industrial
 
-Teemane provides lifting support for manufacturing and industrial operations, including heavy machinery handling, industrial equipment relocation and specialised lifting requirements.
+THH provides lifting support for manufacturing and industrial operations, including heavy machinery handling, industrial equipment relocation and specialised lifting requirements.
 
 ## Ports & Maritime
 
@@ -94,19 +94,19 @@ From vessel launches to dry-dock repairs and harbour operations, our involvement
 
 ## Telecommunications
 
-Teemane serves telecommunications projects as part of its broader industrial lifting capabilities.
+THH serves telecommunications projects as part of its broader industrial lifting capabilities.
 
 ## Aerospace & Aviation
 
-Teemane serves aerospace and aviation projects as part of its broad range of specialised lifting capabilities.
+THH serves aerospace and aviation projects as part of its broad range of specialised lifting capabilities.
 
 ## Other Sectors
 
-The industries mentioned above are only a select few of where Teemane operates.
+The industries mentioned above are only a select few of where THH operates.
 
 Across highly demanding sectors, we are trusted where the work is complex, the sites are technical and the pressure is too great for ordinary capability.
 
-This is where Teemane continues to stand apart, setting a level of excellence that exceeds industry standards.
+This is where THH continues to stand apart, setting a level of excellence that exceeds industry standards.
 
 ---
 
@@ -132,11 +132,11 @@ Our mobile crane hire services offer the flexibility and strength needed to tack
 
 When it comes to heavy lifting, precision, safety, and experience are non-negotiable.
 
-At Teemane Cranes, we specialize in lifting oversized, high-value, and heavy loads with the expertise and equipment to handle even the most complex operations.
+At Teemane Heavy Haulage, we specialize in lifting oversized, high-value, and heavy loads with the expertise and equipment to handle even the most complex operations.
 
 Whether you’re moving large structural components, industrial machinery, or modular units, we provide turnkey heavy lifting solutions tailored to your project’s specific needs.
 
-## Why Choose Teemane Cranes?
+## Why Choose Teemane Heavy Haulage?
 
 - Skilled & Certified Operators
 - Commitment to Safety & Compliance
@@ -171,7 +171,7 @@ We handle the lifting and placement of precast concrete, steel structures, bridg
 
 ## Mobile Crane Hire
 
-At Teemane Cranes, we understand that every lifting project demands precision, reliability, and efficiency.
+At Teemane Heavy Haulage, we understand that every lifting project demands precision, reliability, and efficiency.
 
 Our mobile crane hire services offer the flexibility and strength needed to tackle any lifting challenge, from construction sites to industrial projects.
 
@@ -185,7 +185,7 @@ Our mobile crane hire services offer the flexibility and strength needed to tack
 
 ## Long-Term Crane Rental
 
-For projects that require ongoing lifting solutions, Teemane Cranes offers long-term crane rental services, ensuring your operations run smoothly without the hassle of purchasing and maintaining equipment.
+For projects that require ongoing lifting solutions, Teemane Heavy Haulage offers long-term crane rental services, ensuring your operations run smoothly without the hassle of purchasing and maintaining equipment.
 
 Whether you’re managing a construction project, industrial operation, or infrastructure development, our fleet of modern cranes and expert support team are ready to assist for extended durations.
 
@@ -217,7 +217,7 @@ Precision lifting at extreme heights.
 
 ## Crane Rental
 
-For projects that require ongoing lifting solutions, Teemane Cranes offers long-term crane rental services, ensuring your operations run smoothly without the hassle of purchasing and maintaining equipment.
+For projects that require ongoing lifting solutions, Teemane Heavy Haulage offers long-term crane rental services, ensuring your operations run smoothly without the hassle of purchasing and maintaining equipment.
 
 Whether you’re managing a construction project, industrial operation, or infrastructure development, our fleet of modern cranes and expert support team are ready to assist for extended durations.
 
@@ -269,7 +269,7 @@ We handle the lifting and placement of precast concrete, steel structures, bridg
 
 # 9. Complimentary Services
 
-The homepage describes Teemane as offering services beyond crane rentals.
+The homepage describes THH as offering services beyond crane rentals.
 
 ## Heavy Haulage
 
@@ -317,13 +317,13 @@ Whether it’s an equipment failure or an unforeseen event, we’re here to prov
 
 ## Where Excellence Begins
 
-With services available for both short- and long-term hire and backed by prompt, professional support, Teemane oversees every stage from initial consultation and detailed site inspections to full project execution.
+With services available for both short- and long-term hire and backed by prompt, professional support, THH oversees every stage from initial consultation and detailed site inspections to full project execution.
 
 Safety stands at the forefront of every project, long before operations commence, safeguarding not only our team but every individual on site and the environments in which we work.
 
 For specialised projects, we incorporate advanced lift studies and CAD drawings, allowing us to anticipate challenges and engineer safe, efficient solutions before operations begin.
 
-Combined with decades of experience, this technical approach defines how the most demanding projects are completed to unmatched standards, defining why clients regard Teemane as true industry leaders.
+Combined with decades of experience, this technical approach defines how the most demanding projects are completed to unmatched standards, defining why clients regard THH as true industry leaders.
 
 ---
 
@@ -353,7 +353,7 @@ Completed with precision and safety, ranging from small-scale lifts to major inf
 
 Ready to respond to your lifting needs anytime, day or night.
 
-> The website's current statistics differ from the company profile's statement that Teemane Cranes was established in 2012. These figures have been retained as published and should be verified before being used in final marketing material.
+> The website's current statistics differ from the company profile's statement that Teemane Heavy Haulage was established in 2012. These figures have been retained as published and should be verified before being used in final marketing material.
 
 ---
 
@@ -363,7 +363,7 @@ Ready to respond to your lifting needs anytime, day or night.
 
 **Phone:** 084 263 7690
 
-**Email:** enquiries@teemanecranes.co.za
+**Email:** enquiries@thh.co.za
 
 **Availability:** 24hrs, 365 Days
 
@@ -435,7 +435,7 @@ An alternate holding page currently indexed on the website states:
 
 **084 263 7690**
 
-**enquiries@teemanecranes.co.za**
+**enquiries@thh.co.za**
 
 **Available: 24hrs, 365 Days**
 
@@ -491,7 +491,7 @@ This should be reviewed and replaced with the correct production website informa
 
 ## OUR STORY
 
-Established in 2012, Teemane Cranes prides itself on countless victories across South Africa’s most demanding worksites, from high-stakes projects to complex operations that have redefined what’s possible in mobile crane hire.
+Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa’s most demanding worksites, from high-stakes projects to complex operations that have redefined what’s possible in mobile crane hire.
 
 Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and a team driven to deliver unmatched results, we stand at the forefront of the sector, leading the projects that continue to shape industries today.
 
@@ -538,11 +538,11 @@ Backed by specialised equipment and the capability to perform in the toughest en
 
 ### Service Area Conclusion
 
-The industries mentioned above are only a select few of where Teemane operates.
+The industries mentioned above are only a select few of where THH operates.
 
 Across highly demanding sectors, we are trusted where the work is complex, the sites are technical and the pressure is too great for ordinary capability.
 
-This is where Teemane continues to stand apart, setting a level of excellence that exceeds industry standards.
+This is where THH continues to stand apart, setting a level of excellence that exceeds industry standards.
 
 ---
 
@@ -552,9 +552,9 @@ This is where Teemane continues to stand apart, setting a level of excellence th
 
 The supplied five-page company profile was used as the primary source for the company history, service-area copy, credentials, safety approach and contact details.
 
-## Source: Current Teemane Cranes Website
+## Source: Current Teemane Heavy Haulage Website
 
-Publicly accessible pages from `teemanecranes.co.za` were reviewed and incorporated into this document.
+Publicly accessible pages from `thh.co.za` were reviewed and incorporated into this document.
 
 ### Important Content Differences to Verify
 
@@ -576,7 +576,7 @@ There are several differences between the supplied company profile and the curre
    - Current website lists Heavy Haulage, Rigging, Repairs, Hiring and Consulting as complimentary services.
    - The dedicated service pages provide additional detail around heavy lifting, mobile crane hire, crane rental, lift planning, rigging, equipment relocation and modular structure lifting.
 
-These differences have intentionally **not been silently corrected**. They should be confirmed with Teemane Cranes before the content is used as the definitive company profile.
+These differences have intentionally **not been silently corrected**. They should be confirmed with Teemane Heavy Haulage before the content is used as the definitive company profile.
 
 ---
 
@@ -588,7 +588,7 @@ Based on the content collected, the material can be organised into the following
 Home
 ├── Hero
 ├── Who We Are
-├── Why Teemane
+├── Why THH
 ├── Industries
 │   ├── Construction & Infrastructure
 │   ├── Energy & Power
@@ -630,17 +630,17 @@ Home
 
 # 22. Contact Information
 
-**Teemane Cranes**
+**Teemane Heavy Haulage**
 
 **Address:** 1 Van Eck Street, Bellville South, Cape Town, 7530
 
 **Phone:** 084 263 7690
 
-**Email:** enquiries@teemanecranes.co.za
+**Email:** enquiries@thh.co.za
 
 **Availability:** 24hrs, 365 Days
 
-**Website:** www.teemanecranes.co.za
+**Website:** www.thh.co.za
 
 ---
 

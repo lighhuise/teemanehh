@@ -1,6 +1,6 @@
 ---
-seo_title: About Us - Teemane Cranes
-seo_description: Established in 2012, Teemane Cranes prides itself on countless victories across South Africa's most demanding worksites. Learn about our mobile crane hire expertise.
+seo_title: About Us - Teemane Heavy Haulage
+seo_description: Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites. Learn about our mobile crane hire expertise.
 ---
 
 # Page: About Us
@@ -13,7 +13,7 @@ Please fill out the content for each block below. If a block requires an image, 
 
 **Label:** Our Story
 **Heading:** Redefining What's Possible In Mobile Crane Hire.
-**Description:** Established in 2012, Teemane Cranes prides itself on countless victories across South Africa's most demanding worksites, from high-stakes projects to complex operations.
+**Description:** Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites, from high-stakes projects to complex operations.
 
 ---
 
@@ -33,7 +33,7 @@ Please fill out the content for each block below. If a block requires an image, 
 ## Block 3: Media & Text (Core Content)
 
 **Heading:** Leading the projects that shape industries today.
-**Image:** `Teemane-Boat.webp`
+**Image:** `THH-Boat.webp`
 **Stat Card Value:** 440T
 **Stat Card Label:** Maximum Fleet Capacity
 

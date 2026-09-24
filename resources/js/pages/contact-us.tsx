@@ -103,8 +103,8 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                                         </div>
                                         <div>
                                             <h3 className="font-black text-lg">Email</h3>
-                                            <a href="mailto:enquiries@teemanecranes.co.za" className="text-muted-foreground hover:text-primary transition-colors">
-                                                enquiries@teemanecranes.co.za
+                                            <a href="mailto:enquiries@thh.co.za" className="text-muted-foreground hover:text-primary transition-colors">
+                                                enquiries@thh.co.za
                                             </a>
                                         </div>
                                     </div>

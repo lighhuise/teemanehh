@@ -81,7 +81,7 @@ export default function Map() {
                             <Marker position={position} icon={customMarkerIcon}>
                                 <Popup>
                                     <div className="font-sans leading-relaxed text-center">
-                                        <strong className="text-base text-primary font-bold tracking-tight block mb-1">Teemane Cranes</strong>
+                                        <strong className="text-base text-primary font-bold tracking-tight block mb-1">Teemane Heavy Haulage</strong>
                                         <span className="text-sm text-foreground">6 Van Eck St, Bellville South</span>
                                     </div>
                                 </Popup>

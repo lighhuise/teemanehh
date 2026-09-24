@@ -1,6 +1,6 @@
 ---
-seo_title: Mobile Crane Hire | Teemane Cranes
-seo_description: Reliable mobile cranes for construction, industrial and infrastructure projects. Teemane Cranes offers a comprehensive fleet of mobile cranes designed to meet the demands of any project.
+seo_title: Mobile Crane Hire | Teemane Heavy Haulage
+seo_description: Reliable mobile cranes for construction, industrial and infrastructure projects. Teemane Heavy Haulage offers a comprehensive fleet of mobile cranes designed to meet the demands of any project.
 ---
 
 # Page: Mobile Crane Hire
@@ -12,7 +12,7 @@ Please fill out the content for each block below. If a block requires an image, 
 ## Block 1: Page Header (Main Description)
 
 **Heading:** Mobile Crane Hire
-**Description:** Teemane Cranes offers a comprehensive fleet of mobile cranes designed to meet the demands of any construction or industrial project.
+**Description:** Teemane Heavy Haulage offers a comprehensive fleet of mobile cranes designed to meet the demands of any construction or industrial project.
 
 ---
 

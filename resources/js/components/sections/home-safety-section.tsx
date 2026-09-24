@@ -14,7 +14,7 @@ export function HomeSafetySection() {
                         <div className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
                             <img
                                 src={imgSafety}
-                                alt="Teemane Cranes Safety Briefing"
+                                alt="Teemane Heavy Haulage Safety Briefing"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />
                         </div>
@@ -35,7 +35,7 @@ export function HomeSafetySection() {
                             SAFETY STARTS <br />BEFORE THE LIFT
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            With services available for both short- and long-term hire and backed by prompt, professional support, Teemane oversees every stage from initial consultation and detailed site inspections to full project execution.
+                            With services available for both short- and long-term hire and backed by prompt, professional support, THH oversees every stage from initial consultation and detailed site inspections to full project execution.
                         </p>
                         <p className="text-lg text-muted-foreground leading-relaxed">
                             For specialised projects, we incorporate advanced lift studies and CAD drawings, allowing us to anticipate challenges and engineer safe, efficient solutions before operations begin. Combined with decades of experience, this defines how the most demanding projects are completed to unmatched standards.

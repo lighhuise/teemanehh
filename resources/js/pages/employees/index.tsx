@@ -117,11 +117,11 @@ export default function Index({ employees, filters }: { employees: PaginatedData
             <div className="bg-muted/30 py-24 border-b border-border">
                 <Wrapper>
                     <SectionHeading
-                        label="The Teemane Family"
+                        label="The THH Family"
                         title="OUR TEAM"
                         align="center"
                     >
-                        Meet the skilled professionals behind Teemane Cranes. From our operators to our engineers, our people are our greatest asset and the foundation of our success.
+                        Meet the skilled professionals behind Teemane Heavy Haulage. From our operators to our engineers, our people are our greatest asset and the foundation of our success.
                     </SectionHeading>
 
                     <div className="relative w-full max-w-md mx-auto mt-10">

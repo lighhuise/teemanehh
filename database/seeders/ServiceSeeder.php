@@ -18,7 +18,7 @@ class ServiceSeeder extends Seeder
             [
                 'title' => 'MOBILE CRANE HIRE',
                 'short_description' => 'Reliable mobile cranes for construction, industrial and infrastructure projects.',
-                'description' => '<p>Teemane Cranes offers a comprehensive fleet of mobile cranes designed to meet the demands of any construction or industrial project.</p>',
+                'description' => '<p>Teemane Heavy Haulage offers a comprehensive fleet of mobile cranes designed to meet the demands of any construction or industrial project.</p>',
                 'content_blocks' => [
                     ['type' => 'rich_text', 'data' => ['content' => '<h3>Versatile Lifting Solutions</h3><p>Whether you need a compact city crane for tight urban spaces or a high-capacity all-terrain crane, our fleet is meticulously maintained and ready to deploy.</p>']],
                     ['type' => 'image', 'data' => ['image' => 'https://images.unsplash.com/photo-1541888052528-7694901b08ce?auto=format&fit=crop&q=80&w=1200&h=600', 'alt' => 'Mobile Crane on site', 'caption' => 'High capacity mobile crane in action']],
@@ -54,7 +54,7 @@ class ServiceSeeder extends Seeder
 //            [
 //                'title' => 'HEAVY HAULAGE',
 //                'short_description' => 'Specialised transport for oversized, overweight and high-value equipment.',
-//                'description' => '<p>Teemane Cranes is your trusted partner for heavy haulage, operating a fleet of heavy-duty prime movers and multi-axle trailers.</p>',
+//                'description' => '<p>Teemane Heavy Haulage is your trusted partner for heavy haulage, operating a fleet of heavy-duty prime movers and multi-axle trailers.</p>',
 //                'content_blocks' => [
 //                    ['type' => 'rich_text', 'data' => ['content' => '<h3>Logistics Handled</h3><p>Our dedicated transport logistics team handles route planning, permits, and escorts to ensure your cargo reaches its destination securely.</p>']],
 //                    ['type' => 'image', 'data' => ['image' => 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&q=80&w=1200&h=600', 'alt' => 'Heavy Haulage', 'caption' => 'Oversized transport on the highway']],

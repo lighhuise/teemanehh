@@ -19,7 +19,7 @@ export function HomeIntroSection() {
                             THE ONLY NAME <br />TRUSTED TO PERFORM
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed text-balance">
-                            Established in 2012, Teemane Cranes prides itself on countless victories across South Africa's most demanding worksites. From high-stakes projects to complex operations that have redefined what's possible in mobile crane hire.
+                            Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites. From high-stakes projects to complex operations that have redefined what's possible in mobile crane hire.
                         </p>
                         <p className="text-lg text-muted-foreground leading-relaxed text-balance">
                             Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and more than 100 years of combined management experience, we bring the depth of knowledge, control and capability required to deliver certainty in high-risk environments.
@@ -34,7 +34,7 @@ export function HomeIntroSection() {
                         <div className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
                             <img
                                 src={imgCompanyIntro}
-                                alt="Teemane Cranes on site"
+                                alt="Teemane Heavy Haulage on site"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />
                         </div>

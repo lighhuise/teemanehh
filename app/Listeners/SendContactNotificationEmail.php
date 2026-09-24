@@ -23,7 +23,7 @@ class SendContactNotificationEmail
      */
     public function handle(ContactMessageSubmitted $event): void
     {
-        $contactEmail = env('CONTACT_EMAIL', 'admin@teemanecranes.test');
+        $contactEmail = env('CONTACT_EMAIL', 'admin@thh.test');
         Mail::to($contactEmail)->send(new ContactNotification($event->data));
     }
 }

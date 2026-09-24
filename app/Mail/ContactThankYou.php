@@ -30,7 +30,7 @@ class ContactThankYou extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Thank You for Contacting Teemane Cranes',
+            subject: 'Thank You for Contacting Teemane Heavy Haulage',
         );
     }
 

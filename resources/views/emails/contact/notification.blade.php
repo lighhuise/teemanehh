@@ -1,7 +1,7 @@
 <x-mail::message>
 # New Contact Form Submission
 
-You have received a new message from the contact form on Teemane Cranes.
+You have received a new message from the contact form on Teemane Heavy Haulage.
 
 **Name:** {{ $data['name'] }}  
 **Email:** {{ $data['email'] }}  

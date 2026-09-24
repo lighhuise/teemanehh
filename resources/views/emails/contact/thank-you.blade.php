@@ -1,5 +1,5 @@
 <x-mail::message>
-# Thank You for Contacting Teemane Cranes
+# Thank You for Contacting Teemane Heavy Haulage
 
 Hi {{ $data['name'] }},
 

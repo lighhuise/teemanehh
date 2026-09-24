@@ -1,5 +1,5 @@
 ---
-seo_title: Services - Teemane Cranes
+seo_title: Services - Teemane Heavy Haulage
 seo_description: We understand that every lifting project demands precision, reliability and efficiency. Our services offer the flexibility and strength needed to tackle any challenge.
 ---
 

@@ -1,10 +1,10 @@
-# Teemane Cranes - Corporate Website & CMS
+# Teemane Heavy Haulage - Corporate Website & CMS
 
-This repository contains the official corporate website and Content Management System for **Teemane Cranes**.
+This repository contains the official corporate website and Content Management System for **Teemane Heavy Haulage**.
 
-## 🏗️ About Teemane Cranes
+## 🏗️ About Teemane Heavy Haulage
 
-Established in 2012, Teemane Cranes is a leading provider of crane hire, heavy lifting, rigging, and specialised transport across South Africa's most demanding worksites. 
+Established in 2012, Teemane Heavy Haulage is a leading provider of crane hire, heavy lifting, rigging, and specialised transport across South Africa's most demanding worksites. 
 
 - **Headquarters:** Bellville South, Cape Town, South Africa.
 - **Capacity:** Modern fleet of hydraulic cranes with capacities of up to 440 tons.
