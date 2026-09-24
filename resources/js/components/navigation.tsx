@@ -28,7 +28,7 @@ export default function Navigation() {
   return (
     <>
       {/* Notification Bar - Static (scrolls away) */}
-      <div className="bg-linear-to-t from-primary/70 to-primary border-b bordr-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
+      <div className="bg-linear-to-t from-primary/70 to-primary border-b-2 relative  bordr-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
         <Wrapper className="flex justify-between items-center w-full">
            <div className="flex items-center gap-6">
               <span className="flex items-center gap-2 ">
@@ -48,7 +48,7 @@ export default function Navigation() {
 
       {/* Navigation - Sticky */}
       <nav className="sticky top-2 z-50 w-full  transition-all duration-300">
-        <Wrapper className="flex h-20 items-center justify-between bg-background border shadow-xs rounded-md">
+        <Wrapper className="flex h-20 items-center justify-between bg-background border border-border shadow-xs rounded-md">
           {/* Logo */}
           <Link href="/" prefetch="hover" className="flex items-center gap-2 group">
             <img

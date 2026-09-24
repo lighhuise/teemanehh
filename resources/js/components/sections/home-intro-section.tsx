@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { FloatingStatCard } from "@/components/ui/misc/floating-stat-card";
 // @ts-ignore
 import imgCompanyIntro from "@/../images/IMG_0190-copy.webp";
+import CutoutBox from "@/components/ui/misc/cutout-box";
 
 export function HomeIntroSection() {
     return (
@@ -30,14 +31,14 @@ export function HomeIntroSection() {
                             </Link>
                         </div>
                     </div>
-                    <div className="relative pb-6 lg:pb-0">
-                        <div className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
+                    <div className="relative pb-6 lg:pb-0 drop-shadow-lg drop-shadow-black/30">
+                        <CutoutBox position={`both`} className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
                             <img
                                 src={imgCompanyIntro}
                                 alt="Teemane Heavy Haulage on site"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />
-                        </div>
+                        </CutoutBox>
 
                         <FloatingStatCard
                             value="100+"

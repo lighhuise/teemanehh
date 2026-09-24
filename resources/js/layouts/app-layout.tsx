@@ -30,7 +30,7 @@ export default function AppLayout({ children, title, description, image }: AppLa
     const fullUrl = typeof window !== 'undefined' ? window.location.href : url;
 
     return (
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 ">
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 selection:bg-primary/75 selection:text-white">
             <Head>
                 {title ? <title>{title}</title> : <title>{defaultTitle}</title>}
                 <meta name="description" content={siteDescription} />
@@ -50,7 +50,7 @@ export default function AppLayout({ children, title, description, image }: AppLa
                 <meta name="twitter:image" content={siteImage} />
             </Head>
             <a className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-100 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-background focus:text-foreground focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-bold text-sm" href="#main">Go to main content</a>
-            <div id={'background-gradient'} className={` w-full min-h-180 absolute opacity-50 z-0 top-0 inset-x-0 bg-linear-to-b from-primary/25 to-background dark:from-black     pointer-events-none `} aria-hidden={true}></div>
+            <div id={'background-gradient'} className={` w-full min-h-180 absolute opacity-50 -z-10 top-0 inset-x-0 bg-linear-to-b from-primary/25 to-background dark:from-black     pointer-events-none `} aria-hidden={true}></div>
             <Navigation/>
 
             <main id={`main`} className="w-full flex-1 flex flex-col">

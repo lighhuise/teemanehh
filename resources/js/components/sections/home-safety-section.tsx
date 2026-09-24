@@ -4,20 +4,21 @@ import { buttonVariants } from "@/components/ui/button";
 import { FloatingStatCard } from "@/components/ui/misc/floating-stat-card";
 // @ts-ignore
 import imgSafety from "@/../images/media-24-building.webp";
+import CutoutBox from "@/components/ui/misc/cutout-box";
 
 export function HomeSafetySection() {
     return (
         <section className="py-24 bg-background">
             <Wrapper>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <div className="relative pb-6 lg:pb-0 order-2 lg:order-1">
-                        <div className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
+                    <div className="relative pb-6 lg:pb-0 order-2 lg:order-1 drop-shadow-lg drop-shadow-black/30">
+                        <CutoutBox position={`both`} className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
                             <img
                                 src={imgSafety}
                                 alt="Teemane Heavy Haulage Safety Briefing"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />
-                        </div>
+                        </CutoutBox>
 
                         <FloatingStatCard
                             value="500+"
