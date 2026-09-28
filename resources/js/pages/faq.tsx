@@ -1,7 +1,7 @@
 import { Head } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import Wrapper from '@/components/ui/misc/wrapper';
-import SectionHeading from '@/components/ui/misc/section-heading';
+import PageHeader from '@/components/ui/misc/page-header';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export default function FaqPage({ faqs }: { faqs: any[] }) {
@@ -9,17 +9,10 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
         <AppLayout title="Frequently Asked Questions">
             
             
-            <div className="bg-muted/30 py-24 border-b border-border">
-                <Wrapper>
-                    <SectionHeading
-                        label="FAQ"
-                        title={<>FREQUENTLY ASKED <span className="text-primary">QUESTIONS</span></>}
-                        align="center"
-                    >
-                        Find answers to common questions about our services, equipment, and operations.
-                    </SectionHeading>
-                </Wrapper>
-            </div>
+            <PageHeader
+                title={<>FREQUENTLY ASKED <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-blue-300">QUESTIONS</span></>}
+                description="Find answers to common questions about our heavy haulage services, equipment, and operations."
+            />
 
             <section className="py-24 bg-background">
                 <Wrapper>

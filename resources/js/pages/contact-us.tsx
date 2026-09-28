@@ -9,6 +9,7 @@ import { FormEvent, useEffect } from 'react';
 import { toast } from '@/components/ui/toast';
 import { cn } from "@/lib/utils";
 import SectionHeading from '@/components/ui/misc/section-heading';
+import PageHeader from '@/components/ui/misc/page-header';
 
 interface HoneypotData {
     enabled: boolean;
@@ -47,17 +48,10 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
         <>
             
 
-            <div className="bg-muted/30 py-24 border-b border-border">
-                <Wrapper>
-                    <SectionHeading
-                        label="Get In Touch"
-                        title="LET'S GET TO WORK"
-                        align="center"
-                    >
-                        Whether you need a quote, want to discuss a project, or require immediate emergency support. Our team is available 24 hours a day, 365 days a year.
-                    </SectionHeading>
-                </Wrapper>
-            </div>
+            <PageHeader 
+                title="LET'S GET TO WORK"
+                description="Whether you need a quote, want to discuss a project, or require immediate emergency support. Our team is available 24 hours a day, 365 days a year."
+            />
 
             <section className="py-24 bg-background">
                 <Wrapper>

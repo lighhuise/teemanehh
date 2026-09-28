@@ -35,24 +35,16 @@ export default function SectionHeading({
     className,
 }: SectionHeadingProps) {
     return (
-        <div className={cn('flex flex-col space-y-6', alignClass[align], className)}>
-            {/* Label with decorative lines */}
-
+        <div className={cn('flex flex-col space-y-4', alignClass[align], className)}>
+            {/* Soft, clean label */}
             {label && (
-                <div className={cn('inline-flex items-center gap-4', lineClass[align])}>
-                    {/* Left line — hidden on right-aligned, always shown on left/center */}
-                    {align !== 'right' && <div className="h-px w-8 bg-primary shrink-0" />}
-                    <span className="text-sm font-bold text-primary tracking-widest uppercase whitespace-nowrap">
+                <span className="text-sm font-semibold text-primary tracking-wide uppercase px-3 py-1 rounded-full bg-primary/10">
                     {label}
                 </span>
-                    {/* Right line — shown on center and right */}
-                    {align !== 'left' && <div className="h-px w-8 bg-primary shrink-0" />}
-                </div>
             )}
 
-
-            {/* Title */}
-            <h2 className="text-4xl lg:text-5xl max-w-2xl text-balance font-black tracking-[0.35px] uppercase text-foreground leading-[1.1]">
+            {/* Title - Dropped uppercase and font-black for a fresher, cleaner look */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl max-w-2xl text-balance font-bold tracking-tight text-foreground leading-[1.15]">
                 {title}
             </h2>
 

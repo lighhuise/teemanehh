@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomePageIndexController;
 use App\Http\Controllers\Services\ServicesIndexController;
 use App\Http\Controllers\Services\ServicesShowController;
@@ -11,7 +12,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', HomePageIndexController::class)->name('home');
 Route::get('/about-us', AboutUsController::class)->name('about');
-Route::get('/faq', \App\Http\Controllers\FaqController::class)->name('faq');
+Route::get('/faq', FaqController::class)->name('faq');
 
 Route::get('/privacy-policy', function () {
     return inertia('legal/privacy-policy');

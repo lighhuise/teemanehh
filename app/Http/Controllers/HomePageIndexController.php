@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
-
-use App\Models\Service;
 
 class HomePageIndexController extends Controller
 {

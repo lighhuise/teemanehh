@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/react";
 import { buttonVariants } from "@/components/ui/button";
 import { FloatingStatCard } from "@/components/ui/misc/floating-stat-card";
 // @ts-ignore
-import imgCompanyIntro from "@/../images/IMG_0190-copy.webp";
+import imgCompanyIntro from "@/../images/heavy-haulage-01.webp";
 import CutoutBox from "@/components/ui/misc/cutout-box";
 
 export function HomeIntroSection() {

@@ -6,8 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-// @ts-ignore
-import logoUrl from '@/../images/logo.svg';
+import Logo from '@/components/ui/misc/logo';
 import Wrapper from "@/components/ui/misc/wrapper";
 import { ModeToggle } from '@/components/mode-toggle';
 import { home } from '@/routes';
@@ -27,8 +26,8 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Notification Bar - Static (scrolls away) */}
-      <div className="bg-linear-to-t from-primary/70 to-primary border-b-2 relative  bordr-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
+       {/*Notification Bar - Static (scrolls away) */}
+      <div className="bg-linear-to-t fixed top-0 inset-x-0  from-primary to-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
         <Wrapper className="flex justify-between items-center w-full">
            <div className="flex items-center gap-6">
               <span className="flex items-center gap-2 ">
@@ -47,15 +46,11 @@ export default function Navigation() {
       </div>
 
       {/* Navigation - Sticky */}
-      <nav className="sticky top-2 z-50 w-full  transition-all duration-300">
+      <nav className="fixed top-10 z-50 w-full  transition-all duration-300">
         <Wrapper className="flex h-20 items-center justify-between bg-background border border-border shadow-xs rounded-md">
           {/* Logo */}
           <Link href="/" prefetch="hover" className="flex items-center gap-2 group">
-            <img
-              src={logoUrl}
-              alt="Teemane Heavy Haulage Logo"
-              className="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
+            <Logo className="h-11 w-auto transition-transform duration-300 group-hover:scale-105" aria-label="Teemane Heavy Haulage Logo" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -109,7 +104,7 @@ export default function Navigation() {
 
                 {/* Sheet Header with Logo */}
                 <div className="flex items-center gap-3 px-6 py-5 border-b border-border">
-                  <img src={logoUrl} alt="Teemane Heavy Haulage Logo" className="h-9 w-auto" />
+                  <Logo className="h-9 w-auto" aria-label="Teemane Heavy Haulage Logo" />
                 </div>
 
                 {/* Links */}

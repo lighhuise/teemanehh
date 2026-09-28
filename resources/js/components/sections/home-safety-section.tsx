@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/react";
 import { buttonVariants } from "@/components/ui/button";
 import { FloatingStatCard } from "@/components/ui/misc/floating-stat-card";
 // @ts-ignore
-import imgSafety from "@/../images/media-24-building.webp";
+import imgSafety from "@/../images/heavy-haulage-03.webp";
 import CutoutBox from "@/components/ui/misc/cutout-box";
 
 export function HomeSafetySection() {

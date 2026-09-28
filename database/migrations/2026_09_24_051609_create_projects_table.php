@@ -17,21 +17,21 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('featured_image')->nullable();
             $table->json('gallery')->nullable();
-            
+
             // Context
             $table->string('industry')->nullable();
             $table->string('origin')->nullable();
             $table->string('destination')->nullable();
-            
+
             // Core Load Stats
             $table->string('load_weight')->nullable();
             $table->string('load_dimensions')->nullable();
             $table->string('equipment_used')->nullable();
-            
+
             // Content
             $table->text('route_challenges')->nullable();
             $table->longText('content')->nullable();
-            
+
             $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });

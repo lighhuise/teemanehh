@@ -15,6 +15,6 @@ return [
             'email' => 'robyn@teemaniecranes.co.za',
         ],
     ],
-    
+
     'default_password' => env('SEEDER_DEFAULT_PASSWORD', 'password'),
 ];

@@ -4,6 +4,7 @@ import Wrapper from '@/components/ui/misc/wrapper';
 import {Target, ShieldCheck, Trophy, Truck, Users, Building2, Zap, Award, HardHat} from 'lucide-react';
 import { FloatingStatCard } from '@/components/ui/misc/floating-stat-card';
 import SectionHeading from '@/components/ui/misc/section-heading';
+import PageHeader from '@/components/ui/misc/page-header';
 import StatsBar from '@/components/stats-bar';
 // @ts-ignore
 import imgBoat from '@/../images/THH-Boat.webp';
@@ -13,24 +14,17 @@ export default function AboutUs() {
         <>
 
             {/* Hero Section */}
-            <div className="bg-muted/30 py-24 border-b border-border">
-                <Wrapper>
-                    <SectionHeading
-                        label="Our Story"
-                        title={<>Redefining What's Possible In <span className="text-primary">Mobile Crane</span> Hire.</>}
-                        align="center"
-                        className="mb-16"
-                    >
-                        Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites, from high-stakes projects to complex operations.
-                    </SectionHeading>
-                </Wrapper>
-            </div>
+            <PageHeader
+                title={<>Redefining What's Possible In <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-blue-300">Heavy Haulage.</span></>}
+                description="Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding transport routes, delivering complex, oversized machinery with precision."
+                image={imgBoat}
+            />
 
             {/* Stats Bar */}
             <StatsBar />
 
             {/* Core Content Section */}
-            <section className="py-24 bg-background">
+            <section className="py-2 bg-background">
                 <Wrapper>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <div className="space-y-8">

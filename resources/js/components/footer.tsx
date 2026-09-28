@@ -1,8 +1,7 @@
 import { Link } from '@inertiajs/react';
 import { ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
 import Wrapper from "@/components/ui/misc/wrapper";
-// @ts-ignore
-import logoUrl from '@/../images/logo.svg';
+import Logo from '@/components/ui/misc/logo';
 
 export default function Footer() {
     return (
@@ -18,7 +17,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="lg:col-span-4 flex flex-col gap-8">
                         <Link href="/" className="inline-block">
-                            <img src={logoUrl} alt="Teemane Heavy Haulage Logo" className="h-16 w-auto" />
+                            <Logo className="h-16 w-auto" aria-label="Teemane Heavy Haulage Logo" />
                         </Link>
                         <p className="text-muted-foreground leading-relaxed max-w-sm">
                             The only name trusted to perform on South Africa's most demanding worksites. Unmatched excellence in crane hire, heavy lifting and specialised transport since 2012.
