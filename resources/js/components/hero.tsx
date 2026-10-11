@@ -1,56 +1,101 @@
 import CutoutBox from "@/components/ui/misc/cutout-box";
+import Wrapper from "@/components/ui/misc/wrapper";
 import { Link } from "@inertiajs/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, MapPin, Clock } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 // @ts-ignore
 import heroBgImage from "@/../images/heavy-haulage-02.webp";
 
 export default function Hero() {
-    return (
+    const ref = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end start"]
+    });
 
+    // Image moves slightly down as we scroll down (slower than scroll)
+    const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+    // Text moves down faster than image, creating depth
+    const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+    // Fade out text slightly as it scrolls away
+    const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
+    return (
+        <div ref={ref}>
             <CutoutBox
                 position="bottom"
-                className="px-4 sm:px-6 pt-0 pb-8 relative grid place-content-center z-0 drop-shadow-lg drop-shadow-black/30 min-h-screen"
+                className="relative flex flex-col justify-end z-0 drop-shadow-lg min-h-[75vh] sm:min-h-[85vh] overflow-hidden"
             >
-                {/* Background Image inside the Cutout mask */}
-                <div className="absolute inset-0 bg-background">
+                {/* Background Image Container - animated for parallax */}
+                <motion.div
+                    className="absolute inset-0 bg-slate-950 origin-top"
+                    style={{ y: yImage }}
+                >
                     <img
                         src={heroBgImage}
                         alt="Teemane Heavy Haulage"
-                        className="absolute inset-0 w-full h-full object-cover object-center"
+                        // Make image taller to prevent edges from showing during parallax translation
+                        className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-center"
                     />
-                    <div className="absolute inset-0 bg-linear-to-t from-primary/60 via-primary/30 to-transparent" />
-                </div>
+                    {/* Gradient overlays to darken bottom-left for text readability while leaving image visible */}
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/85 via-slate-950/30 to-black/10" />
+                    {/*<div className="absolute inset-0 bg-linear-to-r from-slate-950/70 via-slate-950/20 to-transparent" />*/}
+                </motion.div>
 
-                {/* Content - Drastically reduced Y-padding here to make it much shorter */}
-                <div className="relative z-10 px-6 sm:px-12 py-10 sm:py-16 max-w-4xl mx-auto text-center space-y-6">
-                    <div className="space-y-4 drop-shadow-lg drop-shadow-primary/30">
-                        <h1 className="text-3xl sm:text-4xl lg:text-7xl font-black tracking-tight text-white leading-[1.1]">
-                            Heavy Haulage. <br/>
-                            <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500">Precisely Planned.</span> <br/>
-                            Reliably Delivered.
-                        </h1>
-                        <p className="text-base sm:text-lg text-white font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-                            Specialised transportation solutions for machinery, oversized equipment and some of the most demanding abnormal loads.
-                        </p>
-                    </div>
+                {/* Content Container - animated for parallax */}
+                <motion.div
+                    className="relative z-10 w-full"
+                    style={{ y: yText, opacity: opacityText }}
+                >
+                    <Wrapper className="pb-12 sm:pb-16 pt-32 sm:pt-40">
+                        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-12">
+                            {/* Left: Heading and Description */}
+                            <div className="max-w-xl text-left space-y-3">
+                                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black uppercase tracking-tighter text-white leading-[1.1] drop-shadow-xl">
+                                    Moving the <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 drop-shadow-sm pr-1 pb-1">Impossible</span>
+                                </h1>
+                                <p className="text-sm sm:text-base lg:text-lg text-slate-200/90 font-medium leading-relaxed drop-shadow-md">
+                                    South Africa's most trusted heavy haulage experts. We specialize in abnormal loads, oversized machinery, and complex transport logistics.
+                                </p>
+                            </div>
 
-                    <div className="flex flex-col sm:flex-row items-center text-sm justify-center gap-4 pt-2">
-                        <Link
-                            href="/contact-us"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold tracking-widest uppercase px-6 py-3 rounded-lg shadow-sm transition-all"
-                        >
-                            Plan Your Transport
-                        </Link>
-                        <Link
-                            href="/services"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-background/70 hover:bg-background border-2 border-primary/20 hover:border-primary text-foreground font-bold tracking-widest uppercase px-6 py-3 rounded-lg backdrop-blur-sm transition-all"
-                        >
-                            Explore Our Services
-                            <ArrowRight className="w-4 h-4" />
-                        </Link>
-                    </div>
-                </div>
+                            {/* Right: Trust Badges and CTA Buttons */}
+                            <div className="flex flex-col lg:items-end gap-4 shrink-0">
+                                {/* Trust Badges */}
+                                <div className="flex flex-wrap items-center lg:justify-end gap-2 sm:gap-3 text-xs font-semibold text-slate-200">
+                                    <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                        <ShieldCheck className="w-3.5 h-3.5 text-sky-400"/> Fully Insured
+                                    </div>
+                                    <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                        <MapPin className="w-3.5 h-3.5 text-sky-400"/> Nationwide Routes
+                                    </div>
+                                    <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                        <Clock className="w-3.5 h-3.5 text-sky-400"/> 24/7 Response
+                                    </div>
+                                </div>
+
+                                {/* Call to action buttons */}
+                                <div className="flex flex-wrap items-center lg:justify-end gap-3 pt-1">
+                                    <Link
+                                        href="/contact-us"
+                                        className="inline-flex items-center justify-center gap-2 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase px-6 py-3 rounded-lg text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                                    >
+                                        Request A Quote
+                                    </Link>
+                                    <Link
+                                        href="/services"
+                                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold tracking-widest uppercase px-6 py-3 rounded-lg text-xs sm:text-sm backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+                                    >
+                                        View Fleet & Services
+                                        <ArrowRight className="w-4 h-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </Wrapper>
+                </motion.div>
             </CutoutBox>
-
+        </div>
     );
 }

@@ -29,7 +29,7 @@ Bellville South, Cape Town, 7530
 **Phone:** 084 263 7690
 **Phone Note:** Available 24hrs, 365 Days
 
-**Email:** enquiries@thh.co.za
+**Email:** enquiries@teemanehh.co.za
 
 **Enquiry Types (Labels):** 
 - New Project

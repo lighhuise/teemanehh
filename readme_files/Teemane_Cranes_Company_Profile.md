@@ -145,7 +145,7 @@ Whether you’re moving large structural components, industrial machinery, or mo
 
 ## Heavy Lifting Capabilities
 
-### Specialized Crane Lifting
+### specialised Crane Lifting
 
 We provide mobile and crawler cranes capable of lifting loads of varying sizes and weights, ensuring the right equipment is used for maximum efficiency and safety.
 
@@ -245,7 +245,7 @@ Whether you’re managing a construction project, industrial operation, or infra
 
 # 8. Specialist Lifting Services
 
-## Specialized Crane Lifting
+## specialised Crane Lifting
 
 We provide mobile and crawler cranes capable of lifting loads of varying sizes and weights, ensuring the right equipment is used for maximum efficiency and safety.
 
@@ -363,7 +363,7 @@ Ready to respond to your lifting needs anytime, day or night.
 
 **Phone:** 084 263 7690
 
-**Email:** enquiries@thh.co.za
+**Email:** enquiries@teemanehh.co.za
 
 **Availability:** 24hrs, 365 Days
 
@@ -435,7 +435,7 @@ An alternate holding page currently indexed on the website states:
 
 **084 263 7690**
 
-**enquiries@thh.co.za**
+**enquiries@teemanehh.co.za**
 
 **Available: 24hrs, 365 Days**
 
@@ -636,7 +636,7 @@ Home
 
 **Phone:** 084 263 7690
 
-**Email:** enquiries@thh.co.za
+**Email:** enquiries@teemanehh.co.za
 
 **Availability:** 24hrs, 365 Days
 

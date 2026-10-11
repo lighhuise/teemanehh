@@ -1,151 +1,26 @@
 import { Head } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
-import Wrapper from '@/components/ui/misc/wrapper';
-import {Target, ShieldCheck, Trophy, Truck, Users, Building2, Zap, Award, HardHat} from 'lucide-react';
-import { FloatingStatCard } from '@/components/ui/misc/floating-stat-card';
-import SectionHeading from '@/components/ui/misc/section-heading';
 import PageHeader from '@/components/ui/misc/page-header';
-import StatsBar from '@/components/stats-bar';
+
+import AboutManifesto from '@/components/sections/about-manifesto';
+import AboutCapabilities from '@/components/sections/about-capabilities';
+
 // @ts-ignore
-import imgBoat from '@/../images/THH-Boat.webp';
+import imgHeavy1 from '@/../images/heavy-haulage-01.webp';
 
 export default function AboutUs() {
     return (
         <>
-
             {/* Hero Section */}
             <PageHeader
-                title={<>Redefining What's Possible In <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-blue-300">Heavy Haulage.</span></>}
-                description="Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding transport routes, delivering complex, oversized machinery with precision."
-                image={imgBoat}
+
+                title={<>Redefining What's Possible In <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 drop-shadow-sm pr-1 pb-1">Heavy Haulage</span></>}
+                description="Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding transport routes, delivering complex, oversized machinery with absolute precision."
+                image={imgHeavy1}
             />
 
-            {/* Stats Bar */}
-            <StatsBar />
-
-            {/* Core Content Section */}
-            <section className="py-2 bg-background">
-                <Wrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                        <div className="space-y-8">
-                            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-foreground leading-[1.2]">
-                                Leading the projects that shape industries today.
-                            </h2>
-                            <p className="text-lg text-muted-foreground leading-relaxed">
-                                Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and a team driven to deliver unmatched results, we stand at the forefront of the sector. Every lift, transport, and rigging operation is executed with precision, safety, and efficiency at its core.
-                            </p>
-
-                            <div className="grid sm:grid-cols-2 gap-8 pt-8">
-                                <div className="space-y-4">
-                                    <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg border border-primary/20">
-                                        <Trophy className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-black uppercase">Proven Track Record</h3>
-                                    <p className="text-muted-foreground text-sm">Countless victories across South Africa's most demanding worksites since 2012.</p>
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg border border-primary/20">
-                                        <Truck className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-black uppercase">Massive Capacity</h3>
-                                    <p className="text-muted-foreground text-sm">A modern fleet of hydraulic cranes with staggering capacities of up to 440 tons.</p>
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg border border-primary/20">
-                                        <HardHat className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-black uppercase">Unmatched Safety</h3>
-                                    <p className="text-muted-foreground text-sm">Stringent safety protocols ensuring zero-incident operations on high-stakes projects.</p>
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg border border-primary/20">
-                                        <Target className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-xl font-black uppercase">Precision Execution</h3>
-                                    <p className="text-muted-foreground text-sm">A highly skilled team driven to deliver unmatched results in complex operations.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="relative pb-6 lg:pb-0">
-                            <div className="aspect-4/5 rounded-xl overflow-hidden border border-border shadow-lg">
-                                <img
-                                    src={imgBoat}
-                                    alt="Teemane Heavy Haulage maritime operations"
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-
-                            <FloatingStatCard
-                                value="440T"
-                                label="Maximum Fleet Capacity"
-                                position="bottom-left"
-                            />
-                        </div>
-                    </div>
-                </Wrapper>
-            </section>
-
-            {/* Trusted Partner Section */}
-            <section className="py-24 bg-muted/30 border-y border-border">
-                <Wrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
-                        {/* Left: Icon Pillars */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order-2 lg:order-1">
-                            <div className="bg-background rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 group">
-                                <div className="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Building2 className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-lg font-black uppercase tracking-tighter mb-3">Sole Provider</h3>
-                                <p className="text-muted-foreground text-sm leading-relaxed">Trusted as the exclusive full turnkey solutions partner by South Africa's most established companies.</p>
-                            </div>
-                            <div className="bg-background rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 group">
-                                <div className="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Users className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-lg font-black uppercase tracking-tighter mb-3">100+ Years Experience</h3>
-                                <p className="text-muted-foreground text-sm leading-relaxed">Our management team brings over a century of combined industry experience to every project.</p>
-                            </div>
-                            <div className="bg-background rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 group">
-                                <div className="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Zap className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-lg font-black uppercase tracking-tighter mb-3">High-Risk Certainty</h3>
-                                <p className="text-muted-foreground text-sm leading-relaxed">The depth of knowledge, control, and capability required to deliver certainty in high-risk environments.</p>
-                            </div>
-                            <div className="bg-background rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 group">
-                                <div className="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Award className="w-7 h-7" />
-                                </div>
-                                <h3 className="text-lg font-black uppercase tracking-tighter mb-3">Complex Success</h3>
-                                <p className="text-muted-foreground text-sm leading-relaxed">A track record of success on projects of the highest complexity, delivered on time and to specification.</p>
-                            </div>
-                        </div>
-
-                        {/* Right: Text */}
-                        <div className="space-y-8 order-1 lg:order-2">
-                            <SectionHeading
-                                label="Why Choose Us"
-                                title="Entrusted by South Africa's Most Established Companies."
-                                align="left"
-                            >
-                                <div className="space-y-4">
-                                    <p>
-                                        Operating across some of the most advanced and complex sites, we are entrusted by South Africa's most established companies as their sole provider for full turnkey solutions.
-                                    </p>
-                                    <p>
-                                        Backed by more than 100 years of combined management experience, we bring the depth of knowledge, control and capability required to deliver certainty in high-risk environments and success on projects of the highest complexity.
-                                    </p>
-                                </div>
-                            </SectionHeading>
-                            <a href="/contact-us" className="inline-flex items-center gap-3 bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow px-8 py-4 rounded-lg font-bold tracking-widest uppercase text-sm">
-                                Work With Us
-                            </a>
-                        </div>
-                    </div>
-                </Wrapper>
-            </section>
+            <AboutManifesto />
+            <AboutCapabilities />
         </>
     );
 }

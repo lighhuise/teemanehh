@@ -27,7 +27,7 @@ export default function Navigation() {
   return (
     <>
        {/*Notification Bar - Static (scrolls away) */}
-      <div className="bg-linear-to-t fixed top-0 inset-x-0  from-primary to-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
+      <div className="bg-linear-to-t fixed top-0 inset-x-0 isolate  from-primary to-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
         <Wrapper className="flex justify-between items-center w-full">
            <div className="flex items-center gap-6">
               <span className="flex items-center gap-2 ">
@@ -43,15 +43,18 @@ export default function Navigation() {
 
            </div>
         </Wrapper>
+          <div aria-hidden={`true`} className="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)]"></div>
+
       </div>
 
       {/* Navigation - Sticky */}
-      <nav className="fixed top-10 z-50 w-full  transition-all duration-300">
-        <Wrapper className="flex h-20 items-center justify-between bg-background border border-border shadow-xs rounded-md">
-          {/* Logo */}
-          <Link href="/" prefetch="hover" className="flex items-center gap-2 group">
-            <Logo className="h-11 w-auto transition-transform duration-300 group-hover:scale-105" aria-label="Teemane Heavy Haulage Logo" />
-          </Link>
+      <nav className="fixed top-0 sm:top-10 z-50 w-full transition-all duration-300">
+        <div className="w-full max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div className="flex h-16 sm:h-20 items-center justify-between bg-background border-b sm:border border-border shadow-xs sm:rounded-md px-4 sm:px-6">
+            {/* Logo */}
+            <Link href="/" prefetch="hover" className="flex items-center gap-2 group">
+              <Logo className="h-9 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105" aria-label="Teemane Heavy Haulage Logo" />
+            </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8">
@@ -77,7 +80,7 @@ export default function Navigation() {
             <Link
               href="/contact-us"
               prefetch="hover"
-              className="text-sm font-bold tracking-widest uppercase inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow px-5 py-2.5 rounded-lg"
+              className="text-sm font-bold tracking-widest uppercase inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow px-5 py-2.5 rounded-xl"
             >
               Contact Us
             </Link>
@@ -91,13 +94,11 @@ export default function Navigation() {
           <div className="flex items-center gap-2 md:hidden">
             <ModeToggle />
             <Sheet>
-              <SheetTrigger >
-                <button
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-                >
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle menu</span>
-                </button>
+              <SheetTrigger
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+              >
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
               </SheetTrigger>
               <SheetContent side="right" className="w-[80vw] sm:w-87.5 bg-background border-l border-border flex flex-col p-0">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
@@ -132,7 +133,7 @@ export default function Navigation() {
                   <Link
                     href="/contact-us"
                     prefetch="hover"
-                    className="mt-3 flex items-center justify-start gap-2 px-4 py-3 rounded-lg text-sm font-bold tracking-widest uppercase bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow"
+                    className="mt-3 flex items-center justify-start gap-2 px-4 py-3 rounded-xl text-sm font-bold tracking-widest uppercase bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow"
                   >
                     Contact Us
                   </Link>
@@ -146,7 +147,8 @@ export default function Navigation() {
               </SheetContent>
             </Sheet>
           </div>
-        </Wrapper>
+        </div>
+      </div>
       </nav>
     </>
   );

@@ -69,7 +69,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-4">
                                 <Mail className="w-6 h-6 text-primary shrink-0" />
-                                <span className="text-muted-foreground">enquiries@thh.co.za</span>
+                                <span className="text-muted-foreground">enquiries@teemanehh.co.za</span>
                             </li>
                         </ul>
                     </div>

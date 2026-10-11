@@ -68,7 +68,7 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
 
                                 <div className="space-y-6">
                                     <div className="flex items-start gap-4">
-                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-md border border-primary/20">
+                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
                                             <MapPin className="w-6 h-6" />
                                         </div>
                                         <div>
@@ -80,7 +80,7 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-md border border-primary/20">
+                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
                                             <Phone className="w-6 h-6" />
                                         </div>
                                         <div>
@@ -92,13 +92,13 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-md border border-primary/20">
+                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
                                             <Mail className="w-6 h-6" />
                                         </div>
                                         <div>
                                             <h3 className="font-black text-lg">Email</h3>
-                                            <a href="mailto:enquiries@thh.co.za" className="text-muted-foreground hover:text-primary transition-colors">
-                                                enquiries@thh.co.za
+                                            <a href="mailto:enquiries@teemanehh.co.za" className="text-muted-foreground hover:text-primary transition-colors">
+                                                enquiries@teemanehh.co.za
                                             </a>
                                         </div>
                                     </div>
@@ -117,9 +117,9 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                         </div>
 
                         {/* Contact Form */}
-                        <div className="bg-background border border-border p-8 md:p-12 rounded-lg shadow-xl relative">
+                        <div className="bg-background border border-border p-8 md:p-12 rounded-3xl shadow-xl relative">
                             {flash?.success ? (
-                                <div className="absolute inset-0 z-10 bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center text-center p-8 rounded-lg border border-primary/50">
+                                <div className="absolute inset-0 z-10 bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center text-center p-8 rounded-3xl border border-primary/50">
                                     <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
                                         <CheckCircle2 className="w-10 h-10" />
                                     </div>

@@ -1,206 +1,194 @@
 {
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
   "node_modules/leaflet/dist/leaflet.css": [
-    "/build/assets/map-BwPOPjbu.js",
+    "/build/assets/map-CnA-26d6.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "node_modules/swiper/modules/navigation.css": [
-    "/build/assets/show-CRBvptny.js",
+    "/build/assets/show-DbruRt7F.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/swiper/modules/pagination.css": [
-    "/build/assets/show-CRBvptny.js",
+    "/build/assets/show-DbruRt7F.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/swiper/swiper.css": [
-    "/build/assets/show-CRBvptny.js",
+    "/build/assets/show-DbruRt7F.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/yet-another-react-lightbox/dist/styles.css": [
-    "/build/assets/show-CRBvptny.js",
+    "/build/assets/show-DbruRt7F.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
-  "resources/images/IMG_0190-copy.webp": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+  "resources/images/heavy-haulage-01.webp": [
+    "/build/assets/heavy-haulage-01-CdrHGCfr.js",
+    "/build/assets/heavy-haulage-02-DJont-aN.webp",
+    "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
-  "resources/images/THH-Boat.webp": [
-    "/build/assets/about-us-CxlwVgGV.js",
-    "/build/assets/THH-Boat-DihsRzVb.webp"
+  "resources/images/heavy-haulage-02.webp": [
+    "/build/assets/heavy-haulage-01-CdrHGCfr.js",
+    "/build/assets/heavy-haulage-02-DJont-aN.webp",
+    "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
-  "resources/images/media-24-building.webp": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
-  ],
-  "resources/images/trucks-loaded.webp": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+  "resources/images/heavy-haulage-03.webp": [
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/emergency-cta.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/footer.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/hero-simple-split.tsx": [
-    "/build/assets/welcome-DjEeiTIM.js"
+    "/build/assets/welcome-BEXlEepl.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/map.tsx": [
-    "/build/assets/map-BwPOPjbu.js",
+    "/build/assets/map-CnA-26d6.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "resources/js/components/mode-toggle.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/navigation.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
+  ],
+  "resources/js/components/sections/about-capabilities.tsx": [
+    "/build/assets/about-us-pXCYrUl4.js"
+  ],
+  "resources/js/components/sections/about-manifesto.tsx": [
+    "/build/assets/about-us-pXCYrUl4.js"
+  ],
+  "resources/js/components/sections/dark-cta.tsx": [
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/service-card-DWjoXDVZ.js"
-  ],
-  "resources/js/components/stats-bar.tsx": [
-    "/build/assets/about-us-CxlwVgGV.js",
-    "/build/assets/THH-Boat-DihsRzVb.webp"
+    "/build/assets/service-card-c8rnEs57.js"
   ],
   "resources/js/components/theme-provider.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/accordion.tsx": [
-    "/build/assets/faq-Cxf3PI7g.js"
+    "/build/assets/faq-DO9oOxWK.js"
   ],
   "resources/js/components/ui/button.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/card.tsx": [
-    "/build/assets/welcome-DjEeiTIM.js"
+    "/build/assets/welcome-BEXlEepl.js"
   ],
   "resources/js/components/ui/dropdown-menu.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/input.tsx": [
-    "/build/assets/input-DF32eJjK.js"
+    "/build/assets/input-Bo_dg0yc.js"
   ],
   "resources/js/components/ui/misc/cutout-box.tsx": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/ui/misc/floating-stat-card.tsx": [
-    "/build/assets/floating-stat-card-BZ0yW1qa.js"
+    "/build/assets/floating-stat-card-BuDhEk1j.js"
+  ],
+  "resources/js/components/ui/misc/logo-mark.tsx": [
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/misc/logo.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/misc/page-header.tsx": [
-    "/build/assets/page-header-DkeVherD.js"
+    "/build/assets/page-header-D9UyPjf9.js"
   ],
   "resources/js/components/ui/misc/section-heading.tsx": [
-    "/build/assets/section-heading-DT21cNXU.js"
+    "/build/assets/section-heading-BeOdYePI.js"
   ],
   "resources/js/components/ui/misc/wrapper.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/sheet.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/components/ui/textarea.tsx": [
-    "/build/assets/contact-us-BvB0wdDH.js"
+    "/build/assets/contact-us-CEnrk13t.js"
   ],
   "resources/js/components/ui/toast.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/layouts/app-layout.tsx": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/lib/utils.ts": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/pages/about-us.tsx": [
-    "/build/assets/about-us-CxlwVgGV.js",
-    "/build/assets/THH-Boat-DihsRzVb.webp"
+    "/build/assets/about-us-pXCYrUl4.js"
   ],
   "resources/js/pages/contact-us.tsx": [
-    "/build/assets/contact-us-BvB0wdDH.js"
+    "/build/assets/contact-us-CEnrk13t.js"
   ],
   "resources/js/pages/employees/index.tsx": [
-    "/build/assets/employees-BkvI2z8N.js"
+    "/build/assets/employees-_Ou9rRrE.js"
   ],
   "resources/js/pages/employees/show.tsx": [
-    "/build/assets/show-BdCfxcNy.js"
+    "/build/assets/show-BxyCUPzF.js"
   ],
   "resources/js/pages/error.tsx": [
-    "/build/assets/error-B9qulDZX.js"
+    "/build/assets/error-DLWmeKNb.js"
   ],
   "resources/js/pages/faq.tsx": [
-    "/build/assets/faq-Cxf3PI7g.js"
+    "/build/assets/faq-DO9oOxWK.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-BkN9R1ok.js",
-    "/build/assets/trucks-loaded-BxQH6cqu.webp",
-    "/build/assets/IMG_0190-copy-870kN3in.webp",
-    "/build/assets/media-24-building-C-uGPsNs.webp"
+    "/build/assets/home-D9x6HFVB.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/pages/legal/privacy-policy.tsx": [
-    "/build/assets/privacy-policy-8e-tpAXP.js"
+    "/build/assets/privacy-policy-T7zG1TGY.js"
   ],
   "resources/js/pages/legal/terms-of-service.tsx": [
-    "/build/assets/terms-of-service-Civ7GtNw.js"
+    "/build/assets/terms-of-service-Uhr9dViW.js"
   ],
   "resources/js/pages/services/index.tsx": [
-    "/build/assets/services-OfObxirE.js"
+    "/build/assets/services-D1qt83oX.js"
   ],
   "resources/js/pages/services/show.tsx": [
-    "/build/assets/show-CRBvptny.js",
+    "/build/assets/show-DbruRt7F.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "resources/js/pages/welcome.tsx": [
-    "/build/assets/welcome-DjEeiTIM.js"
+    "/build/assets/welcome-BEXlEepl.js"
   ],
   "resources/js/routes/index.ts": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ],
   "resources/js/routes/team/index.ts": [
-    "/build/assets/team-DC8FxeTK.js"
+    "/build/assets/team-Cs5C6Isn.js"
   ],
   "resources/js/ssr.tsx": [],
   "resources/js/wayfinder/index.ts": [
-    "/build/assets/app-layout-jF4oSNeR.js"
+    "/build/assets/app-layout-CcOx8vC6.js"
   ]
 }

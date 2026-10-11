@@ -9,7 +9,7 @@ export default function Index({ services }: { services: any[] }) {
     return (
         <AppLayout title="Services">
             <PageHeader 
-                title={<>SPECIALISED TRANSPORT <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-blue-300">SOLUTIONS</span></>}
+                title={<>SPECIALISED TRANSPORT <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1">SOLUTIONS</span></>}
                 description="We understand that every heavy haulage project demands precision, reliability and rigorous planning. Our capabilities provide the flexibility and strength needed to tackle the most demanding abnormal loads."
             />
 

@@ -17,7 +17,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
     return (
         <Link
             href={`/services/${service.slug}`}
-            className="group relative p-8 bg-card flex flex-col justify-between min-h-65 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 rounded-2xl border border-border/40 hover:border-primary/20"
+            className="group relative p-8 bg-card flex flex-col justify-between min-h-65 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 rounded-3xl border border-border/40 hover:border-primary/20"
         >
             <div className="space-y-4">
                 <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-sm mb-2">

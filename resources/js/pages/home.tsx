@@ -4,7 +4,7 @@ import { Head } from "@inertiajs/react";
 import { HomeIntroSection } from "@/components/sections/home-intro-section";
 import { HomeServicesSection } from "@/components/sections/home-services-section";
 import { HomeSafetySection } from "@/components/sections/home-safety-section";
-
+import DarkCta from "@/components/sections/dark-cta";
 
 export default function Home({ services }: { services: any[] }) {
     return (
@@ -18,7 +18,7 @@ export default function Home({ services }: { services: any[] }) {
             <HomeIntroSection />
             <HomeServicesSection services={services} />
             <HomeSafetySection />
-            {/*<HomeCredentialsSection />*/}
+            <DarkCta />
         </div>
     );
 }

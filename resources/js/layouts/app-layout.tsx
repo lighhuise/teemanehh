@@ -56,13 +56,13 @@ export default function AppLayout({ children, title, description, image }: AppLa
             <main id={`main`} className="w-full flex-1 flex flex-col">
                 {children}
             </main>
-
+            <EmergencyCta />
             {mounted && (
                 <Suspense fallback={null}>
                     <Map />
                 </Suspense>
             )}
-            <EmergencyCta />
+
             <Footer />
             <Toaster   />
         </div>

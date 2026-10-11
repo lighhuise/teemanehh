@@ -19,18 +19,18 @@ var renderPage = (page) => createInertiaApp({
 	render: ReactDOMServer.renderToString,
 	title: (title) => `${title} - ${appName}`,
 	resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* #__PURE__ */ Object.assign({
-		"./pages/about-us.tsx": () => import("./assets/about-us-CxlwVgGV.js"),
-		"./pages/contact-us.tsx": () => import("./assets/contact-us-BvB0wdDH.js"),
-		"./pages/employees/index.tsx": () => import("./assets/employees-BkvI2z8N.js"),
-		"./pages/employees/show.tsx": () => import("./assets/show-BdCfxcNy.js"),
-		"./pages/error.tsx": () => import("./assets/error-B9qulDZX.js"),
-		"./pages/faq.tsx": () => import("./assets/faq-Cxf3PI7g.js"),
-		"./pages/home.tsx": () => import("./assets/home-BkN9R1ok.js"),
-		"./pages/legal/privacy-policy.tsx": () => import("./assets/privacy-policy-8e-tpAXP.js"),
-		"./pages/legal/terms-of-service.tsx": () => import("./assets/terms-of-service-Civ7GtNw.js"),
-		"./pages/services/index.tsx": () => import("./assets/services-OfObxirE.js"),
-		"./pages/services/show.tsx": () => import("./assets/show-CRBvptny.js"),
-		"./pages/welcome.tsx": () => import("./assets/welcome-DjEeiTIM.js")
+		"./pages/about-us.tsx": () => import("./assets/about-us-pXCYrUl4.js"),
+		"./pages/contact-us.tsx": () => import("./assets/contact-us-CEnrk13t.js"),
+		"./pages/employees/index.tsx": () => import("./assets/employees-_Ou9rRrE.js"),
+		"./pages/employees/show.tsx": () => import("./assets/show-BxyCUPzF.js"),
+		"./pages/error.tsx": () => import("./assets/error-DLWmeKNb.js"),
+		"./pages/faq.tsx": () => import("./assets/faq-DO9oOxWK.js"),
+		"./pages/home.tsx": () => import("./assets/home-D9x6HFVB.js"),
+		"./pages/legal/privacy-policy.tsx": () => import("./assets/privacy-policy-T7zG1TGY.js"),
+		"./pages/legal/terms-of-service.tsx": () => import("./assets/terms-of-service-Uhr9dViW.js"),
+		"./pages/services/index.tsx": () => import("./assets/services-D1qt83oX.js"),
+		"./pages/services/show.tsx": () => import("./assets/show-DbruRt7F.js"),
+		"./pages/welcome.tsx": () => import("./assets/welcome-BEXlEepl.js")
 	})),
 	setup({ App, props }) {
 		return /* @__PURE__ */ jsx(App, { ...props });

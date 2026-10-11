@@ -138,6 +138,6 @@
     @apply font-sans;
     }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-black tracking-tighter;
-    }
+    @apply font-heading font-black uppercase tracking-tighter;
+  }
 }

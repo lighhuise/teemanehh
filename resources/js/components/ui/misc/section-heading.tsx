@@ -38,13 +38,13 @@ export default function SectionHeading({
         <div className={cn('flex flex-col space-y-4', alignClass[align], className)}>
             {/* Soft, clean label */}
             {label && (
-                <span className="text-sm font-semibold text-primary tracking-wide uppercase px-3 py-1 rounded-full bg-primary/10">
+                <span className="text-xs font-black uppercase tracking-[0.2em] text-primary px-4 py-1.5 rounded-full bg-primary/10 w-fit">
                     {label}
                 </span>
             )}
 
-            {/* Title - Dropped uppercase and font-black for a fresher, cleaner look */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl max-w-2xl text-balance font-bold tracking-tight text-foreground leading-[1.15]">
+            {/* Title - Reverted to industrial heavy style */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl max-w-2xl text-balance font-heading font-black uppercase tracking-tighter text-foreground leading-[1.15]">
                 {title}
             </h2>
 

@@ -293,23 +293,20 @@ export default function Show({ service }: { service: Service }) {
     const hasBlocks = service.content_blocks && service.content_blocks.length > 0;
 
     return (
-        <AppLayout 
-            title={service.title} 
+        <AppLayout
+            title={service.title}
             description={service.short_description || service.description?.substring(0, 160)}
             image={service.featured_image_url || undefined}
         >
             {/* Hero */}
-            <div className="relative border-b border-border bg-muted/20">
-                {service.featured_image_url && (
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-                        <img
-                            src={service.featured_image_url}
-                            alt=""
-                            className="w-full h-full object-cover opacity-20  blur-xs"
-                        />
-                    </div>
-                )}
-                <Wrapper className="relative py-24 z-10">
+            <section className="relative border-b border-border bg-background overflow-hidden isolate">
+                {/* Ambient Glows */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">
+                    <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full"></div>
+                    <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-sky-500/5 blur-[120px] rounded-full"></div>
+                </div>
+
+                <Wrapper className="relative py-24 md:py-32 z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                         <div>
                             <Link
@@ -335,17 +332,18 @@ export default function Show({ service }: { service: Service }) {
                         </div>
 
                         {service.featured_image_url && (
-                            <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-2xl">
+                            <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-2xl border border-border/50 group">
                                 <img
                                     src={service.featured_image_url}
                                     alt={service.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
                                 />
+                                <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                         )}
                     </div>
                 </Wrapper>
-            </div>
+            </section>
 
             {/* Content Blocks */}
             {hasBlocks && (
