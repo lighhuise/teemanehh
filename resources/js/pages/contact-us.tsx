@@ -49,8 +49,8 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
             
 
             <PageHeader 
-                title="LET'S GET TO WORK"
-                description="Whether you need a quote, want to discuss a project, or require immediate emergency support. Our team is available 24 hours a day, 365 days a year."
+                title="TELL US ABOUT YOUR MOVE"
+                description="To help us assess your transport requirements, share your cargo specifications, dimensions, collection point, and destination with our team."
             />
 
             <section className="py-24 bg-background">
@@ -63,7 +63,7 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                                     Our Office
                                 </h2>
                                 <p className="text-lg text-muted-foreground mb-8">
-                                    Headquartered in Bellville South, Cape Town, we serve clients across South Africa. Trusted by some of the country's most established companies as their sole provider for full turnkey lifting solutions.
+                                    Headquartered in Bellville South, Cape Town, we provide specialised heavy haulage and machinery transport solutions tailored to your load and schedule.
                                 </p>
 
                                 <div className="space-y-6">
@@ -85,8 +85,8 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                                         </div>
                                         <div>
                                             <h3 className="font-black text-lg">Phone</h3>
-                                            <a href="tel:0842637690" className="text-muted-foreground hover:text-primary transition-colors">
-                                                084 263 7690
+                                            <a href="tel:0861888004" className="text-muted-foreground hover:text-primary transition-colors">
+                                                086 188 8004
                                             </a>
                                             <p className="text-xs text-muted-foreground/70 mt-1 uppercase tracking-wider font-bold">Available 24hrs, 365 Days</p>
                                         </div>
@@ -109,7 +109,7 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                             <div className="border-t border-border pt-8">
                                 <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Enquiry Types</p>
                                 <div className="flex flex-wrap gap-3">
-                                    {['New Project', 'General Inquiry', 'Emergency Support', 'Careers'].map((type) => (
+                                    {['Heavy Haulage', 'Oversized Cargo', 'Machinery Transport', 'General Enquiry'].map((type) => (
                                         <span key={type} className="px-4 py-2 rounded-full border border-border text-sm font-medium text-muted-foreground">{type}</span>
                                     ))}
                                 </div>

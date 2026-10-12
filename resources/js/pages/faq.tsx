@@ -69,11 +69,11 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
                                         Contact Us
                                     </Link>
                                     <a
-                                        href="tel:0842637690"
+                                        href="tel:0861888004"
                                         className="inline-flex w-full sm:w-auto justify-center items-center gap-3 bg-background hover:bg-accent text-foreground transition-all duration-300 shadow-sm border border-border hover:-translate-y-0.5 px-8 py-4 rounded-xl font-bold tracking-widest uppercase text-sm"
                                     >
                                         <PhoneCall className="w-4 h-4 text-primary" />
-                                        084 263 7690
+                                        086 188 8004
                                     </a>
                                 </div>
                             </div>

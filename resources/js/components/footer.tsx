@@ -20,12 +20,12 @@ export default function Footer() {
                             <Logo className="h-16 w-auto" aria-label="Teemane Heavy Haulage Logo" />
                         </Link>
                         <p className="text-muted-foreground leading-relaxed max-w-sm">
-                            The only name trusted to perform on South Africa's most demanding worksites. Unmatched excellence in crane hire, heavy lifting and specialised transport since 2012.
+                            Tailored transportation solutions for oversized cargo, heavy machinery, and industrial equipment across South Africa.
                         </p>
                         <div className="flex flex-col gap-4 mt-4">
                             <div className="flex items-center gap-4 text-sm font-bold tracking-widest text-foreground uppercase">
                                 <div className="h-px w-8 bg-primary"></div>
-                                A Cut Above The Rest
+                                Moving the Impossible
                             </div>
                         </div>
                     </div>
@@ -65,11 +65,11 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-4">
                                 <Phone className="w-6 h-6 text-primary shrink-0" />
-                                <span className="text-muted-foreground">084 263 7690</span>
+                                <a href="tel:0861888004" className="text-muted-foreground hover:text-primary transition-colors">086 188 8004</a>
                             </li>
                             <li className="flex items-center gap-4">
                                 <Mail className="w-6 h-6 text-primary shrink-0" />
-                                <span className="text-muted-foreground">enquiries@teemanehh.co.za</span>
+                                <a href="mailto:enquiries@teemanehh.co.za" className="text-muted-foreground hover:text-primary transition-colors">enquiries@teemanehh.co.za</a>
                             </li>
                         </ul>
                     </div>

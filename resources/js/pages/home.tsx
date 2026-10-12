@@ -10,11 +10,11 @@ export default function Home({ services }: { services: any[] }) {
     return (
         <div className="bg-background selection:bg-primary selection:text-white">
             <Head>
-                <title>A Cut Above The Rest</title>
-                <meta name="description" content="Established in 2012, Teemane Heavy Haulage delivers crane hire, heavy lifting, rigging and specialised transport across South Africa's most demanding worksites. Up to 440T capacity." />
+                <title>Heavy Haulage & Machinery Transport</title>
+                <meta name="description" content="Teemane Heavy Haulage provides tailored transportation for oversized cargo, heavy equipment and industrial machinery across South Africa." />
             </Head>
 
-            <Hero />
+            <   Hero />
             <HomeIntroSection />
             <HomeServicesSection services={services} />
             <HomeSafetySection />

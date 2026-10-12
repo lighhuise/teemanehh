@@ -35,13 +35,13 @@ export default function EmergencyCta() {
                         </div>
 
                         <div className="shrink-0 w-full lg:w-auto">
-                            <a href="tel:0842637690" className="group overflow-clip isolate relative flex items-center justify-center gap-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 px-8 py-6 rounded-xl w-full lg:w-auto shadow-lg hover:shadow-xl hover:-translate-y-1">
+                            <a href="tel:0861888004" className="group overflow-clip isolate relative flex items-center justify-center gap-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 px-8 py-6 rounded-xl w-full lg:w-auto shadow-lg hover:shadow-xl hover:-translate-y-1">
                                 <div className="bg-background/20 p-4 rounded-full group-hover:scale-110 transition-transform duration-500">
                                     <PhoneCall className="w-7 h-7 text-primary-foreground" />
                                 </div>
                                 <div className="text-left">
-                                    <span className="block text-xs font-black uppercase tracking-[0.2em] text-primary-foreground/80 mb-1">Emergency Hotline</span>
-                                    <span className="block text-2xl md:text-4xl font-heading font-black uppercase tracking-tighter text-primary-foreground">084 263 7690</span>
+                                    <span className="block text-xs font-black uppercase tracking-[0.2em] text-primary-foreground/80 mb-1">Direct Line</span>
+                                    <span className="block text-2xl md:text-4xl font-heading font-black uppercase tracking-tighter text-primary-foreground">086 188 8004</span>
                                 </div>
                                 <div aria-hidden={`true`} className="absolute inset-0 -z-10 opacity-10 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)]"></div>
                             </a>
