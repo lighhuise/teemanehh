@@ -50,7 +50,7 @@ export default function Map() {
                                 Find Us On The Map
                             </h2>
                             <p className="text-muted-foreground md:text-lg leading-relaxed pt-2">
-                                Centrally located to rapidly deploy cranes, rigging teams, and heavy transport equipment anywhere across the Western Cape.
+                                Centrally located to rapidly deploy abnormal transport convoys, escort vehicles, and heavy haulage equipment across South Africa and the SADC region.
                             </p>
                         </div>
                         

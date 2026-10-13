@@ -7,8 +7,11 @@ import SectionHeading from '@/components/ui/misc/section-heading';
 import { FloatingStatCard } from '@/components/ui/misc/floating-stat-card';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+// @ts-ignore
 import 'swiper/css';
+// @ts-ignore
 import 'swiper/css/navigation';
+// @ts-ignore
 import 'swiper/css/pagination';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";

@@ -1,647 +1,399 @@
-# Teemane Heavy Haulage — Complete Website & Company Content
+# Teemane Heavy Haulage — Company Profile & Website Content Architecture
 
-> Consolidated content extracted from the **Teemane Heavy Haulage Company Profile PDF** and the publicly accessible content of **thh.co.za**. Website content is organised by page/section so it can be reused for a website redesign or content migration.
+> Consolidated and structured master document for **Teemane Heavy Haulage (THH)**. This guide outlines the **Services Portfolio** (for database seeders and service offerings) and the **Website Page Content** (Home, About, Services, Contact, and Global Elements).
+>
+> **Scope:** Dedicated exclusively to **Abnormal Transport, Heavy Haulage, Route Planning & Escorts, and Cross-Border Logistics**. All legacy references to crane hire and general lifting operations have been retired.
 
 ---
 
-# 1. Brand & Core Messaging
+# Table of Contents
 
-## Tagline
+- [Part 1: Brand & Core Identity](#part-1-brand--core-identity)
+- [Part 2: Services Directory (Database & Service Offerings)](#part-2-services-directory-database--service-offerings)
+  - [1. Heavy Haulage & Abnormal Transport](#1-heavy-haulage--abnormal-transport)
+  - [2. Route Planning & Escort Services](#2-route-planning--escort-services)
+  - [3. Technical Transport Planning & CAD Engineering](#3-technical-transport-planning--cad-engineering)
+  - [4. Multi-Axle Modular Lowbed Transport](#4-multi-axle-modular-lowbed-transport)
+  - [5. Cross-Border Transport Logistics](#5-cross-border-transport-logistics)
+  - [6. Machinery Relocation & Industrial Transit](#6-machinery-relocation--industrial-transit)
+  - [7. Fleet Specifications & Equipment Guide](#7-fleet-specifications--equipment-guide)
+- [Part 3: Website Pages & Content Architecture](#part-3-website-pages--content-architecture)
+  - [Page 1: Home Page (`/`)](#page-1-home-page-)
+  - [Page 2: About Us Page (`/about-us`)](#page-2-about-us-page-about-us)
+  - [Page 3: Services Index & Detail Pages (`/services`, `/services/{slug}`)](#page-3-services-index--detail-pages-services-servicesslug)
+  - [Page 4: Contact Us Page (`/contact-us`)](#page-4-contact-us-page-contact-us)
+  - [Page 5: Frequently Asked Questions (`/faq`)](#page-5-frequently-asked-questions-faq)
+  - [Page 6: Our Team Page (`/our-team`)](#page-6-our-team-page-our-team)
+- [Part 4: Global Website Elements](#part-4-global-website-elements)
+  - [Notification Bar (Top Ticker)](#notification-bar-top-ticker)
+  - [Header & Sticky Navigation](#header--sticky-navigation)
+  - [Emergency Call-To-Action Floating Bar](#emergency-call-to-action-floating-bar)
+  - [Footer](#footer)
+  - [SEO & Metadata Baseline](#seo--metadata-baseline)
+- [Part 5: Database Seeder Reference (`ServiceSeeder.php`)](#part-5-database-seeder-reference-serviceseederphp)
+- [Part 6: Source Notes & Scope Policy](#part-6-source-notes--scope-policy)
 
-**A cut above the rest**
+---
+
+# Part 1: Brand & Core Identity
+
+## Company Name
+**Teemane Heavy Haulage (THH)**
+
+## Official Tagline
+**A Cut Above The Rest**
 
 ## Primary Brand Statements
-
-### Unmatched Excellence in the Most Demanding Operations
-
-### The Nations Largest Projects
-
-### The Only Name Trusted to Perform
-
----
-
-# 2. Homepage
-
-## Hero
-
-### A cut above the rest
-
-Whether you’re lifting heavy machinery, constructing high-rise buildings, or handling complex industrial projects, our skilled team and modern fleet of cranes are here to support your needs.
+- **Moving the Impossible Across Borders**
+- **Unmatched Excellence in the Most Demanding Operations**
+- **When the Scale is Extraordinary, Experience Makes the Difference**
+- **Built on Experience. Defined by Our Reputation.**
+- **Technical Expertise Behind the Extraordinary**
+- **The Nation's Largest Projects. The Only Name Trusted to Perform.**
 
 ---
 
-## Who We Are
-
-### Welcome to Teemane Heavy Haulage
-
-At Teemane Heavy Haulage, we pride ourselves on delivering top-notch crane services with a focus on safety, efficiency, and customer satisfaction.
-
-### Our Story
-
-Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa’s most demanding worksites, from high-stakes projects to complex operations that have redefined what’s possible in mobile crane hire.
-
-Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and a team driven to deliver unmatched results, we stand at the forefront of the sector, leading the projects that continue to shape industries today.
-
-Operating across some of the most advanced and complex sites, we are entrusted by some of South Africa’s most established companies as their sole provider for full turnkey solutions.
-
-Backed by more than 100 years of combined management experience, we bring the depth of knowledge, control and capability required to deliver certainty in high-risk environments and success on projects of the highest complexity.
-
----
-
-# 3. Industries We Serve
-
-Teemane Heavy Haulage’ versatile fleet and skilled operators provide essential support across a wide range of industries.
-
-## Construction & Infrastructure
-
-THH supports construction and infrastructure projects with lifting solutions for complex worksites, civil projects, high-rise developments and specialised lifting requirements.
-
-The company profile further states:
-
-With years of experience in the construction industry, we have played a part in shaping some of the most complex infrastructure projects known around the nation. From large-scale civil works to iconic high-rise developments, our team delivers end-to-end crane hire solutions that keep projects advancing.
-
-Backed by our versatile fleet and the capability to support both routine and highly specialised lifting demands, we continue to deliver trusted lifting solutions that construction partners can count on.
-
-## Energy & Power
-
-THH supports energy and power projects with specialised lifting capabilities.
-
-The company profile specifically highlights renewable energy:
-
-As a trusted partner in some of the largest renewable energy projects in Africa, we have been part of initiatives that are reshaping the future of power.
-
-From wind turbine installations to solar and hydro developments, our team provides advanced crane hire solutions for critical energy infrastructure.
-
-Backed by specialised equipment and the capability to deliver precision at scale, we continue to support the transition to clean energy with reliability and commitment.
-
-## Mining & Resources
-
-As a trusted partner in some of the most demanding mining projects, we have supported operations that drive growth and progress across the industry.
-
-From the installation of heavy plant infrastructure to the relocation of oversized equipment, our team delivers advanced crane hire solutions tailored to the unique challenges of mining.
-
-Backed by specialised equipment and the capability to perform in the toughest environments, we continue to provide reliable lifting solutions that mining partners count on to keep production moving.
-
-## Manufacturing & Industrial
-
-THH provides lifting support for manufacturing and industrial operations, including heavy machinery handling, industrial equipment relocation and specialised lifting requirements.
-
-## Ports & Maritime
-
-With extensive experience in the maritime industry, we have played an integral role in some of the most high-profile shipyard, port, and offshore projects across the region.
-
-From vessel launches to dry-dock repairs and harbour operations, our involvement in landmark maritime projects has established a presence that continues to shape the sector.
-
-## Telecommunications
-
-THH serves telecommunications projects as part of its broader industrial lifting capabilities.
-
-## Aerospace & Aviation
-
-THH serves aerospace and aviation projects as part of its broad range of specialised lifting capabilities.
-
-## Other Sectors
-
-The industries mentioned above are only a select few of where THH operates.
-
-Across highly demanding sectors, we are trusted where the work is complex, the sites are technical and the pressure is too great for ordinary capability.
-
-This is where THH continues to stand apart, setting a level of excellence that exceeds industry standards.
-
----
-
-# 4. Core Services
-
-## Our Core Services
-
-We understand that every lifting project demands precision, reliability, and efficiency.
-
-Our mobile crane hire services offer the flexibility and strength needed to tackle any lifting challenge, from construction sites to industrial projects.
-
-### Heavy Lifting
-
-### Mobile Rental
-
-### Crane Rental
-
----
-
-# 5. Heavy Lifting
-
-## Heavy Lifting
-
-When it comes to heavy lifting, precision, safety, and experience are non-negotiable.
-
-At Teemane Heavy Haulage, we specialize in lifting oversized, high-value, and heavy loads with the expertise and equipment to handle even the most complex operations.
-
-Whether you’re moving large structural components, industrial machinery, or modular units, we provide turnkey heavy lifting solutions tailored to your project’s specific needs.
-
-## Why Choose Teemane Heavy Haulage?
-
-- Skilled & Certified Operators
-- Commitment to Safety & Compliance
-- Modern & Well-Maintained Fleet
-- Tailored Solutions for Every Project
-
-## Heavy Lifting Capabilities
-
-### specialised Crane Lifting
-
-We provide mobile and crawler cranes capable of lifting loads of varying sizes and weights, ensuring the right equipment is used for maximum efficiency and safety.
-
-### Project-Specific Lift Planning
-
-Each heavy lift operation is carefully planned with detailed lift studies, 3D simulations, and engineered solutions to guarantee a safe and efficient process.
-
-### Rigging & Load Handling
-
-Our expert rigging team ensures proper load securing, balancing, and lifting using certified rigging gear, spreader bars, and slings for maximum stability.
-
-### Machinery & Equipment Relocation
-
-From factory relocations to heavy-duty plant equipment moves, we transport and install industrial machinery with precision.
-
-### Modular & Prefabricated Structure Lifting
-
-We handle the lifting and placement of precast concrete, steel structures, bridge beams, and modular buildings, ensuring seamless assembly on-site.
-
----
-
-# 6. Mobile Crane Hire
-
-## Mobile Crane Hire
-
-At Teemane Heavy Haulage, we understand that every lifting project demands precision, reliability, and efficiency.
-
-Our mobile crane hire services offer the flexibility and strength needed to tackle any lifting challenge, from construction sites to industrial projects.
-
-## Available Crane Types
-
-- All-Terrain Cranes
-- Rough Terrain Cranes
-- Pick and Carry Cranes
-- Crawler Cranes
-- Truck-Mounted Cranes
-
-## Long-Term Crane Rental
-
-For projects that require ongoing lifting solutions, Teemane Heavy Haulage offers long-term crane rental services, ensuring your operations run smoothly without the hassle of purchasing and maintaining equipment.
-
-Whether you’re managing a construction project, industrial operation, or infrastructure development, our fleet of modern cranes and expert support team are ready to assist for extended durations.
-
-## Types of Cranes Available for Long-Term Rental
-
-### All-Terrain Cranes
-
-Versatile for urban and rough terrains.
-
-### Truck-Mounted Cranes
-
-Quick setup for logistics and urban projects.
-
-### Crawler Cranes
-
-Heavy-duty lifting with high stability.
-
-### Rough Terrain Cranes
-
-Ideal for off-road and remote sites.
-
-### Telescopic Cranes
-
-Precision lifting at extreme heights.
-
----
-
-# 7. Crane Rental
-
-## Crane Rental
-
-For projects that require ongoing lifting solutions, Teemane Heavy Haulage offers long-term crane rental services, ensuring your operations run smoothly without the hassle of purchasing and maintaining equipment.
-
-Whether you’re managing a construction project, industrial operation, or infrastructure development, our fleet of modern cranes and expert support team are ready to assist for extended durations.
-
-## Crane Fleet
-
-### All-Terrain Cranes
-
-**Capacity: 30 to 440 Ton**
-
-### Truck-Mounted Cranes
-
-**Capacity: 8 to 60 Ton**
-
-### Rough Terrain Cranes
-
-**Capacity: 25 to 50 Ton**
-
-### Lattice Boom Cranes
-
-**Capacity: 250 to 600 Ton**
-
-> Note: The company profile PDF states lifting capacities of up to 440T, while the current website lists lattice boom cranes up to 600 Ton. Both figures are retained here because they appear in the supplied source materials.
-
----
-
-# 8. Specialist Lifting Services
-
-## specialised Crane Lifting
-
-We provide mobile and crawler cranes capable of lifting loads of varying sizes and weights, ensuring the right equipment is used for maximum efficiency and safety.
-
-## Project-Specific Lift Planning
-
-Each heavy lift operation is carefully planned with detailed lift studies, 3D simulations, and engineered solutions to guarantee a safe and efficient process.
-
-## Rigging & Load Handling
-
-Our expert rigging team ensures proper load securing, balancing, and lifting using certified rigging gear, spreader bars, and slings for maximum stability.
-
-## Machinery & Equipment Relocation
-
-From factory relocations to heavy-duty plant equipment moves, we transport and install industrial machinery with precision.
-
-## Modular & Prefabricated Structure Lifting
-
-We handle the lifting and placement of precast concrete, steel structures, bridge beams, and modular buildings, ensuring seamless assembly on-site.
-
----
-
-# 9. Complimentary Services
-
-The homepage describes THH as offering services beyond crane rentals.
-
-## Heavy Haulage
-
-Support for the movement of heavy equipment and machinery.
-
-## Rigging
-
-Professional load securing, handling and lifting support.
-
-## Repairs
-
-Equipment and crane repair support.
-
-## Hiring
-
-Crane and lifting equipment hire.
-
-## Consulting
-
-Project and lifting consultation services.
-
----
-
-# 10. 24/7 Emergency Support
-
-## Emergencies Can Happen Anytime
-
-### 24/7 Service Support
-
-That’s why we offer 24/7 emergency response services for urgent lifting needs.
-
-Whether it’s an equipment failure or an unforeseen event, we’re here to provide immediate support, minimizing downtime and potential losses.
-
-## Availability
-
-**24hrs, 365 Days**
-
-## Emergency / Service Number
-
-**084 263 7690**
-
----
-
-# 11. Where Excellence Begins
-
-## Where Excellence Begins
-
-With services available for both short- and long-term hire and backed by prompt, professional support, THH oversees every stage from initial consultation and detailed site inspections to full project execution.
-
-Safety stands at the forefront of every project, long before operations commence, safeguarding not only our team but every individual on site and the environments in which we work.
-
-For specialised projects, we incorporate advanced lift studies and CAD drawings, allowing us to anticipate challenges and engineer safe, efficient solutions before operations begin.
-
-Combined with decades of experience, this technical approach defines how the most demanding projects are completed to unmatched standards, defining why clients regard THH as true industry leaders.
-
----
-
-# 12. Company Credentials & Capabilities
-
-- B-BBEE Certified
-- Qualified Red Seal Riggers
-- Operational 24/7
-- ISO9001, 14001 & OHSAS 45001 Accredited
-- Lifting Capacities up to 440T
-
----
-
-# 13. Experience & Company Statistics
-
-The current website presents the following figures:
-
-## 25+ Years of Experience
-
-Providing exceptional crane services across multiple industries.
-
-## 500+ Successful Projects
-
-Completed with precision and safety, ranging from small-scale lifts to major infrastructure projects.
-
-## 24/7 Availability
-
-Ready to respond to your lifting needs anytime, day or night.
-
-> The website's current statistics differ from the company profile's statement that Teemane Heavy Haulage was established in 2012. These figures have been retained as published and should be verified before being used in final marketing material.
-
----
-
-# 14. Contact Page
-
-## Contact Us
-
-**Phone:** 084 263 7690
-
-**Email:** enquiries@teemanehh.co.za
-
-**Availability:** 24hrs, 365 Days
-
-## Address
-
-**1 Van Eck Street, Bellville South, Cape Town, 7530**
-
-## Contact Form
-
-The website provides a contact/enquiry form with fields including:
-
-- Name
-- Email
-- Additional enquiry fields
-
-## Enquiry Categories
-
-The website references:
-
-- A New Project
-- General Inquiry
-- Careers
-
----
-
-# 15. Website Navigation / Footer
-
-The current website footer references the following sections:
-
-- Services
-- Enquiry
-- Media
-- Sustainability
-- Contact
-
-## 24/7 Service Support
-
-**084 263 7690**
-
-## Address
-
-1 Van Eck Street, Bellville South, Cape Town, 7530
-
----
-
-# 16. Website Pages Identified
-
-The publicly accessible website content currently exposes the following pages/sections:
-
-| Page | URL | Main Content |
-|---|---|---|
-| Home | `/` | Brand, company introduction, industries, services, statistics |
-| Core Services | `/core-services/` | Heavy lifting, mobile rental, crane rental |
-| Mobile Crane | `/mobile-crane/` | Mobile crane hire, crane types, lifting capabilities |
-| Heavy Lifting | `/heavy-lifting/` | Heavy lifting, planning, rigging, relocation and modular lifting |
-| Crane Rental | `/crane-rental/` | Long-term rental, crane types and fleet capacities |
-| Contact | `/contact/` | Contact details, enquiry form and address |
-| Privacy Policy | `/privacy-policy/` | WordPress privacy/cookie policy content |
-| Holding Page | `/holding-page/` | Older/alternate website-under-construction content |
-| Uncategorized | `/category/uncategorized/` | WordPress category archive |
-
----
-
-# 17. Older / Holding Page Content
-
-An alternate holding page currently indexed on the website states:
-
-## Website Under Construction
-
-**084 263 7690**
-
-**enquiries@teemanehh.co.za**
-
-**Available: 24hrs, 365 Days**
-
-### Services Listed
-
-- Mobile Crane Hire
-- Rigging Services
-- Crane Truck Hire
-- Transport and Heavy Haulage
-
-### Address
-
-1 Van Eck Street, Bellville South, Cape Town, 7530
-
-This appears to be legacy/holding-page content rather than the primary current website content.
-
----
-
-# 18. Privacy Policy
-
-The current privacy-policy page contains generic WordPress privacy-policy template content.
-
-It references:
-
-- Website address
-- Comments
-- Visitor IP addresses and browser user-agent information
-- Gravatar
-- Uploaded media and EXIF/GPS metadata
-- Cookies
-- Login cookies
-- Embedded content
-- Password reset information
-- Data retention
-- User rights to access, edit or delete personal information
-- Automated spam detection
-
-The page also contains the following placeholder website address:
-
-`https://dev.swancircle.co.za/teemane`
-
-This should be reviewed and replaced with the correct production website information before the privacy policy is published.
-
----
-
-# 19. Company Profile — Original PDF Content
-
-## Unmatched Excellence in the Most Demanding Operations
-
-### THE NATIONS LARGEST PROJECTS
-
-### THE ONLY NAME TRUSTED TO PERFORM
-
-## OUR STORY
-
-Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa’s most demanding worksites, from high-stakes projects to complex operations that have redefined what’s possible in mobile crane hire.
-
-Backed by a fleet of hydraulic cranes with capacities of up to 440 tons and a team driven to deliver unmatched results, we stand at the forefront of the sector, leading the projects that continue to shape industries today.
-
-Operating across some of the most advanced and complex sites, we are entrusted by some of South Africa’s most established companies as their sole provider for full turnkey solutions.
-
-Backed by more than 100 years of combined management experience, we bring the depth of knowledge, control and capability required to deliver certainty in high-risk environments and success on projects of the highest complexity.
-
-## A CUT ABOVE THE REST
-
-## SERVICE AREAS
-
-- Construction
-- Maritime
-- Renewable Energy
-- Mining
-
-### Construction
-
-With years of experience in the construction industry, we have played a part in shaping some of the most complex infrastructure projects known around the nation. From large-scale civil works to iconic high-rise developments, our team delivers end-to-end crane hire solutions that keep projects advancing.
-
-Backed by our versatile fleet and the capability to support both routine and highly specialised lifting demands, we continue to deliver trusted lifting solutions that construction partners can count on.
-
-### Maritime
-
-With extensive experience in the maritime industry, we have played an integral role in some of the most high-profile shipyard, port, and offshore projects across the region.
-
-From vessel launches to dry-dock repairs and harbour operations, our involvement in landmark maritime projects has established a presence that continues to shape the sector.
-
-### Renewable Energy
-
-As a trusted partner in some of the largest renewable energy projects in Africa, we have been part of initiatives that are reshaping the future of power.
-
-From wind turbine installations to solar and hydro developments, our team provides advanced crane hire solutions for critical energy infrastructure.
-
-Backed by specialised equipment and the capability to deliver precision at scale, we continue to support the transition to clean energy with reliability and commitment.
-
-### Mining
-
-As a trusted partner in some of the most demanding mining projects, we have supported operations that drive growth and progress across the industry.
-
-From the installation of heavy plant infrastructure to the relocation of oversized equipment, our team delivers advanced crane hire solutions tailored to the unique challenges of mining.
-
-Backed by specialised equipment and the capability to perform in the toughest environments, we continue to provide reliable lifting solutions that mining partners count on to keep production moving.
-
-### Service Area Conclusion
-
-The industries mentioned above are only a select few of where THH operates.
-
-Across highly demanding sectors, we are trusted where the work is complex, the sites are technical and the pressure is too great for ordinary capability.
-
-This is where THH continues to stand apart, setting a level of excellence that exceeds industry standards.
-
----
-
-# 20. Source & Content Notes
-
-## Source: Company Profile PDF
-
-The supplied five-page company profile was used as the primary source for the company history, service-area copy, credentials, safety approach and contact details.
-
-## Source: Current Teemane Heavy Haulage Website
-
-Publicly accessible pages from `thh.co.za` were reviewed and incorporated into this document.
-
-### Important Content Differences to Verify
-
-There are several differences between the supplied company profile and the current website:
-
-1. **Company history**
-   - Company profile: Established in 2012.
-   - Current website: Claims 25+ years of experience.
-
-2. **Fleet capacity**
-   - Company profile: Hydraulic cranes with capacities up to 440 tons.
-   - Current website: Lists lattice boom cranes from 250 to 600 Ton.
-
-3. **Service terminology**
-   - Company profile focuses on Construction, Maritime, Renewable Energy and Mining.
-   - Current website additionally lists Energy & Power, Manufacturing & Industrial, Telecommunications and Aerospace & Aviation.
-
-4. **Website services**
-   - Current website lists Heavy Haulage, Rigging, Repairs, Hiring and Consulting as complimentary services.
-   - The dedicated service pages provide additional detail around heavy lifting, mobile crane hire, crane rental, lift planning, rigging, equipment relocation and modular structure lifting.
-
-These differences have intentionally **not been silently corrected**. They should be confirmed with Teemane Heavy Haulage before the content is used as the definitive company profile.
-
----
-
-# 21. Recommended Content Architecture for a New Website
-
-Based on the content collected, the material can be organised into the following website structure:
-
-```text
-Home
-├── Hero
-├── Who We Are
-├── Why THH
-├── Industries
-│   ├── Construction & Infrastructure
-│   ├── Energy & Power
-│   ├── Mining & Resources
-│   ├── Manufacturing & Industrial
-│   ├── Ports & Maritime
-│   ├── Telecommunications
-│   └── Aerospace & Aviation
-├── Core Services
-│   ├── Heavy Lifting
-│   ├── Mobile Crane Hire
-│   ├── Crane Rental
-│   ├── Rigging
-│   ├── Heavy Haulage
-│   ├── Repairs
-│   └── Consulting
-├── Fleet
-│   ├── All-Terrain
-│   ├── Rough Terrain
-│   ├── Pick & Carry
-│   ├── Crawler
-│   ├── Truck-Mounted
-│   └── Lattice Boom
-├── Safety & Engineering
-│   ├── Lift Studies
-│   ├── CAD Drawings
-│   ├── 3D Simulations
-│   └── Site Inspections
-├── Projects / Showcase
-├── Company
-│   ├── Our Story
-│   ├── Experience
-│   └── Credentials
-├── Enquiry
-└── Contact
+# Part 2: Services Directory (Database & Service Offerings)
+
+*The services below form the active abnormal transport service catalog seeded in `database/seeders/ServiceSeeder.php` and managed via the administrative backend.*
+
+```
+Services Overview
+├── 1. Heavy Haulage & Abnormal Transport
+├── 2. Route Planning & Escort Services
+├── 3. Technical Transport Planning & CAD Engineering
+├── 4. Multi-Axle Modular Lowbed Transport
+├── 5. Cross-Border Transport Logistics
+└── 6. Machinery Relocation & Industrial Transit
 ```
 
 ---
 
-# 22. Contact Information
+## 1. Heavy Haulage & Abnormal Transport
 
-**Teemane Heavy Haulage**
+- **Slug:** `heavy-haulage-abnormal-transport`
+- **Short Description:** Specialised transport solutions for oversized machinery, abnormal loads, and complex transport logistics across the SADC region.
 
-**Address:** 1 Van Eck Street, Bellville South, Cape Town, 7530
+### Overview
+Heavy haulage and abnormal transport are at the heart of what we do. When the scale is extraordinary, experience makes the difference. Our reputation has been built on years of industry experience, an extensive fleet of multi-axle modular trailers and heavy-duty prime movers, and the proven ability to manage some of the most challenging transport requirements to date.
 
-**Phone:** 084 263 7690
-
-**Email:** enquiries@teemanehh.co.za
-
-**Availability:** 24hrs, 365 Days
-
-**Website:** www.thh.co.za
+### Scope & Capabilities
+- **Cross-Border Transport:** Turnkey logistics spanning South Africa and the greater SADC region (Namibia, Botswana, Zimbabwe, Mozambique, Zambia).
+- **Oversized & Super-Loads:** Tailored configurations for transformers, mining plant, wind turbine components, pressure vessels, and industrial earthmovers.
+- **Client Partnership:** We work with leading local and international clients who expect an established industry partner with the resources, technical expertise, and proven ability to deliver certainty in high-risk transport environments.
+- **Big Picture Approach:** This responsibility goes beyond simply moving loads. It is about understanding the bigger picture and delivering the level of professionalism that has made THH a recognised name within the industry.
 
 ---
 
-## End of Consolidated Content
+## 2. Route Planning & Escort Services
+
+- **Slug:** `route-planning-escort-services`
+- **Short Description:** Comprehensive route assessments, obstacle mitigation, permit clearance, and experienced escort drivers with real-time GPS tracking.
+
+### Overview
+The route we choose plays a significant role in the safe transportation of every load, requiring thorough preparation and an understanding of what lies ahead before the journey begins.
+
+### Scope & Capabilities
+- **Road Network Analysis:** Identification of the safest, most practical routes, evaluating load weight/dimensions, bridge weight formulas, overhead wire clearances, turning radiuses, and road gradient conditions.
+- **Obstacle & Delay Mitigation:** Advance route reconnaissance to eliminate bottlenecks, arrange municipal and electrical clearances, and ensure drivers have complete visual and technical road briefings.
+- **Certified Escort Operations:** Dedicated abnormal escort vehicles and certified drivers maintaining live radio communication, pilot warnings, and traffic management to guide other motorists safely around oversized convoys.
+- **Real-Time Fleet GPS Tracking:** Our entire fleet is equipped with advanced GPS tracking technology, providing real-time visibility of vehicle locations, speed monitoring, and route progress oversight.
+- **Public & Crew Safety:** The safety of everyone involved—from our drivers and logistics crew to the motoring public—remains our uncompromising priority throughout every journey.
+
+---
+
+## 3. Technical Transport Planning & CAD Engineering
+
+- **Slug:** `technical-transport-planning`
+- **Short Description:** Detailed CAD drawings, 3D simulations, and engineered route feasibility studies for exceptionally complex and oversized loads.
+
+### Overview
+Some loads require a level of technical expertise that extends far beyond conventional transport. Our technical knowledge plays an integral role in our ability to undertake highly complex and exceptionally oversized loads.
+
+### Scope & Capabilities
+- **CAD Route & Transport Drawings:** Custom 2D and 3D engineered drawings illustrating axle weight distributions, center of gravity analysis, and vehicle swept-path simulations.
+- **Transport Feasibility Studies:** Pre-trip engineering verifying turning envelopes, ground pressure thresholds, and bridge structural loading capabilities.
+- **Regulatory Approvals:** Engineered drawings prepared specifically for provincial and national road transport permit authorities.
+- **Specialised Access:** Combining advanced technical planning with extensive industry experience allows us to confidently transport loads that fall outside conventional transport parameters.
+
+---
+
+## 4. Multi-Axle Modular Lowbed Transport
+
+- **Slug:** `multi-axel-heavy-transport`
+- **Short Description:** High-capacity multi-axle modular hydraulic trailers and lowbeds configured for extreme weight distribution and superload transit.
+
+### Overview
+When moving payloads that challenge legal road boundaries, multi-axle hydraulic platform trailers offer the stability, hydraulic leveling, and payload distribution required to move mega-cargo safely.
+
+### Scope & Capabilities
+- **Modular Combinations:** Expandable line combinations allowing custom axle configurations to comply with bridge formula restrictions.
+- **Steerable Axles & Hydraulic Suspension:** Independent hydraulic steering and height adjustment to navigate sharp curves, uneven terrain, and bridge approaches.
+- **High Payload Capacity:** Heavy-duty transport engineered for payloads in excess of 250 tons.
+- **Industrial Applications:** Mining excavators, mill shells, transformers, refinery vessels, and structural components.
+
+---
+
+## 5. Cross-Border Transport Logistics
+
+- **Slug:** `cross-border-transport`
+- **Short Description:** Seamless abnormal transport logistics and customs clearance across South Africa, Namibia, Botswana, Zimbabwe, Mozambique, and Zambia.
+
+### Overview
+Moving abnormal freight across African borders demands deep regulatory knowledge, bonded transport capabilities, and coordination with regional road authorities.
+
+### Scope & Capabilities
+- **SADC Regional Coverage:** Reliable abnormal freight transport across all primary transit corridors throughout the Southern African Development Community.
+- **Permit & Customs Facilitation:** Comprehensive management of cross-border abnormal load permits, border escorts, and customs transit documentation.
+- **Bilingual Convoys & Local Agents:** Dedicated corridor coordinators ensuring zero delays at international border posts.
+- **Convoy Tracking:** End-to-end satellite tracking from origin to destination across international borders.
+
+---
+
+## 6. Machinery Relocation & Industrial Transit
+
+- **Slug:** `machinery-relocation`
+- **Short Description:** Safe and efficient extraction, dismantling, transport, and precision positioning of industrial plant machinery.
+
+### Overview
+From factory relocations to heavy-duty plant equipment moves, we transport, extract, and transit industrial machinery with absolute precision.
+
+### Scope & Capabilities
+- **Turnkey Plant Moves:** Complete mechanical staging, transport, and site repositioning for industrial operations.
+- **Confined Space Extractions:** Hydraulic jacking, heavy-duty industrial skates, and winch systems to maneuver massive machinery out of existing buildings with tight clearances onto transport trailers.
+- **Minimal Disruption:** Scheduled round-the-clock weekend or plant shutdown transport execution to minimise operational downtime for manufacturing clients.
+
+---
+
+## 7. Fleet Specifications & Equipment Guide
+
+| Fleet Category | Configuration / Capacity | Typical Abnormal Transport Application |
+|---|---|---|
+| **Multi-Axle Modular Trailers** | Up to 250T+ Payload, Hydraulic Platform | Superloads, transformers, mining equipment, ball mills |
+| **Heavy-Duty Prime Movers** | 6x4 & 8x4 High-Torque Heavy Tractors | High-mass pulling and pushing for abnormal transport convoys |
+| **Step-Deck & Well-Deck Trailers** | Extendable, Low-Profile Decks | Tall industrial tanks, agricultural machinery, high cargo |
+| **Extendable Lowbeds** | Telescopic length expansion | Extra-long structural bridge beams, wind turbine blades |
+| **Pilot & Escort Vehicles** | Custom Rigged with Beacons, Comms & Signs | Abnormal load traffic management, driver warnings, convoy pilots |
+| **Tracking Systems** | Real-Time Fleet-Wide GPS | Constant location visibility, speed oversight, live customer tracking |
+
+---
+
+# Part 3: Website Pages & Content Architecture
+
+---
+
+## Page 1: Home Page (`/`)
+
+### 1. Hero Section
+- **Headline:** MOVING THE IMPOSSIBLE
+- **Gradient Accent:** Across Borders
+- **Paragraph:** South Africa's most trusted heavy haulage experts. We specialize in abnormal loads, oversized machinery, and complex transport logistics.
+- **Call-to-Action 1 (Primary):** Request A Quote (`/contact-us`)
+- **Call-to-Action 2 (Secondary):** View Fleet & Services (`/services`)
+- **Hero Image:** `resources/images/heavy-haulage-02.webp` (Wide abnormal transport convoy with escort and Komatsu excavator)
+- **Trust Badges:**
+  - Fully Insured
+  - Nationwide & SADC Routes
+  - 24/7 Response
+
+### 2. Who We Are / Intro Section
+- **Label:** Who We Are
+- **Title:** THE ONLY NAME TRUSTED TO PERFORM
+- **Copy:**
+  - Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding worksites. From high-stakes logistics to complex routing operations, we have redefined what's possible in abnormal load transport.
+  - Backed by a state-of-the-art fleet of multi-axle modular trailers, high-capacity prime movers, and over 100 years of combined management experience, we bring the precise engineering, control, and capability required to deliver certainty in high-risk environments.
+- **Button:** Our Story (`/about-us`)
+- **Floating Stat Card:** 100+ Years Combined Management Experience
+
+### 3. Core Highlights & Company Statistics
+- **250T+** Max Payload Capacity
+- **100+** Years Combined Management Experience
+- **500+** Successful Abnormal Transport Projects Executed
+- **24/7** Dispatch & Emergency Service Support
+
+### 4. Industries We Serve (Showcase Grid)
+1. **Construction & Infrastructure:** Oversized precast bridge beams, earthmoving machinery, civil infrastructure, and structural steel.
+2. **Energy & Power:** Electrical transformers, wind turbine components, generator sets, and substation equipment.
+3. **Mining & Resources:** Dragline parts, mill shells, dump truck chassis, processing plants, and oversized excavators.
+4. **Manufacturing & Industrial:** Complete factory relocations, autoclaves, storage tanks, and heavy machinery.
+5. **Ports & Maritime:** Shipyard abnormal cargo, container handling equipment, vessel propulsion, and harbour project freight.
+6. **Aerospace & Telecommunications:** Antenna masts, specialized modular shelters, and high-value industrial freight.
+
+### 5. Services Grid
+Showcase cards displaying active abnormal transport services linking to `/services/{slug}` with featured imagery and quick quote buttons.
+
+### 6. Dark CTA Banner
+- **Title:** Ready to Move the Impossible?
+- **Text:** Contact our transport logistics specialists today for certified route surveys, transport engineering, and competitive quotations.
+- **CTA:** Contact Our Team (`/contact-us`)
+
+---
+
+## Page 2: About Us Page (`/about-us`)
+
+### 1. Page Header
+- **Title:** Redefining What's Possible In **Heavy Haulage**
+- **Description:** Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding transport routes, delivering complex, oversized machinery with absolute precision.
+- **Hero Banner:** `resources/images/heavy-haulage-01.webp`
+
+### 2. Core Narrative: Built on Experience. Defined by Our Reputation.
+> **BUILT ON EXPERIENCE. DEFINED BY OUR REPUTATION.**
+
+- **Paragraph 1 (Reputation Earned Over Time):**
+  Within this industry, a reputation is earned over time. Ours has been built through years of hands-on experience, extensive industry knowledge and an unwavering dedication to the work we do. It is a reputation shaped by the standards we hold ourselves to, the relationships we have established and the consistent performance that has earned us the trust of our clients.
+
+- **Paragraph 2 (Passion & Behind-the-Scenes Expertise):**
+  There is far more to what we do than simply getting the job done. We have a genuine passion for our work, investing an immense amount of time, thought and expertise in every project we undertake. Our knowledge extends far beyond the practicalities of transporting a load. It comes from years of experience, understanding the finer details of our industry and knowing how to bring together the right solutions to achieve the best possible outcome.
+
+- **Paragraph 3 (Planning & Lasting Relationships):**
+  We take great pride in the work that happens behind the scenes. The hours devoted to planning, the attention given to every requirement and the satisfaction of seeing everything come together successfully. It is this personal commitment that has helped us build lasting relationships with those who recognise the value of having an experienced transport partner who is genuinely invested in their success.
+
+- **Paragraph 4 (Uncompromising Responsibility):**
+  We understand the importance of the loads entrusted to us and the responsibility that comes with being part of projects of significant scale. Our clients expect an exceptional level of service, and that is exactly what we strive to deliver. It is a commitment we stand behind, regardless of the size or complexity of the project.
+
+### 3. Our Story & Management Depth
+- Founded in 2012 in South Africa.
+- Over **100 years of combined senior management experience** in abnormal transport, superload logistics, and cross-border transport.
+- Dedicated leadership committed to engineered safety, modern equipment investment, and flawless execution.
+
+### 4. Technical Expertise Behind the Extraordinary
+> **TECHNICAL EXPERTISE BEHIND THE EXTRAORDINARY**
+
+- Some loads require a level of technical expertise that extends far beyond conventional transport.
+- Our technical knowledge plays an integral role in our ability to undertake highly complex and exceptionally oversized loads. With years of practical industry experience behind us, we understand the intricacies involved in transporting loads of extraordinary scale and dimensions.
+- For loads of this magnitude, we utilise detailed CAD drawings and specialised transport planning, bringing an additional level of technical insight and preparation to the transport process.
+- Combining advanced technical planning with extensive industry experience allows us to confidently transport loads that fall outside conventional transport parameters, giving our clients access to the specialised expertise required for transport of this calibre.
+
+### 5. Accreditations, Governance & Safety Standards
+- **B-BBEE Certified:** Proud contributor to South African economic transformation and local enterprise development.
+- **Safety Accreditations:** ISO 9001 (Quality Management), ISO 14001 (Environmental), and OHSAS 45001 / ISO 45001 (Occupational Health & Safety).
+- **Fleet Tracking Oversight:** Fleet-wide real-time GPS tracking, speed governed engines, and 24/7 movement monitoring.
+- **Permit & Road Safety:** Complete compliance with South African National Roads Agency (SANRAL) and provincial abnormal load regulations.
+- **Insurance:** Comprehensive Goods in Transit (GIT) and third-party public liability coverage.
+
+---
+
+## Page 3: Services Index & Detail Pages (`/services`, `/services/{slug}`)
+
+### 1. Services Index (`/services`)
+- **Title:** Comprehensive Heavy Haulage & Abnormal Transport Services
+- **Subtitle:** Engineered transport solutions tailored to the scale, specifications, and individual needs of projects across the SADC region.
+- **Service Cards:** Interactive grid showing all active services with title, summary, and direct link to detailed service page.
+
+### 2. Service Detail Template (`/services/{slug}`)
+- **Header:** Service Title, Subtitle, Breadcrumbs, Quick Action: Request a Quote.
+- **Description:** In-depth service explanation.
+- **Content Blocks System:**
+  - `rich_text`: In-depth technical specifications, transport methodology, and safety checklists.
+  - `image` / `gallery`: High-resolution photos of abnormal convoys with captions and lightbox zoom.
+  - `media_text`: Split section with stat cards and convoy imagery.
+  - `cta`: Dedicated quote request call-out block.
+
+---
+
+## Page 4: Contact Us Page (`/contact-us`)
+
+### 1. Contact Information
+- **Phone:** 084 263 7690
+- **Email:** `enquiries@teemanehh.co.za`
+- **Availability:** 24 Hours / 365 Days a Year
+- **Head Office Address:** 1 Van Eck Street, Bellville South, Cape Town, 7530
+- **Operating Territories:** Western Cape, Gauteng, KwaZulu-Natal, Northern Cape, and cross-border SADC transit routes.
+
+### 2. Enquiry Form Fields
+- Name
+- Company / Organization
+- Email Address
+- Contact Number
+- Service Required (Dropdown populated from active abnormal transport services)
+- Origin & Destination
+- Cargo Dimensions (Length, Width, Height) & Gross Weight
+- Message / Project Details
+
+---
+
+## Page 5: Frequently Asked Questions (`/faq`)
+
+Common client inquiries covering:
+1. What permits are required for abnormal loads in South Africa?
+2. How far in advance should route surveys and feasibility studies be conducted?
+3. What is the maximum payload capacity THH can transport?
+4. Do you supply certified escort vehicles and coordinate police escorts?
+5. What cross-border SADC countries does THH service?
+6. How does real-time GPS tracking work for clients during transit?
+
+---
+
+## Page 6: Our Team Page (`/our-team`)
+
+Showcase of executive management, route logistics coordinators, transport engineers, and certified escort pilots.
+
+---
+
+# Part 4: Global Website Elements
+
+### Notification Bar (Top Ticker)
+- **Left Item:** 📍 Operating across South Africa & SADC
+- **Right Item:** ⏰ Available 24/7 Transport Support: **084 263 7690**
+
+### Header & Sticky Navigation
+- **Logo:** Teemane Heavy Haulage Vector SVG Logo
+- **Links:** Home (`/`), Services (`/services`), About Us (`/about-us`), FAQ (`/faq`), Contact Us (`/contact-us`)
+- **CTA Button:** Contact Us
+- **Theme:** Light / Dark Mode Toggle
+
+### Emergency Call-To-Action Floating Bar
+- **Heading:** 24/7 Breakdown & Urgent Abnormal Transport Dispatch
+- **Direct Line:** 084 263 7690
+
+### Footer
+- **Company Summary:** Teemane Heavy Haulage — Moving the Impossible Across Borders.
+- **Quick Links:** Services, About Us, Fleet, Safety & Credentials, Privacy Policy, Terms of Service.
+- **Direct Contacts:** Phone, Email, Physical Address.
+- **Copyright:** &copy; Teemane Heavy Haulage. All rights reserved.
+
+### SEO & Metadata Baseline
+- **Default Title:** Teemane Heavy Haulage — Heavy Haulage & Abnormal Transport
+- **Meta Description:** Teemane Heavy Haulage provides tailored abnormal transport, heavy haulage, route surveys, and escort services across South Africa and the SADC region.
+- **OpenGraph & Twitter Card:** Configured with `heavy-haulage-02.webp` featured image.
+
+---
+
+# Part 5: Database Seeder Reference (`ServiceSeeder.php` & `FaqSeeder.php`)
+
+All abnormal transport services are defined in `database/seeders/ServiceSeeder.php`:
+
+```php
+// Active database records seeded:
+1. Heavy Haulage & Abnormal Transport    (slug: heavy-haulage-abnormal-transport)
+2. Route Planning & Escort Services      (slug: route-planning-escort-services)
+3. Technical Transport Planning          (slug: technical-transport-planning)
+4. Multi-Axle Modular Lowbed Transport   (slug: multi-axel-heavy-transport)
+5. Cross-Border Transport Logistics      (slug: cross-border-transport)
+6. Machinery Relocation                  (slug: machinery-relocation)
+```
+
+Abnormal transport FAQs are defined in `database/seeders/FaqSeeder.php`:
+- Permits & regulations under the National Road Traffic Act
+- Maximum payload capacity (250T+ modular hydraulic trailers)
+- Route surveys, obstacle mitigation & certified escorts
+- Cross-border SADC transit corridors
+- Real-time fleet GPS tracking
+- Advance planning & feasibility timeline
+- 24/7 emergency response & operations
+- Transport quotation requirements
+
+To re-seed or refresh services and FAQs in development:
+```bash
+php artisan db:seed --class=ServiceSeeder
+php artisan db:seed --class=FaqSeeder
+```
+
+---
+
+# Part 6: Source Notes & Scope Policy
+
+1. **Scope Policy:** The business focus of Teemane Heavy Haulage is strictly centered on **Heavy Haulage, Abnormal Transport, Route Planning, Escorts, and Cross-Border Freight**. All historical references to mobile cranes, crane hire, and crane rentals have been permanently decommissioned.
+2. **Foundational History:** Established in 2012 with 100+ years combined management experience in abnormal transport and heavy logistics.
+3. **Payload Capacity:** Modular hydraulic platform trailers capable of handling payloads in excess of 250 tons.
+4. **Geographic Coverage:** Full South African national routes and key SADC cross-border transit corridors.

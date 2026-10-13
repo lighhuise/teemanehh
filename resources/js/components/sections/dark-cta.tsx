@@ -20,9 +20,9 @@ export default function DarkCta() {
                         <ul className="space-y-5 pt-4">
                             {[
                                 "Expert Route Surveying & Engineering",
-                                "Abnormal Load Permits & specialised Escorting",
+                                "Abnormal Load Permits & Specialised Escorting",
                                 "Comprehensive End-to-End Project Management",
-                                "Rigging & Heavy Lifting Coordination"
+                                "Multi-Axle Modular Transport & SADC Logistics"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center gap-4">
                                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">

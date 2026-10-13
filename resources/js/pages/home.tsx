@@ -14,7 +14,7 @@ export default function Home({ services }: { services: any[] }) {
                 <meta name="description" content="Teemane Heavy Haulage provides tailored transportation for oversized cargo, heavy equipment and industrial machinery across South Africa." />
             </Head>
 
-            <   Hero />
+            <Hero />
             <HomeIntroSection />
             <HomeServicesSection services={services} />
             <HomeSafetySection />

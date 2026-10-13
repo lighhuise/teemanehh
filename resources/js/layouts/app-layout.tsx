@@ -23,7 +23,7 @@ export default function AppLayout({ children, title, description, image }: AppLa
 
     const defaultTitle = 'Teemane Heavy Haulage';
     const siteTitle = title ? `${title} - ${defaultTitle}` : defaultTitle;
-    const siteDescription = description || "The only name trusted to perform on South Africa's most demanding worksites. Unmatched excellence in crane hire, heavy lifting and specialised transport since 2012.";
+    const siteDescription = description || "The only name trusted to perform on South Africa's most demanding worksites. Unmatched excellence in heavy haulage, abnormal transport, and specialised logistics across the SADC region.";
     // Need a default image, ideally the logo or a hero image
     const siteImage = image || '/images/logo.svg';
     // Construct full URL using window.location if available, fallback to path

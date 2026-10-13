@@ -3,7 +3,7 @@ import Wrapper from "@/components/ui/misc/wrapper";
 import { Link } from "@inertiajs/react";
 import { ArrowRight, ShieldCheck, MapPin, Clock } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 // @ts-ignore
 import heroBgImage from "@/../images/heavy-haulage-02.webp";
 
@@ -14,7 +14,22 @@ export default function Hero() {
         offset: ["start start", "end start"]
     });
 
-    // Image moves slightly down as we scroll down (slower than scroll)
+    const [isMobile, setIsMobile] = useState(() => {
+        if (typeof window !== "undefined") {
+            return window.innerWidth < 640;
+        }
+        return false;
+    });
+
+    useEffect(() => {
+        const media = window.matchMedia("(max-width: 639px)");
+        const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+        setIsMobile(media.matches);
+        media.addEventListener("change", onChange);
+        return () => media.removeEventListener("change", onChange);
+    }, []);
+
+    // Image moves slightly down as we scroll down (slower than scroll) on desktop
     const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
     // Text moves down faster than image, creating depth
     const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
@@ -25,21 +40,21 @@ export default function Hero() {
         <div ref={ref}>
             <CutoutBox
                 position="bottom"
-                className="relative flex flex-col justify-end z-0 drop-shadow-lg min-h-[75vh] sm:min-h-[85vh] overflow-hidden"
+                className="relative flex flex-col justify-end z-0 drop-shadow-lg min-h-[46vh] sm:min-h-[65vh] lg:min-h-[85vh] overflow-hidden"
             >
-                {/* Background Image Container - animated for parallax */}
+                {/* Background Image Container - animated for parallax on larger screens */}
                 <motion.div
                     className="absolute inset-0 bg-slate-950 origin-top"
-                    style={{ y: yImage }}
+                    style={{ y: isMobile ? undefined : yImage }}
                 >
                     <img
                         src={heroBgImage}
                         alt="Teemane Heavy Haulage"
-                        // Make image taller to prevent edges from showing during parallax translation
-                        className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-center"
+                        // Balanced sizing and focal point on convoy across all viewports
+                        className="absolute top-0 left-0 w-full h-full sm:top-[-10%] sm:h-[120%] lg:top-[-20%] lg:h-[140%] object-cover object-[43%_center] sm:object-center"
                     />
                     {/* Gradient overlays to darken bottom-left for text readability while leaving image visible */}
-                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/85 via-slate-950/30 to-black/10" />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/30 to-transparent sm:via-slate-950/30 sm:to-black/10" />
                     {/*<div className="absolute inset-0 bg-linear-to-r from-slate-950/70 via-slate-950/20 to-transparent" />*/}
                 </motion.div>
 
@@ -48,7 +63,7 @@ export default function Hero() {
                     className="relative z-10 w-full"
                     style={{ y: yText, opacity: opacityText }}
                 >
-                    <Wrapper className="pb-12 sm:pb-16 pt-32 sm:pt-40">
+                    <Wrapper className="pb-8 sm:pb-14 lg:pb-16 pt-24 sm:pt-36 lg:pt-40">
                         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-12">
                             {/* Left: Heading and Description */}
                             <div className="max-w-xl text-left space-y-3">
@@ -61,7 +76,7 @@ export default function Hero() {
                             </div>
 
                             {/* Right: Trust Badges and CTA Buttons */}
-                            <div className="flex flex-col lg:items-end gap-4 shrink-0">
+                            <div className="hidden md:flex flex-col lg:items-end gap-4 shrink-0">
                                 {/* Trust Badges */}
                                 <div className="flex flex-wrap items-center lg:justify-end gap-2 sm:gap-3 text-xs font-semibold text-slate-200">
                                     <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">

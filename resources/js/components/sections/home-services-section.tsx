@@ -11,11 +11,11 @@ export function HomeServicesSection({ services }: { services: any[] }) {
             <Wrapper>
                 <SectionHeading
                     label="Our Capabilities"
-                    title="ENGINEERED FOR THE LIFT"
+                    title="ENGINEERED FOR THE EXTRAORDINARY"
                     align="center"
                     className="mb-16"
                 >
-                    We understand that every lifting project demands precision, reliability and efficiency. Our services offer the flexibility and strength needed to tackle any challenge from construction sites to the most demanding industrial operations.
+                    When the scale is extraordinary, experience makes the difference. Our specialised abnormal transport solutions offer the engineered precision, modular capacity, and proven expertise needed to move oversized cargo across South Africa and the SADC region.
                 </SectionHeading>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
