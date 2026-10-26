@@ -24,140 +24,72 @@ export default function Index({ services }: { services: Service[] }) {
             />
 
             <div className="bg-background selection:bg-primary selection:text-white pb-28 md:pb-36">
-                <section className="py-20 md:py-28 bg-background">
+                <section className="relative py-20 md:py-28 bg-background overflow-hidden">
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+                        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" />
+                        <svg className="absolute inset-0 w-full h-full text-primary/15" viewBox="0 0 1200 800" fill="none" stroke="currentColor" strokeWidth="1.2" preserveAspectRatio="none">
+                            <path d="M0,160 Q320,100 600,220 T1200,140" />
+                            <path d="M0,300 Q260,220 560,340 T1200,260" />
+                            <path d="M0,600 Q290,520 590,620 T1200,530" />
+                        </svg>
+                        <div className="absolute top-8 left-8 flex items-center gap-2 font-mono text-[10px] tracking-wider text-muted-foreground/50 uppercase select-none">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary/60 animate-pulse" />
+                            <span>ROUTE TOPO ELEVATION // SADC TRANSIT CORRIDOR</span>
+                        </div>
+                    </div>
                     <Wrapper>
-                        <div className="flex flex-col gap-20 sm:gap-28 lg:gap-36">
-                            {services.map((service, idx) => {
-                                const isEven = idx % 2 === 0;
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10">
+                            {services.map((service) => {
                                 const imageUrl = service.featured_image_url || service.image;
-                                const skewClass = isEven ? 'skew-x-0 lg:-skew-x-6' : 'skew-x-0 lg:skew-x-6';
-                                const unskewClass = isEven ? 'skew-x-0 lg:skew-x-6' : 'skew-x-0 lg:-skew-x-6';
+                                const summary = service.short_description || (service.description ? service.description.replace(/<[^>]*>?/gm, "").substring(0, 110) + "..." : "");
 
                                 return (
                                     <article
                                         key={service.id}
-                                        className="grid grid-cols-1 lg:grid-cols-12 items-center"
+                                        className="group bg-card border border-border hover:border-primary/50 rounded-xl overflow-hidden transition-all duration-200 flex flex-row items-stretch"
                                     >
-                                        {/* Text Card */}
-                                        <div
-                                            className={cn(
-                                                "relative z-20 lg:row-start-1",
-                                                "-mt-4 sm:-mt-6 lg:mt-0",
-                                                isEven
-                                                    ? "lg:col-span-6 lg:col-start-1 lg:-mr-6 xl:-mr-8 order-2 lg:order-1"
-                                                    : "lg:col-span-6 lg:col-start-7 lg:-ml-6 xl:-ml-8 order-2 lg:order-2"
-                                            )}
+                                        <Link
+                                            href={`/services/${service.slug}`}
+                                            className="block relative w-28 sm:w-36 shrink-0 bg-muted overflow-hidden border-r border-border"
+                                            tabIndex={-1}
+                                            aria-hidden="true"
                                         >
-                                            <div className="relative group/card bg-card/95 dark:bg-card/90 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-border/80 shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col justify-between h-full min-h-[320px]">
-                                                {/* Ambient subtle glow */}
-                                                <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 blur-3xl rounded-full pointer-events-none -z-10" />
-
-                                                <div className="space-y-6">
-                                                    <div className="flex items-center justify-between gap-4">
-                                                        <span className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-primary/10 text-primary font-black text-xs tracking-widest uppercase border border-primary/20">
-                                                            0{idx + 1} &bull; Capability
-                                                        </span>
-                                                        <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
-                                                            Specialised Transport
-                                                        </span>
-                                                    </div>
-
-                                                    <h2 className="text-2xl sm:text-3xl lg:text-3xl font-heading font-black uppercase tracking-tighter text-foreground group-hover/card:text-primary transition-colors leading-[1.15]">
-                                                        <Link href={`/services/${service.slug}`} className="hover:underline">
-                                                            {service.title}
-                                                        </Link>
-                                                    </h2>
-
-                                                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                                                        {service.short_description || (service.description ? service.description.replace(/<[^>]*>?/gm, '').substring(0, 180) + '...' : '')}
-                                                    </p>
+                                            {imageUrl ? (
+                                                <img
+                                                    src={imageUrl}
+                                                    alt={service.title}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                    loading="lazy"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center text-[10px] uppercase font-bold text-muted-foreground p-2 text-center">
+                                                    Spec Asset
                                                 </div>
-
-                                                <div className="pt-8 mt-6 border-t border-border/60 flex flex-wrap items-center justify-between gap-4">
-                                                    <Link
-                                                        href={`/services/${service.slug}`}
-                                                        className="inline-flex items-center gap-3 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase text-xs sm:text-sm px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 group/btn"
-                                                    >
-                                                        Explore Capabilities
-                                                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1.5 transition-transform" />
+                                            )}
+                                        </Link>
+                                        <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-1 min-w-0">
+                                            <div className="space-y-1">
+                                                <span className="inline-block text-[10px] font-black uppercase tracking-wider text-primary">
+                                                    Specialised Heavy Transport
+                                                </span>
+                                                <h2 className="text-sm sm:text-base font-heading font-black uppercase tracking-tight text-foreground group-hover:text-primary transition-colors truncate">
+                                                    <Link href={`/services/${service.slug}`} className="hover:underline">
+                                                        {service.title}
                                                     </Link>
-
-                                                    <Link
-                                                        href={`/services/${service.slug}`}
-                                                        className="text-xs font-bold text-muted-foreground hover:text-primary uppercase tracking-widest transition-colors hidden sm:inline-flex items-center gap-1"
-                                                    >
-                                                        View Details &rarr;
-                                                    </Link>
-                                                </div>
+                                                </h2>
+                                                <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">
+                                                    {summary}
+                                                </p>
                                             </div>
-                                        </div>
-
-                                        {/* Skewed Rounded-Block Image */}
-                                        <div
-                                            className={cn(
-                                                "relative z-10 w-full lg:row-start-1",
-                                                isEven
-                                                    ? "lg:col-span-6 lg:col-start-7 order-1 lg:order-2"
-                                                    : "lg:col-span-6 lg:col-start-1 order-1 lg:order-1"
-                                            )}
-                                        >
-                                            <Link
-                                                href={`/services/${service.slug}`}
-                                                className="group block relative w-full pr-2 pb-2 sm:pr-3 sm:pb-3 lg:pr-5 lg:pb-5 focus:outline-none focus:ring-2 focus:ring-primary rounded-3xl"
-                                            >
-                                                {/* Skewed Background Accent Layer with Industrial Hazard Stripes */}
-                                                <div
-                                                    aria-hidden="true"
-                                                    className={cn(
-                                                        "absolute inset-0 rounded-3xl bg-linear-to-br from-primary to-primary/80 border border-primary-foreground/20 shadow-xl shadow-primary/20 overflow-hidden translate-x-2 translate-y-2 sm:translate-x-3 sm:translate-y-3 lg:translate-x-5 lg:translate-y-5 transition-transform duration-500 ease-out group-hover:translate-x-3 group-hover:translate-y-3 sm:group-hover:translate-x-4 sm:group-hover:translate-y-4 lg:group-hover:translate-x-6 lg:group-hover:translate-y-6",
-                                                        skewClass
-                                                    )}
+                                            <div className="pt-2 flex items-center justify-end border-t border-border/40 mt-2">
+                                                <Link
+                                                    href={`/services/${service.slug}`}
+                                                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-all"
                                                 >
-                                                    <div className="absolute inset-0 opacity-15 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)]" />
-                                                </div>
-
-                                                {/* Skewed Main Image Block */}
-                                                <div
-                                                    className={cn(
-                                                        "relative z-10 scale-105  rounded-3xl overflow-hidden border-2 border-border/80 shadow-2xl aspect-16/10 bg-muted",
-                                                        skewClass
-                                                    )}
-                                                >
-                                                    {imageUrl ? (
-                                                        <img
-                                                            src={imageUrl}
-                                                            alt={service.title}
-                                                            className={cn(
-                                                                "w-full h-full object-cover  group-hover:scale-110 sm:group-hover:scale-115 lg:group-hover:scale-135 transition-transform duration-700 ease-out",
-                                                                unskewClass
-                                                            )}
-                                                        />
-                                                    ) : (
-                                                        <div
-                                                            className={cn(
-                                                                "w-full h-full flex items-center justify-center bg-muted text-muted-foreground",
-                                                                unskewClass
-                                                            )}
-                                                        >
-                                                            <span className="text-sm uppercase tracking-widest font-bold">No Image</span>
-                                                        </div>
-                                                    )}
-                                                    <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-
-                                                    {/* Floating Index Tag */}
-                                                    <div
-                                                        className={cn(
-                                                            "absolute top-4 left-4 z-20",
-                                                            unskewClass
-                                                        )}
-                                                    >
-                                                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/15 text-[11px] font-black uppercase tracking-widest text-white shadow-lg">
-                                                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                                            0{idx + 1}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </Link>
+                                                    <span>Learn More</span>
+                                                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                                                </Link>
+                                            </div>
                                         </div>
                                     </article>
                                 );

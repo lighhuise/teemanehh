@@ -6,7 +6,7 @@ import AboutManifesto from '@/components/sections/about-manifesto';
 import AboutCapabilities from '@/components/sections/about-capabilities';
 
 // @ts-ignore
-import imgHeavy1 from '@/../images/heavy-haulage-01.webp';
+import imgHeavy1 from '@/../images/lineup.webp';
 
 export default function AboutUs() {
     return (
