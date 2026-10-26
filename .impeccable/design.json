@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T03:13:30Z",
+  "title": "Design System: Teemane Heavy Haulage",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Industrial Navy",
+        "canonical": "oklch(0.469344 0.112698 242.6308)",
+        "tonalRamp": [
+          "#081628",
+          "#0f2c50",
+          "#164278",
+          "#1d4e89",
+          "#3a72b0",
+          "#6695ca",
+          "#9ebde3",
+          "#dbe8f7"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Machine Steel Ochre",
+        "canonical": "oklch(0.603 0.019 79.16)",
+        "tonalRamp": [
+          "#22201d",
+          "#413e38",
+          "#656157",
+          "#8b8577",
+          "#a7a296",
+          "#c4c0b6",
+          "#dedcd7",
+          "#f1f0ee"
+        ]
+      },
+      "neutral-fg": {
+        "role": "neutral",
+        "displayName": "Deep Steel Black",
+        "canonical": "oklch(0.205 0 0)",
+        "tonalRamp": [
+          "#05070a",
+          "#0b1017",
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Heavy",
+        "purpose": "Major tonnage numbers and hero banner titles."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "All section titles in Montserrat Black uppercase."
+      },
+      "body": {
+        "displayName": "Body Sans",
+        "purpose": "Clean technical specifications and narrative copy."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hover-lift",
+        "value": "0 4px 12px rgba(0, 0, 0, 0.08)",
+        "purpose": "Subtle tactile response on interactive cards and buttons."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-heavy",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Crisp, weighted transitions for industrial UI components."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary call-to-action button with industrial gradient.",
+      "html": "<button class=\"ds-btn-primary\">REQUEST A QUOTE</button>",
+      "css": ".ds-btn-primary { background: linear-gradient(to right, #1d4e89, #2b6cb0); color: #ffffff; padding: 10px 20px; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.025em; text-transform: uppercase; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1); } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.15); } .ds-btn-primary:active { transform: translateY(1px); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Heavy Rigging Monolith",
+    "overview": "Teemane's visual system evokes the raw kinetic power, calculated engineering precision, and immense scale of heavy haulage and 440-ton crane lifts. It avoids fragile decorative flourishes in favor of structural density, high-contrast industrial surfaces, and authoritative typography.",
+    "keyCharacteristics": [
+      "Industrial Scale & Punch: Ultra-bold uppercase headings with tight tracking anchor every viewport.",
+      "Engineered Restraint: Clean utilitarian layouts structured for fast scanning by field personnel.",
+      "Material Realism: Real machinery photography framed by industrial cutout container silhouettes."
+    ],
+    "rules": [
+      {
+        "name": "The Monolith Header Rule",
+        "body": "All section headers and hero titles MUST be uppercase Montserrat with bold or black weights and negative letter-spacing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-Steel Rule",
+        "body": "Elements sit flat and grounded on the grid canvas; elevation is only triggered on user interaction or sticky emergency bars.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use real fleet photography with industrial worksite context.",
+      "Do maintain uppercase, heavy-weight Montserrat headings for all primary section headers.",
+      "Do make emergency contact numbers and quote CTAs prominent and accessible on all viewport sizes."
+    ],
+    "donts": [
+      "Don't use pastel, playful, or whimsical decorative motifs.",
+      "Don't dilute industrial authority with generic stock photography.",
+      "Don't hide emergency contact options behind multi-step menus."
+    ]
+  }
+}

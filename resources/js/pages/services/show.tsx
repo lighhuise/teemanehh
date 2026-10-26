@@ -290,6 +290,78 @@ function ContentBlock({ block }: { block: ContentBlock }) {
     }
 }
 
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+
+export function Hero({ service }: { service: Service }) {
+    return (
+        <section className="relative border-b border-border bg-background overflow-hidden isolate">
+            {/* Ambient Glows */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">
+                <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full"></div>
+                <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-sky-500/5 blur-[120px] rounded-full"></div>
+            </div>
+
+            <Wrapper className="relative py-24 md:py-32 z-10">
+                <div className={`grid grid-cols-1 ${service.featured_image_url ? 'lg:grid-cols-12 gap-12 lg:gap-16' : ''} items-center`}>
+                    <div className={service.featured_image_url ? 'lg:col-span-5' : 'max-w-3xl'}>
+                        <Link
+                            href="/services"
+                            className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-muted-foreground hover:text-primary mb-8 transition-colors gap-2"
+                        >
+                            <ArrowLeft className="h-4 w-4" />
+                            Back to Services
+                        </Link>
+                        <SectionHeading
+                            label="Service Profile"
+                            title={service.title}
+                            align="left"
+                            className="mb-0"
+                        >
+                            {service.description && (
+                                <div
+                                    className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert text-muted-foreground"
+                                    dangerouslySetInnerHTML={{ __html: service.description }}
+                                />
+                            )}
+                        </SectionHeading>
+                    </div>
+
+                    {service.featured_image_url && (
+                        <div className="lg:col-span-7 relative pr-2 pb-2 sm:pr-6 sm:pb-6">
+                            <div className="relative group w-full max-w-2xl mx-auto lg:max-w-none">
+                                {/* Box 1 (Back): Primary with gradient stripe */}
+                                <div
+                                    aria-hidden="true"
+                                    className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary to-primary/80 border border-primary-foreground/20 shadow-xl shadow-primary/30 overflow-hidden origin-bottom-right scale-95 sm:scale-[0.97] translate-x-5 translate-y-5 sm:translate-x-7 sm:translate-y-7 transition-transform duration-500 ease-out group-hover:translate-x-6 group-hover:translate-y-6 sm:group-hover:translate-x-9 sm:group-hover:translate-y-9"
+                                >
+                                    {/* Subtle industrial stripe overlay */}
+                                    <div className="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)]" />
+                                </div>
+
+                                {/* Box 2 (Middle): Sleek glassmorphic card with elevation */}
+                                <div
+                                    aria-hidden="true"
+                                    className="absolute inset-0 rounded-2xl bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl origin-bottom-right scale-95 sm:scale-[0.97] translate-x-2.5 translate-y-2.5 sm:translate-x-3.5 sm:translate-y-3.5 transition-transform duration-500 ease-out group-hover:translate-x-3.5 group-hover:translate-y-3.5 sm:group-hover:translate-x-5 sm:group-hover:translate-y-5"
+                                />
+
+                                {/* Front Image */}
+                                <div className="relative z-10 w-full aspect-4/3 rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-muted">
+                                    <img
+                                        src={service.featured_image_url}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </Wrapper>
+        </section>
+    );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function Show({ service }: { service: Service }) {
@@ -301,52 +373,7 @@ export default function Show({ service }: { service: Service }) {
             description={service.short_description || service.description?.substring(0, 160)}
             image={service.featured_image_url || undefined}
         >
-            {/* Hero */}
-            <section className="relative border-b border-border bg-background overflow-hidden isolate">
-                {/* Ambient Glows */}
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">
-                    <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full"></div>
-                    <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-sky-500/5 blur-[120px] rounded-full"></div>
-                </div>
-
-                <Wrapper className="relative py-24 md:py-32 z-10">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-                        <div>
-                            <Link
-                                href="/services"
-                                className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-muted-foreground hover:text-primary mb-8 transition-colors gap-2"
-                            >
-                                <ArrowLeft className="h-4 w-4" />
-                                Back to Services
-                            </Link>
-                            <SectionHeading
-                                label="Service Profile"
-                                title={service.title}
-                                align="left"
-                                className="mb-0"
-                            >
-                                {service.description && (
-                                    <div
-                                        className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert text-muted-foreground"
-                                        dangerouslySetInnerHTML={{ __html: service.description }}
-                                    />
-                                )}
-                            </SectionHeading>
-                        </div>
-
-                        {service.featured_image_url && (
-                            <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-2xl border border-border/50 group">
-                                <img
-                                    src={service.featured_image_url}
-                                    alt={service.title}
-                                    className="w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
-                            </div>
-                        )}
-                    </div>
-                </Wrapper>
-            </section>
+            <Hero service={service} />
 
             {/* Content Blocks */}
             {hasBlocks && (

@@ -8,19 +8,19 @@
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "node_modules/swiper/modules/navigation.css": [
-    "/build/assets/show-DiBZC-ox.js",
+    "/build/assets/show-DBFeO1QL.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/swiper/modules/pagination.css": [
-    "/build/assets/show-DiBZC-ox.js",
+    "/build/assets/show-DBFeO1QL.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/swiper/swiper.css": [
-    "/build/assets/show-DiBZC-ox.js",
+    "/build/assets/show-DBFeO1QL.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/yet-another-react-lightbox/dist/styles.css": [
-    "/build/assets/show-DiBZC-ox.js",
+    "/build/assets/show-DBFeO1QL.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "resources/images/heavy-haulage-01.webp": [
@@ -34,7 +34,7 @@
     "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
   "resources/images/heavy-haulage-03.webp": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/emergency-cta.tsx": [
@@ -47,7 +47,7 @@
     "/build/assets/welcome-C97uIO47.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/map.tsx": [
@@ -64,29 +64,30 @@
     "/build/assets/app-layout-B7PuHxtL.js"
   ],
   "resources/js/components/sections/about-capabilities.tsx": [
-    "/build/assets/about-us-CBJulJsV.js"
+    "/build/assets/about-us-BtSh3sr8.js"
   ],
   "resources/js/components/sections/about-manifesto.tsx": [
-    "/build/assets/about-us-CBJulJsV.js"
+    "/build/assets/about-us-BtSh3sr8.js"
   ],
   "resources/js/components/sections/dark-cta.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/service-card-c8rnEs57.js"
+    "/build/assets/home-BNk3T37P.js",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/theme-provider.tsx": [
     "/build/assets/app-layout-B7PuHxtL.js"
@@ -107,11 +108,11 @@
     "/build/assets/input-K436QdIO.js"
   ],
   "resources/js/components/ui/misc/cutout-box.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/ui/misc/floating-stat-card.tsx": [
-    "/build/assets/floating-stat-card-xOtCFXee.js"
+    "/build/assets/floating-stat-card-BXZ6Ejll.js"
   ],
   "resources/js/components/ui/misc/logo-mark.tsx": [
     "/build/assets/app-layout-B7PuHxtL.js"
@@ -144,7 +145,7 @@
     "/build/assets/app-layout-B7PuHxtL.js"
   ],
   "resources/js/pages/about-us.tsx": [
-    "/build/assets/about-us-CBJulJsV.js"
+    "/build/assets/about-us-BtSh3sr8.js"
   ],
   "resources/js/pages/contact-us.tsx": [
     "/build/assets/contact-us-Cfn86UaP.js"
@@ -162,7 +163,7 @@
     "/build/assets/faq-ClymIlP2.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-lsL9PL_d.js",
+    "/build/assets/home-BNk3T37P.js",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/pages/legal/privacy-policy.tsx": [
@@ -172,10 +173,10 @@
     "/build/assets/terms-of-service-DJ7S2EKP.js"
   ],
   "resources/js/pages/services/index.tsx": [
-    "/build/assets/services-BPg4akrQ.js"
+    "/build/assets/services-D-GLFLeh.js"
   ],
   "resources/js/pages/services/show.tsx": [
-    "/build/assets/show-DiBZC-ox.js",
+    "/build/assets/show-DBFeO1QL.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "resources/js/pages/welcome.tsx": [
