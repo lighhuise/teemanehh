@@ -6,7 +6,7 @@ import imgHeavy1 from '@/../images/heavy-haulage-01.webp';
 
 export default function AboutCapabilities() {
     return (
-        <section className="py-20 md:py-32 bg-muted/40 border-y border-border">
+        <section className="py-20 md:py-32 bg-muted/40 border-y border-b-border border-t-transparent">
             <Wrapper>
                 <SectionHeading title="Our Core Capabilities" label="Why we lead the sector" align="center" />
 

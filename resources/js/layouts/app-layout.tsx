@@ -8,6 +8,7 @@ const Map = lazy(() => import("@/components/map"));
 import EmergencyCta from "@/components/emergency-cta";
 
 import { usePage } from '@inertiajs/react';
+import Divider1 from "@/components/ui/divider-1";
 
 interface AppLayoutProps {
     children: React.ReactNode;
@@ -57,6 +58,7 @@ export default function AppLayout({ children, title, description, image }: AppLa
                 {children}
             </main>
             <EmergencyCta />
+            <Divider1/>
             {mounted && (
                 <Suspense fallback={null}>
                     <Map />

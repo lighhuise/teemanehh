@@ -5,6 +5,7 @@ import PageHeader from '@/components/ui/misc/page-header';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { PhoneCall, Mail } from 'lucide-react';
 import LogoMark from '@/components/ui/misc/logo-mark';
+import Divider1 from "@/components/ui/divider-1";
 
 export default function FaqPage({ faqs }: { faqs: any[] }) {
     return (
@@ -24,19 +25,24 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
                 <Wrapper>
                     <div className="max-w-4xl mx-auto">
                         {faqs.length > 0 ? (
-                            <Accordion collapsible={true} className="w-full space-y-4">
+                            <Accordion className="w-full gap-3">
                                 {faqs.map((faq, index) => (
                                     <AccordionItem
                                         key={faq.id}
                                         value={`item-${faq.id}`}
-                                        className="bg-card border border-border/60 rounded-2xl px-4 md:px-8 shadow-sm hover:shadow-md transition-all duration-300 data-[state=open]:border-primary/30 data-[state=open]:shadow-primary/5"
+                                        className="group/item bg-card border border-border/70 rounded-2xl px-5 md:px-8 shadow-xs hover:border-primary/40 hover:shadow-md data-open:border-primary/40 data-open:bg-primary/[0.015] data-open:shadow-md transition-all duration-200"
                                     >
-                                        <AccordionTrigger className="text-left font-bold text-lg md:text-xl py-6 hover:no-underline hover:text-primary transition-colors group-aria-expanded/accordion-trigger:text-primary border-none">
-                                            {faq.question}
+                                        <AccordionTrigger className="text-left font-bold text-lg md:text-xl py-5 md:py-6 hover:no-underline hover:text-primary transition-colors group-aria-expanded/accordion-trigger:text-primary border-none items-center gap-4 **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-primary">
+                                            <span className="shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-xs font-mono font-bold tracking-wider bg-primary/10 text-primary group-data-open/item:bg-primary group-data-open/item:text-primary-foreground transition-colors">
+                                                {String(index + 1).padStart(2, '0')}
+                                            </span>
+                                            <span className="flex-1 leading-snug text-foreground group-hover/accordion-trigger:text-primary group-data-open/item:text-primary transition-colors">
+                                                {faq.question}
+                                            </span>
                                         </AccordionTrigger>
-                                        <AccordionContent className="pb-8">
+                                        <AccordionContent className="pb-7 pt-1">
                                             <div
-                                                className="text-muted-foreground leading-relaxed text-base md:text-lg prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-a:text-primary hover:prose-a:text-primary/80"
+                                                className="pl-0 md:pl-12 text-muted-foreground leading-relaxed text-base md:text-lg prose dark:prose-invert max-w-[68ch] prose-p:leading-relaxed prose-a:text-primary hover:prose-a:text-primary/80"
                                                 dangerouslySetInnerHTML={{ __html: faq.answer }}
                                             />
                                         </AccordionContent>
@@ -82,6 +88,7 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
                     </div>
                 </Wrapper>
             </section>
+            <Divider1/>
         </AppLayout>
     );
 }

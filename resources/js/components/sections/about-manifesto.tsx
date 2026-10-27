@@ -5,7 +5,9 @@ import imgHeavy2 from '@/../images/lineup.webp';
 
 export default function AboutManifesto() {
     return (
-        <section className="py-20 md:py-32 relative overflow-hidden">
+        <>
+            
+            <section className="py-20 md:py-32 relative overflow-hidden">
             <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-1/2 bg-primary/5 blur-[120px] rounded-full"></div>
                 {/* Rotating Azimuth Telemetry Compass */}
@@ -48,5 +50,6 @@ export default function AboutManifesto() {
                 </div>
             </Wrapper>
         </section>
+        </>
     );
 }

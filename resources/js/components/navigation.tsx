@@ -27,7 +27,7 @@ export default function Navigation() {
   return (
     <>
        {/*Notification Bar - Static (scrolls away) */}
-      <div className="bg-linear-to-t fixed top-0 inset-x-0 isolate  from-primary to-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
+      <div className="bg-linear-to-t fixed top-0 inset-x-0 isolate from-primary to-primary z-100 mb-4  text-white text-[8px]  font-bold py-2.5 px-4 tracking-[0.2em] uppercase hidden sm:block">
         <Wrapper className="flex justify-between items-center w-full">
            <div className="flex items-center gap-6">
               <span className="flex items-center gap-2 ">

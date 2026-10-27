@@ -4,6 +4,16 @@ import Wrapper from '@/components/ui/misc/wrapper';
 import { ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/ui/misc/page-header';
 import { cn } from '@/lib/utils';
+import Divider1 from "@/components/ui/divider-1";
+
+interface ServiceContentBlock {
+    type: string;
+    data?: {
+        image?: string;
+        images?: string[];
+        [key: string]: unknown;
+    };
+}
 
 interface Service {
     id: number;
@@ -13,6 +23,34 @@ interface Service {
     description: string | null;
     image: string | null;
     featured_image_url?: string | null;
+    content_blocks?: ServiceContentBlock[] | null;
+}
+
+function getServiceImageUrl(service: Service): string | null {
+    let rawUrl = service.featured_image_url || service.image;
+
+    if (!rawUrl && Array.isArray(service.content_blocks)) {
+        for (const block of service.content_blocks) {
+            if (block.type === 'image' && block.data?.image) {
+                rawUrl = block.data.image;
+                break;
+            }
+            if ((block.type === 'media_text' || block.type === 'gallery') && block.data?.images?.[0]) {
+                rawUrl = block.data.images[0];
+                break;
+            }
+        }
+    }
+
+    if (!rawUrl) {
+        return null;
+    }
+
+    if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://') || rawUrl.startsWith('/')) {
+        return rawUrl;
+    }
+
+    return `/storage/${rawUrl}`;
 }
 
 export default function Index({ services }: { services: Service[] }) {
@@ -40,7 +78,7 @@ export default function Index({ services }: { services: Service[] }) {
                     <Wrapper>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10">
                             {services.map((service) => {
-                                const imageUrl = service.featured_image_url || service.image;
+                                const imageUrl = getServiceImageUrl(service);
                                 const summary = service.short_description || (service.description ? service.description.replace(/<[^>]*>?/gm, "").substring(0, 110) + "..." : "");
 
                                 return (
@@ -97,6 +135,7 @@ export default function Index({ services }: { services: Service[] }) {
                         </div>
                     </Wrapper>
                 </section>
+                <Divider1/>
             </div>
         </AppLayout>
     );

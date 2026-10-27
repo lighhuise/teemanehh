@@ -28,9 +28,28 @@ class Service extends Model implements HasMedia
             ?: $this->getFirstMediaUrl('featured_image');
 
         if (! $featuredImage && $this->image) {
-            return str_starts_with($this->image, 'http')
+            $featuredImage = str_starts_with($this->image, 'http') || str_starts_with($this->image, '/')
                 ? $this->image
                 : Storage::disk('public')->url($this->image);
+        }
+
+        if (! $featuredImage && ! empty($this->content_blocks)) {
+            foreach ($this->content_blocks as $block) {
+                if (($block['type'] ?? '') === 'image' && ! empty($block['data']['image'])) {
+                    $img = $block['data']['image'];
+
+                    return str_starts_with($img, 'http') || str_starts_with($img, '/')
+                        ? $img
+                        : Storage::disk('public')->url($img);
+                }
+                if (in_array($block['type'] ?? '', ['media_text', 'gallery']) && ! empty($block['data']['images'][0])) {
+                    $img = $block['data']['images'][0];
+
+                    return str_starts_with($img, 'http') || str_starts_with($img, '/')
+                        ? $img
+                        : Storage::disk('public')->url($img);
+                }
+            }
         }
 
         return $featuredImage ?: null;
@@ -45,11 +64,29 @@ class Service extends Model implements HasMedia
         $clearCache = function ($service) {
             Cache::forget('services_index');
             Cache::forget('homepage_services');
-            Cache::forget('service_show_'.$service->id);
+            if (isset($service->id)) {
+                Cache::forget('service_show_'.$service->id);
+            }
         };
 
         static::saved($clearCache);
         static::deleted($clearCache);
+
+        Media::saved(function (Media $media) {
+            if ($media->model_type === Service::class) {
+                Cache::forget('services_index');
+                Cache::forget('homepage_services');
+                Cache::forget('service_show_'.$media->model_id);
+            }
+        });
+
+        Media::deleted(function (Media $media) {
+            if ($media->model_type === Service::class) {
+                Cache::forget('services_index');
+                Cache::forget('homepage_services');
+                Cache::forget('service_show_'.$media->model_id);
+            }
+        });
     }
 
     public function registerMediaCollections(): void
