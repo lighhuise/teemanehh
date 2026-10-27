@@ -28,12 +28,12 @@
     "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
   "resources/images/heavy-haulage-02.webp": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/images/heavy-haulage-03.webp": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
@@ -51,7 +51,7 @@
     "/build/assets/welcome-BCkZ7yxG.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
@@ -77,27 +77,27 @@
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/components/sections/dark-cta.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
@@ -123,7 +123,7 @@
     "/build/assets/input-DLIDCedM.js"
   ],
   "resources/js/components/ui/misc/cutout-box.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
@@ -180,7 +180,7 @@
     "/build/assets/faq-H8TLyxOP.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-C9vsyWsG.js",
+    "/build/assets/home-BiMSOVM2.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
@@ -191,7 +191,7 @@
     "/build/assets/terms-of-service-CdNKLQ5v.js"
   ],
   "resources/js/pages/services/index.tsx": [
-    "/build/assets/services-Br3omYwI.js"
+    "/build/assets/services-CX2bG9UO.js"
   ],
   "resources/js/pages/services/show.tsx": [
     "/build/assets/show-CAl4KwDW.js",

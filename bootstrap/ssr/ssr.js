@@ -24,10 +24,10 @@ var renderPage = (page) => createInertiaApp({
 		"./pages/employees/show.tsx": () => import("./assets/show-C9WJbaVn.js"),
 		"./pages/error.tsx": () => import("./assets/error-Os5f70MK.js"),
 		"./pages/faq.tsx": () => import("./assets/faq-H8TLyxOP.js"),
-		"./pages/home.tsx": () => import("./assets/home-C9vsyWsG.js"),
+		"./pages/home.tsx": () => import("./assets/home-BiMSOVM2.js"),
 		"./pages/legal/privacy-policy.tsx": () => import("./assets/privacy-policy-BSFXRM4m.js"),
 		"./pages/legal/terms-of-service.tsx": () => import("./assets/terms-of-service-CdNKLQ5v.js"),
-		"./pages/services/index.tsx": () => import("./assets/services-Br3omYwI.js"),
+		"./pages/services/index.tsx": () => import("./assets/services-CX2bG9UO.js"),
 		"./pages/services/show.tsx": () => import("./assets/show-CAl4KwDW.js"),
 		"./pages/welcome.tsx": () => import("./assets/welcome-BCkZ7yxG.js")
 	})),

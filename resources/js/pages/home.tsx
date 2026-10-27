@@ -5,6 +5,7 @@ import { HomeIntroSection } from "@/components/sections/home-intro-section";
 import { HomeServicesSection } from "@/components/sections/home-services-section";
 import { HomeSafetySection } from "@/components/sections/home-safety-section";
 import DarkCta from "@/components/sections/dark-cta";
+import Divider1 from "@/components/ui/divider-1";
 
 export default function Home({ services }: { services: any[] }) {
     return (
@@ -17,6 +18,7 @@ export default function Home({ services }: { services: any[] }) {
             <Hero />
             <HomeIntroSection />
             <HomeServicesSection services={services} />
+            <Divider1/>
             <HomeSafetySection />
             <DarkCta />
         </div>

@@ -34,28 +34,21 @@ function Index({ services }) {
 			children: [/* @__PURE__ */ jsxs("section", {
 				className: "relative py-20 md:py-28 bg-background overflow-hidden",
 				children: [/* @__PURE__ */ jsxs("div", {
-					className: "absolute inset-0 pointer-events-none overflow-hidden",
+					className: "absolute inset-0 pointer-events-none overflow-hidden opacity-50",
 					"aria-hidden": "true",
-					children: [
-						/* @__PURE__ */ jsx("div", { className: "absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" }),
-						/* @__PURE__ */ jsxs("svg", {
-							className: "absolute inset-0 w-full h-full text-primary/15",
-							viewBox: "0 0 1200 800",
-							fill: "none",
-							stroke: "currentColor",
-							strokeWidth: "1.2",
-							preserveAspectRatio: "none",
-							children: [
-								/* @__PURE__ */ jsx("path", { d: "M0,160 Q320,100 600,220 T1200,140" }),
-								/* @__PURE__ */ jsx("path", { d: "M0,300 Q260,220 560,340 T1200,260" }),
-								/* @__PURE__ */ jsx("path", { d: "M0,600 Q290,520 590,620 T1200,530" })
-							]
-						}),
-						/* @__PURE__ */ jsxs("div", {
-							className: "absolute top-8 left-8 flex items-center gap-2 font-mono text-[10px] tracking-wider text-muted-foreground/50 uppercase select-none",
-							children: [/* @__PURE__ */ jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-primary/60 animate-pulse" }), /* @__PURE__ */ jsx("span", { children: "ROUTE TOPO ELEVATION // SADC TRANSIT CORRIDOR" })]
-						})
-					]
+					children: [/* @__PURE__ */ jsx("div", { className: "absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" }), /* @__PURE__ */ jsxs("svg", {
+						className: "absolute inset-0 w-full h-full text-primary/15",
+						viewBox: "0 0 1200 800",
+						fill: "none",
+						stroke: "currentColor",
+						strokeWidth: "1.2",
+						preserveAspectRatio: "none",
+						children: [
+							/* @__PURE__ */ jsx("path", { d: "M0,160 Q320,100 600,220 T1200,140" }),
+							/* @__PURE__ */ jsx("path", { d: "M0,300 Q260,220 560,340 T1200,260" }),
+							/* @__PURE__ */ jsx("path", { d: "M0,600 Q290,520 590,620 T1200,530" })
+						]
+					})]
 				}), /* @__PURE__ */ jsx(Wrapper, { children: /* @__PURE__ */ jsx("div", {
 					className: "grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10",
 					children: services.map((service) => {
@@ -117,4 +110,4 @@ function Index({ services }) {
 }
 export { Index as default };
 
-//# sourceMappingURL=services-Br3omYwI.js.map
+//# sourceMappingURL=services-CX2bG9UO.js.map

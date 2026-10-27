@@ -1,4 +1,4 @@
-import { c as buttonVariants, l as Wrapper, t as AppLayout, u as cn } from "./app-layout-Dnnkc3zM.js";
+import { c as buttonVariants, l as Wrapper, n as Divider1, t as AppLayout, u as cn } from "./app-layout-Dnnkc3zM.js";
 import { t as FloatingStatCard } from "./floating-stat-card-PVOO0GmF.js";
 import { t as SectionHeading } from "./section-heading-BDaSvTOx.js";
 import { t as heavy_haulage_01_default } from "./heavy-haulage-01-CZXBirKr.js";
@@ -237,9 +237,25 @@ function ServiceCard({ service, index }) {
 }
 // resources/js/components/sections/home-services-section.tsx
 function HomeServicesSection({ services }) {
-	return /* @__PURE__ */ jsx("section", {
-		className: "py-24 bg-muted/30 border-y border-border",
-		children: /* @__PURE__ */ jsxs(Wrapper, { children: [
+	return /* @__PURE__ */ jsxs("section", {
+		className: "py-24 bg-muted/30 border-y border-border relative",
+		children: [/* @__PURE__ */ jsxs("div", {
+			className: "absolute inset-0 pointer-events-none overflow-hidden opacity-50",
+			"aria-hidden": "true",
+			children: [/* @__PURE__ */ jsx("div", { className: "absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" }), /* @__PURE__ */ jsxs("svg", {
+				className: "absolute inset-0 w-full h-full text-primary/15",
+				viewBox: "0 0 1200 800",
+				fill: "none",
+				stroke: "currentColor",
+				strokeWidth: "1.2",
+				preserveAspectRatio: "none",
+				children: [
+					/* @__PURE__ */ jsx("path", { d: "M0,160 Q320,100 600,220 T1200,140" }),
+					/* @__PURE__ */ jsx("path", { d: "M0,300 Q260,220 560,340 T1200,260" }),
+					/* @__PURE__ */ jsx("path", { d: "M0,600 Q290,520 590,620 T1200,530" })
+				]
+			})]
+		}), /* @__PURE__ */ jsxs(Wrapper, { children: [
 			/* @__PURE__ */ jsx(SectionHeading, {
 				label: "Our Capabilities",
 				title: "ENGINEERED FOR THE EXTRAORDINARY",
@@ -266,7 +282,7 @@ function HomeServicesSection({ services }) {
 					children: "View All Services"
 				})
 			})
-		] })
+		] })]
 	});
 }
 // resources/images/heavy-haulage-03.webp
@@ -426,6 +442,7 @@ function Home({ services }) {
 			/* @__PURE__ */ jsx(Hero, {}),
 			/* @__PURE__ */ jsx(HomeIntroSection, {}),
 			/* @__PURE__ */ jsx(HomeServicesSection, { services }),
+			/* @__PURE__ */ jsx(Divider1, {}),
 			/* @__PURE__ */ jsx(HomeSafetySection, {}),
 			/* @__PURE__ */ jsx(DarkCta, {})
 		]
@@ -435,4 +452,4 @@ Home.displayName = "Home";
 Home.layout = AppLayout;
 export { Home as default };
 
-//# sourceMappingURL=home-C9vsyWsG.js.map
+//# sourceMappingURL=home-BiMSOVM2.js.map
