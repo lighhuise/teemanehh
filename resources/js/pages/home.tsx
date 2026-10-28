@@ -20,6 +20,7 @@ export default function Home({ services }: { services: any[] }) {
             <HomeServicesSection services={services} />
             <Divider1/>
             <HomeSafetySection />
+            <Divider1/>
             <DarkCta />
         </div>
     );

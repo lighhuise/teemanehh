@@ -9,7 +9,7 @@ export function HomeServicesSection({ services }: { services: any[] }) {
     return (
         <section className="py-24 bg-muted/30 border-y border-border relative">
             <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50" aria-hidden="true">
-                <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" />
+                <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-125 bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" />
                 <svg className="absolute inset-0 w-full h-full text-primary/15" viewBox="0 0 1200 800" fill="none" stroke="currentColor" strokeWidth="1.2" preserveAspectRatio="none">
                     <path d="M0,160 Q320,100 600,220 T1200,140" />
                     <path d="M0,300 Q260,220 560,340 T1200,260" />

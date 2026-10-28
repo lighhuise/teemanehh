@@ -1,26 +1,26 @@
 {
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
   "node_modules/leaflet/dist/leaflet.css": [
-    "/build/assets/map-CAJEpQHy.js",
+    "/build/assets/map-BHC9kEoV.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "node_modules/swiper/modules/navigation.css": [
-    "/build/assets/show-CAl4KwDW.js",
+    "/build/assets/show-m5H9PrUz.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/swiper/modules/pagination.css": [
-    "/build/assets/show-CAl4KwDW.js",
+    "/build/assets/show-m5H9PrUz.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/swiper/swiper.css": [
-    "/build/assets/show-CAl4KwDW.js",
+    "/build/assets/show-m5H9PrUz.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "node_modules/yet-another-react-lightbox/dist/styles.css": [
-    "/build/assets/show-CAl4KwDW.js",
+    "/build/assets/show-m5H9PrUz.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "resources/images/heavy-haulage-01.webp": [
@@ -28,186 +28,230 @@
     "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
   "resources/images/heavy-haulage-02.webp": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/images/heavy-haulage-03.webp": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/images/lineup.webp": [
-    "/build/assets/about-us-CWVVetJp.js",
+    "/build/assets/about-us-V7fU_Vzy.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
+  "resources/images/volvo-FH16-abnormal-load-blueprint-left.webp": [
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+  ],
+  "resources/images/volvo-FH16-abnormal-load-blueprint.webp": [
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+  ],
   "resources/js/components/emergency-cta.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/footer.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/hero-simple-split.tsx": [
-    "/build/assets/welcome-BCkZ7yxG.js"
+    "/build/assets/welcome-DslH_U68.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/map.tsx": [
-    "/build/assets/map-CAJEpQHy.js",
+    "/build/assets/map-BHC9kEoV.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "resources/js/components/mode-toggle.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/navigation.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/sections/about-capabilities.tsx": [
-    "/build/assets/about-us-CWVVetJp.js",
+    "/build/assets/about-us-V7fU_Vzy.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/components/sections/about-manifesto.tsx": [
-    "/build/assets/about-us-CWVVetJp.js",
+    "/build/assets/about-us-V7fU_Vzy.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/components/sections/dark-cta.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/theme-provider.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/accordion.tsx": [
-    "/build/assets/faq-H8TLyxOP.js"
+    "/build/assets/faq-BLPmW3uQ.js"
   ],
   "resources/js/components/ui/button.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/card.tsx": [
-    "/build/assets/welcome-BCkZ7yxG.js"
+    "/build/assets/welcome-DslH_U68.js"
   ],
   "resources/js/components/ui/divider-1.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/dropdown-menu.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/input.tsx": [
-    "/build/assets/input-DLIDCedM.js"
+    "/build/assets/input-CApAzQWk.js"
   ],
   "resources/js/components/ui/misc/cutout-box.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/components/ui/misc/floating-stat-card.tsx": [
-    "/build/assets/floating-stat-card-PVOO0GmF.js"
+    "/build/assets/floating-stat-card-iuAf4AIt.js"
   ],
   "resources/js/components/ui/misc/logo-mark.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/misc/logo.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/misc/page-header.tsx": [
-    "/build/assets/page-header-viOes1UD.js"
+    "/build/assets/page-header-BzD7Yga3.js"
   ],
   "resources/js/components/ui/misc/section-heading.tsx": [
-    "/build/assets/section-heading-BDaSvTOx.js"
+    "/build/assets/section-heading-D-XWfGjk.js"
   ],
   "resources/js/components/ui/misc/wrapper.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/sheet.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/components/ui/textarea.tsx": [
-    "/build/assets/contact-us-BeKbZACR.js"
+    "/build/assets/contact-us-DeFAdeJr.js"
   ],
   "resources/js/components/ui/toast.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/layouts/app-layout.tsx": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/lib/utils.ts": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/pages/about-us.tsx": [
-    "/build/assets/about-us-CWVVetJp.js",
+    "/build/assets/about-us-V7fU_Vzy.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/pages/contact-us.tsx": [
-    "/build/assets/contact-us-BeKbZACR.js"
+    "/build/assets/contact-us-DeFAdeJr.js"
   ],
   "resources/js/pages/employees/index.tsx": [
-    "/build/assets/employees-CqycmDoW.js"
+    "/build/assets/employees-rwFsUS2x.js"
   ],
   "resources/js/pages/employees/show.tsx": [
-    "/build/assets/show-C9WJbaVn.js"
+    "/build/assets/show-Cximjqf6.js"
   ],
   "resources/js/pages/error.tsx": [
-    "/build/assets/error-Os5f70MK.js"
+    "/build/assets/error-V69Vr28-.js"
   ],
   "resources/js/pages/faq.tsx": [
-    "/build/assets/faq-H8TLyxOP.js"
+    "/build/assets/faq-BLPmW3uQ.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-BiMSOVM2.js",
+    "/build/assets/home-B4g4BCR4.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp"
   ],
   "resources/js/pages/legal/privacy-policy.tsx": [
-    "/build/assets/privacy-policy-BSFXRM4m.js"
+    "/build/assets/privacy-policy-CQKmbsSp.js"
   ],
   "resources/js/pages/legal/terms-of-service.tsx": [
-    "/build/assets/terms-of-service-CdNKLQ5v.js"
+    "/build/assets/terms-of-service-aOMgODU-.js"
   ],
   "resources/js/pages/services/index.tsx": [
-    "/build/assets/services-CX2bG9UO.js"
+    "/build/assets/services-iVbkjaFm.js"
   ],
   "resources/js/pages/services/show.tsx": [
-    "/build/assets/show-CAl4KwDW.js",
+    "/build/assets/show-m5H9PrUz.js",
     "/build/assets/show-BgP3iXkL.css"
   ],
   "resources/js/pages/welcome.tsx": [
-    "/build/assets/welcome-BCkZ7yxG.js"
+    "/build/assets/welcome-DslH_U68.js"
   ],
   "resources/js/routes/index.ts": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ],
   "resources/js/routes/team/index.ts": [
-    "/build/assets/team-DrKsaSTH.js"
+    "/build/assets/team--npWW8FL.js"
   ],
   "resources/js/ssr.tsx": [],
   "resources/js/wayfinder/index.ts": [
-    "/build/assets/app-layout-Dnnkc3zM.js"
+    "/build/assets/app-layout-BMgmXEAN.js",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
+    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
   ]
 }

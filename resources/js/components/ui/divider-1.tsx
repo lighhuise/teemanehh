@@ -1,122 +1,222 @@
 
 
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import LogoMark from '@/components/ui/misc/logo-mark';
+// @ts-ignore
+import volvoBlueprintImage from '@/../images/volvo-FH16-abnormal-load-blueprint.webp';
+// @ts-ignore
+import volvoBlueprintImageLeft from '@/../images/volvo-FH16-abnormal-load-blueprint-left.webp';
 
 interface Divider1Props extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
+    leftImage?: string;
+    rightImage?: string;
 }
 
-function Divider1({ className, ...props }: Divider1Props) {
-    const containerRef = useRef<HTMLDivElement>(null);
+const cadBoardStyle: React.CSSProperties = {
+    backgroundColor: 'color-mix(in oklab, var(--primary) 72%, var(--chart-5))',
+    color: 'var(--primary-foreground)',
+    backgroundImage: [
+        'linear-gradient(to right, color-mix(in oklab, var(--primary-foreground) 18%, transparent) 1px, transparent 1px)',
+        'linear-gradient(to bottom, color-mix(in oklab, var(--primary-foreground) 18%, transparent) 1px, transparent 1px)',
+        'linear-gradient(to right, color-mix(in oklab, var(--primary-foreground) 7%, transparent) 1px, transparent 1px)',
+        'linear-gradient(to bottom, color-mix(in oklab, var(--primary-foreground) 7%, transparent) 1px, transparent 1px)',
+    ].join(', '),
+    backgroundSize: '80px 80px, 80px 80px, 16px 16px, 16px 16px',
+    backgroundPosition: 'center center',
+};
 
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ['start end', 'end start'],
-    });
+const rulerTicksStyle = (position: 'top left' | 'bottom left'): React.CSSProperties => ({
+    backgroundImage: [
+        'repeating-linear-gradient(90deg, color-mix(in oklab, var(--primary-foreground) 85%, transparent) 0px, color-mix(in oklab, var(--primary-foreground) 85%, transparent) 1.5px, transparent 1.5px, transparent 80px)',
+        'repeating-linear-gradient(90deg, color-mix(in oklab, var(--primary-foreground) 55%, transparent) 0px, color-mix(in oklab, var(--primary-foreground) 55%, transparent) 1px, transparent 1px, transparent 40px)',
+        'repeating-linear-gradient(90deg, color-mix(in oklab, var(--primary-foreground) 35%, transparent) 0px, color-mix(in oklab, var(--primary-foreground) 35%, transparent) 1px, transparent 1px, transparent 8px)',
+    ].join(', '),
+    backgroundSize: '80px 20px, 40px 13px, 8px 7px',
+    backgroundRepeat: 'repeat-x',
+    backgroundPosition: position,
+});
 
-    // Mechanical counter-sliding parallax tracks on scroll
-    const xTrackUpper = useTransform(scrollYProgress, [0, 1], ['-4%', '4%']);
-    const xTrackLower = useTransform(scrollYProgress, [0, 1], ['4%', '-4%']);
-    const centerScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.92, 1.04, 0.92]);
+function Divider1({
+    className,
+    leftImage = volvoBlueprintImageLeft,
+    rightImage = volvoBlueprintImage,
+    ...props
+}: Divider1Props) {
+    const rootRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = rootRef.current;
+        if (!el || typeof window === 'undefined') {
+            return;
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            return;
+        }
+
+        let targetY = window.scrollY;
+        // Double-exponential (2-pole) low-pass state for C2-continuous acceleration & deceleration
+        let midFluidY = targetY;
+        let smoothY = targetY;
+        let midFlyY = targetY;
+        let flywheelY = targetY;
+        let lastTime = performance.now();
+        let rafId = 0;
+        let running = false;
+
+        const mod80 = (n: number): number => ((n % 80) + 80) % 80;
+
+        const step = (now: number) => {
+            const dt = Math.min(32, Math.max(4, now - lastTime)) / 16.667;
+            lastTime = now;
+
+            // Pole 1 + Pole 2 cascade ensures smooth ramp-up AND smooth coast-down on discrete wheel ticks
+            const aFluid = 1 - Math.pow(1 - 0.11, dt);
+            const aFly = 1 - Math.pow(1 - 0.065, dt);
+
+            midFluidY += (targetY - midFluidY) * aFluid;
+            smoothY += (midFluidY - smoothY) * aFluid;
+
+            midFlyY += (targetY - midFlyY) * aFly;
+            flywheelY += (midFlyY - flywheelY) * aFly;
+
+            // 80px-periodic tick offset driven purely by C2-smooth state
+            const tickShift = mod80(smoothY * 0.5) - 40;
+            const flyTickShift = mod80(flywheelY * 0.65) - 40;
+
+            // Pure C2-smooth sinusoidal label glide (zero raw delta jump on wheel ticks)
+            const labelShift = Math.sin(smoothY * 0.004) * 56;
+            const flyLabelShift = Math.sin(flywheelY * 0.0035) * 68;
+
+            el.style.setProperty('--cad-tick-shift', `${tickShift.toFixed(2)}px`);
+            el.style.setProperty('--cad-fly-tick-shift', `${flyTickShift.toFixed(2)}px`);
+            el.style.setProperty('--cad-label-shift', `${labelShift.toFixed(2)}px`);
+            el.style.setProperty('--cad-fly-label-shift', `${flyLabelShift.toFixed(2)}px`);
+
+            if (
+                Math.abs(targetY - smoothY) > 0.05 ||
+                Math.abs(targetY - flywheelY) > 0.05
+            ) {
+                rafId = window.requestAnimationFrame(step);
+            } else {
+                running = false;
+            }
+        };
+
+        const onScroll = () => {
+            targetY = window.scrollY;
+            if (!running) {
+                running = true;
+                lastTime = performance.now();
+                rafId = window.requestAnimationFrame(step);
+            }
+        };
+
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            if (rafId) {
+                window.cancelAnimationFrame(rafId);
+            }
+        };
+    }, []);
 
     return (
         <div
-            ref={containerRef}
-            aria-hidden="true"
+            ref={rootRef}
             className={cn(
-                'relative isolate h-24 w-full select-none overflow-hidden sm:h-32 lg:h-40',
-                'border-y-2 border-primary/80 bg-slate-950',
-                'shadow-[inset_0_16px_36px_rgba(0,0,0,0.6),inset_0_-16px_36px_rgba(0,0,0,0.6)]',
+                'relative isolate h-64 w-full select-none overflow-hidden sm:h-80 lg:h-96',
+                'border-y-2 border-primary bg-primary text-primary-foreground',
+                'shadow-[inset_0_24px_56px_rgba(0,0,0,0.4),inset_0_-24px_56px_rgba(0,0,0,0.4)]',
                 className
             )}
             {...props}
         >
-            {/* Primary atmospheric core gradient */}
-            <div className="absolute inset-0 -z-20 bg-linear-to-r from-slate-950 via-primary/95 to-slate-950" />
-
-            {/* Radial spotlight behind the central coupling node */}
-            <div className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-48 w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400/25 blur-3xl" />
-
-            {/* Diagonal industrial hazard texture (parallax layer 1) */}
-            <motion.div
-                style={{ x: xTrackUpper }}
-                className="pointer-events-none absolute -inset-x-16 inset-y-0 -z-10 opacity-15 bg-[repeating-linear-gradient(-45deg,transparent,transparent_6px,#000_6px,#000_12px)]"
-            />
-
-            {/* Precision CAD blueprint grid overlay */}
-            <div className="pointer-events-none absolute inset-0 -z-10 opacity-15 bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:32px_32px]" />
-
-            {/* Top precision millimeter ruler flange */}
-            <motion.div
-                style={{ x: xTrackLower }}
-                className="pointer-events-none absolute top-0 -inset-x-16 h-2.5 border-b border-white/15 bg-slate-950/50 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.35)_0px,rgba(255,255,255,0.35)_1px,transparent_1px,transparent_12px)]"
+            <div
+                style={cadBoardStyle}
+                className="relative flex h-full w-full items-center justify-center overflow-hidden px-4"
             >
-                <div className="h-full w-full bg-[repeating-linear-gradient(90deg,rgba(56,189,248,0.65)_0px,rgba(56,189,248,0.65)_2px,transparent_2px,transparent_60px)]" />
-            </motion.div>
-
-            {/* Bottom precision millimeter ruler flange */}
-            <motion.div
-                style={{ x: xTrackUpper }}
-                className="pointer-events-none absolute bottom-0 -inset-x-16 h-2.5 border-t border-white/15 bg-slate-950/50 bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.35)_0px,rgba(255,255,255,0.35)_1px,transparent_1px,transparent_12px)]"
-            >
-                <div className="h-full w-full bg-[repeating-linear-gradient(90deg,rgba(56,189,248,0.65)_0px,rgba(56,189,248,0.65)_2px,transparent_2px,transparent_60px)]" />
-            </motion.div>
-
-            {/* Horizontal structural horizon beam & center assembly */}
-            <div className="relative flex h-full w-full items-center justify-center px-4">
-                {/* Full-width glowing horizon axis line */}
-                <div className="pointer-events-none absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-linear-to-r from-transparent via-sky-300/60 to-transparent" />
-                <div className="pointer-events-none absolute inset-x-1/4 top-1/2 h-[3px] -translate-y-1/2 bg-linear-to-r from-transparent via-sky-400/30 to-transparent blur-[2px]" />
-
-                {/* Left stepped industrial chevron array */}
-                <div className="mr-4 hidden items-center gap-1.5 sm:mr-6 sm:flex md:gap-2">
-                    {[0.15, 0.25, 0.4, 0.6, 0.85].map((opacity, index) => (
-                        <span
-                            key={`left-rib-${index}`}
-                            style={{ opacity }}
-                            className="block h-5 w-1.5 -skew-x-24 rounded-[1px] bg-linear-to-b from-sky-300 via-white to-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.4)] sm:h-6 sm:w-2"
-                        />
-                    ))}
+                {/* Top Vernier CAD Ruler Track (Fine 0.55x Reduction Gear) */}
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-9 overflow-hidden border-b border-primary-foreground/25 bg-background/10 sm:h-11">
+                    <div
+                        style={rulerTicksStyle('top left')}
+                        className="absolute inset-y-0 -left-24 -right-24 translate-x-[calc(var(--cad-tick-shift,0px)*0.55)] will-change-transform"
+                    />
+                    <div className="absolute inset-x-8 bottom-1.5 hidden translate-x-[calc(var(--cad-label-shift,0px)*0.45)] justify-between font-mono text-[10px] font-bold tracking-widest text-primary-foreground/75 will-change-transform sm:flex sm:text-[11px]">
+                        <span>000 MM</span>
+                        <span>100 MM</span>
+                        <span>200 MM</span>
+                        <span>DATUM 0.0</span>
+                        <span>200 MM</span>
+                        <span>100 MM</span>
+                        <span>000 MM</span>
+                    </div>
                 </div>
 
-                {/* Central Heavy-Haulage Structural Lockplate */}
-                <motion.div
-                    style={{ scale: centerScale }}
-                    className="relative flex items-center gap-3 -skew-x-12 rounded-xl border border-sky-300/35 bg-slate-950/85 px-5 py-2.5 shadow-[0_0_30px_rgba(2,96,147,0.6),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-md sm:px-7 sm:py-3"
-                >
-                    {/* Subtle internal hazard sheen */}
-                    <div className="pointer-events-none absolute inset-0 rounded-xl opacity-15 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#fff_4px,#fff_5px)]" />
-
-                    {/* Left telemetry beacon */}
-                    <span className="relative flex h-2 w-2 skew-x-12 items-center justify-center">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75" />
-                        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-sky-400 shadow-[0_0_6px_#38bdf8]" />
-                    </span>
-
-                    {/* Brand geometric emblem */}
-                    <div className="relative z-10 skew-x-12 px-1">
-                        <LogoMark className="h-6 w-auto drop-shadow-[0_2px_8px_rgba(56,189,248,0.45)] sm:h-8" />
+                {/* Bottom Vernier CAD Ruler Track (1.25x Overdrive Parallax Gear) */}
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-9 overflow-hidden border-t border-primary-foreground/25 bg-background/10 sm:h-11">
+                    <div
+                        style={rulerTicksStyle('bottom left')}
+                        className="absolute inset-y-0 -left-24 -right-24 translate-x-[calc(var(--cad-fly-tick-shift,0px)*1.25)] will-change-transform"
+                    />
+                    <div className="absolute inset-x-8 top-1.5 hidden translate-x-[calc(var(--cad-fly-label-shift,0px)*1.15)] justify-between font-mono text-[10px] font-bold tracking-widest text-primary-foreground/75 will-change-transform sm:flex sm:text-[11px]">
+                        <span>SCALE 1:50</span>
+                        <span>CAD-REV.04</span>
+                        <span>AXLE-LOAD</span>
+                        <span>CENTERLINE</span>
+                        <span>440T-SPEC</span>
+                        <span>SADC-GRID</span>
+                        <span>THH-ENG</span>
                     </div>
+                </div>
 
-                    {/* Right telemetry beacon */}
-                    <span className="relative flex h-2 w-2 skew-x-12 items-center justify-center">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75 [animation-delay:750ms]" />
-                        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-sky-400 shadow-[0_0_6px_#38bdf8]" />
+                {/* CAD Centerline Axis & Dimension Ticks */}
+                <div className="pointer-events-none absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-primary-foreground/30" />
+                <div className="pointer-events-none absolute inset-y-9 left-1/2 w-px -translate-x-1/2 border-l border-dashed border-primary-foreground/35 sm:inset-y-11" />
+
+                {/* Right CAD Blueprint Overlay (Screen Blend Mode) */}
+                {rightImage && (
+                    <img
+                        src={rightImage}
+                        alt=""
+                        aria-hidden="true"
+                        className="pointer-events-none absolute top-9 right-2 bottom-9 z-0 h-[calc(100%-4.5rem)] w-auto max-w-[38%] object-contain object-right opacity-85 mix-blend-screen sm:top-11 sm:right-6 sm:bottom-11 sm:h-[calc(100%-5.5rem)] lg:right-10"
+                    />
+                )}
+
+                {leftImage && (
+                    <img
+                        src={leftImage}
+                        alt=""
+                        aria-hidden="true"
+                        className="pointer-events-none absolute top-9 left-2 bottom-9 z-0 h-[calc(100%-4.5rem)] w-auto max-w-[38%] object-contain object-left opacity-85 mix-blend-screen sm:top-11 sm:left-6 sm:bottom-11 sm:h-[calc(100%-5.5rem)] lg:left-10"
+                    />
+                )}
+
+                {/* Left Dimension Extension Line */}
+                <div className="mr-6 hidden items-center gap-2 sm:flex md:mr-10">
+                    <div className="h-4 w-px bg-primary-foreground/60" />
+                    <div className="h-px w-16 bg-primary-foreground/50 md:w-28 lg:w-40" />
+                    <span className="font-mono text-[10px] font-semibold tracking-widest text-primary-foreground/75">
+                        R-240
                     </span>
-                </motion.div>
+                    <div className="h-px w-8 bg-primary-foreground/50 md:w-14" />
+                </div>
 
-                {/* Right stepped industrial chevron array */}
-                <div className="ml-4 hidden items-center gap-1.5 sm:ml-6 sm:flex md:gap-2">
-                    {[0.85, 0.6, 0.4, 0.25, 0.15].map((opacity, index) => (
-                        <span
-                            key={`right-rib-${index}`}
-                            style={{ opacity }}
-                            className="block h-5 w-1.5 skew-x-24 rounded-[1px] bg-linear-to-b from-sky-300 via-white to-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.4)] sm:h-6 sm:w-2"
-                        />
-                    ))}
+
+                {/* Right Dimension Extension Line */}
+                <div className="ml-6 hidden items-center gap-2 sm:flex md:ml-10">
+                    <div className="h-px w-8 bg-primary-foreground/50 md:w-14" />
+                    <span className="font-mono text-[10px] font-semibold tracking-widest text-primary-foreground/75">
+                        R-240
+                    </span>
+                    <div className="h-px w-16 bg-primary-foreground/50 md:w-28 lg:w-40" />
+                    <div className="h-4 w-px bg-primary-foreground/60" />
                 </div>
             </div>
         </div>

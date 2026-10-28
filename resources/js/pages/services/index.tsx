@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/ui/misc/page-header';
 import { cn } from '@/lib/utils';
 import Divider1 from "@/components/ui/divider-1";
+import LogoMark from "@/components/ui/misc/logo-mark";
 
 interface ServiceContentBlock {
     type: string;
@@ -61,7 +62,12 @@ export default function Index({ services }: { services: Service[] }) {
                 description="We understand that every heavy haulage project demands precision, reliability and rigorous planning. Our capabilities provide the flexibility and strength needed to tackle the most demanding abnormal loads."
             />
 
-            <div className="bg-background selection:bg-primary selection:text-white pb-28 md:pb-36">
+            <div className="bg-background selection:bg-primary selection:text-white relative">
+                <div aria-hidden="true" className="absolute top-30 right-0 pointer-events-none opacity-10 md:opacity-[0.1] translate-x-1/2  mix-blend-luminosity">
+                    <div className="absolute top-0 right-0 -mr-20 -mt-20 w-180 h-180 rounded-full blur-[80px] bg-primary/50  pointer-events-none" />
+                    <LogoMark className="w-64 md:w-96 h-auto" />
+
+                </div>
                 <section className="relative py-20 md:py-28 bg-background overflow-hidden">
                     <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-50" aria-hidden="true">
                         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none opacity-30" />
@@ -70,7 +76,7 @@ export default function Index({ services }: { services: Service[] }) {
                             <path d="M0,300 Q260,220 560,340 T1200,260" />
                             <path d="M0,600 Q290,520 590,620 T1200,530" />
                         </svg>
-    
+
                     </div>
                     <Wrapper>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10">
@@ -132,7 +138,7 @@ export default function Index({ services }: { services: Service[] }) {
                         </div>
                     </Wrapper>
                 </section>
-                <Divider1/>
+
             </div>
         </AppLayout>
     );

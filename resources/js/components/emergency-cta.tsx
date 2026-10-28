@@ -4,12 +4,18 @@ import LogoMark from '@/components/ui/misc/logo-mark';
 
 export default function EmergencyCta() {
     return (
-        <section className="py-16 sm:py-24 relative overflow-hidden bg-background isolate border-b border-border">
+        <section className="py-16 sm:py-24 relative overflow-hidden  isolate border-y border-border">
+            <div aria-hidden="true" className="absolute top-30 left-0 pointer-events-none opacity-10 md:opacity-[0.1] -translate-x-1/2  mix-blend-luminosity">
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-180 h-180 rounded-full blur-[80px] bg-primary/50  pointer-events-none" />
+                <LogoMark className="w-64 md:w-96 h-auto" />
+
+            </div>
+
             <Wrapper>
                 <div className="relative overflow-hidden rounded-3xl bg-card text-card-foreground shadow-xl border border-border">
                     {/* The Logo Watermark - Scaled down and positioned top-right inside the card */}
                     <div aria-hidden="true" className="absolute top-0 right-0 pointer-events-none opacity-10 md:opacity-[0.1] translate-x-1/2  mix-blend-luminosity">
-                        <LogoMark className="w-64 md:w-96 h-auto" />
+                        <LogoMark className="w-80 md:w-110 h-auto" />
                     </div>
 
                     {/* Abstract decorative background glows using theme colors */}
