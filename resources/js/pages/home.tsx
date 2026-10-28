@@ -7,6 +7,10 @@ import { HomeSafetySection } from "@/components/sections/home-safety-section";
 import DarkCta from "@/components/sections/dark-cta";
 import Divider1 from "@/components/ui/divider-1";
 
+// @ts-ignore
+import volvoBlueprintImageLeft from '@/../images/isolate-truck-trailer-load-left.webp';
+// @ts-ignore
+import volvoBlueprintImage from '@/../images/isolate-truck-trailer-load.webp';
 export default function Home({ services }: { services: any[] }) {
     return (
         <div className="bg-background selection:bg-primary selection:text-white">
@@ -18,9 +22,9 @@ export default function Home({ services }: { services: any[] }) {
             <Hero />
             <HomeIntroSection />
             <HomeServicesSection services={services} />
-            <Divider1/>
+            <Divider1 leftImage={volvoBlueprintImageLeft} rightImage={volvoBlueprintImage} />
             <HomeSafetySection />
-            <Divider1/>
+            <Divider1 rightImage={volvoBlueprintImage}/>
             <DarkCta />
         </div>
     );

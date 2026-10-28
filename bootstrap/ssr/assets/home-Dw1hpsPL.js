@@ -430,6 +430,10 @@ function DarkCta() {
 		]
 	});
 }
+// resources/images/isolate-truck-trailer-load-left.webp
+var isolate_truck_trailer_load_left_default = "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp";
+// resources/images/isolate-truck-trailer-load.webp
+var isolate_truck_trailer_load_default = "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp";
 // resources/js/pages/home.tsx
 function Home({ services }) {
 	return /* @__PURE__ */ jsxs("div", {
@@ -442,9 +446,12 @@ function Home({ services }) {
 			/* @__PURE__ */ jsx(Hero, {}),
 			/* @__PURE__ */ jsx(HomeIntroSection, {}),
 			/* @__PURE__ */ jsx(HomeServicesSection, { services }),
-			/* @__PURE__ */ jsx(Divider1, {}),
+			/* @__PURE__ */ jsx(Divider1, {
+				leftImage: isolate_truck_trailer_load_left_default,
+				rightImage: isolate_truck_trailer_load_default
+			}),
 			/* @__PURE__ */ jsx(HomeSafetySection, {}),
-			/* @__PURE__ */ jsx(Divider1, {}),
+			/* @__PURE__ */ jsx(Divider1, { rightImage: isolate_truck_trailer_load_default }),
 			/* @__PURE__ */ jsx(DarkCta, {})
 		]
 	});
@@ -453,4 +460,4 @@ Home.displayName = "Home";
 Home.layout = AppLayout;
 export { Home as default };
 
-//# sourceMappingURL=home-B4g4BCR4.js.map
+//# sourceMappingURL=home-Dw1hpsPL.js.map

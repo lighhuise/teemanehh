@@ -4,7 +4,7 @@ import Wrapper from '@/components/ui/misc/wrapper';
 import { ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/ui/misc/page-header';
 import { cn } from '@/lib/utils';
-import Divider1 from "@/components/ui/divider-1";
+
 import LogoMark from "@/components/ui/misc/logo-mark";
 
 interface ServiceContentBlock {

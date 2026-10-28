@@ -28,14 +28,32 @@
     "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
   "resources/images/heavy-haulage-02.webp": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/images/heavy-haulage-03.webp": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
+  ],
+  "resources/images/isolate-truck-trailer-load-left.webp": [
+    "/build/assets/home-Dw1hpsPL.js",
+    "/build/assets/heavy-haulage-02-DJont-aN.webp",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
+  ],
+  "resources/images/isolate-truck-trailer-load.webp": [
+    "/build/assets/home-Dw1hpsPL.js",
+    "/build/assets/heavy-haulage-02-DJont-aN.webp",
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/images/lineup.webp": [
     "/build/assets/about-us-V7fU_Vzy.js",
@@ -65,9 +83,11 @@
     "/build/assets/welcome-DslH_U68.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/map.tsx": [
     "/build/assets/map-BHC9kEoV.js",
@@ -95,29 +115,39 @@
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/components/sections/dark-cta.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/theme-provider.tsx": [
     "/build/assets/app-layout-BMgmXEAN.js",
@@ -149,9 +179,11 @@
     "/build/assets/input-CApAzQWk.js"
   ],
   "resources/js/components/ui/misc/cutout-box.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/ui/misc/floating-stat-card.tsx": [
     "/build/assets/floating-stat-card-iuAf4AIt.js"
@@ -220,9 +252,11 @@
     "/build/assets/faq-BLPmW3uQ.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-B4g4BCR4.js",
+    "/build/assets/home-Dw1hpsPL.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
-    "/build/assets/heavy-haulage-03-pNrpKH65.webp"
+    "/build/assets/heavy-haulage-03-pNrpKH65.webp",
+    "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
+    "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/pages/legal/privacy-policy.tsx": [
     "/build/assets/privacy-policy-CQKmbsSp.js"
