@@ -74,8 +74,8 @@ function Divider1({
             lastTime = now;
 
             // Pole 1 + Pole 2 cascade ensures smooth ramp-up AND smooth coast-down on discrete wheel ticks
-            const aFluid = 1 - Math.pow(1 - 0.11, dt);
-            const aFly = 1 - Math.pow(1 - 0.065, dt);
+            const aFluid = 1 - Math.pow(1 - 0.055, dt);
+            const aFly = 1 - Math.pow(1 - 0.035, dt);
 
             midFluidY += (targetY - midFluidY) * aFluid;
             smoothY += (midFluidY - smoothY) * aFluid;
@@ -83,13 +83,13 @@ function Divider1({
             midFlyY += (targetY - midFlyY) * aFly;
             flywheelY += (midFlyY - flywheelY) * aFly;
 
-            // 80px-periodic tick offset driven purely by C2-smooth state
-            const tickShift = mod80(smoothY * 0.5) - 40;
-            const flyTickShift = mod80(flywheelY * 0.65) - 40;
+            // 80px-periodic tick offset driven purely by C2-smooth state (heavily geared down for slow travel)
+            const tickShift = mod80(smoothY * 0.1) - 40;
+            const flyTickShift = mod80(flywheelY * 0.14) - 40;
 
             // Pure C2-smooth sinusoidal label glide (zero raw delta jump on wheel ticks)
-            const labelShift = Math.sin(smoothY * 0.004) * 56;
-            const flyLabelShift = Math.sin(flywheelY * 0.0035) * 68;
+            const labelShift = Math.sin(smoothY * 0.0012) * 28;
+            const flyLabelShift = Math.sin(flywheelY * 0.001) * 34;
 
             el.style.setProperty('--cad-tick-shift', `${tickShift.toFixed(2)}px`);
             el.style.setProperty('--cad-fly-tick-shift', `${flyTickShift.toFixed(2)}px`);

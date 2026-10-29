@@ -4,10 +4,11 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import Wrapper from './ui/misc/wrapper';
 import { MapPin, Navigation as NavIcon } from 'lucide-react';
+import {FloatingStatCard} from "@/components/ui/misc/floating-stat-card";
 
 export default function Map() {
     const [mounted, setMounted] = useState(false);
-    
+
     useEffect(() => {
         setMounted(true);
     }, []);
@@ -31,14 +32,14 @@ export default function Map() {
     const customMarkerIcon = L.divIcon({
         className: 'custom-marker',
         html: `<div style="background-color: var(--primary); width: 28px; height: 28px; border-radius: 50%; border: 4px solid var(--background); box-shadow: 0 0 20px var(--primary); display: flex; align-items: center; justify-content: center; position: relative; top: -14px; left: -14px;"><div style="background-color: var(--background); width: 8px; height: 8px; border-radius: 50%;"></div></div>`,
-        iconSize: [0, 0], 
+        iconSize: [0, 0],
     });
 
     return (
         <section className="bg-background relative z-10 w-full pb-24 pt-12">
             <Wrapper>
                 <div className="flex flex-col gap-10">
-                    
+
                     {/* Header Text Section */}
                     <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 w-full">
                         <div className="space-y-4 max-w-2xl">
@@ -53,7 +54,7 @@ export default function Map() {
                                 Centrally located to rapidly deploy abnormal transport convoys, escort vehicles, and heavy haulage equipment across South Africa and the SADC region.
                             </p>
                         </div>
-                        
+
                         <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
                             <div className="flex items-center gap-4 border-l-4 border-primary/20 pl-4 py-1">
                                 <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-full">
@@ -72,8 +73,8 @@ export default function Map() {
                     </div>
 
                     {/* Map Section */}
-                    <div className="relative w-full h-[400px] lg:h-[550px] rounded-xl overflow-hidden border-2 border-border shadow-[0_0_40px_-15px_var(--primary)] group grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
-                        <MapContainer center={position} zoom={16} scrollWheelZoom={false} className="w-full h-full relative z-0" style={{ zIndex: 0 }}>
+                    <div className="relative w-full h-[400px] lg:h-[550px] border-2 border-border shadow-[0_0_40px_-15px_var(--primary)] group grayscale-[0.2] hover:grayscale-0 transition-all duration-700">
+                        <MapContainer center={position} zoom={16} scrollWheelZoom={false} className="w-full rounded-xl overflow-hidden  h-full relative z-0" style={{ zIndex: 0 }}>
                             <TileLayer
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -87,7 +88,8 @@ export default function Map() {
                                 </Popup>
                             </Marker>
                         </MapContainer>
-                        
+                        <FloatingStatCard value={`THH`} label={`Headquarters Cape Town`} position={`bottom-right`} className={`pointer-events-none`}/>
+
                         <style>{`
                             html.dark .leaflet-tile-pane {
                                 filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
