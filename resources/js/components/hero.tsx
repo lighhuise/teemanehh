@@ -7,7 +7,7 @@ import { useRef, useState, useEffect } from "react";
 // @ts-ignore
 import heroBgImage from "@/../images/heavy-haulage-02.webp";
 
-export default function Hero() {
+export default function     Hero() {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
