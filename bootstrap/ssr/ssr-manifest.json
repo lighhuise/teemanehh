@@ -1,291 +1,291 @@
 {
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
   "node_modules/leaflet/dist/leaflet.css": [
-    "/build/assets/map-CZu0PDn2.js",
+    "/build/assets/map-CVMS-t33.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "node_modules/swiper/modules/navigation.css": [
-    "/build/assets/show-XMlDRvv4.js",
-    "/build/assets/show-BgP3iXkL.css"
+    "/build/assets/show-DYP8d5NO.js",
+    "/build/assets/show-BgpZsBTt.css"
   ],
   "node_modules/swiper/modules/pagination.css": [
-    "/build/assets/show-XMlDRvv4.js",
-    "/build/assets/show-BgP3iXkL.css"
+    "/build/assets/show-DYP8d5NO.js",
+    "/build/assets/show-BgpZsBTt.css"
   ],
   "node_modules/swiper/swiper.css": [
-    "/build/assets/show-XMlDRvv4.js",
-    "/build/assets/show-BgP3iXkL.css"
+    "/build/assets/show-DYP8d5NO.js",
+    "/build/assets/show-BgpZsBTt.css"
   ],
   "node_modules/yet-another-react-lightbox/dist/styles.css": [
-    "/build/assets/show-XMlDRvv4.js",
-    "/build/assets/show-BgP3iXkL.css"
+    "/build/assets/show-DYP8d5NO.js",
+    "/build/assets/show-BgpZsBTt.css"
+  ],
+  "resources/images/Abnormal Volvo FH16 Empty Low-Loader Blueprint.webp": [
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
+  ],
+  "resources/images/Inverted Volvo FH16 Haulage Blueprint.webp": [
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/images/heavy-haulage-01.webp": [
     "/build/assets/heavy-haulage-01-CZXBirKr.js",
     "/build/assets/heavy-haulage-01-CfzgrpXj.webp"
   ],
   "resources/images/heavy-haulage-02.webp": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/images/heavy-haulage-03.webp": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/images/isolate-truck-trailer-load-left.webp": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/images/isolate-truck-trailer-load.webp": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/images/lineup.webp": [
-    "/build/assets/about-us-D9HrKX_4.js",
+    "/build/assets/about-us-M-NP2KQd.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
-  "resources/images/volvo-FH16-abnormal-load-blueprint-left.webp": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
-  ],
-  "resources/images/volvo-FH16-abnormal-load-blueprint.webp": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
-  ],
   "resources/js/components/emergency-cta.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/footer.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/hero-simple-split.tsx": [
-    "/build/assets/welcome-BJ9f_wqW.js"
+    "/build/assets/welcome-CsTIeYsj.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/map.tsx": [
-    "/build/assets/map-CZu0PDn2.js",
+    "/build/assets/map-CVMS-t33.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "resources/js/components/mode-toggle.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/navigation.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/sections/about-capabilities.tsx": [
-    "/build/assets/about-us-D9HrKX_4.js",
+    "/build/assets/about-us-M-NP2KQd.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/components/sections/about-manifesto.tsx": [
-    "/build/assets/about-us-D9HrKX_4.js",
+    "/build/assets/about-us-M-NP2KQd.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/components/sections/dark-cta.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/theme-provider.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/accordion.tsx": [
-    "/build/assets/faq-Bc2P_ijY.js"
+    "/build/assets/faq-DcbOrbax.js"
   ],
   "resources/js/components/ui/button.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/card.tsx": [
-    "/build/assets/welcome-BJ9f_wqW.js"
+    "/build/assets/welcome-CsTIeYsj.js"
   ],
   "resources/js/components/ui/divider-1.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/dropdown-menu.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/input.tsx": [
-    "/build/assets/input-VgDtbsqb.js"
+    "/build/assets/input-DZBSIgPL.js"
   ],
   "resources/js/components/ui/misc/cutout-box.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/components/ui/misc/floating-stat-card.tsx": [
-    "/build/assets/floating-stat-card-a9tsvTLc.js"
+    "/build/assets/floating-stat-card-CX_M4zMw.js"
   ],
   "resources/js/components/ui/misc/logo-mark.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/misc/logo.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/misc/page-header.tsx": [
-    "/build/assets/page-header-Rlgc2lTZ.js"
+    "/build/assets/page-header-sTDh-GxE.js"
   ],
   "resources/js/components/ui/misc/section-heading.tsx": [
-    "/build/assets/section-heading-BZtZsIwe.js"
+    "/build/assets/section-heading-BEgcLp5A.js"
   ],
   "resources/js/components/ui/misc/wrapper.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/sheet.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/components/ui/textarea.tsx": [
-    "/build/assets/contact-us-BiW4AKxf.js"
+    "/build/assets/contact-us-6ulwroMP.js"
   ],
   "resources/js/components/ui/toast.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/layouts/app-layout.tsx": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/lib/utils.ts": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/pages/about-us.tsx": [
-    "/build/assets/about-us-D9HrKX_4.js",
+    "/build/assets/about-us-M-NP2KQd.js",
     "/build/assets/lineup-Ccm_0BOI.webp"
   ],
   "resources/js/pages/contact-us.tsx": [
-    "/build/assets/contact-us-BiW4AKxf.js"
+    "/build/assets/contact-us-6ulwroMP.js"
   ],
   "resources/js/pages/employees/index.tsx": [
-    "/build/assets/employees-BlYFbznW.js"
+    "/build/assets/employees-CU18CeHe.js"
   ],
   "resources/js/pages/employees/show.tsx": [
-    "/build/assets/show-BT9DFNTS.js"
+    "/build/assets/show-Dg9yqlre.js"
   ],
   "resources/js/pages/error.tsx": [
-    "/build/assets/error-COfGxq2F.js"
+    "/build/assets/error-C6V9UbBV.js"
   ],
   "resources/js/pages/faq.tsx": [
-    "/build/assets/faq-Bc2P_ijY.js"
+    "/build/assets/faq-DcbOrbax.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-J_71xJuA.js",
+    "/build/assets/home-DgHQNMYz.js",
     "/build/assets/heavy-haulage-02-DJont-aN.webp",
     "/build/assets/heavy-haulage-03-pNrpKH65.webp",
     "/build/assets/isolate-truck-trailer-load-left-CixsnmC6.webp",
     "/build/assets/isolate-truck-trailer-load-pOQyv-wc.webp"
   ],
   "resources/js/pages/legal/privacy-policy.tsx": [
-    "/build/assets/privacy-policy-DRx74yBp.js"
+    "/build/assets/privacy-policy-Bzazyyhb.js"
   ],
   "resources/js/pages/legal/terms-of-service.tsx": [
-    "/build/assets/terms-of-service-i8hFwFiW.js"
+    "/build/assets/terms-of-service-hx2aaHOL.js"
   ],
   "resources/js/pages/services/index.tsx": [
-    "/build/assets/services-CBkuLb1i.js"
+    "/build/assets/services-DlH4DjUU.js"
   ],
   "resources/js/pages/services/show.tsx": [
-    "/build/assets/show-XMlDRvv4.js",
-    "/build/assets/show-BgP3iXkL.css"
+    "/build/assets/show-DYP8d5NO.js",
+    "/build/assets/show-BgpZsBTt.css"
   ],
   "resources/js/pages/welcome.tsx": [
-    "/build/assets/welcome-BJ9f_wqW.js"
+    "/build/assets/welcome-CsTIeYsj.js"
   ],
   "resources/js/routes/index.ts": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ],
   "resources/js/routes/team/index.ts": [
-    "/build/assets/team-CF6dz3I0.js"
+    "/build/assets/team-D3tVqKR6.js"
   ],
   "resources/js/ssr.tsx": [],
   "resources/js/wayfinder/index.ts": [
-    "/build/assets/app-layout-BRHKpbat.js",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "/build/assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+    "/build/assets/app-layout-gxDMRaO_.js",
+    "/build/assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "/build/assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
   ]
 }

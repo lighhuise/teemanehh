@@ -1,6 +1,6 @@
 {
-  "_app-layout-tGVyzP2I.js": {
-    "file": "assets/app-layout-tGVyzP2I.js",
+  "_app-layout-BC4fE7Ak.js": {
+    "file": "assets/app-layout-BC4fE7Ak.js",
     "name": "app-layout",
     "imports": [
       "resources/js/app.tsx"
@@ -9,52 +9,52 @@
       "resources/js/components/map.tsx"
     ],
     "assets": [
-      "assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-      "assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp"
+      "assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+      "assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp"
     ]
   },
-  "_arrow-left-BQVqh9Gt.js": {
-    "file": "assets/arrow-left-BQVqh9Gt.js",
+  "_arrow-left-QRR5CN07.js": {
+    "file": "assets/arrow-left-QRR5CN07.js",
     "name": "arrow-left",
     "imports": [
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js"
     ]
   },
-  "_building-complex-B7Z7I52O.js": {
-    "file": "assets/building-complex-B7Z7I52O.js",
+  "_building-complex-Ewt3Uyru.js": {
+    "file": "assets/building-complex-Ewt3Uyru.js",
     "name": "building-complex",
     "imports": [
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js"
     ]
   },
-  "_floating-stat-card-TovBzjhw.js": {
-    "file": "assets/floating-stat-card-TovBzjhw.js",
+  "_floating-stat-card-DqgkXx75.js": {
+    "file": "assets/floating-stat-card-DqgkXx75.js",
     "name": "floating-stat-card",
     "imports": [
-      "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js",
+      "resources/js/app.tsx"
     ]
   },
   "_fonts-DqppEDJS.css": {
     "file": "assets/fonts-DqppEDJS.css",
     "src": "_fonts-DqppEDJS.css"
   },
-  "_heavy-haulage-01-Cj5Tfxl3.js": {
-    "file": "assets/heavy-haulage-01-Cj5Tfxl3.js",
+  "_heavy-haulage-01-g4KDg-d5.js": {
+    "file": "assets/heavy-haulage-01-g4KDg-d5.js",
     "name": "heavy-haulage-01",
     "imports": [
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js"
     ],
     "assets": [
       "assets/heavy-haulage-01-CfzgrpXj.webp"
     ]
   },
-  "_input-svY7Txri.js": {
-    "file": "assets/input-svY7Txri.js",
+  "_input-DCXZvhAb.js": {
+    "file": "assets/input-DCXZvhAb.js",
     "name": "input",
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js"
     ]
   },
   "_instrument-sans-400-normal-D1W7dsQl.woff": {
@@ -81,27 +81,27 @@
     "file": "assets/instrument-sans-600-normal-B9e8oLYv.woff",
     "src": "_instrument-sans-600-normal-B9e8oLYv.woff"
   },
-  "_page-header-KsHEh6kZ.js": {
-    "file": "assets/page-header-KsHEh6kZ.js",
+  "_page-header-rphBpX_P.js": {
+    "file": "assets/page-header-rphBpX_P.js",
     "name": "page-header",
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js"
     ]
   },
-  "_section-heading-BVgMJvcO.js": {
-    "file": "assets/section-heading-BVgMJvcO.js",
+  "_section-heading-CfKzMM_M.js": {
+    "file": "assets/section-heading-CfKzMM_M.js",
     "name": "section-heading",
     "imports": [
-      "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js",
+      "resources/js/app.tsx"
     ]
   },
-  "_team-XgaRccx9.js": {
-    "file": "assets/team-XgaRccx9.js",
+  "_team-Cn19mhaY.js": {
+    "file": "assets/team-Cn19mhaY.js",
     "name": "team",
     "imports": [
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js"
     ]
   },
   "node_modules/@fontsource-variable/geist/files/geist-cyrillic-ext-wght-normal.woff2": {
@@ -157,7 +157,7 @@
     "src": "node_modules/leaflet/dist/images/marker-icon.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DH1ETQ_K.css",
+    "file": "assets/app-CS6K9fbC.css",
     "name": "app",
     "names": [
       "app.css"
@@ -176,6 +176,14 @@
       "assets/montserrat-latin-ext-wght-normal-BsZE-iaG.woff2",
       "assets/montserrat-latin-wght-normal-l_AIctKy.woff2"
     ]
+  },
+  "resources/images/Abnormal Volvo FH16 Empty Low-Loader Blueprint.webp": {
+    "file": "assets/Abnormal Volvo FH16 Empty Low-Loader Blueprint-e5vg6o9o.webp",
+    "src": "resources/images/Abnormal Volvo FH16 Empty Low-Loader Blueprint.webp"
+  },
+  "resources/images/Inverted Volvo FH16 Haulage Blueprint.webp": {
+    "file": "assets/Inverted Volvo FH16 Haulage Blueprint-BRUtfxys.webp",
+    "src": "resources/images/Inverted Volvo FH16 Haulage Blueprint.webp"
   },
   "resources/images/heavy-haulage-01.webp": {
     "file": "assets/heavy-haulage-01-CfzgrpXj.webp",
@@ -201,16 +209,8 @@
     "file": "assets/lineup-Ccm_0BOI.webp",
     "src": "resources/images/lineup.webp"
   },
-  "resources/images/volvo-FH16-abnormal-load-blueprint-left.webp": {
-    "file": "assets/volvo-FH16-abnormal-load-blueprint-left-C-VGIaxl.webp",
-    "src": "resources/images/volvo-FH16-abnormal-load-blueprint-left.webp"
-  },
-  "resources/images/volvo-FH16-abnormal-load-blueprint.webp": {
-    "file": "assets/volvo-FH16-abnormal-load-blueprint-BlLnG5j8.webp",
-    "src": "resources/images/volvo-FH16-abnormal-load-blueprint.webp"
-  },
   "resources/js/app.tsx": {
-    "file": "assets/app-Uta1Dyof.js",
+    "file": "assets/app-Hz7KYMZf.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -229,7 +229,7 @@
       "resources/js/pages/welcome.tsx"
     ],
     "css": [
-      "assets/app-DH1ETQ_K.css"
+      "assets/app-CS6K9fbC.css"
     ],
     "assets": [
       "assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2",
@@ -245,14 +245,14 @@
     ]
   },
   "resources/js/components/map.tsx": {
-    "file": "assets/map-BO9ZemnH.js",
+    "file": "assets/map-DnoY71qZ.js",
     "name": "map",
     "src": "resources/js/components/map.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_floating-stat-card-TovBzjhw.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_floating-stat-card-DqgkXx75.js"
     ],
     "css": [
       "assets/map-1DTFk8zz.css"
@@ -264,95 +264,95 @@
     ]
   },
   "resources/js/pages/about-us.tsx": {
-    "file": "assets/about-us-BVQaBjOY.js",
+    "file": "assets/about-us-C3zShx7y.js",
     "name": "about-us",
     "src": "resources/js/pages/about-us.tsx",
     "isDynamicEntry": true,
     "imports": [
+      "_app-layout-BC4fE7Ak.js",
+      "_page-header-rphBpX_P.js",
+      "_floating-stat-card-DqgkXx75.js",
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_building-complex-B7Z7I52O.js",
-      "_heavy-haulage-01-Cj5Tfxl3.js",
-      "_floating-stat-card-TovBzjhw.js",
-      "_page-header-KsHEh6kZ.js",
-      "_section-heading-BVgMJvcO.js"
+      "_section-heading-CfKzMM_M.js",
+      "_heavy-haulage-01-g4KDg-d5.js",
+      "_building-complex-Ewt3Uyru.js"
     ],
     "assets": [
       "assets/lineup-Ccm_0BOI.webp"
     ]
   },
   "resources/js/pages/contact-us.tsx": {
-    "file": "assets/contact-us-XxzNJb1H.js",
+    "file": "assets/contact-us-BBVYBHVU.js",
     "name": "contact-us",
     "src": "resources/js/pages/contact-us.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_page-header-KsHEh6kZ.js",
-      "_input-svY7Txri.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_input-DCXZvhAb.js",
+      "_page-header-rphBpX_P.js"
     ]
   },
   "resources/js/pages/employees/index.tsx": {
-    "file": "assets/employees-Cv0eI9xK.js",
+    "file": "assets/employees-8-AKD7qJ.js",
     "name": "employees",
     "src": "resources/js/pages/employees/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_building-complex-B7Z7I52O.js",
-      "_section-heading-BVgMJvcO.js",
-      "_input-svY7Txri.js",
-      "_team-XgaRccx9.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_team-Cn19mhaY.js",
+      "_building-complex-Ewt3Uyru.js",
+      "_input-DCXZvhAb.js",
+      "_section-heading-CfKzMM_M.js"
     ]
   },
   "resources/js/pages/employees/show.tsx": {
-    "file": "assets/show-Blwzh88F.js",
+    "file": "assets/show-DOp5wFaL.js",
     "name": "show",
     "src": "resources/js/pages/employees/show.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_arrow-left-BQVqh9Gt.js",
-      "_building-complex-B7Z7I52O.js",
-      "_team-XgaRccx9.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_team-Cn19mhaY.js",
+      "_building-complex-Ewt3Uyru.js",
+      "_arrow-left-QRR5CN07.js"
     ]
   },
   "resources/js/pages/error.tsx": {
-    "file": "assets/error-gocn3_6O.js",
+    "file": "assets/error-KPYl0X31.js",
     "name": "error",
     "src": "resources/js/pages/error.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_arrow-left-BQVqh9Gt.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_arrow-left-QRR5CN07.js"
     ]
   },
   "resources/js/pages/faq.tsx": {
-    "file": "assets/faq-Dwa_LE9G.js",
+    "file": "assets/faq-BepzHHz0.js",
     "name": "faq",
     "src": "resources/js/pages/faq.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_page-header-KsHEh6kZ.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_page-header-rphBpX_P.js"
     ]
   },
   "resources/js/pages/home.tsx": {
-    "file": "assets/home-C5BGZYXx.js",
+    "file": "assets/home-bq3yQUd6.js",
     "name": "home",
     "src": "resources/js/pages/home.tsx",
     "isDynamicEntry": true,
     "imports": [
+      "_app-layout-BC4fE7Ak.js",
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_heavy-haulage-01-Cj5Tfxl3.js",
-      "_floating-stat-card-TovBzjhw.js",
-      "_section-heading-BVgMJvcO.js"
+      "_heavy-haulage-01-g4KDg-d5.js",
+      "_floating-stat-card-DqgkXx75.js",
+      "_section-heading-CfKzMM_M.js"
     ],
     "assets": [
       "assets/heavy-haulage-02-DJont-aN.webp",
@@ -362,62 +362,62 @@
     ]
   },
   "resources/js/pages/legal/privacy-policy.tsx": {
-    "file": "assets/privacy-policy-CdzreD0q.js",
+    "file": "assets/privacy-policy-Bek8qlIC.js",
     "name": "privacy-policy",
     "src": "resources/js/pages/legal/privacy-policy.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_section-heading-BVgMJvcO.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_section-heading-CfKzMM_M.js",
+      "resources/js/app.tsx"
     ]
   },
   "resources/js/pages/legal/terms-of-service.tsx": {
-    "file": "assets/terms-of-service-DdYZEdLZ.js",
+    "file": "assets/terms-of-service-6G1iXrGX.js",
     "name": "terms-of-service",
     "src": "resources/js/pages/legal/terms-of-service.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_section-heading-BVgMJvcO.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_section-heading-CfKzMM_M.js",
+      "resources/js/app.tsx"
     ]
   },
   "resources/js/pages/services/index.tsx": {
-    "file": "assets/services-CSab8_o4.js",
+    "file": "assets/services-DepiEDp0.js",
     "name": "services",
     "src": "resources/js/pages/services/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_page-header-KsHEh6kZ.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_page-header-rphBpX_P.js"
     ]
   },
   "resources/js/pages/services/show.tsx": {
-    "file": "assets/show-BJxrAjrG.js",
+    "file": "assets/show-BNjNX4wJ.js",
     "name": "show",
     "src": "resources/js/pages/services/show.tsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js",
-      "_arrow-left-BQVqh9Gt.js",
-      "_floating-stat-card-TovBzjhw.js",
-      "_section-heading-BVgMJvcO.js"
+      "_app-layout-BC4fE7Ak.js",
+      "_arrow-left-QRR5CN07.js",
+      "_section-heading-CfKzMM_M.js",
+      "_floating-stat-card-DqgkXx75.js"
     ],
     "css": [
-      "assets/show-BgP3iXkL.css"
+      "assets/show-BgpZsBTt.css"
     ]
   },
   "resources/js/pages/welcome.tsx": {
-    "file": "assets/welcome-CFPyOCxm.js",
+    "file": "assets/welcome---irGRtz.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx",
-      "_app-layout-tGVyzP2I.js"
+      "_app-layout-BC4fE7Ak.js",
+      "resources/js/app.tsx"
     ]
   }
 }
