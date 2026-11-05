@@ -54,22 +54,42 @@ export default function Footer() {
 
                     {/* Contact Column */}
                     <div className="lg:col-span-4">
-                        <h3 className="text-foreground text-lg font-black mb-8 tracking-tighter uppercase">Contact Us</h3>
-                        <ul className="flex flex-col gap-6">
-                            <li className="flex items-start gap-4">
-                                <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+                        <span className="text-xs font-black tracking-widest text-primary uppercase mb-2 block">Direct Communication</span>
+                        <h3 className="text-foreground text-xl font-black mb-7 tracking-tighter uppercase">Contact Us</h3>
+                        <ul className="flex flex-col gap-5">
+                            <li className="flex items-start gap-3.5">
+                                <div className="p-2.5 rounded-lg text-primary shrink-0 mt-0.5 bg-muted border border-border transition-all">
+                                    <MapPin className="w-4 h-4" />
+                                </div>
                                 <div>
-                                    <span className="block text-foreground font-bold mb-1">Address</span>
-                                    <span className="text-muted-foreground">6 Van Eck St, Bellville South, Cape Town, 7530</span>
+                                    <div className="text-xs font-black uppercase tracking-wider text-foreground mb-0.5">Head Office & Depot</div>
+                                    <p className="text-sm text-muted-foreground leading-normal">
+                                        6 Van Eck St, Bellville South<br />
+                                        Cape Town, Western Cape, 7530
+                                    </p>
                                 </div>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <Phone className="w-6 h-6 text-primary shrink-0" />
-                                <a href="tel:0861888004" className="text-muted-foreground hover:text-primary transition-colors">086 188 8004</a>
+                            <li className="flex items-center gap-3.5">
+                                <div className="p-2.5 rounded-lg text-primary shrink-0 bg-muted border border-border transition-all">
+                                    <Phone className="w-4 h-4" />
+                                </div>
+                                <div>
+                                    <div className="text-xs font-black uppercase tracking-wider text-foreground mb-0.5">Telephone Hotline</div>
+                                    <a href="tel:0861888004" className="text-base font-bold text-foreground hover:text-primary transition-colors">
+                                        086 188 8004
+                                    </a>
+                                </div>
                             </li>
-                            <li className="flex items-center gap-4">
-                                <Mail className="w-6 h-6 text-primary shrink-0" />
-                                <a href="mailto:enquiries@teemanehh.co.za" className="text-muted-foreground hover:text-primary transition-colors">enquiries@teemanehh.co.za</a>
+                            <li className="flex items-center gap-3.5">
+                                <div className="p-2.5 rounded-lg text-primary shrink-0 bg-muted border border-border transition-all">
+                                    <Mail className="w-4 h-4" />
+                                </div>
+                                <div>
+                                    <div className="text-xs font-black uppercase tracking-wider text-foreground mb-0.5">Electronic Mail</div>
+                                    <a href="mailto:enquiries@teemanehh.co.za" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
+                                        enquiries@teemanehh.co.za
+                                    </a>
+                                </div>
                             </li>
                         </ul>
                     </div>

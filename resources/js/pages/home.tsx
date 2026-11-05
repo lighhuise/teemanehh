@@ -24,7 +24,7 @@ export default function Home({ services }: { services: any[] }) {
             <HomeServicesSection services={services} />
             <Divider1 leftImage={volvoBlueprintImageLeft} rightImage={volvoBlueprintImage} />
             <HomeSafetySection />
-            <Divider1 rightImage={volvoBlueprintImage}/>
+            <Divider1 />
             <DarkCta />
         </div>
     );

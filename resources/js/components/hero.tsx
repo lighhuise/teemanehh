@@ -53,9 +53,8 @@ export default function Hero() {
                         // Balanced sizing and focal point on convoy across all viewports
                         className="absolute top-0 left-0 w-full h-full sm:top-[-10%] sm:h-[120%] lg:top-[-20%] lg:h-[140%] object-cover object-[43%_center] sm:object-center"
                     />
-                    {/* Gradient overlays to darken bottom-left for text readability while leaving image visible */}
-                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/30 to-transparent sm:via-slate-950/30 sm:to-black/10" />
-                    {/*<div className="absolute inset-0 bg-linear-to-r from-slate-950/70 via-slate-950/20 to-transparent" />*/}
+                    {/* Subtle gradient overlay to ensure the fleet image is clearly visible while keeping text legible */}
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 via-slate-950/15 to-transparent sm:from-slate-950/50 sm:via-slate-950/10 sm:to-transparent" />
                 </motion.div>
 
                 {/* Content Container - animated for parallax */}
@@ -67,10 +66,10 @@ export default function Hero() {
                         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-12">
                             {/* Left: Heading and Description */}
                             <div className="max-w-xl text-left space-y-3">
-                                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black uppercase tracking-tighter text-white leading-[1.1] drop-shadow-xl">
-                                    Moving the <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 drop-shadow-sm pr-1 pb-1">Impossible</span>
+                                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black uppercase tracking-tighter text-white leading-[1.1] drop-shadow-[0_3px_10px_rgba(0,0,0,0.85)]">
+                                    Moving the <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-400 drop-shadow-sm pr-1 pb-1">Impossible</span>
                                 </h1>
-                                <p className="text-sm sm:text-base lg:text-lg text-slate-200/90 font-medium leading-relaxed drop-shadow-md">
+                                <p className="text-sm sm:text-base lg:text-lg text-slate-100 font-medium leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                                     South Africa's most trusted heavy haulage experts. We specialize in abnormal loads, oversized machinery, and complex transport logistics.
                                 </p>
                             </div>
@@ -79,13 +78,13 @@ export default function Hero() {
                             <div className="hidden md:flex flex-col lg:items-end gap-4 shrink-0">
                                 {/* Trust Badges */}
                                 <div className="flex flex-wrap items-center lg:justify-end gap-2 sm:gap-3 text-xs font-semibold text-slate-200">
-                                    <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                    <div className="flex items-center gap-1.5 bg-slate-950/70 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/15 shadow-md">
                                         <ShieldCheck className="w-3.5 h-3.5 text-sky-400"/> Fully Insured
                                     </div>
-                                    <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                    <div className="flex items-center gap-1.5 bg-slate-950/70 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/15 shadow-md">
                                         <MapPin className="w-3.5 h-3.5 text-sky-400"/> Nationwide Routes
                                     </div>
-                                    <div className="flex items-center gap-1.5 bg-slate-950/60 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/10 shadow-sm">
+                                    <div className="flex items-center gap-1.5 bg-slate-950/70 px-3 py-1.5 rounded-full backdrop-blur-md border border-white/15 shadow-md">
                                         <Clock className="w-3.5 h-3.5 text-sky-400"/> 24/7 Response
                                     </div>
                                 </div>
@@ -94,13 +93,13 @@ export default function Hero() {
                                 <div className="flex flex-wrap items-center lg:justify-end gap-3 pt-1">
                                     <Link
                                         href="/contact-us"
-                                        className="inline-flex items-center justify-center gap-2 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase px-6 py-3 rounded-lg text-xs sm:text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                                        className="inline-flex items-center justify-center gap-2 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase px-6 py-3 rounded-lg text-xs sm:text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
                                     >
                                         Request A Quote
                                     </Link>
                                     <Link
                                         href="/services"
-                                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold tracking-widest uppercase px-6 py-3 rounded-lg text-xs sm:text-sm backdrop-blur-md shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
+                                        className="inline-flex items-center justify-center gap-2 bg-slate-950/40 hover:bg-slate-900/60 border border-white/25 text-white font-bold tracking-widest uppercase px-6 py-3 rounded-lg text-xs sm:text-sm backdrop-blur-md shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
                                     >
                                         View Fleet & Services
                                         <ArrowRight className="w-4 h-4" />

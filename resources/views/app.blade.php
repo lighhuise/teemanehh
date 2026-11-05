@@ -14,5 +14,8 @@
     </head>
     <body class="bg-background text-foreground min-h-screen">
         @inertia
-    </body>
+    <!-- impeccable-live-start -->
+<script src="http://localhost:8400/live.js?token=6996db90-1344-49c2-81ad-8ebaac01d612"></script>
+<!-- impeccable-live-end -->
+</body>
 </html>

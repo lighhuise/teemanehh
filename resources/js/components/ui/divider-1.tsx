@@ -4,9 +4,9 @@ import React, { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import LogoMark from '@/components/ui/misc/logo-mark';
 // @ts-ignore
-import volvoBlueprintImage from '@/../images/volvo-FH16-abnormal-load-blueprint.webp';
+import volvoBlueprintImage from '@/../images/Abnormal Volvo FH16 Empty Low-Loader Blueprint.webp';
 // @ts-ignore
-import volvoBlueprintImageLeft from '@/../images/volvo-FH16-abnormal-load-blueprint-left.webp';
+import volvoBlueprintImageLeft from '@/../images/Inverted Volvo FH16 Haulage Blueprint.webp';
 
 interface Divider1Props extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
