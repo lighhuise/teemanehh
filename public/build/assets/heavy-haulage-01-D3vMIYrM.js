@@ -1,0 +1,1 @@
+var e=`/build/assets/heavy-haulage-01-CfzgrpXj.webp`;export{e as t};

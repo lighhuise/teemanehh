@@ -18,18 +18,18 @@ var renderPage = (page) => createInertiaApp({
 	render: ReactDOMServer.renderToString,
 	title: (title) => `${title} - ${appName}`,
 	resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* #__PURE__ */ Object.assign({
-		"./pages/about-us.tsx": () => import("./assets/about-us-M-NP2KQd.js"),
-		"./pages/contact-us.tsx": () => import("./assets/contact-us-6ulwroMP.js"),
-		"./pages/employees/index.tsx": () => import("./assets/employees-CU18CeHe.js"),
-		"./pages/employees/show.tsx": () => import("./assets/show-Dg9yqlre.js"),
-		"./pages/error.tsx": () => import("./assets/error-C6V9UbBV.js"),
-		"./pages/faq.tsx": () => import("./assets/faq-DcbOrbax.js"),
-		"./pages/home.tsx": () => import("./assets/home-DgHQNMYz.js"),
-		"./pages/legal/privacy-policy.tsx": () => import("./assets/privacy-policy-Bzazyyhb.js"),
-		"./pages/legal/terms-of-service.tsx": () => import("./assets/terms-of-service-hx2aaHOL.js"),
-		"./pages/services/index.tsx": () => import("./assets/services-DlH4DjUU.js"),
-		"./pages/services/show.tsx": () => import("./assets/show-DYP8d5NO.js"),
-		"./pages/welcome.tsx": () => import("./assets/welcome-CsTIeYsj.js")
+		"./pages/about-us.tsx": () => import("./assets/about-us-pc2sRuho.js"),
+		"./pages/contact-us.tsx": () => import("./assets/contact-us-1nGYqVG7.js"),
+		"./pages/employees/index.tsx": () => import("./assets/employees-DTUPpdgW.js"),
+		"./pages/employees/show.tsx": () => import("./assets/show-DHSLN1OF.js"),
+		"./pages/error.tsx": () => import("./assets/error-gy4oTXtR.js"),
+		"./pages/faq.tsx": () => import("./assets/faq-CVpcBn6-.js"),
+		"./pages/home.tsx": () => import("./assets/home-ujF1RACz.js"),
+		"./pages/legal/privacy-policy.tsx": () => import("./assets/privacy-policy-WzAyXfHJ.js"),
+		"./pages/legal/terms-of-service.tsx": () => import("./assets/terms-of-service-YYLbHgvW.js"),
+		"./pages/services/index.tsx": () => import("./assets/services-DTM5dwob.js"),
+		"./pages/services/show.tsx": () => import("./assets/show-BT7oXxhU.js"),
+		"./pages/welcome.tsx": () => import("./assets/welcome-B15GxRP8.js")
 	})),
 	setup({ App, props }) {
 		return /* @__PURE__ */ jsx(App, { ...props });

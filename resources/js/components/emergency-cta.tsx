@@ -36,7 +36,7 @@ export default function EmergencyCta() {
                             </h2>
 
                             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                                Unexpected equipment failures and critical incidents demand immediate action. Our specialised rapid-response teams are on standby 24/7 to provide urgent heavy haulage and transport solutions, minimizing your downtime.
+                                Unexpected equipment failures and critical incidents demand immediate action. Our specialised rapid-response teams are on standby 24/7 to provide urgent heavy haulage and transport solutions, minimising your downtime.
                             </p>
                         </div>
 

@@ -12,10 +12,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.tsx'])
         @inertiaHead
     </head>
-    <body class="bg-background text-foreground min-h-screen">
+    <body class="bg-background text-foreground min-h-screen overflow-x-clip">
         @inertia
-    <!-- impeccable-live-start -->
-<script src="http://localhost:8400/live.js?token=6996db90-1344-49c2-81ad-8ebaac01d612"></script>
-<!-- impeccable-live-end -->
-</body>
+    </body>
 </html>

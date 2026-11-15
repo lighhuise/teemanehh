@@ -1,37 +1,99 @@
 import { Link } from '@inertiajs/react';
 import { ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
+// @ts-ignore
+import defaultServiceImage from '@/../images/heavy-haulage-01.webp';
 
-interface Service {
+export interface ServiceContentBlock {
+    type: string;
+    data?: {
+        image?: string;
+        images?: string[];
+        [key: string]: unknown;
+    };
+}
+
+export interface Service {
     id: number;
     title: string;
     slug: string;
     short_description: string | null;
+    description?: string | null;
+    image?: string | null;
+    featured_image_url?: string | null;
+    content_blocks?: ServiceContentBlock[] | null;
 }
 
-interface ServiceCardProps {
+export interface ServiceCardProps {
     service: Service;
-    index: number;
+    index?: number;
+    className?: string;
 }
 
-export function ServiceCard({ service, index }: ServiceCardProps) {
+export function getServiceImageUrl(service: Service): string | null {
+    let rawUrl = service.featured_image_url || service.image;
+
+    if (!rawUrl && Array.isArray(service.content_blocks)) {
+        for (const block of service.content_blocks) {
+            if (block.type === 'image' && block.data?.image) {
+                rawUrl = block.data.image;
+                break;
+            }
+            if ((block.type === 'media_text' || block.type === 'gallery') && block.data?.images?.[0]) {
+                rawUrl = block.data.images[0];
+                break;
+            }
+        }
+    }
+
+    if (!rawUrl) {
+        return null;
+    }
+
+    if (rawUrl.startsWith('http://') || rawUrl.startsWith('https://') || rawUrl.startsWith('/')) {
+        return rawUrl;
+    }
+
+    return `/storage/${rawUrl}`;
+}
+
+export function ServiceCard({ service, className }: ServiceCardProps) {
+    const imageUrl = getServiceImageUrl(service) || defaultServiceImage;
+
     return (
         <Link
             href={`/services/${service.slug}`}
-            className="group relative p-8 bg-card flex flex-col justify-between min-h-65 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 rounded-3xl border border-border/40 hover:border-primary/20"
+            className={cn(
+                "group relative bg-card flex flex-col justify-between overflow-hidden rounded-2xl border border-border shadow-xs hover:border-primary/40 hover:shadow-xl transition-all duration-300 hover:-translate-y-1",
+                className
+            )}
         >
-            <div className="space-y-4">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary font-bold text-sm mb-2">
-                    0{index + 1}
-                </span>
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground line-clamp-4 leading-relaxed">
-                    {service.short_description}
-                </p>
+            {/* Service Thumbnail Image */}
+            <div className="relative aspect-16/10 w-full overflow-hidden bg-muted border-b border-border/50">
+                <img
+                    src={imageUrl}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    loading="lazy"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-20 group-hover:opacity-0 transition-opacity duration-300" />
             </div>
-            <div className="mt-8 flex items-center text-sm font-semibold tracking-wide text-primary">
-                Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+
+            {/* Content Area */}
+            <div className="p-6 flex flex-col justify-between flex-1">
+                <div className="space-y-2.5">
+                    <h3 className="text-lg font-heading font-black uppercase tracking-tight text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                        {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                        {service.short_description}
+                    </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-primary">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
             </div>
         </Link>
     );

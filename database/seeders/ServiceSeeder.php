@@ -221,7 +221,7 @@ class ServiceSeeder extends Seeder
                         'data' => [
                             'subheading' => 'Regulatory & Corridor Oversight',
                             'heading' => 'Customs Clearance & Border Escorts',
-                            'content' => '<p>Our cross-border specialists manage all foreign abnormal permits, customs transit documentation, and regional border post escorts, minimizing border dwell times.</p><p>With bilingual corridor coordinators and live satellite GPS tracking, clients retain complete milestone visibility across national borders.</p>',
+                            'content' => '<p>Our cross-border specialists manage all foreign abnormal permits, customs transit documentation, and regional border post escorts, minimising border dwell times.</p><p>With bilingual corridor coordinators and live satellite GPS tracking, clients retain complete milestone visibility across national borders.</p>',
                             'images' => [
                                 'https://images.unsplash.com/photo-1586528116493-a029325540fa?auto=format&fit=crop&q=80&w=1200&h=800',
                             ],
