@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+// @ts-ignore
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import Wrapper from './ui/misc/wrapper';
 import { MapPin, Navigation as NavIcon } from 'lucide-react';
 import {FloatingStatCard} from "@/components/ui/misc/floating-stat-card";
+import SectionBackdrop from "@/components/ui/misc/section-backdrop";
 
 export default function Map() {
     const [mounted, setMounted] = useState(false);
@@ -18,7 +20,8 @@ export default function Map() {
 
     if (!mounted) {
         return (
-            <section className="bg-background relative z-10 w-full mb-24 mt-12">
+            <section className="bg-background  relative z-10 w-full mb-24 mt-12">
+
                 <Wrapper>
                     <div className="w-full h-[500px] lg:h-[600px] rounded-lg overflow-hidden border border-border bg-muted flex items-center justify-center">
                         <span className="text-muted-foreground animate-pulse font-medium tracking-widest uppercase">Loading Map...</span>
@@ -36,7 +39,8 @@ export default function Map() {
     });
 
     return (
-        <section className="bg-background relative z-10 w-full pb-24 pt-12">
+        <section className="bg-background overflow-clip relative z-10 w-full pb-24 pt-12">
+            <SectionBackdrop  />
             <Wrapper>
                 <div className="flex flex-col gap-10">
 

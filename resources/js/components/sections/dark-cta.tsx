@@ -1,12 +1,11 @@
 import Wrapper from '@/components/ui/misc/wrapper';
 import { Trophy, CheckCircle2, ArrowRight } from 'lucide-react';
+import SectionBackdrop from '@/components/ui/misc/section-backdrop';
 
 export default function DarkCta() {
     return (
-        <section className="py-24 md:py-32 bg-background text-foreground relative overflow-hidden border-y border-border">
-            {/* Ambient Corner Lights */}
-            <div className="absolute top-0 left-0 w-125 h-125 bg-primary/10 blur-[120px] rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-            <div className="absolute bottom-0 right-0 w-150 h-150 bg-sky-500/10 blur-[130px] rounded-full pointer-events-none translate-x-1/3 translate-y-1/3"></div>
+        <section className="py-24 md:py-32 isolate bg-background text-foreground relative overflow-hidden border-y border-border">
+            <SectionBackdrop graphic="wheel" />
 
             <Wrapper className="relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">

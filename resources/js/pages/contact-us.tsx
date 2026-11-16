@@ -11,6 +11,9 @@ import { cn } from "@/lib/utils";
 import SectionHeading from '@/components/ui/misc/section-heading';
 import PageHeader from '@/components/ui/misc/page-header';
 
+// @ts-ignore
+import imgContactHeader from '@/../images/469880431_546677775019063_8311794249468884922_n.webp';
+
 interface HoneypotData {
     enabled: boolean;
     nameFieldName: string;
@@ -46,11 +49,12 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
 
     return (
         <>
-            
 
-            <PageHeader 
-                title="TELL US ABOUT YOUR MOVE"
+
+            <PageHeader
+                title={<>TELL US ABOUT YOUR <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1"> MOVE</span></>}
                 description="To help us assess your transport requirements, share your cargo specifications, dimensions, collection point, and destination with our team."
+                image={imgContactHeader}
             />
 
             <section className="py-24 bg-background">

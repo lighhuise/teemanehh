@@ -6,7 +6,7 @@ import AboutManifesto from '@/components/sections/about-manifesto';
 import AboutCapabilities from '@/components/sections/about-capabilities';
 
 // @ts-ignore
-import imgHeavy1 from '@/../images/lineup.webp';
+import imgHeavy1 from '@/../images/554094071_767416502945188_8952982047091955044_n.webp';
 import Divider1 from "@/components/ui/divider-1";
 
 export default function AboutUs() {

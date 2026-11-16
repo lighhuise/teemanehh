@@ -4,12 +4,14 @@ import { Link } from "@inertiajs/react";
 import { buttonVariants } from "@/components/ui/button";
 import { ServiceCard, Service } from "@/components/service-card";
 import { cn } from "@/lib/utils";
+import SectionBackdrop from "../ui/misc/section-backdrop";
 
 export function HomeServicesSection({ services }: { services: Service[] }) {
     const isFourCol = services?.length === 4 || (services?.length && services.length % 4 === 0);
 
     return (
-        <section className="py-24 bg-muted/30 border-y border-border relative">
+        <section className="py-24 bg-muted/30 border-y isolate border-border relative overflow-clip">
+            <SectionBackdrop  />
             <Wrapper>
                 <SectionHeading
                     label="Our Capabilities"

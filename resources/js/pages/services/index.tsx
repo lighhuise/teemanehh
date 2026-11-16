@@ -6,6 +6,9 @@ import { ServiceCard, Service } from '@/components/service-card';
 import { cn } from '@/lib/utils';
 import LogoMark from "@/components/ui/misc/logo-mark";
 
+// @ts-ignore
+import imgServicesHeader from '@/../images/480681841_599071983112975_7334336084460441989_n.webp';
+
 export default function Index({ services }: { services: Service[] }) {
     const isFourCol = services?.length === 4 || (services?.length && services.length % 4 === 0);
 
@@ -14,6 +17,7 @@ export default function Index({ services }: { services: Service[] }) {
             <PageHeader
                 title={<>SPECIALISED TRANSPORT <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1">SOLUTIONS</span></>}
                 description="We understand that every heavy haulage project demands precision, reliability and rigorous planning. Our capabilities provide the flexibility and strength needed to tackle the most demanding abnormal loads."
+                image={imgServicesHeader}
             />
 
             <div className="bg-background selection:bg-primary selection:text-white relative">

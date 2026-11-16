@@ -6,6 +6,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { PhoneCall, Mail } from 'lucide-react';
 import LogoMark from '@/components/ui/misc/logo-mark';
 import Divider1 from "@/components/ui/divider-1";
+import SectionBackdrop from "@/components/ui/misc/section-backdrop";
+
+// @ts-ignore
+import imgFaqHeader from '@/../images/576907135_805628229124015_6667111443022305155_n.webp';
 
 export default function FaqPage({ faqs }: { faqs: any[] }) {
     return (
@@ -13,14 +17,17 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
             <PageHeader
                 title={<>FREQUENTLY ASKED <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1">QUESTIONS</span></>}
                 description="Find answers to common questions about our heavy haulage services, equipment, and operations."
+                image={imgFaqHeader}
             />
 
-            <section className="py-20 md:py-32 bg-background relative overflow-hidden isolate">
+            <section className="py-20 md:py-32 bg-background relative overflow-clip isolate">
                 {/* Ambient Glows */}
-                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">
-                    <div className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full"></div>
-                    <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-sky-500/5 blur-[120px] rounded-full"></div>
-                </div>
+                {/*<div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">*/}
+                {/*    <div className="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full"></div>*/}
+                {/*    <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-sky-500/5 blur-[120px] rounded-full"></div>*/}
+                {/*</div>*/}
+
+                <SectionBackdrop reticules={`both`}   />
 
                 <Wrapper>
                     <div className="max-w-4xl mx-auto">
