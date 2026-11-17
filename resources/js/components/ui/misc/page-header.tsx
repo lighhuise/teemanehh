@@ -20,11 +20,7 @@ export default function PageHeader({ label, title, description, children, image,
 
     return (
         <section className={`relative border-b border-border bg-background overflow-hidden isolate pb-20 pt-36 sm:pt-44 lg:pt-48 lg:pb-28 ${className || ''}`}>
-            {/* Ambient Glows */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">
-                <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full" />
-                <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-sky-500/5 blur-[120px] rounded-full" />
-            </div>
+            <div aria-hidden="true" className="page-header-radial absolute inset-0 pointer-events-none select-none -z-10" />
 
             <Wrapper className="relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -38,7 +34,7 @@ export default function PageHeader({ label, title, description, children, image,
                             {title}
                         </h1>
                         {description && (
-                            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-normal">
+                            <p className="page-header-desc text-lg sm:text-xl text-muted-foreground leading-relaxed font-normal">
                                 {description}
                             </p>
                         )}

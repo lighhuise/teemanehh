@@ -42,7 +42,8 @@
     --color-secondary-foreground: var(--secondary-foreground);
     --color-secondary: var(--secondary);
     --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
+    --color-primary: #0064be;
+/*var(--primary);*/
     --color-popover-foreground: var(--popover-foreground);
     --color-popover: var(--popover);
     --color-card-foreground: var(--card-foreground);
@@ -151,4 +152,72 @@
     opacity: 1;
     transform: scale(1.15);
   }
+}
+
+.nav-logo-plinth {
+  border-bottom: 1px solid #0064be;
+  border-right: 1px solid #0064be;
+  background-image:
+    radial-gradient(180px 95px at 100% 100%, rgba(0, 100, 190, 0.6) 0%, rgba(0, 100, 190, 0.2) 48%, transparent 78%),
+    linear-gradient(to bottom, #00102a 0%, rgba(1, 33, 72, 0.82) 100%);
+  box-shadow:
+    inset -2px -2px 0px 0px rgba(0, 100, 190, 0.45),
+    inset -16px -14px 28px -8px rgba(0, 100, 190, 0.45),
+    6px 8px 24px -6px rgba(0, 100, 190, 0.5);
+}
+
+.nav-link-active {
+  color: #0064be;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -6px;
+  height: 2px;
+  background-color: #0064be;
+  box-shadow: 0 2px 10px rgba(0, 100, 190, 0.65);
+}
+
+.page-header-radial {
+  background-image: radial-gradient(
+    ellipse 95% 85% at 50% 42%,
+    transparent 0%,
+    transparent 50%,
+    color-mix(in oklch, var(--primary) 24.7%, transparent) 74%,
+    color-mix(in oklch, var(--primary) 49.4%, transparent) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 8%,
+    rgba(0, 0, 0, 0.35) 18.2%,
+    black 28%,
+    black 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 8%,
+    rgba(0, 0, 0, 0.35) 18.2%,
+    black 28%,
+    black 100%
+  );
+}
+
+.page-header-desc {
+  color: color-mix(in oklch, var(--muted-foreground) 82%, var(--primary));
+}
+
+.divider-radial-vignette {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 38%,
+    rgba(0, 8, 24, 0.4225) 64%,
+    rgba(0, 4, 14, 0.65) 100%
+  );
 }

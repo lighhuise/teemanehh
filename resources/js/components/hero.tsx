@@ -1,9 +1,9 @@
 import CutoutBox from "@/components/ui/misc/cutout-box";
 import Wrapper from "@/components/ui/misc/wrapper";
-import { Link } from "@inertiajs/react";
-import { ArrowRight, ShieldCheck, MapPin, Clock } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import {Link} from "@inertiajs/react";
+import {ArrowRight, Clock, MapPin, ShieldCheck} from "lucide-react";
+import {motion, useScroll, useTransform} from "framer-motion";
+import {useEffect, useRef, useState} from "react";
 // @ts-ignore
 import heroBgImage from "@/../images/heavy-haulage-02.webp";
 
@@ -51,7 +51,7 @@ export default function Hero() {
                         src={heroBgImage}
                         alt="Teemane Heavy Haulage"
                         // Balanced sizing and focal point on convoy across all viewports
-                        className="w-full h-full object-cover object-[43%_center] sm:object-center lg:absolute lg:top-[-20%] lg:h-[140%] lg:left-0"
+                        className="w-full contrast-125 h-full object-cover object-[43%_center] sm:object-center lg:absolute lg:top-[-20%] lg:h-[140%] lg:left-0"
                     />
                     {/* Gradient overlay to ensure visual depth and seamless transition */}
                     <div className="absolute inset-0 bg-linear-to-t from-background/30 via-transparent to-transparent lg:from-slate-950/70 lg:via-slate-950/20 lg:to-transparent" />

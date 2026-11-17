@@ -30,20 +30,20 @@ export default function Navigation2() {
             {/* Logo */}
             <Link href="/" prefetch="hover" className="flex isolate items-center gap-2 group relative">
               {/*<Logo className="h-9 sm:h-11 z-0 w-auto relative transition-transform duration-300 group-hover:scale-105" aria-label="Teemane Heavy Haulage Logo" />*/}
-                <div className={`absolute h-28 w-300 -z-5 -right-20 bg-linear-to-b border-ee-emerald-300 from-[#00102a] backdrop-blur-xs to-[#012148]/80 rounded-br-3xl -skew-x-18`}></div>
-                <div className={`flex space-x-2 items-center`}>
+                <div className="nav-logo-plinth absolute h-26 w-300 border-b border-r border-[#0064be] -z-5 -right-2 bg-linear-to-b from-[#00102a]/95 backdrop-blur-xs to-[#012148]/80 rounded-br-3xl -skew-x-18"></div>
+                <div className={`flex space-x-2 items-center md:-translate-x-6`}>
                     <div className={`text-6xl text-white -skew-x-18 tracking-tight font-black`}>THH</div>
                     <div className={`-skew-x-18 w-2 h-11 bg-[#0064be]`}></div>
-                    <div className={`text-white -skew-x-18 font-semibold`}>
+                    <div className={`text-white -skew-x-18 font-semibold leading-5`}>
                         Teemane <br/>
-                        Heavy Haulage
+                        <span className={`whitespace-nowrap`}>Heavy Haulage</span>
                     </div>
                 </div>
             </Link>
 
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden lg:flex md:items-center md:gap-8">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -51,10 +51,10 @@ export default function Navigation2() {
                   key={link.name}
                   href={link.href}
                   prefetch="hover"
-                  className={`text-sm text-white font-bold tracking-widest uppercase transition-colors px-2 py-1  ${
+                  className={`text-sm font-bold tracking-widest whitespace-nowrap uppercase transition-colors px-2 py-1 ${
                     active
-                      ? 'text-primary border-b-[#0064be]'
-                      : 'hover:text-primary'
+                      ? 'nav-link-active text-[#0064be]'
+                      : 'text-white hover:text-primary'
                   }`}
                 >
                   {link.name}
@@ -66,7 +66,7 @@ export default function Navigation2() {
             <Link
               href="/contact-us"
               prefetch="hover"
-              className="text-sm font-bold tracking-widest uppercase inline-flex items-center gap-2 bg-[#0064be] hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow px-5 py-2.5 -skew-x-18"
+              className="text-sm font-bold whitespace-nowrap tracking-widest uppercase inline-flex items-center gap-2 bg-[#0064be] hover:from-primary/90 hover:to-primary text-primary-foreground transition-all shadow-sm hover:shadow px-5 py-2.5 -skew-x-18"
             >
               Request a Quote
             </Link>
@@ -79,7 +79,7 @@ export default function Navigation2() {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <ModeToggle />
             <Sheet>
               <SheetTrigger

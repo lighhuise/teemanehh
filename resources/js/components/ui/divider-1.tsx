@@ -43,7 +43,7 @@ function Divider1({
             <div className={`absolute top-0 inset-x-0 h-5 opacity-10 border-b border-black bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)] `}></div>
             <div className={`absolute bottom-0 inset-x-0 h-5 opacity-10 border-t border-black bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)] `}></div>
             <div
-                className="relative flex h-full w-full items-center justify-center overflow-hidden px-4"
+                className="divider-radial-vignette relative flex h-full w-full items-center justify-center overflow-hidden px-4"
             >
                 {/* Right CAD Blueprint Overlay (Screen Blend Mode) */}
                 {rightImage && (
