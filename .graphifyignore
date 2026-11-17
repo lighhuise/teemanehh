@@ -1,0 +1,7 @@
+﻿vendor/
+storage/framework/
+bootstrap/cache/
+bootstrap/ssr/
+public/build/
+public/js/filament/
+public/css/filament/
