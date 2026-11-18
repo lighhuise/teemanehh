@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "cobejs": {
+      "source": "MengTo/Skills",
+      "commit": "3cc93458c4949c39a04e938ea7892a1d6d3d40bf",
+      "sourceType": "github",
+      "skillPath": "agent-skills/web-design/cobejs/SKILL.md",
+      "computedHash": "6852ef8362d9f3df12290dbe6c207d63dc56040e24b66ca439db563735fbb095"
+    }
+  }
+}

@@ -7,7 +7,7 @@ import React from "react";
 export default function Footer() {
     return (
         <footer className="bg-muted z-5 text-muted-foreground relative overflow-hidden pt-24 pb-12 border-t-20 border-primary">
-
+            <div className={`absolute top-0 inset-x-0 h-5 w-full bg-[#918e88]`}></div>
             {/*<div className={`absolute top-0 inset-x-0 h-5 opacity-50 border-b border-black bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,var(--primary)_4px,var(--primary)_8px)] `}></div>*/}
 
             {/* Background Typography */}

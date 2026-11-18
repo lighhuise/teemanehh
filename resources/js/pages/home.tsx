@@ -13,6 +13,7 @@ import volvoBlueprintImageLeft from '@/../images/isolate-truck-trailer-load-left
 import volvoBlueprintImage from '@/../images/isolate-truck-trailer-load.webp';
 import {Building2, CalendarClock, ClipboardCheck, Clock, Compass, HardHat, ShieldCheck, Truck} from "lucide-react";
 import ScrollDivider from "@/components/scroll-divider";
+import Globe from "@/components/globe";
 
 export default function Home({ services }: { services: any[] }) {
     return (
@@ -23,6 +24,7 @@ export default function Home({ services }: { services: any[] }) {
             </Head>
 
             <Hero />
+
             <ScrollDivider
                 texts={[
                     <>
@@ -73,7 +75,7 @@ export default function Home({ services }: { services: any[] }) {
             <HomeServicesSection services={services} />
             <Divider1 leftImage={volvoBlueprintImageLeft} rightImage={volvoBlueprintImage} />
             <HomeSafetySection />
-            <Divider1 />
+            <Globe/>
             <DarkCta />
         </div>
     );
