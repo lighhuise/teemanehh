@@ -10,6 +10,7 @@ import { toast } from '@/components/ui/toast';
 import { cn } from "@/lib/utils";
 import SectionHeading from '@/components/ui/misc/section-heading';
 import PageHeader from '@/components/ui/misc/page-header';
+import ScrollDivider from '@/components/scroll-divider';
 
 // @ts-ignore
 import imgContactHeader from '@/../images/469880431_546677775019063_8311794249468884922_n.webp';
@@ -55,6 +56,44 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                 title={<>TELL US ABOUT YOUR <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1"> MOVE</span></>}
                 description="To help us assess your transport requirements, share your cargo specifications, dimensions, collection point, and destination with our team."
                 image={imgContactHeader}
+            />
+            <ScrollDivider
+                texts={[
+                    <>
+                        <span className="inline-flex items-center uppercase font-heading">
+                            24/7/365 Emergency Dispatch
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Bellville South Headquarters
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Rapid Quote Turnaround
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Nationwide &amp; SADC Coverage
+                        </span>
+                    </>,
+                    <>
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Heavy Haulage Enquiries
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Oversized Cargo Assessments
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Machinery Transport Planning
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Direct Hotline: 086 188 8004
+                        </span>
+                    </>,
+                ]}
             />
 
             <section className="py-24 bg-background">

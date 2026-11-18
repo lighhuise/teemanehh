@@ -1,13 +1,13 @@
-import { Link } from '@inertiajs/react';
-import { ArrowRight, MapPin, Phone, Mail } from 'lucide-react';
+import {Link} from '@inertiajs/react';
+import {ArrowRight, Mail, MapPin, Phone} from 'lucide-react';
 import Wrapper from "@/components/ui/misc/wrapper";
 import Logo from '@/components/ui/misc/logo';
 import React from "react";
 
 export default function Footer() {
     return (
-        <footer className="bg-muted z-5 text-muted-foreground relative overflow-hidden pt-24 pb-12 border-t-6 border-primary">
-            <div aria-hidden={true} className={`h-50 pointer-events-none absolute top-0 inset-x-0 bg-linear-to-b from-primary/25 to-transparent`}></div>
+        <footer className="bg-muted z-5 text-muted-foreground relative overflow-hidden pt-24 pb-12 border-t-20 border-primary">
+
             {/*<div className={`absolute top-0 inset-x-0 h-5 opacity-50 border-b border-black bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,var(--primary)_4px,var(--primary)_8px)] `}></div>*/}
 
             {/* Background Typography */}

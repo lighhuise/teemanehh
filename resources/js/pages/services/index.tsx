@@ -1,16 +1,39 @@
-import { Head } from '@inertiajs/react';
+import React from 'react';
 import AppLayout from '@/layouts/app-layout';
 import Wrapper from '@/components/ui/misc/wrapper';
 import PageHeader from '@/components/ui/misc/page-header';
-import { ServiceCard, Service } from '@/components/service-card';
-import { cn } from '@/lib/utils';
+import {Service, ServiceCard} from '@/components/service-card';
+import {cn} from '@/lib/utils';
 import LogoMark from "@/components/ui/misc/logo-mark";
 
 // @ts-ignore
 import imgServicesHeader from '@/../images/480681841_599071983112975_7334336084460441989_n.webp';
+import ScrollDivider from "@/components/scroll-divider";
+
+function renderServiceTickerRow(items: Service[]) {
+    return (
+        <>
+            {items.map((service, idx) => (
+                <React.Fragment key={service.id ?? service.slug ?? idx}>
+                    {idx > 0 && (
+                        <>
+                            &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        </>
+                    )}
+                    <span className="inline-flex items-center uppercase font-heading">
+                        {service.title}
+                    </span>
+                </React.Fragment>
+            ))}
+        </>
+    );
+}
 
 export default function Index({ services }: { services: Service[] }) {
     const isFourCol = services?.length === 4 || (services?.length && services.length % 4 === 0);
+    const midpoint = Math.ceil((services?.length || 0) / 2);
+    const firstRowServices = services?.slice(0, midpoint) ?? [];
+    const secondRowServices = services?.length > 1 ? services.slice(midpoint) : firstRowServices;
 
     return (
         <AppLayout title="Services">
@@ -19,6 +42,14 @@ export default function Index({ services }: { services: Service[] }) {
                 description="We understand that every heavy haulage project demands precision, reliability and rigorous planning. Our capabilities provide the flexibility and strength needed to tackle the most demanding abnormal loads."
                 image={imgServicesHeader}
             />
+            {services?.length > 0 && (
+                <ScrollDivider
+                    texts={[
+                        renderServiceTickerRow(firstRowServices),
+                        renderServiceTickerRow(secondRowServices),
+                    ]}
+                />
+            )}
 
             <div className="bg-background selection:bg-primary selection:text-white relative">
                 <div aria-hidden="true" className="absolute top-30 right-0 pointer-events-none opacity-10 md:opacity-[0.1] translate-x-1/2 mix-blend-luminosity">

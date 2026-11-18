@@ -1,4 +1,3 @@
-import { Head } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import PageHeader from '@/components/ui/misc/page-header';
 
@@ -8,6 +7,7 @@ import AboutCapabilities from '@/components/sections/about-capabilities';
 // @ts-ignore
 import imgHeavy1 from '@/../images/554094071_767416502945188_8952982047091955044_n.webp';
 import Divider1 from "@/components/ui/divider-1";
+import ScrollDivider from "@/components/scroll-divider";
 
 export default function AboutUs() {
     return (
@@ -19,7 +19,7 @@ export default function AboutUs() {
                 description="Established in 2012, Teemane Heavy Haulage prides itself on countless victories across South Africa's most demanding transport routes, delivering complex, oversized machinery with absolute precision."
                 image={imgHeavy1}
             />
-            <Divider1/>
+            <ScrollDivider texts={[`Redefining What's Possible In Heavy Haulage`, `Redefining What's Possible In Heavy Haulage`]} />
             <AboutManifesto />
             <Divider1/>
             <AboutCapabilities />

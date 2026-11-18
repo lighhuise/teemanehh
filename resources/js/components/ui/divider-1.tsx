@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { cn } from '@/lib/utils';
+import React, {useRef} from 'react';
+import {cn} from '@/lib/utils';
 // @ts-ignore
 import volvoBlueprintImage from '@/../images/Abnormal Volvo FH16 Empty Low-Loader Blueprint.webp';
 // @ts-ignore
@@ -60,7 +60,7 @@ function Divider1({
                         <div className={`h-px -inset-x-10 bg-linear-to-r rotate-45 from-transparent via-white/30 to-transparent absolute top-1/2`}></div>
                         <div className={`h-px -inset-x-20 bg-linear-to-r -rotate-45 from-transparent via-white/30 to-transparent absolute top-1/2`}></div>
                         <div className={`w-px -inset-y-10 bg-linear-to-b from-transparent via-white/30 to-transparent absolute left-1/2`}></div>
-                        <div className={`border border-2 inset-4 border-white/25 absolute rounded-full`}></div>
+                        <div className={`border-2 inset-4 border-white/25 absolute rounded-full`}></div>
                     </div>
                     <div className={`size-32 shadow-2xl border-5 border-black/25 bg-background  grid place-items-center rounded-full`}>
                         <Logo className="h-9 z-10 sm:h-11 w-auto block relative transition-transform duration-300 group-hover:scale-105" aria-label="Teemane Heavy Haulage Logo" />

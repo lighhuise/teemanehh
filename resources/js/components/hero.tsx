@@ -1,8 +1,7 @@
-import CutoutBox from "@/components/ui/misc/cutout-box";
 import Wrapper from "@/components/ui/misc/wrapper";
 import {Link} from "@inertiajs/react";
 import {ArrowRight, Clock, MapPin, ShieldCheck} from "lucide-react";
-import {motion, useScroll, useTransform} from "framer-motion";
+import {useScroll, useTransform} from "framer-motion";
 import {useEffect, useRef, useState} from "react";
 // @ts-ignore
 import heroBgImage from "@/../images/heavy-haulage-02.webp";
@@ -38,14 +37,14 @@ export default function Hero() {
 
     return (
         <div ref={ref}>
-            <CutoutBox
-                position="bottom"
+            <div
+
                 className="relative flex flex-col justify-end z-0 drop-shadow-lg min-h-0 lg:min-h-[85vh] overflow-hidden bg-background lg:bg-slate-950 transition-colors duration-300"
             >
                 {/* Image Container - dedicated top section on mobile & tablet, full-bleed parallax background on desktop */}
-                <motion.div
-                    className="relative w-full aspect-16/10 sm:aspect-16/9 md:aspect-21/9 lg:aspect-auto lg:absolute lg:inset-0 bg-background lg:bg-slate-950 origin-top overflow-hidden pt-16 sm:pt-32 lg:pt-0 [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] lg:[mask-image:none] [-webkit-mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] lg:[-webkit-mask-image:none]"
-                    style={{ y: isMobileOrTablet ? undefined : yImage }}
+                <div
+                    className="relative w-full aspect-16/10 sm:aspect-16/9 md:aspect-21/9 lg:aspect-auto lg:absolute lg:inset-0 bg-background lg:bg-slate-950 origin-top overflow-hidden pt-16  lg:pt-0 [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] lg:[mask-image:none] [-webkit-mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] lg:[-webkit-mask-image:none]"
+
                 >
                     <img
                         src={heroBgImage}
@@ -54,22 +53,22 @@ export default function Hero() {
                         className="w-full contrast-125 h-full object-cover object-[43%_center] sm:object-center lg:absolute lg:top-[-20%] lg:h-[140%] lg:left-0"
                     />
                     {/* Gradient overlay to ensure visual depth and seamless transition */}
-                    <div className="absolute inset-0 bg-linear-to-t from-background/30 via-transparent to-transparent lg:from-slate-950/70 lg:via-slate-950/20 lg:to-transparent" />
-                </motion.div>
+                    <div className="absolute inset-0 bg-linear-to-t from-background/30 via-transparent to-transparent lg:from-slate-950/40 lg:via-slate-950/20 lg:to-transparent" />
+                </div>
 
                 {/* Content Container - flows naturally under image on mobile & tablet, overlays image on desktop */}
-                <motion.div
+                <div
                     className="relative z-10 w-full"
-                    style={{ y: isMobileOrTablet ? undefined : yText, opacity: isMobileOrTablet ? undefined : opacityText }}
+
                 >
                     <Wrapper className="pt-6 sm:pt-8 lg:pt-40 pb-14 sm:pb-16 lg:pb-16">
                         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 lg:gap-12">
                             {/* Left: Heading and Description */}
                             <div className="max-w-xl sm:max-w-2xl lg:max-w-xl text-left space-y-3 sm:space-y-4">
-                                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-black uppercase tracking-tighter text-foreground lg:text-white leading-[1.1] drop-shadow-none lg:drop-shadow-[0_3px_10px_rgba(0,0,0,0.85)]">
-                                    Moving the <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-400 drop-shadow-sm pr-1 pb-1">Impossible</span>
+                                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-heading font-black uppercase tracking-tighter text-foreground lg:text-white leading-[1.1] drop-shadow-none lg:drop-shadow-[0_3px_4px_rgba(0,0,0,0.85)]">
+                                    Moving the <span className="text-primary drop-shadow-sm pr-1 pb-1">Impossible</span>
                                 </h1>
-                                <p className="text-sm sm:text-base lg:text-lg text-foreground/80 lg:text-slate-100 font-medium leading-relaxed drop-shadow-none lg:drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                                <p className="text-sm sm:text-base lg:text-lg text-foreground/80 lg:text-slate-100 font-medium leading-relaxed drop-shadow-none lg:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                                     South Africa's most trusted heavy haulage experts. We specialize in abnormal loads, oversized machinery, and complex transport logistics.
                                 </p>
                             </div>
@@ -108,8 +107,8 @@ export default function Hero() {
                             </div>
                         </div>
                     </Wrapper>
-                </motion.div>
-            </CutoutBox>
+                </div>
+            </div>
         </div>
     );
 }

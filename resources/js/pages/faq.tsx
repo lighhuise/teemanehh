@@ -7,6 +7,7 @@ import { PhoneCall, Mail } from 'lucide-react';
 import LogoMark from '@/components/ui/misc/logo-mark';
 import Divider1 from "@/components/ui/divider-1";
 import SectionBackdrop from "@/components/ui/misc/section-backdrop";
+import ScrollDivider from "@/components/scroll-divider";
 
 // @ts-ignore
 import imgFaqHeader from '@/../images/576907135_805628229124015_6667111443022305155_n.webp';
@@ -18,6 +19,44 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
                 title={<>FREQUENTLY ASKED <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1">QUESTIONS</span></>}
                 description="Find answers to common questions about our heavy haulage services, equipment, and operations."
                 image={imgFaqHeader}
+            />
+            <ScrollDivider
+                texts={[
+                    <>
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Abnormal Load Permits
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            250T+ Payload Capacity
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Route Surveys &amp; Escort Pilots
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            SADC Cross-Border Corridors
+                        </span>
+                    </>,
+                    <>
+                        <span className="inline-flex items-center uppercase font-heading">
+                            24/7 Live GPS Fleet Tracking
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            CAD &amp; Bridge Engineering Studies
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            24/7/365 Emergency Dispatch
+                        </span>
+                        &nbsp;<span className="mx-3.75 inline-flex items-center">•</span>&nbsp;
+                        <span className="inline-flex items-center uppercase font-heading">
+                            Engineered Transport Quotations
+                        </span>
+                    </>,
+                ]}
             />
 
             <section className="py-20 md:py-32 bg-background relative overflow-clip isolate">
