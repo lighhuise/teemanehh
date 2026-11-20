@@ -49,5 +49,7 @@ it('resolves featured_image_url from content blocks when image is empty', functi
         ->has('services', 1)
         ->where('services.0.title', 'Content Block Service')
         ->where('services.0.featured_image_url', 'https://example.com/block-image.jpg')
+        ->where('services.0.featured_image_thumb_url', 'https://example.com/block-image.jpg')
+        ->where('services.0.featured_image_srcset', null)
     );
 });

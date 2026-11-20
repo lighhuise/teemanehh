@@ -1,14 +1,11 @@
-
-import { Head } from '@inertiajs/react';
+import {Head, usePage} from '@inertiajs/react';
 import Footer from "@/components/footer";
 import {Toaster} from "@/components/ui/toast";
 import Navigation2 from "@/components/navigation2";
-import { useState, useEffect, Suspense, lazy } from 'react';
-const Map = lazy(() => import("@/components/map"));
+import {lazy, Suspense, useEffect, useState} from 'react';
 import EmergencyCta from "@/components/emergency-cta";
 
-import { usePage } from '@inertiajs/react';
-import Divider1 from "@/components/ui/divider-1";
+const Map = lazy(() => import("@/components/map"));
 
 interface AppLayoutProps {
     children: React.ReactNode;
@@ -31,7 +28,7 @@ export default function AppLayout({ children, title, description, image }: AppLa
     const fullUrl = typeof window !== 'undefined' ? window.location.href : url;
 
     return (
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 selection:bg-primary/75 selection:text-white">
+        <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300 selection:bg-primary/75 selection:text-white">
             <Head>
                 {title ? <title>{title}</title> : <title>{defaultTitle}</title>}
                 <meta name="description" content={siteDescription} />
@@ -50,15 +47,18 @@ export default function AppLayout({ children, title, description, image }: AppLa
                 <meta name="twitter:description" content={siteDescription} />
                 <meta name="twitter:image" content={siteImage} />
             </Head>
-            <a className="sr-only focus:not-sr-only bg-background  focus:fixed focus:top-2 focus:left-2 focus:z-100 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-background focus:text-foreground focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-bold text-sm" href="#main">Go to main content</a>
-            <div id={'background-gradient'} className={` w-full min-h-180 absolute opacity-50 -z-10 top-0 inset-x-0 bg-linear-to-b from-primary/25 to-background dark:from-black     pointer-events-none `} aria-hidden={true}></div>
-            <Navigation2/>
+            <a
+                className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-100 focus:px-4 focus:py-2 focus:rounded-xl focus:bg-background focus:text-foreground focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-bold text-sm"
+                href="#main"
+            >
+                Skip to main content
+            </a>
+            <Navigation2 />
 
-            <main id={`main`} className="w-full flex-1 flex flex-col">
+            <main id="main" className="w-full flex-1 flex flex-col">
                 {children}
             </main>
             <EmergencyCta />
-            <Divider1/>
             {mounted && (
                 <Suspense fallback={null}>
                     <Map />
@@ -66,7 +66,7 @@ export default function AppLayout({ children, title, description, image }: AppLa
             )}
 
             <Footer />
-            <Toaster   />
+            <Toaster />
         </div>
     );
 }

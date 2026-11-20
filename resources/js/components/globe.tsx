@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useCallback, useState } from 'react';
 import createGlobe from 'cobe';
 import { Eye, EyeOff } from 'lucide-react';
 import Wrapper from '@/components/ui/misc/wrapper';
-// @ts-ignore
-import spaceNebulaBg from '@/../images/space-nebula-bg.webp';
+import ResponsiveImage from '@/components/ui/misc/responsive-image';
+import { responsiveImages } from '@/lib/responsive-images';
 
 export interface GlobeMarker {
     id: string;
@@ -551,8 +551,9 @@ export default function Globe({
         <section className="relative overflow-hidden bg-[#030611] text-white min-h-[760px] sm:min-h-[860px] lg:min-h-[960px] flex items-center py-20 lg:py-28 border-y border-white/10 select-none">
             {/* Space Nebula Background Image */}
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
-                <img
-                    src={spaceNebulaBg}
+                <ResponsiveImage
+                    source={responsiveImages.spaceNebulaBg}
+                    sizes="100vw"
                     alt=""
                     className="h-full w-full object-cover object-right opacity-85"
                 />

@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import {
-  motion,
-  useAnimationFrame,
-  useMotionValue,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useVelocity
+    motion,
+    useAnimationFrame,
+    useMotionValue,
+    useReducedMotion,
+    useScroll,
+    useSpring,
+    useTransform,
+    useVelocity
 } from 'motion/react';
 
 interface VelocityMapping {
@@ -260,7 +260,7 @@ function VelocityText({
   for (let i = 0; i < numCopies; i++) {
     spans.push(
       <span
-        className={`flex-shrink-0 ${className}`}
+        className={`shrink-0 ${className}`}
         key={i}
         ref={i === 0 ? copyRef : null}
         aria-hidden={i > 0 ? true : undefined}

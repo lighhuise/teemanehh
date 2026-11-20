@@ -1,59 +1,62 @@
-import { Head, Link } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import Wrapper from '@/components/ui/misc/wrapper';
+import { buttonVariants } from '@/components/ui/button';
 import { ArrowLeft, AlertTriangle } from 'lucide-react';
 
 export default function ErrorPage({ status }: { status: number }) {
     const messages: Record<number, { title: string; description: string }> = {
         503: {
-            title: '503: Service Unavailable',
-            description: 'Sorry, we are doing some maintenance. Please check back soon.',
+            title: 'Service Unavailable',
+            description: 'Sorry, we are doing some scheduled maintenance. Please check back soon.',
         },
         500: {
-            title: '500: Server Error',
-            description: 'Whoops, something went wrong on our servers.',
+            title: 'Server Error',
+            description: 'Whoops, something went wrong on our servers. Our team has been alerted.',
         },
         404: {
-            title: '404: Page Not Found',
-            description: 'Sorry, the page you are looking for could not be found.',
+            title: 'Page Not Found',
+            description: 'Sorry, the page you are looking for could not be found or has been moved.',
         },
         403: {
-            title: '403: Forbidden',
-            description: 'Sorry, you are forbidden from accessing this page.',
+            title: 'Forbidden',
+            description: 'Sorry, you do not have permission to access this page.',
         },
     };
 
     const { title, description } = messages[status] || {
-        title: `${status}: Error`,
+        title: 'Unexpected Error',
         description: 'An unexpected error occurred.',
     };
 
     return (
-        <AppLayout title={title}>
-            
-            <div className="bg-background selection:bg-primary selection:text-white pb-24 min-h-[70vh] flex flex-col justify-center">
-                <Wrapper className="text-center flex flex-col items-center justify-center">
-                    <div className="bg-muted/30 p-8 rounded-full mb-8">
-                        <AlertTriangle className="w-16 h-16 text-primary" />
+        <AppLayout title={`${status}: ${title}`}>
+            <section className="relative overflow-hidden isolate bg-background pt-32 sm:pt-40 pb-20 sm:pb-28 min-h-[70vh] flex flex-col justify-center">
+                <div aria-hidden="true" className="page-header-radial absolute inset-0 pointer-events-none select-none -z-10" />
+                <Wrapper className="relative z-10 text-center flex flex-col items-center justify-center">
+                    <div className="size-20 rounded-2xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center mb-6 shadow-sm">
+                        <AlertTriangle className="w-10 h-10" />
                     </div>
-                    
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-foreground uppercase mb-6">
+
+                    <span className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full border bg-primary/10 text-primary border-primary/20 mb-5">
+                        <span aria-hidden="true" className="size-1.5 rounded-full bg-primary" />
+                        Error {status}
+                    </span>
+
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black tracking-tighter text-foreground uppercase mb-5">
                         {title}
                     </h1>
-                    
-                    <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed mb-12">
+
+                    <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10">
                         {description}
                     </p>
 
-                    <Link
-                        href="/"
-                        className="inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-lg shadow-sm hover:shadow transition-all"
-                    >
+                    <Link href="/" prefetch="hover" className={buttonVariants({ size: 'xl' })}>
                         <ArrowLeft className="w-4 h-4" />
-                        Back to Home
+                        <span>Back to Home</span>
                     </Link>
                 </Wrapper>
-            </div>
+            </section>
         </AppLayout>
     );
 }

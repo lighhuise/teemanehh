@@ -11,9 +11,7 @@ import { cn } from "@/lib/utils";
 import SectionHeading from '@/components/ui/misc/section-heading';
 import PageHeader from '@/components/ui/misc/page-header';
 import ScrollDivider from '@/components/scroll-divider';
-
-// @ts-ignore
-import imgContactHeader from '@/../images/469880431_546677775019063_8311794249468884922_n.webp';
+import { responsiveImages } from '@/lib/responsive-images';
 
 interface HoneypotData {
     enabled: boolean;
@@ -53,9 +51,19 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
 
 
             <PageHeader
-                title={<>TELL US ABOUT YOUR <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1"> MOVE</span></>}
+                label="Get In Touch"
+                title={
+                    <>
+                        TELL US ABOUT YOUR{' '}
+                        <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1">
+                            MOVE
+                        </span>
+                    </>
+                }
                 description="To help us assess your transport requirements, share your cargo specifications, dimensions, collection point, and destination with our team."
-                image={imgContactHeader}
+                image={responsiveImages.contactHeader}
+                imageAlt="Teemane Heavy Haulage Mercedes-Benz truck transporting oversized industrial storage tanks"
+                imageClassName="object-[45%_55%]"
             />
             <ScrollDivider
                 texts={[
@@ -96,147 +104,193 @@ export default function ContactUs({ flash, honeypot }: { flash: { success?: stri
                 ]}
             />
 
-            <section className="py-24 bg-background">
+            <section className="py-16 sm:py-24 lg:py-28 bg-background">
                 <Wrapper>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
                         {/* Contact Information */}
-                        <div className="space-y-12">
-                            <div>
-                                <h2 className="text-3xl font-black tracking-tighter text-foreground uppercase mb-4">
-                                    Our Office
-                                </h2>
-                                <p className="text-lg text-muted-foreground mb-8">
-                                    Headquartered in Bellville South, Cape Town, we provide specialised heavy haulage and machinery transport solutions tailored to your load and schedule.
-                                </p>
+                        <div className="lg:col-span-5 space-y-10">
+                            <SectionHeading
+                                label="Direct Contact"
+                                title="Our Head Office"
+                                align="left"
+                            >
+                                Headquartered in Bellville South, Cape Town, we provide specialised heavy haulage and machinery transport solutions tailored to your load and schedule.
+                            </SectionHeading>
 
-                                <div className="space-y-6">
-                                    <div className="flex items-start gap-4">
-                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
-                                            <MapPin className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-black text-lg">Address</h3>
-                                            <p className="text-muted-foreground">
-                                                6 Van Eck St<br />
-                                                Bellville South, Cape Town, 7530
-                                            </p>
-                                        </div>
+                            <div className="space-y-4">
+                                <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5 shadow-xs">
+                                    <div className="shrink-0 size-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
+                                        <MapPin className="w-5 h-5" />
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
-                                            <Phone className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-black text-lg">Phone</h3>
-                                            <a href="tel:0861888004" className="text-muted-foreground hover:text-primary transition-colors">
-                                                086 188 8004
-                                            </a>
-                                            <p className="text-xs text-muted-foreground/70 mt-1 uppercase tracking-wider font-bold">Available 24hrs, 365 Days</p>
-                                        </div>
+                                    <div>
+                                        <h3 className="font-heading font-black text-sm uppercase tracking-wider text-foreground">
+                                            Address
+                                        </h3>
+                                        <p className="text-muted-foreground text-sm sm:text-base mt-1 leading-relaxed">
+                                            6 Van Eck St
+                                            <br />
+                                            Bellville South, Cape Town, 7530
+                                        </p>
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="shrink-0 w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
-                                            <Mail className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-black text-lg">Email</h3>
-                                            <a href="mailto:enquiries@teemanehh.co.za" className="text-muted-foreground hover:text-primary transition-colors">
-                                                enquiries@teemanehh.co.za
-                                            </a>
-                                        </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5 shadow-xs">
+                                    <div className="shrink-0 size-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
+                                        <Phone className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-heading font-black text-sm uppercase tracking-wider text-foreground">
+                                            24/7 Dispatch Hotline
+                                        </h3>
+                                        <a
+                                            href="tel:0861888004"
+                                            className="cursor-pointer block text-base sm:text-lg font-bold text-foreground hover:text-primary transition-colors mt-1"
+                                        >
+                                            086 188 8004
+                                        </a>
+                                        <p className="text-[11px] text-primary mt-1 uppercase tracking-[0.16em] font-black">
+                                            Available 24hrs, 365 Days
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 rounded-2xl bg-card border border-border p-5 shadow-xs">
+                                    <div className="shrink-0 size-12 bg-primary/10 text-primary flex items-center justify-center rounded-xl border border-primary/20">
+                                        <Mail className="w-5 h-5" />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <h3 className="font-heading font-black text-sm uppercase tracking-wider text-foreground">
+                                            Email
+                                        </h3>
+                                        <a
+                                            href="mailto:enquiries@teemanehh.co.za"
+                                            className="cursor-pointer block text-sm sm:text-base font-semibold text-foreground hover:text-primary transition-colors mt-1 break-all"
+                                        >
+                                            enquiries@teemanehh.co.za
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Enquiry categories */}
                             <div className="border-t border-border pt-8">
-                                <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Enquiry Types</p>
-                                <div className="flex flex-wrap gap-3">
+                                <p className="text-xs font-black uppercase tracking-[0.18em] text-muted-foreground mb-4">
+                                    Specialised Enquiry Types
+                                </p>
+                                <div className="flex flex-wrap gap-2.5">
                                     {['Heavy Haulage', 'Oversized Cargo', 'Machinery Transport', 'General Enquiry'].map((type) => (
-                                        <span key={type} className="px-4 py-2 rounded-full border border-border text-sm font-medium text-muted-foreground">{type}</span>
+                                        <span
+                                            key={type}
+                                            className="px-3.5 py-1.5 rounded-full bg-muted/70 border border-border text-xs font-bold uppercase tracking-wider text-foreground"
+                                        >
+                                            {type}
+                                        </span>
                                     ))}
                                 </div>
                             </div>
                         </div>
 
                         {/* Contact Form */}
-                        <div className="bg-background border border-border p-8 md:p-12 rounded-3xl shadow-xl relative">
+                        <div className="lg:col-span-7 bg-card border border-border p-6 sm:p-8 md:p-12 rounded-3xl shadow-xl relative">
                             {flash?.success ? (
-                                <div className="absolute inset-0 z-10 bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center text-center p-8 rounded-3xl border border-primary/50">
-                                    <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+                                <div className="absolute inset-0 z-10 bg-card/96 backdrop-blur-sm flex flex-col items-center justify-center text-center p-8 rounded-3xl border border-primary/40">
+                                    <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl border border-primary/20 flex items-center justify-center mb-6">
                                         <CheckCircle2 className="w-10 h-10" />
                                     </div>
-                                    <h3 className="text-3xl font-black uppercase tracking-tighter mb-4 text-foreground">Message Sent!</h3>
-                                    <p className="text-lg text-muted-foreground">
+                                    <h3 className="text-3xl font-heading font-black uppercase tracking-tighter mb-3 text-foreground">
+                                        Message Sent!
+                                    </h3>
+                                    <p className="text-base sm:text-lg text-muted-foreground max-w-md">
                                         {flash.success}
                                     </p>
                                 </div>
                             ) : null}
 
-                            <h2 className="text-2xl font-black tracking-tighter text-foreground uppercase mb-6">
-                                Send a Message
-                            </h2>
+                            <div className="mb-8">
+                                <span className="text-[11px] font-black uppercase tracking-[0.2em] text-primary block mb-2">
+                                    Project Specification
+                                </span>
+                                <h2 className="text-2xl sm:text-3xl font-heading font-black tracking-tight text-foreground uppercase">
+                                    Send a Message
+                                </h2>
+                                <p className="text-sm text-muted-foreground mt-2">
+                                    Include dimensions, estimated tonnage, collection point, and destination for the fastest quote turnaround.
+                                </p>
+                            </div>
 
                             <form onSubmit={submit} className="space-y-6">
                                 <div className="space-y-2">
-                                    <label htmlFor="name" className="text-sm font-medium leading-none">Full Name</label>
+                                    <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider text-foreground block">
+                                        Full Name
+                                    </label>
                                     <Input
                                         id="name"
                                         name="name"
+                                        placeholder="e.g. John van der Merwe"
                                         value={data.name}
                                         onChange={(e) => setData('name', e.target.value)}
-                                        className={errors.name ? 'border-destructive' : ''}
+                                        className={cn('h-12 bg-background', errors.name ? 'border-destructive' : '')}
                                     />
-                                    {errors.name && <p className="text-sm text-destructive font-medium">{errors.name}</p>}
+                                    {errors.name && <p className="text-xs sm:text-sm text-destructive font-medium">{errors.name}</p>}
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label htmlFor="email" className="text-sm font-medium leading-none">Email Address</label>
+                                        <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-foreground block">
+                                            Email Address
+                                        </label>
                                         <Input
                                             id="email"
                                             name="email"
                                             type="email"
+                                            placeholder="name@company.co.za"
                                             value={data.email}
                                             onChange={(e) => setData('email', e.target.value)}
-                                            className={errors.email ? 'border-destructive' : ''}
+                                            className={cn('h-12 bg-background', errors.email ? 'border-destructive' : '')}
                                         />
-                                        {errors.email && <p className="text-sm text-destructive font-medium">{errors.email}</p>}
+                                        {errors.email && <p className="text-xs sm:text-sm text-destructive font-medium">{errors.email}</p>}
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label htmlFor="phone" className="text-sm font-medium leading-none">Phone Number (Optional)</label>
+                                        <label htmlFor="phone" className="text-xs font-bold uppercase tracking-wider text-foreground block">
+                                            Phone Number <span className="text-muted-foreground font-normal normal-case">(Optional)</span>
+                                        </label>
                                         <Input
                                             id="phone"
                                             name="phone"
+                                            type="tel"
+                                            placeholder="+27 82 000 0000"
                                             value={data.phone}
                                             onChange={(e) => setData('phone', e.target.value)}
-                                            className={errors.phone ? 'border-destructive' : ''}
+                                            className={cn('h-12 bg-background', errors.phone ? 'border-destructive' : '')}
                                         />
-                                        {errors.phone && <p className="text-sm text-destructive font-medium">{errors.phone}</p>}
+                                        {errors.phone && <p className="text-xs sm:text-sm text-destructive font-medium">{errors.phone}</p>}
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="message" className="text-sm font-medium leading-none">Message</label>
+                                    <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-foreground block">
+                                        Cargo &amp; Route Details
+                                    </label>
                                     <Textarea
                                         id="message"
                                         name="message"
-                                        rows={10}
+                                        rows={7}
+                                        placeholder="Describe your cargo dimensions, weight, origin, destination, and target dates..."
                                         value={data.message}
                                         onChange={(e) => setData('message', e.target.value)}
-                                        className={cn(errors.message ? 'border-destructive' : '', 'min-h-30')}
+                                        className={cn('min-h-36 bg-background', errors.message ? 'border-destructive' : '')}
                                     />
-                                    {errors.message && <p className="text-sm text-destructive font-medium">{errors.message}</p>}
+                                    {errors.message && <p className="text-xs sm:text-sm text-destructive font-medium">{errors.message}</p>}
                                 </div>
 
                                 <Button
                                     type="submit"
-                                    size="lg"
-                                    className="w-full text-base font-bold tracking-wide uppercase"
+                                    size="xl"
+                                    className="w-full"
                                     disabled={processing}
                                 >
-                                    {processing ? 'Sending...' : 'Send Message'}
+                                    {processing ? 'Sending Enquiry...' : 'Send Message'}
                                 </Button>
                             </form>
                         </div>

@@ -5,6 +5,7 @@ import Wrapper from "@/components/ui/misc/wrapper";
 import { Building2, MapPin, Calendar, User, ArrowLeft } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import ResponsiveImage from '@/components/ui/misc/responsive-image';
 
 interface EmployeeDetail {
     id: number;
@@ -17,8 +18,10 @@ interface EmployeeDetail {
     branch_location: string;
     bio: string | null;
     image_url: string | null;
+    image_srcset?: string | null;
     superior: {
         id: number;
+        slug: string;
         first_name: string;
         last_name: string;
         role: string;
@@ -28,19 +31,31 @@ interface EmployeeDetail {
 export default function Show({ employee }: { employee: EmployeeDetail }) {
     return (
         <>
-            <section className="py-12 bg-muted/30 border-b border-border">
-                <Wrapper>
-                    <Link href={team.index.url()} className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors mb-12">
+            <section className="relative overflow-hidden isolate pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 bg-background border-b border-border">
+                <div aria-hidden="true" className="page-header-radial absolute inset-0 pointer-events-none select-none -z-10" />
+                <Wrapper className="relative z-10">
+                    <Link
+                        href={team.index.url()}
+                        prefetch="hover"
+                        className="cursor-pointer inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-muted-foreground hover:text-primary transition-colors mb-8 sm:mb-10"
+                    >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Team
                     </Link>
 
-                    <div className="flex flex-col md:flex-row gap-12 items-start">
+                    <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-start">
                         {/* Profile Image Column */}
-                        <div className="w-full md:w-1/3 shrink-0">
-                            <div className="relative aspect-square rounded-sm overflow-hidden bg-muted border border-border shadow-xl">
+                        <div className="w-full max-w-xs sm:max-w-sm md:max-w-none md:w-1/3 mx-auto md:mx-0 shrink-0">
+                            <div className="relative aspect-4/5 sm:aspect-square rounded-2xl overflow-hidden bg-muted border border-border shadow-xl">
                                 {employee.image_url ? (
-                                    <img src={employee.image_url} alt={`${employee.first_name} ${employee.last_name}`} className="w-full h-full object-cover" />
+                                    <ResponsiveImage
+                                        source={employee.image_url}
+                                        srcSet={employee.image_srcset || undefined}
+                                        sizes="(max-width: 639px) 320px, (max-width: 767px) 384px, 33vw"
+                                        priority
+                                        alt={`${employee.first_name} ${employee.last_name}`}
+                                        className="w-full h-full object-cover object-top"
+                                    />
                                 ) : (
                                     <div className="w-full h-full flex flex-col items-center justify-center text-muted-foreground/30">
                                         <User className="w-32 h-32 mb-4" />

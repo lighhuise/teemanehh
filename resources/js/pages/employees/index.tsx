@@ -8,6 +8,7 @@ import { Building2, MapPin, Search } from 'lucide-react';
 import Wrapper from "@/components/ui/misc/wrapper";
 import { Input } from "@/components/ui/input";
 import SectionHeading from '@/components/ui/misc/section-heading';
+import ResponsiveImage from '@/components/ui/misc/responsive-image';
 
 interface Employee {
     id: number;
@@ -18,6 +19,7 @@ interface Employee {
     department: string;
     branch_location: string;
     image_url: string | null;
+    image_srcset?: string | null;
 }
 
 interface PaginatedData<T> {
@@ -27,8 +29,8 @@ interface PaginatedData<T> {
 
 function EmployeeCardSkeleton() {
     return (
-        <div className="bg-background border border-border rounded-md flex flex-col items-center text-center p-8 animate-pulse">
-            <div className="w-32 h-32 rounded-full bg-muted mb-6 shrink-0" />
+        <div className="bg-card border border-border rounded-2xl flex flex-col items-center text-center p-6 sm:p-8 animate-pulse">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-muted mb-6 shrink-0" />
             <div className="h-5 w-36 rounded bg-muted mb-3" />
             <div className="h-3 w-24 rounded bg-muted mb-6" />
             <div className="w-full h-px bg-border mb-6" />
@@ -42,16 +44,24 @@ function EmployeeCardSkeleton() {
 
 function EmployeeGrid({ employees }: { employees: Employee[] }) {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {employees.map((employee) => (
                 <Link
                     key={employee.id}
                     href={team.show.url(employee.slug)}
-                    className="group relative bg-background border border-border rounded-md flex flex-col items-center text-center p-8 transition-all duration-300 hover:border-primary hover:shadow-xl hover:-translate-y-1"
+                    className="cursor-pointer group relative bg-card border border-border rounded-2xl flex flex-col items-center text-center p-6 sm:p-8 shadow-xs transition-all duration-300 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
                 >
-                    <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-muted group-hover:border-primary transition-colors duration-300">
+                    <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-6 border-4 border-muted group-hover:border-primary transition-colors duration-300 bg-muted">
                         {employee.image_url ? (
-                            <img src={employee.image_url} alt={`${employee.first_name} ${employee.last_name}`} className="w-full h-full object-cover" />
+                            <ResponsiveImage
+                                source={employee.image_url}
+                                srcSet={employee.image_srcset || undefined}
+                                sizes="(max-width: 639px) 112px, 128px"
+                                width={128}
+                                height={128}
+                                alt={`${employee.first_name} ${employee.last_name}`}
+                                className="w-full h-full object-cover object-top"
+                            />
                         ) : (
                             <div className="w-full h-full bg-muted flex items-center justify-center">
                                 <span className="text-3xl font-bold tracking-wider text-muted-foreground/50">
@@ -114,30 +124,39 @@ export default function Index({ employees, filters }: { employees: PaginatedData
         <>
             
 
-            <div className="bg-muted/30 py-24 border-b border-border">
-                <Wrapper>
+            <section className="relative overflow-hidden isolate bg-background pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-20 border-b border-border">
+                <div aria-hidden="true" className="page-header-radial absolute inset-0 pointer-events-none select-none -z-10" />
+                <Wrapper className="relative z-10">
                     <SectionHeading
                         label="The THH Family"
-                        title="OUR TEAM"
+                        title={
+                            <>
+                                OUR{' '}
+                                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500">
+                                    TEAM
+                                </span>
+                            </>
+                        }
                         align="center"
                     >
                         Meet the skilled professionals behind Teemane Heavy Haulage. From our operators to our engineers, our people are our greatest asset and the foundation of our success.
                     </SectionHeading>
 
                     <div className="relative w-full max-w-md mx-auto mt-10">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
                         <Input
-                            type="text"
+                            type="search"
+                            aria-label="Search team members by name, role, or department"
                             placeholder="Search by name, role, or department..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="pl-12 h-14 text-base rounded-full shadow-sm bg-background border-border"
+                            className="pl-12 h-13 text-sm sm:text-base rounded-full shadow-sm bg-card border-border"
                         />
                     </div>
                 </Wrapper>
-            </div>
+            </section>
 
-            <section className="py-24 bg-background">
+            <section className="py-16 sm:py-24 bg-background">
                 <Wrapper>
                     {isMounted ? (
                         <InfiniteScroll data="employees">

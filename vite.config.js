@@ -29,7 +29,13 @@ export default defineConfig({
     },
     server: {
         watch: {
-            ignored: ['**/storage/framework/views/**'],
+            ignored: [
+                '**/storage/**',
+                '**/vendor/**',
+                '**/bootstrap/ssr/**',
+                '**/public/build/**',
+                '**/graphify-out/**',
+            ],
         },
     },
 });

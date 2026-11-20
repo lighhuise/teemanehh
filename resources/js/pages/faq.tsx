@@ -8,17 +8,26 @@ import LogoMark from '@/components/ui/misc/logo-mark';
 import Divider1 from "@/components/ui/divider-1";
 import SectionBackdrop from "@/components/ui/misc/section-backdrop";
 import ScrollDivider from "@/components/scroll-divider";
-
-// @ts-ignore
-import imgFaqHeader from '@/../images/576907135_805628229124015_6667111443022305155_n.webp';
+import { buttonVariants } from '@/components/ui/button';
+import { responsiveImages } from '@/lib/responsive-images';
 
 export default function FaqPage({ faqs }: { faqs: any[] }) {
     return (
         <AppLayout title="Frequently Asked Questions">
             <PageHeader
-                title={<>FREQUENTLY ASKED <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1">QUESTIONS</span></>}
-                description="Find answers to common questions about our heavy haulage services, equipment, and operations."
-                image={imgFaqHeader}
+                label="Knowledge Base"
+                title={
+                    <>
+                        FREQUENTLY ASKED{' '}
+                        <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1">
+                            QUESTIONS
+                        </span>
+                    </>
+                }
+                description="Find answers to common questions about our heavy haulage services, equipment, permits, and SADC operations."
+                image={responsiveImages.faqHeader}
+                imageAlt="Teemane Heavy Haulage abnormal convoy hauling a large catamaran yacht"
+                imageClassName="object-[52%_52%]"
             />
             <ScrollDivider
                 texts={[
@@ -78,7 +87,7 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
                                         value={`item-${faq.id}`}
                                         className="group/item bg-card border border-border/70 rounded-2xl px-5 md:px-8 shadow-xs hover:border-primary/40 hover:shadow-md data-open:border-primary/40 data-open:bg-primary/[0.015] data-open:shadow-md transition-all duration-200"
                                     >
-                                        <AccordionTrigger className="text-left font-bold text-lg md:text-xl py-5 md:py-6 hover:no-underline hover:text-primary transition-colors group-aria-expanded/accordion-trigger:text-primary border-none items-center gap-4 **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-primary">
+                                        <AccordionTrigger className="cursor-pointer text-left font-bold text-base sm:text-lg md:text-xl py-5 md:py-6 hover:no-underline hover:text-primary transition-colors group-aria-expanded/accordion-trigger:text-primary border-none items-center gap-4 **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-primary">
                                             <span className="shrink-0 inline-flex items-center justify-center rounded-lg px-2.5 py-1 text-xs font-mono font-bold tracking-wider bg-primary/10 text-primary group-data-open/item:bg-primary group-data-open/item:text-primary-foreground transition-colors">
                                                 {String(index + 1).padStart(2, '0')}
                                             </span>
@@ -96,36 +105,43 @@ export default function FaqPage({ faqs }: { faqs: any[] }) {
                                 ))}
                             </Accordion>
                         ) : (
-                            <div className="text-center bg-card border border-border/50 rounded-3xl p-12 shadow-sm">
+                            <div className="text-center bg-card border border-border rounded-2xl p-12 shadow-sm">
                                 <p className="text-xl text-muted-foreground font-medium">No FAQs have been added yet.</p>
                                 <p className="text-muted-foreground mt-2">Please check back later.</p>
                             </div>
                         )}
 
                         {/* Still Have Questions CTA */}
-                        <div className="mt-16 md:mt-24 bg-linear-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-sm">
-                            <div aria-hidden="true" className="absolute top-0 left-0 pointer-events-none opacity-10 md:opacity-[0.1] -translate-x-1/3  ">
+                        <div className="mt-16 md:mt-24 bg-card border border-border rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-lg">
+                            <div aria-hidden="true" className="absolute top-0 left-0 pointer-events-none opacity-[0.07] -translate-x-1/3">
                                 <LogoMark className="w-64 md:w-76 h-auto text-primary" />
                             </div>
                             <div className="relative z-10">
-                                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-foreground mb-4">Still have questions?</h3>
-                                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                                    Can't find the answer you're looking for? Our heavy haulage experts are available 24/7 to assist you with your project requirements.
+                                <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-black uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full border bg-primary/10 text-primary border-primary/20 mb-4">
+                                    <span aria-hidden="true" className="size-1.5 rounded-full bg-primary" />
+                                    Direct Support
+                                </span>
+                                <h3 className="text-2xl md:text-3xl font-heading font-black uppercase tracking-tight text-foreground mb-3">
+                                    Still have questions?
+                                </h3>
+                                <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                                    Can&apos;t find the answer you&apos;re looking for? Our heavy haulage experts are available 24/7 to assist you with your project requirements.
                                 </p>
-                                <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                                <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
                                     <Link
                                         href="/contact-us"
-                                        className="inline-flex w-full sm:w-auto justify-center items-center gap-3 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all duration-300 shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 px-8 py-4 rounded-xl font-bold tracking-widest uppercase text-sm"
+                                        prefetch="hover"
+                                        className={buttonVariants({ size: 'xl', className: 'w-full sm:w-auto' })}
                                     >
                                         <Mail className="w-4 h-4" />
-                                        Contact Us
+                                        <span>Contact Us</span>
                                     </Link>
                                     <a
                                         href="tel:0861888004"
-                                        className="inline-flex w-full sm:w-auto justify-center items-center gap-3 bg-background hover:bg-accent text-foreground transition-all duration-300 shadow-sm border border-border hover:-translate-y-0.5 px-8 py-4 rounded-xl font-bold tracking-widest uppercase text-sm"
+                                        className={buttonVariants({ variant: 'outline', size: 'xl', className: 'w-full sm:w-auto' })}
                                     >
                                         <PhoneCall className="w-4 h-4 text-primary" />
-                                        086 188 8004
+                                        <span>086 188 8004</span>
                                     </a>
                                 </div>
                             </div>

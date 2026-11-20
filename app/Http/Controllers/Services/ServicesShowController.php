@@ -61,6 +61,7 @@ class ServicesShowController extends Controller
                 'short_description' => $service->short_description,
                 'description' => $service->description,
                 'featured_image_url' => $featuredImage ?: null,
+                'featured_image_srcset' => $service->featured_image_srcset,
                 'content_blocks' => $blocks,
             ];
         });

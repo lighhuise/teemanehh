@@ -20,6 +20,8 @@ class Service extends Model implements HasMedia
 
     protected $appends = [
         'featured_image_url',
+        'featured_image_thumb_url',
+        'featured_image_srcset',
     ];
 
     public function getFeaturedImageUrlAttribute(): ?string
@@ -53,6 +55,52 @@ class Service extends Model implements HasMedia
         }
 
         return $featuredImage ?: null;
+    }
+
+    public function getFeaturedImageThumbUrlAttribute(): ?string
+    {
+        $media = $this->getFirstMedia('featured_image');
+
+        if ($media) {
+            if ($media->hasGeneratedConversion('thumb')) {
+                return $media->getUrl('thumb');
+            }
+
+            if ($media->hasGeneratedConversion('webp')) {
+                return $media->getUrl('webp');
+            }
+
+            return $media->getUrl();
+        }
+
+        return $this->featured_image_url;
+    }
+
+    public function getFeaturedImageSrcsetAttribute(): ?string
+    {
+        $media = $this->getFirstMedia('featured_image');
+
+        if (! $media) {
+            return null;
+        }
+
+        $entries = [];
+
+        if ($media->hasGeneratedConversion('sm')) {
+            $entries[] = $media->getUrl('sm').' 480w';
+        }
+
+        if ($media->hasGeneratedConversion('thumb')) {
+            $entries[] = $media->getUrl('thumb').' 800w';
+        }
+
+        if ($media->hasGeneratedConversion('webp')) {
+            $entries[] = $media->getUrl('webp').' 1400w';
+        } elseif (count($entries) > 0) {
+            $entries[] = $media->getUrl().' 1400w';
+        }
+
+        return count($entries) > 1 ? implode(', ', $entries) : null;
     }
 
     protected $casts = [
@@ -103,6 +151,11 @@ class Service extends Model implements HasMedia
 
         $this->addMediaConversion('thumb')
             ->width(800)
+            ->format('webp')
+            ->nonQueued();
+
+        $this->addMediaConversion('sm')
+            ->width(480)
             ->format('webp')
             ->nonQueued();
     }

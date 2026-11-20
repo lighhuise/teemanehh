@@ -6,6 +6,8 @@ import { useState } from 'react';
 import SectionHeading from '@/components/ui/misc/section-heading';
 import { FloatingStatCard } from '@/components/ui/misc/floating-stat-card';
 import { StackedImage } from '@/components/ui/misc/stacked-image';
+import ResponsiveImage from '@/components/ui/misc/responsive-image';
+import { buttonVariants } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 // @ts-ignore
@@ -35,6 +37,7 @@ interface Service {
     short_description: string | null;
     description: string | null;
     featured_image_url: string | null;
+    featured_image_srcset?: string | null;
     content_blocks: ContentBlock[];
 }
 
@@ -78,12 +81,14 @@ function RichTextRenderer({ data }: { data: RichTextBlock['data'] }) {
 
 function ImageRenderer({ data }: { data: ImageBlock['data'] }) {
     return (
-        <figure className="overflow-hidden rounded-lg">
-            <img
-                src={data.image_url}
-                alt={data.alt ?? ''}
-                className="w-full object-cover rounded-lg"
-            />
+        <figure className="overflow-hidden">
+            <div className="aspect-16/10 sm:aspect-16/9 max-h-[75vh] w-full overflow-hidden rounded-xl border border-border/50 bg-muted">
+                <ResponsiveImage
+                    source={data.image_url}
+                    alt={data.alt || data.caption || 'Teemane Heavy Haulage project photography'}
+                    className="w-full h-full object-cover object-center"
+                />
+            </div>
             {data.caption && (
                 <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
                     {data.caption}
@@ -107,17 +112,19 @@ function GalleryRenderer({ data }: { data: GalleryBlock['data'] }) {
                 </SectionHeading>
             )}
             <figure>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 {urls.map((url, i) => (
                     <button
                         key={i}
+                        type="button"
                         onClick={() => setLightbox(i)}
-                        className="aspect-square overflow-hidden rounded-lg group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        aria-label={`Open ${data.heading || 'gallery'} image ${i + 1} in lightbox`}
+                        className="cursor-pointer aspect-4/3 sm:aspect-square overflow-hidden rounded-xl bg-muted border border-border/50 group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     >
-                        <img
-                            src={url}
-                            alt=""
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        <ResponsiveImage
+                            source={url}
+                            alt={`${data.heading || 'Project gallery'} image ${i + 1}`}
+                            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                         />
                     </button>
                 ))}
@@ -183,23 +190,38 @@ function VideoRenderer({ data }: { data: VideoBlock['data'] }) {
 }
 
 function CtaRenderer({ data }: { data: CtaBlock['data'] }) {
+    const isExternal = data.button_url.startsWith('http');
+
     return (
-        <div className="bg-muted/40 border border-border rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="flex-1">
-                <h3 className="text-2xl font-black tracking-tighter text-foreground mb-2">
+                <h3 className="text-2xl sm:text-3xl font-heading font-black tracking-tight text-foreground mb-2">
                     {data.heading}
                 </h3>
                 {data.text && (
-                    <p className="text-muted-foreground leading-relaxed">{data.text}</p>
+                    <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">{data.text}</p>
                 )}
             </div>
-            <a
-                href={data.button_url}
-                className="shrink-0 inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary/70 hover:from-primary/90 hover:to-primary text-primary-foreground font-bold tracking-widest uppercase text-sm px-6 py-3 rounded-lg shadow-sm hover:shadow transition-all"
-            >
-                {data.button_label}
-                <ArrowRight className="w-4 h-4" />
-            </a>
+            {isExternal ? (
+                <a
+                    href={data.button_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={buttonVariants({ size: 'xl', className: 'shrink-0' })}
+                >
+                    <span>{data.button_label}</span>
+                    <ArrowRight className="w-4 h-4" />
+                </a>
+            ) : (
+                <Link
+                    href={data.button_url}
+                    prefetch="hover"
+                    className={buttonVariants({ size: 'xl', className: 'shrink-0' })}
+                >
+                    <span>{data.button_label}</span>
+                    <ArrowRight className="w-4 h-4" />
+                </Link>
+            )}
         </div>
     );
 }
@@ -226,16 +248,32 @@ function MediaTextRenderer({ data }: { data: MediaTextBlock['data'] }) {
                                     prose-a:text-primary hover:prose-a:underline" dangerouslySetInnerHTML={{ __html: data.content }} />
                 )}
                 {data.button_label && data.button_url && (
-                    <a href={data.button_url} className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary/70 text-primary-foreground font-bold tracking-widest uppercase text-sm px-8 py-4 rounded-lg shadow-sm hover:from-primary/90 hover:to-primary transition-all group">
-                        {data.button_label}
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    data.button_url.startsWith('http') ? (
+                        <a
+                            href={data.button_url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={buttonVariants({ size: 'xl' })}
+                        >
+                            <span>{data.button_label}</span>
+                            <ArrowRight className="w-4 h-4" />
+                        </a>
+                    ) : (
+                        <Link
+                            href={data.button_url}
+                            prefetch="hover"
+                            className={buttonVariants({ size: 'xl' })}
+                        >
+                            <span>{data.button_label}</span>
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    )
                 )}
             </div>
 
             {/* Media Content */}
-            <div className="flex-1 min-w-0 w-full h-100 md:h-125 relative group">
-                <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl relative">
+            <div className="flex-1 min-w-0 w-full aspect-4/3 sm:aspect-16/10 md:aspect-auto md:h-112 lg:h-125 relative group">
+                <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl relative bg-muted border border-border/50">
                     {hasMultiple ? (
                         <Swiper
                             modules={[Navigation, Pagination]}
@@ -254,12 +292,20 @@ function MediaTextRenderer({ data }: { data: MediaTextBlock['data'] }) {
                         >
                             {urls.map((url, i) => (
                                 <SwiperSlide key={i}>
-                                    <img src={url} alt="" className="w-full h-full object-cover" />
+                                    <ResponsiveImage
+                                        source={url}
+                                        alt={`${data.heading || 'Service showcase'} slide ${i + 1}`}
+                                        className="w-full h-full object-cover object-center"
+                                    />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     ) : urls.length === 1 ? (
-                        <img src={urls[0]} alt="" className="w-full h-full object-cover" />
+                        <ResponsiveImage
+                            source={urls[0]}
+                            alt={data.heading || 'Service showcase image'}
+                            className="w-full h-full object-cover object-center"
+                        />
                     ) : (
                         <div className="w-full h-full bg-muted flex items-center justify-center">
                             <span className="text-muted-foreground text-sm uppercase tracking-widest">No Image</span>
@@ -295,19 +341,16 @@ function ContentBlock({ block }: { block: ContentBlock }) {
 
 export function Hero({ service }: { service: Service }) {
     return (
-        <section className="relative border-b border-border bg-background overflow-hidden isolate">
-            {/* Ambient Glows */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none select-none -z-10">
-                <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/10 blur-[120px] rounded-full"></div>
-                <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] bg-sky-500/5 blur-[120px] rounded-full"></div>
-            </div>
+        <section className="relative border-b border-border bg-background overflow-hidden isolate pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-20 lg:pb-28">
+            <div aria-hidden="true" className="page-header-radial absolute inset-0 pointer-events-none select-none -z-10" />
 
-            <Wrapper className="relative py-24 md:py-32 z-10">
-                <div className={`grid grid-cols-1 ${service.featured_image_url ? 'lg:grid-cols-12 gap-12 lg:gap-16' : ''} items-center`}>
+            <Wrapper className="relative z-10">
+                <div className={`grid grid-cols-1 ${service.featured_image_url ? 'lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16' : ''} items-center`}>
                     <div className={service.featured_image_url ? 'lg:col-span-5' : 'max-w-3xl'}>
                         <Link
                             href="/services"
-                            className="inline-flex items-center text-sm font-bold tracking-widest uppercase text-muted-foreground hover:text-primary mb-8 transition-colors gap-2"
+                            prefetch="hover"
+                            className="cursor-pointer inline-flex items-center text-xs font-black tracking-[0.18em] uppercase text-muted-foreground hover:text-primary mb-6 sm:mb-8 transition-colors gap-2"
                         >
                             <ArrowLeft className="h-4 w-4" />
                             Back to Services
@@ -320,7 +363,7 @@ export function Hero({ service }: { service: Service }) {
                         >
                             {service.description && (
                                 <div
-                                    className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert text-muted-foreground"
+                                    className="prose prose-sm sm:prose lg:prose-lg max-w-none dark:prose-invert text-muted-foreground"
                                     dangerouslySetInnerHTML={{ __html: service.description }}
                                 />
                             )}
@@ -331,6 +374,9 @@ export function Hero({ service }: { service: Service }) {
                         <div className="lg:col-span-7 flex justify-center lg:justify-end">
                             <StackedImage
                                 src={service.featured_image_url}
+                                srcSet={service.featured_image_srcset || undefined}
+                                sizes="(max-width: 1023px) calc(100vw - 2.5rem), 54vw"
+                                priority
                                 alt={service.title}
                             />
                         </div>

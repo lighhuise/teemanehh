@@ -1,51 +1,132 @@
+import type { CSSProperties } from 'react';
+import { Link } from '@inertiajs/react';
 import Wrapper from '@/components/ui/misc/wrapper';
-import { Trophy, CheckCircle2, ArrowRight } from 'lucide-react';
-import SectionBackdrop from '@/components/ui/misc/section-backdrop';
+import SectionHeading from '@/components/ui/misc/section-heading';
+import { buttonVariants } from '@/components/ui/button';
+import { ArrowRight, CheckCircle2, Trophy } from 'lucide-react';
+import SpotlightCard from '@/components/SpotlightCard';
+
+const capabilities = [
+    'Expert Route Surveying & Engineering',
+    'Abnormal Load Permits & Specialised Escorting',
+    'Comprehensive End-to-End Project Management',
+    'Multi-Axle Modular Transport & SADC Logistics',
+];
 
 export default function DarkCta() {
     return (
-        <section className="py-24 md:py-32 isolate bg-background text-foreground relative overflow-hidden border-y border-border">
-            <SectionBackdrop graphic="wheel" />
-
+        <section className="py-16 sm:py-24 lg:py-28 isolate bg-muted/40 text-foreground relative overflow-hidden border-y border-border">
             <Wrapper className="relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
                     <div className="lg:col-span-7 space-y-8">
-                        <h2 className="text-4xl md:text-5xl text-balance font-black uppercase tracking-tighter text-foreground leading-[1.1]">
-                            100+ Years of <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500 pr-1 pb-1">Combined Expertise.</span>
-                        </h2>
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                            With over a century of collective industry experience, our leadership team delivers the technical rigor and practical know-how needed to master Africa's toughest transport routes. We don't just move abnormal cargo. We engineer every transit, eliminate risk, and deliver certainty from start to finish.
-                        </p>
-                        <ul className="space-y-5 pt-4">
-                            {[
-                                "Expert Route Surveying & Engineering",
-                                "Abnormal Load Permits & Specialised Escorting",
-                                "Comprehensive End-to-End Project Management",
-                                "Multi-Axle Modular Transport & SADC Logistics"
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-center gap-4">
-                                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                        <CheckCircle2 className="text-primary w-5 h-5" />
-                                    </div>
-                                    <span className="text-lg font-bold text-foreground tracking-wide uppercase">{item}</span>
+                        <SectionHeading
+                            label="Proven Leadership"
+                            title={
+                                <>
+                                    100+ Years of{' '}
+                                    <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/75">
+                                        Combined Expertise.
+                                    </span>
+                                </>
+                            }
+                            align="left"
+                        >
+                            With over a century of collective industry experience, our leadership team delivers the technical rigor and practical know-how needed to master Africa's toughest transport routes. We engineer every transit, eliminate risk, and deliver certainty from start to finish.
+                        </SectionHeading>
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                            {capabilities.map((item) => (
+                                <li key={item}>
+                                    <SpotlightCard
+                                        theme="dark"
+                                        spotlightColor="var(--spotlight-color)"
+                                        intensity={0.2}
+                                        spotlightSize={160}
+                                        softness={0.7}
+                                        shape="circle"
+                                        borderGlow={0.85}
+                                        proximity={160}
+                                        smoothing={0.5}
+                                        grain={0}
+                                        ambient={false}
+                                        flare
+                                        className="h-full rounded-xl! p-4! flex items-start gap-3.5 shadow-xs!"
+                                        style={{
+                                            '--spotlight-card-surface': 'var(--card)',
+                                            '--spotlight-card-border': 'var(--border)',
+                                        } as CSSProperties}
+                                    >
+                                        <div className="size-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                            <CheckCircle2 className="w-4 h-4" />
+                                        </div>
+                                        <span className="text-sm font-heading font-black text-foreground tracking-tight uppercase leading-snug">
+                                            {item}
+                                        </span>
+                                    </SpotlightCard>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* CTA Card */}
+                    {/* Elevated CTA Card */}
                     <div className="lg:col-span-5 relative">
-                        {/* Glow */}
-                        <div className="absolute inset-0 bg-primary/10 blur-[80px] rounded-full"></div>
+                        <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -inset-4 bg-primary/10 blur-3xl rounded-full"
+                        />
 
-                        <div className="relative bg-card/80 backdrop-blur-2xl rounded-3xl p-10 md:p-12 border border-border shadow-xl text-center">
-                            <Trophy className="w-16 h-16 text-primary mx-auto mb-6 drop-shadow-sm" />
-                            <h3 className="text-3xl font-black uppercase tracking-tight text-foreground mb-4">Ready for your next project?</h3>
-                            <p className="text-muted-foreground text-lg mb-10 leading-relaxed">Let us engineer the optimal transport solution for your oversized and abnormal needs.</p>
-                            <a href="/contact-us" className="inline-flex w-full justify-center items-center gap-3 bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-primary-foreground transition-all duration-300 shadow-lg hover:shadow-primary/20 hover:-translate-y-1 px-8 py-5 rounded-xl font-black tracking-widest uppercase text-sm">
-                                Request a Quote <ArrowRight className="w-5 h-5" />
-                            </a>
-                        </div>
+                        <SpotlightCard
+                            theme="dark"
+                            spotlightColor="var(--spotlight-color)"
+                            intensity={0.2}
+                            spotlightSize={160}
+                            softness={0.7}
+                            shape="circle"
+                            borderGlow={0.85}
+                            proximity={160}
+                            smoothing={0.5}
+                            grain={0}
+                            ambient={false}
+                            flare
+                            className="text-card-foreground rounded-3xl! p-8! sm:p-10! md:p-12! shadow-xl! text-center"
+                            style={{
+                                '--spotlight-card-surface': 'var(--card)',
+                                '--spotlight-card-border': 'var(--border)',
+                            } as CSSProperties}
+                        >
+                            <div
+                                aria-hidden="true"
+                                className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(-45deg,transparent,transparent_13px,color-mix(in_oklch,var(--primary)_7%,transparent)_13px,color-mix(in_oklch,var(--primary)_7%,transparent)_14px)] mask-[radial-gradient(ellipse_at_top_right,black_15%,transparent_75%)]"
+                            />
+                            <div
+                                aria-hidden="true"
+                                className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent"
+                            />
+                            <div
+                                aria-hidden="true"
+                                className="pointer-events-none absolute -top-24 -right-24 size-60 rounded-full bg-primary/12 blur-3xl"
+                            />
+
+                            <div className="relative z-10">
+                                <div className="size-16 rounded-2xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center mx-auto mb-6 shadow-xs">
+                                    <Trophy className="w-8 h-8" />
+                                </div>
+                                <h3 className="text-2xl sm:text-3xl font-heading font-black uppercase tracking-tight text-card-foreground mb-4">
+                                    Ready for your next project?
+                                </h3>
+                                <p className="text-muted-foreground text-base sm:text-lg mb-8 leading-relaxed">
+                                    Let us engineer the optimal transport solution for your oversized and abnormal cargo needs.
+                                </p>
+                                <Link
+                                    href="/contact-us"
+                                    prefetch="hover"
+                                    className={buttonVariants({ size: 'xl', className: 'w-full' })}
+                                >
+                                    <span>Request a Quote</span>
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </div>
+                        </SpotlightCard>
                     </div>
                 </div>
             </Wrapper>

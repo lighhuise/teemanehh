@@ -1,20 +1,34 @@
 import Wrapper from "@/components/ui/misc/wrapper";
 import { Link } from "@inertiajs/react";
+import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { FloatingStatCard } from "@/components/ui/misc/floating-stat-card";
-// @ts-ignore
-import imgCompanyIntro from "@/../images/heavy-haulage-01.webp";
 import SectionHeading from "@/components/ui/misc/section-heading";
+import ResponsiveImage from "@/components/ui/misc/responsive-image";
+import { responsiveImages } from "@/lib/responsive-images";
+
+const highlights = [
+    { value: '250T+', label: 'Payload Capacity' },
+    { value: 'SADC', label: 'Regional Corridors' },
+    { value: '24/7', label: 'Live Operations' },
+];
 
 export function HomeIntroSection() {
     return (
-        <section className="py-24 bg-background">
+        <section className="py-16 sm:py-24 lg:py-28 bg-background">
             <Wrapper>
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     <div className="space-y-8">
-                        <SectionHeading 
-                            label="Who We Are" 
-                            title={<>THE ONLY NAME <br />TRUSTED TO PERFORM</>}
+                        <SectionHeading
+                            label="Who We Are"
+                            title={
+                                <>
+                                    THE ONLY NAME <br />
+                                    <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-sky-500">
+                                        TRUSTED TO PERFORM
+                                    </span>
+                                </>
+                            }
                             align="left"
                         >
                             <div className="space-y-4">
@@ -26,18 +40,43 @@ export function HomeIntroSection() {
                                 </p>
                             </div>
                         </SectionHeading>
-                        <div className="pt-2">
-                            <Link href="/about-us" className={buttonVariants({ size: "lg", className: "uppercase tracking-widest font-bold px-8 h-14" })}>
-                                Our Story
+
+                        {/* Compact Performance Pillars */}
+                        <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-1">
+                            {highlights.map((item) => (
+                                <div
+                                    key={item.label}
+                                    className="rounded-xl border border-border bg-card px-3.5 py-3 sm:px-4 sm:py-3.5 shadow-xs"
+                                >
+                                    <div className="text-lg sm:text-2xl font-heading font-black tracking-tight text-primary">
+                                        {item.value}
+                                    </div>
+                                    <div className="text-[11px] sm:text-xs font-semibold text-muted-foreground mt-0.5 leading-snug">
+                                        {item.label}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="pt-1">
+                            <Link
+                                href="/about-us"
+                                prefetch="hover"
+                                className={buttonVariants({ size: "xl" })}
+                            >
+                                <span>Our Story</span>
+                                <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
                     </div>
-                    <div className="relative pb-6 lg:pb-0 drop-shadow-lg drop-shadow-black/30">
-                        <div className="aspect-square rounded-xl overflow-hidden border border-border shadow-lg">
-                            <img
-                                src={imgCompanyIntro}
-                                alt="Teemane Heavy Haulage on site"
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+
+                    <div className="relative pb-8 lg:pb-0">
+                        <div className="aspect-4/3 sm:aspect-3/2 lg:aspect-4/3 xl:aspect-square rounded-2xl overflow-hidden border border-border shadow-xl bg-muted">
+                            <ResponsiveImage
+                                source={responsiveImages.heavyHaulage01}
+                                sizes="(max-width: 1023px) calc(100vw - 2rem), 46vw"
+                                alt="Teemane Heavy Haulage abnormal convoy staging with escort vehicles"
+                                className="w-full h-full object-cover object-[52%_52%] hover:scale-105 transition-transform duration-700 motion-reduce:transition-none motion-reduce:hover:scale-100"
                             />
                         </div>
 

@@ -1,40 +1,41 @@
-import ScrollVelocity from "@/components/ScrollVelocity";
-
+import React from 'react';
+import ScrollVelocity from '@/components/ScrollVelocity';
+import DividerSurface from '@/components/ui/divider-surface';
+import {cn} from "@/lib/utils";
 
 interface ScrollDividerProps {
     texts: React.ReactNode[];
+    className?: string;
 }
 
-function ScrollDivider({texts}: ScrollDividerProps) {
+function ScrollDivider({ texts, className }: ScrollDividerProps) {
     return (
-        <section
-            className="relative overflow-hidden py-16 lg:py-18 min-h-32 bg-linear-to-br from-zinc-950 via-primary/95 to-primary text-white border-y border-white/10">
-            {/* Dotted pattern with radial gradient mask from top right */}
-            <div
-                aria-hidden={true}
-                className="pointer-events-none opacity-20 absolute bg-fixed inset-0 bg-[radial-gradient(circle,#ffffff40_2px,transparent_2px)] bg-size-[16px_16px] mask-[radial-gradient(ellipse_at_top_right,black_35%,transparent_60%)]"
-            />
-
+        <DividerSurface
+            as="section"
+            canopyTrim={false}
+            aria-label="Key capabilities ticker"
+            className={cn('scroll-divider-ticker py-8 sm:py-10 lg:py-12', className)}
+        >
             <ScrollVelocity
                 texts={texts}
-                velocity={40}
-                skewWithVelocity={16}
-                scaleWithVelocity={0.18}
+                velocity={36}
+                skewWithVelocity={10}
+                scaleWithVelocity={0.1}
                 draggable
-                fontSize={40}
+                fontSize={60}
                 fontWeight={900}
-                className="opacity-70 inline-flex items-center py-2"
+                className="inline-flex items-center py-1"
                 numCopies={5}
                 damping={50}
                 stiffness={400}
-                separator="•"
+                separator=""
                 fadeEdges
                 outlineAlternate={false}
-                gap={30}
+                gap={10}
                 pauseOnHover={false}
             />
-        </section>
-    )
+        </DividerSurface>
+    );
 }
 
 export default ScrollDivider;

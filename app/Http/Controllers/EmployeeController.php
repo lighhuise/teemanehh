@@ -35,7 +35,8 @@ class EmployeeController extends Controller
                     'role' => $employee->role,
                     'department' => $employee->department,
                     'branch_location' => $employee->branch_location,
-                    'image_url' => ($media = $employee->getFirstMedia('default')) ? ($media->hasGeneratedConversion('webp') ? $media->getUrl('webp') : $media->getUrl()) : null,
+                    'image_url' => $employee->getAvatarUrl(),
+                    'image_srcset' => $employee->getImageSrcset(),
                 ];
             });
 
@@ -61,7 +62,8 @@ class EmployeeController extends Controller
                 'department' => $employee->department,
                 'branch_location' => $employee->branch_location,
                 'bio' => $employee->bio,
-                'image_url' => ($media = $employee->getFirstMedia('default')) ? ($media->hasGeneratedConversion('webp') ? $media->getUrl('webp') : $media->getUrl()) : null,
+                'image_url' => $employee->getProfileImageUrl(),
+                'image_srcset' => $employee->getImageSrcset(),
                 'superior' => $employee->superior ? [
                     'id' => $employee->superior->id,
                     'slug' => $employee->superior->slug,

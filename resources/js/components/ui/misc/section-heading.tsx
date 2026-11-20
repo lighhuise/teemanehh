@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 type Align = 'left' | 'center' | 'right';
 
 interface SectionHeadingProps {
-    /** Small label shown above the title with decorative lines */
+    /** Small label shown above the title with industrial precision styling */
     label?: string;
     /** Main heading text */
     title: string | ReactNode;
@@ -12,19 +12,15 @@ interface SectionHeadingProps {
     children?: ReactNode;
     /** Text alignment — controls layout of the label, title and children */
     align?: Align;
+    /** Use 'dark' when rendering on deep navy/dark surfaces */
+    tone?: 'default' | 'dark';
     className?: string;
 }
 
 const alignClass: Record<Align, string> = {
-    left:   'items-start text-left',
+    left: 'items-start text-left',
     center: 'items-center text-center',
-    right:  'items-end text-right',
-};
-
-const lineClass: Record<Align, string> = {
-    left:   'flex-row',
-    center: 'flex-row',
-    right:  'flex-row-reverse',
+    right: 'items-end text-right',
 };
 
 export default function SectionHeading({
@@ -32,30 +28,52 @@ export default function SectionHeading({
     title,
     children,
     align = 'center',
+    tone = 'default',
     className,
 }: SectionHeadingProps) {
+    const isDark = tone === 'dark';
+
     return (
         <div className={cn('flex flex-col space-y-4', alignClass[align], className)}>
-            {/* Soft, clean label */}
             {label && (
-                <span className="text-xs font-black uppercase tracking-[0.2em] text-primary px-4 py-1.5 rounded-full bg-primary/10 w-fit">
+                <span
+                    className={cn(
+                        'inline-flex items-center gap-2 text-[11px] sm:text-xs font-black uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full border w-fit',
+                        isDark
+                            ? 'bg-sky-500/15 text-sky-300 border-sky-400/25'
+                            : 'bg-primary/10 text-primary border-primary/20'
+                    )}
+                >
+                    <span
+                        aria-hidden="true"
+                        className={cn(
+                            'size-1.5 rounded-full',
+                            isDark ? 'bg-sky-400' : 'bg-primary'
+                        )}
+                    />
                     {label}
                 </span>
             )}
 
-            {/* Title - Reverted to industrial heavy style */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl max-w-2xl text-balance font-heading font-black uppercase tracking-tighter text-foreground leading-[1.15]">
+            <h2
+                className={cn(
+                    'text-3xl sm:text-4xl lg:text-5xl max-w-2xl text-balance font-heading font-black uppercase tracking-tighter leading-[1.08]',
+                    isDark ? 'text-white' : 'text-foreground'
+                )}
+            >
                 {title}
             </h2>
 
-            {/* Optional children (description or extra content) */}
             {children && (
-                <div className={cn(
-                    'text-lg text-muted-foreground leading-relaxed',
-                    align === 'center' && 'max-w-2xl mx-auto',
-                    align === 'left'   && 'max-w-2xl',
-                    align === 'right'  && 'max-w-2xl ml-auto',
-                )}>
+                <div
+                    className={cn(
+                        'text-base sm:text-lg leading-relaxed',
+                        isDark ? 'text-slate-300' : 'text-muted-foreground',
+                        align === 'center' && 'max-w-2xl mx-auto',
+                        align === 'left' && 'max-w-2xl',
+                        align === 'right' && 'max-w-2xl ml-auto'
+                    )}
+                >
                     {children}
                 </div>
             )}

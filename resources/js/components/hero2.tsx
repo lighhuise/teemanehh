@@ -1,12 +1,13 @@
 import Wrapper from "@/components/ui/misc/wrapper";
-import {motion, useScroll, useTransform} from "framer-motion";
-import {useEffect, useRef, useState} from "react";
-// @ts-ignore
-import heroBgImage from "@/../images/heavy-haulage-02.webp";
-import {Link} from "@inertiajs/react";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "@inertiajs/react";
+import ResponsiveImage from "@/components/ui/misc/responsive-image";
+import { responsiveImages } from "@/lib/responsive-images";
 
 export default function Her2o() {
     const ref = useRef<HTMLDivElement>(null);
+    const prefersReducedMotion = useReducedMotion();
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"]
@@ -27,6 +28,8 @@ export default function Her2o() {
         return () => media.removeEventListener("change", onChange);
     }, []);
 
+    const disableMotion = isMobileOrTablet || prefersReducedMotion;
+
     // Image moves slightly down as we scroll down (slower than scroll) on desktop
     const yImage = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
     // Text moves down faster than image, creating depth
@@ -39,16 +42,18 @@ export default function Her2o() {
             <div
                 className="relative flex flex-col justify-end z-0 drop-shadow-lg min-h-0 lg:min-h-[85vh] overflow-hidden bg-background lg:bg-slate-950 transition-colors duration-300"
             >
-                {/* Image Container - dedicated top section on mobile & tablet, full-bleed parallax background on desktop */}
+                {/* Image Container - dedicated top section below fixed navbar on mobile & tablet, full-bleed parallax background on desktop */}
                 <motion.div
-                    className="relative w-full aspect-16/10 sm:aspect-16/9 md:aspect-21/9 lg:aspect-auto lg:absolute lg:inset-0 bg-background lg:bg-slate-950 origin-top overflow-hidden pt-16 sm:pt-32 lg:pt-0 [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] lg:[mask-image:none] [-webkit-mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] lg:[-webkit-mask-image:none]"
-                    style={{ y: isMobileOrTablet ? undefined : yImage }}
+                    className="relative mt-16 sm:mt-20 lg:mt-0 w-full aspect-4/3 sm:aspect-16/9 md:aspect-2/1 lg:aspect-auto lg:absolute lg:inset-0 bg-background lg:bg-slate-950 origin-top overflow-hidden [mask-image:linear-gradient(to_bottom,black_88%,transparent_100%)] lg:[mask-image:none] [-webkit-mask-image:linear-gradient(to_bottom,black_88%,transparent_100%)] lg:[-webkit-mask-image:none]"
+                    style={{ y: disableMotion ? undefined : yImage }}
                 >
-                    <img
-                        src={heroBgImage}
-                        alt="Teemane Heavy Haulage"
+                    <ResponsiveImage
+                        source={responsiveImages.heavyHaulage02}
+                        sizes="100vw"
+                        priority
+                        alt="Teemane Heavy Haulage abnormal load convoy transporting a Komatsu excavator"
                         // Balanced sizing and focal point on convoy across all viewports
-                        className="w-full contrast-125 h-full object-cover object-[43%_center] sm:object-center lg:absolute lg:top-[-20%] lg:h-[140%] lg:left-0"
+                        className="w-full contrast-125 h-full object-cover object-[43%_46%] sm:object-[46%_46%] lg:object-[45%_42%] lg:absolute lg:top-[-15%] lg:h-[130%] lg:left-0"
                     />
                     {/* Gradient overlay to ensure visual depth and seamless transition */}
                     <div className="absolute inset-0 bg-linear-to-t from-background/30 via-transparent to-transparent lg:from-slate-950/70 lg:via-slate-950/20 lg:to-transparent" />
@@ -57,7 +62,7 @@ export default function Her2o() {
                 {/* Content Container - flows naturally under image on mobile & tablet, overlays image on desktop */}
                 <motion.div
                     className="relative z-10 w-full"
-                    style={{ y: isMobileOrTablet ? undefined : yText, opacity: isMobileOrTablet ? undefined : opacityText }}
+                    style={{ y: disableMotion ? undefined : yText, opacity: disableMotion ? undefined : opacityText }}
                 >
                     <Wrapper className="pt-6 sm:pt-8 lg:pt-40 pb-14 sm:pb-8 lg:pb-8">
                         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 lg:gap-12">

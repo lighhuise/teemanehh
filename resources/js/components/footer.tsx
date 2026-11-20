@@ -1,54 +1,77 @@
+import type {CSSProperties} from 'react';
 import {Link} from '@inertiajs/react';
 import {ArrowRight, Mail, MapPin, Phone} from 'lucide-react';
-import Wrapper from "@/components/ui/misc/wrapper";
+import Wrapper from '@/components/ui/misc/wrapper';
 import Logo from '@/components/ui/misc/logo';
-import React from "react";
+import SpotlightCard from '@/components/SpotlightCard';
+
+const footerLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact Us', href: '/contact-us' },
+];
 
 export default function Footer() {
     return (
-        <footer className="bg-muted z-5 text-muted-foreground relative overflow-hidden pt-24 pb-12 border-t-20 border-primary">
-            <div className={`absolute top-0 inset-x-0 h-5 w-full bg-[#918e88]`}></div>
-            {/*<div className={`absolute top-0 inset-x-0 h-5 opacity-50 border-b border-black bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,var(--primary)_4px,var(--primary)_8px)] `}></div>*/}
+        <footer className="footer-surface text-slate-300 relative overflow-hidden pt-20 pb-10 border-t border-primary/40">
+            {/* Atmospheric top-edge radial light flare matching ScrollDivider */}
+            <div aria-hidden="true" className="footer-corona pointer-events-none absolute inset-0" />
+
+            {/* Subtle precision dot grid catching top-edge light */}
+            <div aria-hidden="true" className="footer-dots pointer-events-none absolute inset-0" />
+
+            {/* Top flare hairline & subtle bottom highlight */}
+            <div aria-hidden="true" className="scroll-divider-top-edge pointer-events-none absolute top-0 inset-x-0 h-px" />
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-0 inset-x-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent"
+            />
 
             {/* Background Typography */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-5 dark:opacity-[1%] pointer-events-none select-none overflow-hidden">
-                <h2 className="text-[20vh] xl:text-[300px] font-black tracking-tighter leading-none whitespace-nowrap text-foreground">THH</h2>
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none overflow-hidden"
+            >
+                <span className="font-heading text-[22vw] xl:text-[320px] font-black tracking-tighter leading-none whitespace-nowrap text-white">
+                    THH
+                </span>
             </div>
 
             <Wrapper className="relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
-
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-10 pb-16">
                     {/* Brand Column */}
-                    <div className="lg:col-span-4 flex flex-col gap-8">
-                        <Link href="/" className="inline-block">
-                            <Logo className="h-16 w-auto" aria-label="Teemane Heavy Haulage Logo" />
+                    <div className="lg:col-span-4 flex flex-col gap-6">
+                        <Link href="/" className="cursor-pointer inline-block w-fit">
+                            <Logo inverted className="h-14 w-auto" aria-label="Teemane Heavy Haulage Logo" />
                         </Link>
-                        <p className="text-muted-foreground leading-relaxed max-w-sm">
-                            Tailored transportation solutions for oversized cargo, heavy machinery, and industrial equipment across South Africa.
+                        <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed max-w-sm">
+                            Tailored transportation solutions for oversized cargo, heavy machinery, and industrial equipment across South Africa and the SADC region.
                         </p>
-                        <div className="flex flex-col gap-4 mt-4">
-                            <div className="flex items-center gap-4 text-sm font-bold tracking-widest text-foreground uppercase">
-                                <div className="h-px w-8 bg-primary"></div>
-                                Moving the Impossible
-                            </div>
+                        <div className="flex items-center gap-3.5 text-xs font-black tracking-[0.2em] text-sky-400 uppercase pt-1">
+                            <span aria-hidden="true" className="h-px w-8 bg-primary" />
+                            <span>Moving the Impossible</span>
                         </div>
                     </div>
 
                     {/* Navigation Column */}
                     <div className="lg:col-span-3 lg:col-start-6">
-                        <h3 className="text-foreground text-lg font-black mb-8 tracking-tighter uppercase">Navigation</h3>
-                        <ul className="flex flex-col gap-4">
-                            {[
-                                { name: 'Home', href: '/' },
-                                { name: 'Services', href: '/services' },
-                                { name: 'About Us', href: '/about-us' },
-                                { name: 'FAQ', href: '/faq' },
-                                // { name: 'Our Team', href: '/our-team' },
-                                { name: 'Contact Us', href: '/contact-us' },
-                            ].map((item) => (
+                        <span className="text-[11px] font-black tracking-[0.2em] text-sky-400 uppercase mb-2 block">
+                            Explore
+                        </span>
+                        <h3 className="text-white text-lg font-heading font-black mb-6 tracking-tight uppercase">
+                            Navigation
+                        </h3>
+                        <ul className="flex flex-col gap-3.5">
+                            {footerLinks.map((item) => (
                                 <li key={item.name}>
-                                    <Link href={item.href} className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group w-fit font-medium">
-                                        <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-primary" />
+                                    <Link
+                                        href={item.href}
+                                        prefetch="hover"
+                                        className="cursor-pointer text-slate-300 hover:text-white transition-colors duration-200 flex items-center gap-2 group w-fit text-sm font-medium"
+                                    >
+                                        <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200 motion-reduce:transition-none text-sky-400" />
                                         <span>{item.name}</span>
                                     </Link>
                                 </li>
@@ -58,58 +81,155 @@ export default function Footer() {
 
                     {/* Contact Column */}
                     <div className="lg:col-span-4">
-                        <span className="text-xs font-black tracking-widest text-primary uppercase mb-2 block">Direct Communication</span>
-                        <h3 className="text-foreground text-xl font-black mb-7 tracking-tighter uppercase">Contact Us</h3>
-                        <ul className="flex flex-col gap-5">
-                            <li className="flex items-start gap-3.5">
-                                <div className="p-2.5 rounded-lg text-primary shrink-0 mt-0.5 bg-muted border border-border transition-all">
-                                    <MapPin className="w-4 h-4" />
-                                </div>
-                                <div>
-                                    <div className="text-xs font-black uppercase tracking-wider text-foreground mb-0.5">Head Office & Depot</div>
-                                    <p className="text-sm text-muted-foreground leading-normal">
-                                        6 Van Eck St, Bellville South<br />
-                                        Cape Town, Western Cape, 7530
-                                    </p>
-                                </div>
+                        <span className="text-[11px] font-black tracking-[0.2em] text-sky-400 uppercase mb-2 block">
+                            Direct Communication
+                        </span>
+                        <h3 className="text-white text-lg font-heading font-black mb-6 tracking-tight uppercase">
+                            Contact Us
+                        </h3>
+                        <ul className="flex flex-col gap-3.5">
+                            <li>
+                                <SpotlightCard
+                                    theme="dark"
+                                    spotlightColor="#38bdf8"
+                                    intensity={0.22}
+                                    spotlightSize={180}
+                                    softness={0.7}
+                                    shape="circle"
+                                    borderGlow={0.85}
+                                    proximity={160}
+                                    smoothing={0.5}
+                                    grain={0}
+                                    ambient={false}
+                                    flare
+                                    className="footer-glass-card rounded-2xl! p-4! flex items-start gap-3.5"
+                                    style={{
+                                        '--spotlight-card-surface': 'rgba(1, 22, 49, 0.48)',
+                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.22)',
+                                        '--spotlight-card-shadow': 'none',
+                                    } as CSSProperties}
+                                >
+                                    <div className="p-2.5 rounded-xl text-sky-400 shrink-0 mt-0.5 bg-sky-400/10 border border-sky-300/20">
+                                        <MapPin className="w-4 h-4" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[11px] font-black uppercase tracking-wider text-white mb-0.5">
+                                            Head Office &amp; Depot
+                                        </div>
+                                        <p className="text-sm text-slate-300 leading-normal">
+                                            6 Van Eck St, Bellville South
+                                            <br />
+                                            Cape Town, Western Cape, 7530
+                                        </p>
+                                    </div>
+                                </SpotlightCard>
                             </li>
-                            <li className="flex items-center gap-3.5">
-                                <div className="p-2.5 rounded-lg text-primary shrink-0 bg-muted border border-border transition-all">
-                                    <Phone className="w-4 h-4" />
-                                </div>
-                                <div>
-                                    <div className="text-xs font-black uppercase tracking-wider text-foreground mb-0.5">Telephone Hotline</div>
-                                    <a href="tel:0861888004" className="text-base font-bold text-foreground hover:text-primary transition-colors">
-                                        086 188 8004
-                                    </a>
-                                </div>
+                            <li>
+                                <SpotlightCard
+                                    theme="dark"
+                                    spotlightColor="#38bdf8"
+                                    intensity={0.22}
+                                    spotlightSize={180}
+                                    softness={0.7}
+                                    shape="circle"
+                                    borderGlow={0.85}
+                                    proximity={160}
+                                    smoothing={0.5}
+                                    grain={0}
+                                    ambient={false}
+                                    flare
+                                    className="footer-glass-card rounded-2xl! p-4! flex items-center gap-3.5"
+                                    style={{
+                                        '--spotlight-card-surface': 'rgba(1, 22, 49, 0.48)',
+                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.22)',
+                                        '--spotlight-card-shadow': 'none',
+                                    } as CSSProperties}
+                                >
+                                    <div className="p-2.5 rounded-xl text-sky-400 shrink-0 bg-sky-400/10 border border-sky-300/20">
+                                        <Phone className="w-4 h-4" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[11px] font-black uppercase tracking-wider text-white mb-0.5">
+                                            24/7 Dispatch Hotline
+                                        </div>
+                                        <a
+                                            href="tel:0861888004"
+                                            className="cursor-pointer text-base font-bold text-white hover:text-sky-400 transition-colors"
+                                        >
+                                            086 188 8004
+                                        </a>
+                                    </div>
+                                </SpotlightCard>
                             </li>
-                            <li className="flex items-center gap-3.5">
-                                <div className="p-2.5 rounded-lg text-primary shrink-0 bg-muted border border-border transition-all">
-                                    <Mail className="w-4 h-4" />
-                                </div>
-                                <div>
-                                    <div className="text-xs font-black uppercase tracking-wider text-foreground mb-0.5">Electronic Mail</div>
-                                    <a href="mailto:enquiries@teemanehh.co.za" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
-                                        enquiries@teemanehh.co.za
-                                    </a>
-                                </div>
+                            <li>
+                                <SpotlightCard
+                                    theme="dark"
+                                    spotlightColor="#38bdf8"
+                                    intensity={0.22}
+                                    spotlightSize={180}
+                                    softness={0.7}
+                                    shape="circle"
+                                    borderGlow={0.85}
+                                    proximity={160}
+                                    smoothing={0.5}
+                                    grain={0}
+                                    ambient={false}
+                                    flare
+                                    className="footer-glass-card rounded-2xl! p-4! flex items-center gap-3.5"
+                                    style={{
+                                        '--spotlight-card-surface': 'rgba(1, 22, 49, 0.48)',
+                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.22)',
+                                        '--spotlight-card-shadow': 'none',
+                                    } as CSSProperties}
+                                >
+                                    <div className="p-2.5 rounded-xl text-sky-400 shrink-0 bg-sky-400/10 border border-sky-300/20">
+                                        <Mail className="w-4 h-4" />
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="text-[11px] font-black uppercase tracking-wider text-white mb-0.5">
+                                            Electronic Mail
+                                        </div>
+                                        <a
+                                            href="mailto:enquiries@teemanehh.co.za"
+                                            className="cursor-pointer text-sm font-semibold text-white hover:text-sky-400 transition-colors break-all"
+                                        >
+                                            enquiries@teemanehh.co.za
+                                        </a>
+                                    </div>
+                                </SpotlightCard>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="py-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground font-medium">
+                <div className="relative pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-sky-400/25 to-transparent"
+                    />
                     <p>&copy; {new Date().getFullYear()} Teemane Heavy Haulage. All rights reserved.</p>
-                    <div className="flex items-center gap-6">
-                        <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-                        <Link href="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
+                    <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+                        <Link href="/privacy-policy" className="cursor-pointer hover:text-white transition-colors">
+                            Privacy Policy
+                        </Link>
+                        <Link href="/terms-of-service" className="cursor-pointer hover:text-white transition-colors">
+                            Terms of Service
+                        </Link>
+                        <span className="text-slate-600 hidden sm:inline" aria-hidden="true">|</span>
+                        <span>
+                            Built by{' '}
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                className="cursor-pointer text-sky-400 hover:text-sky-300 hover:underline"
+                                href="https://designbycode.co.za"
+                            >
+                                designbycode
+                            </a>
+                        </span>
                     </div>
                 </div>
-            </Wrapper>
-            <Wrapper className={`pt-8 border-t border-border text-center`}>
-                Designed and developed by  <a target={`_blank`} className={`text-primary hover:underline inline`} href="https://designbycode.co.za">designbycode</a>
             </Wrapper>
         </footer>
     );

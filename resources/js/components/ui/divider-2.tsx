@@ -1,27 +1,23 @@
-
-
-import React, { useEffect, useRef } from 'react';
-import { cn } from '@/lib/utils';
-import LogoMark from '@/components/ui/misc/logo-mark';
-// @ts-ignore
-import volvoBlueprintImage from '@/../images/Abnormal Volvo FH16 Empty Low-Loader Blueprint.webp';
-// @ts-ignore
-import volvoBlueprintImageLeft from '@/../images/Inverted Volvo FH16 Haulage Blueprint.webp';
+import React, {useEffect, useRef} from 'react';
+import {cn} from '@/lib/utils';
+import Logo from '@/components/ui/misc/logo';
+import ResponsiveImage from '@/components/ui/misc/responsive-image';
+import DividerSurface from '@/components/ui/divider-surface';
+import {ImageSource, responsiveImages} from '@/lib/responsive-images';
 
 interface Divider2Props extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
-    leftImage?: string;
-    rightImage?: string;
+    leftImage?: ImageSource;
+    rightImage?: ImageSource;
 }
 
 const cadBoardStyle: React.CSSProperties = {
-    backgroundColor: 'color-mix(in oklab, var(--primary) 72%, var(--chart-5))',
     color: 'var(--primary-foreground)',
     backgroundImage: [
-        'linear-gradient(to right, color-mix(in oklab, var(--primary-foreground) 18%, transparent) 1px, transparent 1px)',
-        'linear-gradient(to bottom, color-mix(in oklab, var(--primary-foreground) 18%, transparent) 1px, transparent 1px)',
-        'linear-gradient(to right, color-mix(in oklab, var(--primary-foreground) 7%, transparent) 1px, transparent 1px)',
-        'linear-gradient(to bottom, color-mix(in oklab, var(--primary-foreground) 7%, transparent) 1px, transparent 1px)',
+        'linear-gradient(to right, rgba(125, 211, 252, 0.14) 1px, transparent 1px)',
+        'linear-gradient(to bottom, rgba(125, 211, 252, 0.14) 1px, transparent 1px)',
+        'linear-gradient(to right, rgba(125, 211, 252, 0.05) 1px, transparent 1px)',
+        'linear-gradient(to bottom, rgba(125, 211, 252, 0.05) 1px, transparent 1px)',
     ].join(', '),
     backgroundSize: '80px 80px, 80px 80px, 16px 16px, 16px 16px',
     backgroundPosition: 'center center',
@@ -40,8 +36,8 @@ const rulerTicksStyle = (position: 'top left' | 'bottom left'): React.CSSPropert
 
 function Divider2({
     className,
-    leftImage = volvoBlueprintImageLeft,
-    rightImage = volvoBlueprintImage,
+    leftImage = responsiveImages.volvoBlueprintLeft,
+    rightImage = responsiveImages.volvoBlueprintRight,
     ...props
 }: Divider2Props) {
     const rootRef = useRef<HTMLDivElement>(null);
@@ -127,14 +123,9 @@ function Divider2({
     }, []);
 
     return (
-        <div
+        <DividerSurface
             ref={rootRef}
-            className={cn(
-                'relative isolate h-64 w-full select-none overflow-hidden sm:h-80 lg:h-96',
-                'border-y-2 border-primary bg-primary text-primary-foreground',
-                'shadow-[inset_0_24px_56px_rgba(0,0,0,0.4),inset_0_-24px_56px_rgba(0,0,0,0.4)]',
-                className
-            )}
+            className={cn('h-64 select-none sm:h-80 lg:h-96', className)}
             {...props}
         >
             <div
@@ -181,20 +172,22 @@ function Divider2({
 
                 {/* Right CAD Blueprint Overlay (Screen Blend Mode) */}
                 {rightImage && (
-                    <img
-                        src={rightImage}
+                    <ResponsiveImage
+                        source={rightImage}
+                        sizes="(max-width: 639px) 34vw, (max-width: 1023px) 38vw, 40vw"
                         alt=""
                         aria-hidden="true"
-                        className="pointer-events-none absolute top-9 right-2 bottom-9 z-0 h-[calc(100%-4.5rem)] w-auto max-w-[38%] object-contain object-right opacity-85 mix-blend-screen sm:top-11 sm:right-6 sm:bottom-11 sm:h-[calc(100%-5.5rem)] lg:right-10"
+                        className="pointer-events-none absolute top-9 right-2 bottom-9 h-[calc(100%-4.5rem)] w-auto max-w-[34%] sm:max-w-[38%] object-contain object-right opacity-65 sm:opacity-85 mix-blend-screen sm:top-11 sm:right-6 sm:bottom-11 sm:h-[calc(100%-5.5rem)] lg:right-10"
                     />
                 )}
 
                 {leftImage && (
-                    <img
-                        src={leftImage}
+                    <ResponsiveImage
+                        source={leftImage}
+                        sizes="(max-width: 639px) 34vw, (max-width: 1023px) 38vw, 40vw"
                         alt=""
                         aria-hidden="true"
-                        className="pointer-events-none absolute top-9 left-2 bottom-9 z-0 h-[calc(100%-4.5rem)] w-auto max-w-[38%] object-contain object-left opacity-85 mix-blend-screen sm:top-11 sm:left-6 sm:bottom-11 sm:h-[calc(100%-5.5rem)] lg:left-10"
+                        className="pointer-events-none absolute top-9 left-2 bottom-9 h-[calc(100%-4.5rem)] w-auto max-w-[34%] sm:max-w-[38%] object-contain object-left opacity-65 sm:opacity-85 mix-blend-screen sm:top-11 sm:left-6 sm:bottom-11 sm:h-[calc(100%-5.5rem)] lg:left-10"
                     />
                 )}
 
@@ -208,6 +201,23 @@ function Divider2({
                     <div className="h-px w-8 bg-primary-foreground/50 md:w-14" />
                 </div>
 
+                {/* Center Glassmorphism Brand Plinth Medallion */}
+                <div className="relative flex items-center justify-center shrink-0">
+                    <div
+                        aria-hidden="true"
+                        className="pointer-events-none absolute -inset-3.5 sm:-inset-4 rounded-full border border-dashed border-sky-300/25"
+                    />
+                    <div className="glass-plinth-medallion relative isolate size-28 sm:size-34 rounded-full overflow-hidden grid place-items-center">
+                        <div aria-hidden="true" className="glass-plinth-medallion-flare pointer-events-none absolute inset-0" />
+                        <div aria-hidden="true" className="glass-plinth-medallion-dots pointer-events-none absolute inset-0" />
+                        <div aria-hidden="true" className="glass-plinth-medallion-rim pointer-events-none absolute inset-0 rounded-full" />
+                        <Logo
+                            inverted
+                            className="relative z-10 h-9 sm:h-11 w-auto block drop-shadow-[0_2px_10px_rgba(0,100,190,0.45)]"
+                            aria-label="Teemane Heavy Haulage Logo"
+                        />
+                    </div>
+                </div>
 
                 {/* Right Dimension Extension Line */}
                 <div className="ml-6 hidden items-center gap-2 sm:flex md:ml-10">
@@ -219,7 +229,7 @@ function Divider2({
                     <div className="h-4 w-px bg-primary-foreground/60" />
                 </div>
             </div>
-        </div>
+        </DividerSurface>
     );
 }
 
