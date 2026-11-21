@@ -56,7 +56,7 @@ export default function Navigation2() {
                                 prefetch="hover"
                                 className={`cursor-pointer text-xs font-bold tracking-[0.18em] whitespace-nowrap uppercase transition-colors duration-200 px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-sm ${
                                     active
-                                        ? 'nav-link-active text-sky-400'
+                                        ? 'nav-link-active'
                                         : 'text-slate-200 hover:text-white'
                                 }`}
                             >

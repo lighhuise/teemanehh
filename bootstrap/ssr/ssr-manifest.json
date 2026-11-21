@@ -1,26 +1,26 @@
 {
   "node_modules/laravel-vite-plugin/inertia-helpers/index.js": [],
   "node_modules/leaflet/dist/leaflet.css": [
-    "/build/assets/map-BNYngfn7.js",
+    "/build/assets/map-eMLUQ8sU.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "node_modules/swiper/modules/navigation.css": [
-    "/build/assets/show-D1iLJGMq.js",
+    "/build/assets/show-BYe_f5NW.js",
     "/build/assets/show-BgpZsBTt.css"
   ],
   "node_modules/swiper/modules/pagination.css": [
-    "/build/assets/show-D1iLJGMq.js",
+    "/build/assets/show-BYe_f5NW.js",
     "/build/assets/show-BgpZsBTt.css"
   ],
   "node_modules/swiper/swiper.css": [
-    "/build/assets/show-D1iLJGMq.js",
+    "/build/assets/show-BYe_f5NW.js",
     "/build/assets/show-BgpZsBTt.css"
   ],
   "node_modules/yet-another-react-lightbox/dist/styles.css": [
-    "/build/assets/show-D1iLJGMq.js",
+    "/build/assets/show-BYe_f5NW.js",
     "/build/assets/show-BgpZsBTt.css"
   ],
   "resources/images/469880431_546677775019063_8311794249468884922_n.webp": [
@@ -286,6 +286,46 @@
     "/build/assets/space-nebula-bg-BVRDihK7.webp",
     "/build/assets/space-nebula-bg-480w-BsKWW1uY.webp",
     "/build/assets/space-nebula-bg-768w-BP2fh-cY.webp"
+  ],
+  "resources/images/fleet-icons/gooseneck-lowbed.webp": [
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
+  ],
+  "resources/images/fleet-icons/multi-axle-modular.webp": [
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
+  ],
+  "resources/images/fleet-icons/step-deck-flatbed.webp": [
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
+  ],
+  "resources/images/fleet-icons/telescopic-abnormal.webp": [
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
+  ],
+  "resources/images/fleet-icons/vessel-bridge.webp": [
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/images/heavy-haulage-01.webp": [
     "/build/assets/responsive-image-CxkYlq3p.js",
@@ -1828,104 +1868,155 @@
     "/build/assets/space-nebula-bg-768w-BP2fh-cY.webp"
   ],
   "resources/js/components/ParticleText.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/ScrollVelocity.tsx": [
-    "/build/assets/scroll-divider-CjH_P-yb.js"
+    "/build/assets/scroll-divider-DhWxEaK9.js"
   ],
   "resources/js/components/SpotlightCard.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
+  ],
+  "resources/js/components/TextLoop.tsx": [
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/emergency-cta.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/footer.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/globe.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/hero-simple-split.tsx": [
-    "/build/assets/welcome-B8kJHtTJ.js"
+    "/build/assets/welcome-DtQ2EgHw.js"
   ],
   "resources/js/components/hero.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/map.tsx": [
-    "/build/assets/map-BNYngfn7.js",
+    "/build/assets/map-eMLUQ8sU.js",
     "/build/assets/map-1DTFk8zz.css",
     "/build/assets/layers-BWBAp2CZ.png",
     "/build/assets/layers-2x-Bpkbi35X.png",
     "/build/assets/marker-icon-hN30_KVU.png"
   ],
   "resources/js/components/mode-toggle.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/navigation2.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/scroll-divider.tsx": [
-    "/build/assets/scroll-divider-CjH_P-yb.js"
+    "/build/assets/scroll-divider-DhWxEaK9.js"
   ],
   "resources/js/components/sections/about-capabilities.tsx": [
-    "/build/assets/about-us-waa5DE1r.js"
+    "/build/assets/about-us-DHL-Ts-z.js"
   ],
   "resources/js/components/sections/about-manifesto.tsx": [
-    "/build/assets/about-us-waa5DE1r.js"
+    "/build/assets/about-us-DHL-Ts-z.js"
   ],
   "resources/js/components/sections/dark-cta.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/sections/home-intro-section.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/sections/home-safety-section.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/sections/home-services-section.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
+  ],
+  "resources/js/components/sections/icon-spacer.tsx": [
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/service-card.tsx": [
-    "/build/assets/service-card-DXNwmBGu.js"
+    "/build/assets/service-card-DWpa_fmF.js"
   ],
   "resources/js/components/theme-provider.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/accordion.tsx": [
-    "/build/assets/faq-CF38IQR1.js"
+    "/build/assets/faq-zn3lfxBT.js"
   ],
   "resources/js/components/ui/button.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/card.tsx": [
-    "/build/assets/welcome-B8kJHtTJ.js"
+    "/build/assets/welcome-DtQ2EgHw.js"
   ],
   "resources/js/components/ui/divider-1.tsx": [
-    "/build/assets/divider-1-bcU1KOwR.js"
+    "/build/assets/divider-1-B8EquaLK.js"
   ],
   "resources/js/components/ui/divider-3.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/components/ui/divider-surface.tsx": [
-    "/build/assets/scroll-divider-CjH_P-yb.js"
+    "/build/assets/scroll-divider-DhWxEaK9.js"
   ],
   "resources/js/components/ui/dropdown-menu.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/input.tsx": [
-    "/build/assets/input-DU2Ayv40.js"
+    "/build/assets/input-DQo0-Skb.js"
   ],
   "resources/js/components/ui/misc/floating-stat-card.tsx": [
-    "/build/assets/floating-stat-card-CZ1lS9UY.js"
+    "/build/assets/floating-stat-card-LhZieMZg.js"
   ],
   "resources/js/components/ui/misc/logo-mark.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/misc/logo.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/misc/page-header.tsx": [
-    "/build/assets/page-header-B50LwUXx.js"
+    "/build/assets/page-header-ICKVkuZ7.js"
   ],
   "resources/js/components/ui/misc/responsive-image.tsx": [
     "/build/assets/responsive-image-CxkYlq3p.js",
@@ -1971,29 +2062,26 @@
     "/build/assets/space-nebula-bg-480w-BsKWW1uY.webp",
     "/build/assets/space-nebula-bg-768w-BP2fh-cY.webp"
   ],
-  "resources/js/components/ui/misc/section-backdrop.tsx": [
-    "/build/assets/faq-CF38IQR1.js"
-  ],
   "resources/js/components/ui/misc/section-heading.tsx": [
-    "/build/assets/section-heading-CT93tXK3.js"
+    "/build/assets/section-heading-8zOEVGTQ.js"
   ],
   "resources/js/components/ui/misc/stacked-image.tsx": [
-    "/build/assets/stacked-image-K_AKMb2m.js"
+    "/build/assets/stacked-image-CCRpH6iH.js"
   ],
   "resources/js/components/ui/misc/wrapper.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/sheet.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/components/ui/textarea.tsx": [
-    "/build/assets/contact-us-y-5yOsJQ.js"
+    "/build/assets/contact-us-DlSbPjjT.js"
   ],
   "resources/js/components/ui/toast.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/layouts/app-layout.tsx": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/lib/responsive-images.ts": [
     "/build/assets/responsive-image-CxkYlq3p.js",
@@ -2040,53 +2128,58 @@
     "/build/assets/space-nebula-bg-768w-BP2fh-cY.webp"
   ],
   "resources/js/lib/utils.ts": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/pages/about-us.tsx": [
-    "/build/assets/about-us-waa5DE1r.js"
+    "/build/assets/about-us-DHL-Ts-z.js"
   ],
   "resources/js/pages/contact-us.tsx": [
-    "/build/assets/contact-us-y-5yOsJQ.js"
+    "/build/assets/contact-us-DlSbPjjT.js"
   ],
   "resources/js/pages/employees/index.tsx": [
-    "/build/assets/employees-DyKv7t-H.js"
+    "/build/assets/employees-CnJLRBSr.js"
   ],
   "resources/js/pages/employees/show.tsx": [
-    "/build/assets/show-BKGapU3B.js"
+    "/build/assets/show-PCv7eZXm.js"
   ],
   "resources/js/pages/error.tsx": [
-    "/build/assets/error-CjDzMEb5.js"
+    "/build/assets/error-BMiUMdcV.js"
   ],
   "resources/js/pages/faq.tsx": [
-    "/build/assets/faq-CF38IQR1.js"
+    "/build/assets/faq-zn3lfxBT.js"
   ],
   "resources/js/pages/home.tsx": [
-    "/build/assets/home-DXEVFwkR.js"
+    "/build/assets/home-CzPblBFz.js",
+    "/build/assets/gooseneck-lowbed-DbvwsFd5.webp",
+    "/build/assets/step-deck-flatbed-C7jeaR35.webp",
+    "/build/assets/multi-axle-modular-niLqYdz6.webp",
+    "/build/assets/vessel-bridge-CN02LS9F.webp",
+    "/build/assets/telescopic-abnormal-CfWrKQ5u.webp"
   ],
   "resources/js/pages/legal/privacy-policy.tsx": [
-    "/build/assets/privacy-policy-Bb5jRQpL.js"
+    "/build/assets/privacy-policy-vDptfD_J.js"
   ],
   "resources/js/pages/legal/terms-of-service.tsx": [
-    "/build/assets/terms-of-service-CCUyR5tj.js"
+    "/build/assets/terms-of-service-6_cH5fL-.js"
   ],
   "resources/js/pages/services/index.tsx": [
-    "/build/assets/services-C72OTUs_.js"
+    "/build/assets/services-C-EdeSXs.js"
   ],
   "resources/js/pages/services/show.tsx": [
-    "/build/assets/show-D1iLJGMq.js",
+    "/build/assets/show-BYe_f5NW.js",
     "/build/assets/show-BgpZsBTt.css"
   ],
   "resources/js/pages/welcome.tsx": [
-    "/build/assets/welcome-B8kJHtTJ.js"
+    "/build/assets/welcome-DtQ2EgHw.js"
   ],
   "resources/js/routes/index.ts": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ],
   "resources/js/routes/team/index.ts": [
-    "/build/assets/team-T8EQ4q0c.js"
+    "/build/assets/team-DogQMkRJ.js"
   ],
   "resources/js/ssr.tsx": [],
   "resources/js/wayfinder/index.ts": [
-    "/build/assets/app-layout-DCuwPKZC.js"
+    "/build/assets/app-layout-4wljOYs7.js"
   ]
 }

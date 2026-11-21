@@ -1,7 +1,8 @@
-import React from "react";
-import Wrapper from "@/components/ui/misc/wrapper";
-import { StackedImage } from "@/components/ui/misc/stacked-image";
-import { ImageSource, responsiveImages } from "@/lib/responsive-images";
+import React from 'react';
+import Wrapper from '@/components/ui/misc/wrapper';
+import { StackedImage } from '@/components/ui/misc/stacked-image';
+import { ImageSource, responsiveImages } from '@/lib/responsive-images';
+import { cn } from '@/lib/utils';
 
 interface PageHeaderProps {
     label?: string;
@@ -29,29 +30,46 @@ export default function PageHeader({
     const headerImage = image || responsiveImages.lineup;
 
     return (
-        <section className={`relative border-b border-border bg-background overflow-hidden isolate pb-16 sm:pb-20 pt-28 sm:pt-36 lg:pt-44 lg:pb-28 ${className || ''}`}>
-            <div aria-hidden="true" className="page-header-radial absolute inset-0 pointer-events-none select-none -z-10" />
+        <section
+            className={cn(
+                'capabilities-glass-stage relative isolate overflow-hidden border-b border-sky-500/15 pt-28 pb-16 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-28',
+                className,
+            )}
+        >
+            <div aria-hidden="true" className="capabilities-stage-dots pointer-events-none absolute inset-0 -z-10" />
+            <div
+                aria-hidden="true"
+                className="scroll-divider-top-edge pointer-events-none absolute inset-x-0 bottom-0 h-px opacity-50"
+            />
 
             <Wrapper className="relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 items-center">
-                    <div className="lg:col-span-6 space-y-6">
+                <div className="grid grid-cols-1 items-center gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-16">
+                    <div className="space-y-6 lg:col-span-6">
                         {label && (
-                            <span className="inline-flex text-xs font-black uppercase tracking-[0.2em] text-primary px-4 py-1.5 rounded-full bg-primary/10 w-fit">
-                                {label}
+                            <span className="bento-glass-card relative inline-flex w-fit items-center gap-2 overflow-hidden rounded-full px-4 py-1.5 text-xs font-black tracking-[0.2em] text-primary uppercase dark:text-sky-200">
+                                <span
+                                    aria-hidden="true"
+                                    className="bento-glass-card-flare pointer-events-none absolute inset-0"
+                                />
+                                <span
+                                    aria-hidden="true"
+                                    className="relative z-10 size-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(0,100,190,0.8)] dark:bg-sky-400 dark:shadow-[0_0_8px_#38bdf8]"
+                                />
+                                <span className="relative z-10">{label}</span>
                             </span>
                         )}
-                        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black uppercase tracking-tighter text-foreground leading-[1.08]">
+                        <h1 className="font-heading text-3xl leading-[1.08] font-black tracking-tighter text-foreground uppercase sm:text-5xl lg:text-6xl">
                             {title}
                         </h1>
                         {description && (
-                            <p className="page-header-desc text-base sm:text-xl text-muted-foreground leading-relaxed font-normal">
+                            <p className="page-header-desc text-base leading-relaxed font-normal text-muted-foreground sm:text-xl">
                                 {description}
                             </p>
                         )}
                         {children}
                     </div>
 
-                    <div className="lg:col-span-6 flex justify-center lg:justify-end">
+                    <div className="flex justify-center lg:col-span-6 lg:justify-end">
                         <StackedImage
                             src={headerImage}
                             srcSet={imageSrcSet}

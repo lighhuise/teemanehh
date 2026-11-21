@@ -33,18 +33,18 @@ export function Divider3({
             <div className={cn('relative w-full px-4 sm:px-6 lg:px-8', heightClassName)}>
                 <ParticleText
                     text={text}
-                    particleSize={3}
-                    density={5}
+                    particleSize={5}
+                    density={8}
                     color="currentColor"
                     highlightColor={highlightColor}
                     highlightMode="motion"
                     shape="circle"
                     intro="rain"
-                    scatter={190}
+                    scatter={290}
                     gatherDuration={2500}
                     stagger={600}
                     clickBurst={false}
-                    burstStrength={1.4}
+                    burstStrength={2.4}
                     pointerRepel={24}
                     repelRadius={90}
                     idleDrift={0.9}

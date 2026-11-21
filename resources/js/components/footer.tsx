@@ -22,7 +22,8 @@ export default function Footer() {
             {/* Subtle precision dot grid catching top-edge light */}
             <div aria-hidden="true" className="footer-dots pointer-events-none absolute inset-0" />
 
-            {/* Top flare hairline & subtle bottom highlight */}
+            {/* Top canopy hazard micro-rail, flare hairline & subtle bottom highlight */}
+            <div aria-hidden="true" className="nav-canopy-hazard pointer-events-none absolute top-0 inset-x-0 h-1.5" />
             <div aria-hidden="true" className="scroll-divider-top-edge pointer-events-none absolute top-0 inset-x-0 h-px" />
             <div
                 aria-hidden="true"
@@ -49,8 +50,8 @@ export default function Footer() {
                         <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed max-w-sm">
                             Tailored transportation solutions for oversized cargo, heavy machinery, and industrial equipment across South Africa and the SADC region.
                         </p>
-                        <div className="flex items-center gap-3.5 text-xs font-black tracking-[0.2em] text-sky-400 uppercase pt-1">
-                            <span aria-hidden="true" className="h-px w-8 bg-primary" />
+                        <div className="emergency-cta-pill inline-flex w-fit items-center gap-3 px-4 py-1.5 rounded-full text-[11px] font-black tracking-[0.2em] text-sky-300 uppercase">
+                            <span aria-hidden="true" className="size-1.5 rounded-full bg-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.9)]" />
                             <span>Moving the Impossible</span>
                         </div>
                     </div>
@@ -102,17 +103,19 @@ export default function Footer() {
                                     grain={0}
                                     ambient={false}
                                     flare
-                                    className="footer-glass-card rounded-2xl! p-4! flex items-start gap-3.5"
+                                    className="footer-glass-card relative overflow-hidden rounded-2xl! p-4! flex items-start gap-3.5"
                                     style={{
-                                        '--spotlight-card-surface': 'rgba(1, 22, 49, 0.48)',
-                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.22)',
+                                        '--spotlight-card-surface': 'transparent',
+                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.28)',
                                         '--spotlight-card-shadow': 'none',
                                     } as CSSProperties}
                                 >
-                                    <div className="p-2.5 rounded-xl text-sky-400 shrink-0 mt-0.5 bg-sky-400/10 border border-sky-300/20">
+                                    <div aria-hidden="true" className="footer-glass-card-flare pointer-events-none absolute inset-0" />
+                                    <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px" />
+                                    <div className="relative z-10 p-2.5 rounded-xl text-sky-300 shrink-0 mt-0.5 bg-sky-400/12 border border-sky-300/25 shadow-[inset_0_1px_0_rgba(224,242,254,0.28)]">
                                         <MapPin className="w-4 h-4" />
                                     </div>
-                                    <div>
+                                    <div className="relative z-10">
                                         <div className="text-[11px] font-black uppercase tracking-wider text-white mb-0.5">
                                             Head Office &amp; Depot
                                         </div>
@@ -138,23 +141,25 @@ export default function Footer() {
                                     grain={0}
                                     ambient={false}
                                     flare
-                                    className="footer-glass-card rounded-2xl! p-4! flex items-center gap-3.5"
+                                    className="footer-glass-card relative overflow-hidden rounded-2xl! p-4! flex items-center gap-3.5"
                                     style={{
-                                        '--spotlight-card-surface': 'rgba(1, 22, 49, 0.48)',
-                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.22)',
+                                        '--spotlight-card-surface': 'transparent',
+                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.28)',
                                         '--spotlight-card-shadow': 'none',
                                     } as CSSProperties}
                                 >
-                                    <div className="p-2.5 rounded-xl text-sky-400 shrink-0 bg-sky-400/10 border border-sky-300/20">
+                                    <div aria-hidden="true" className="footer-glass-card-flare pointer-events-none absolute inset-0" />
+                                    <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px" />
+                                    <div className="relative z-10 p-2.5 rounded-xl text-sky-300 shrink-0 bg-sky-400/12 border border-sky-300/25 shadow-[inset_0_1px_0_rgba(224,242,254,0.28)]">
                                         <Phone className="w-4 h-4" />
                                     </div>
-                                    <div>
+                                    <div className="relative z-10">
                                         <div className="text-[11px] font-black uppercase tracking-wider text-white mb-0.5">
                                             24/7 Dispatch Hotline
                                         </div>
                                         <a
                                             href="tel:0861888004"
-                                            className="cursor-pointer text-base font-bold text-white hover:text-sky-400 transition-colors"
+                                            className="cursor-pointer text-base font-bold text-white hover:text-sky-300 transition-colors"
                                         >
                                             086 188 8004
                                         </a>
@@ -175,23 +180,25 @@ export default function Footer() {
                                     grain={0}
                                     ambient={false}
                                     flare
-                                    className="footer-glass-card rounded-2xl! p-4! flex items-center gap-3.5"
+                                    className="footer-glass-card relative overflow-hidden rounded-2xl! p-4! flex items-center gap-3.5"
                                     style={{
-                                        '--spotlight-card-surface': 'rgba(1, 22, 49, 0.48)',
-                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.22)',
+                                        '--spotlight-card-surface': 'transparent',
+                                        '--spotlight-card-border': 'rgba(56, 189, 248, 0.28)',
                                         '--spotlight-card-shadow': 'none',
                                     } as CSSProperties}
                                 >
-                                    <div className="p-2.5 rounded-xl text-sky-400 shrink-0 bg-sky-400/10 border border-sky-300/20">
+                                    <div aria-hidden="true" className="footer-glass-card-flare pointer-events-none absolute inset-0" />
+                                    <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px" />
+                                    <div className="relative z-10 p-2.5 rounded-xl text-sky-300 shrink-0 bg-sky-400/12 border border-sky-300/25 shadow-[inset_0_1px_0_rgba(224,242,254,0.28)]">
                                         <Mail className="w-4 h-4" />
                                     </div>
-                                    <div className="min-w-0">
+                                    <div className="relative z-10 min-w-0">
                                         <div className="text-[11px] font-black uppercase tracking-wider text-white mb-0.5">
                                             Electronic Mail
                                         </div>
                                         <a
                                             href="mailto:enquiries@teemanehh.co.za"
-                                            className="cursor-pointer text-sm font-semibold text-white hover:text-sky-400 transition-colors break-all"
+                                            className="cursor-pointer text-sm font-semibold text-white hover:text-sky-300 transition-colors break-all"
                                         >
                                             enquiries@teemanehh.co.za
                                         </a>
@@ -203,10 +210,10 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="relative pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
+                <div className="footer-bottom-glass relative rounded-2xl px-5 py-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-300/90">
                     <div
                         aria-hidden="true"
-                        className="pointer-events-none absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-sky-400/25 to-transparent"
+                        className="pointer-events-none absolute top-0 inset-x-4 h-px bg-linear-to-r from-transparent via-sky-300/40 to-transparent"
                     />
                     <p>&copy; {new Date().getFullYear()} Teemane Heavy Haulage. All rights reserved.</p>
                     <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">

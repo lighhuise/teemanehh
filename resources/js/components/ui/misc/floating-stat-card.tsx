@@ -2,11 +2,13 @@ import { cn } from '@/lib/utils';
 import { motion, useReducedMotion } from 'framer-motion';
 
 type FloatingPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+export type FloatingStatGlass = 'frosted' | 'realglass';
 
 interface FloatingStatCardProps {
     value: string;
     label: string;
     position?: FloatingPosition;
+    glass?: FloatingStatGlass;
     className?: string;
     delay?: number;
 }
@@ -22,10 +24,12 @@ export function FloatingStatCard({
     value,
     label,
     position = 'bottom-left',
+    glass = 'frosted',
     className,
     delay = 0,
 }: FloatingStatCardProps) {
     const prefersReducedMotion = useReducedMotion();
+    const isRealGlass = glass === 'realglass';
 
     return (
         <motion.div
@@ -48,27 +52,76 @@ export function FloatingStatCard({
                 className
             )}
         >
-            {/* Slanted, Pop-out Industrial Value Block */}
-            <div className="relative z-10 -mr-5 sm:-mr-6 bg-linear-to-br from-primary to-sky-600 border border-primary-foreground/20 shadow-xl shadow-primary/30 px-4 py-2.5 sm:px-5 sm:py-3 md:px-7 md:py-4 rounded-xl -skew-x-12 flex items-center justify-center overflow-hidden">
-                {/* Subtle industrial stripe overlay */}
-                <div className="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)]" />
+            {/* Slanted, Pop-out Value Block */}
+            <div
+                className={cn(
+                    'relative z-10 -mr-5 sm:-mr-6 px-4 py-2.5 sm:px-5 sm:py-3 md:px-7 md:py-4 rounded-xl -skew-x-12 flex items-center justify-center overflow-hidden',
+                    isRealGlass ? 'floating-stat-value-realglass' : 'floating-stat-value'
+                )}
+            >
+                {isRealGlass ? (
+                    <div
+                        aria-hidden="true"
+                        className="floating-stat-realglass-sheen pointer-events-none absolute inset-0"
+                    />
+                ) : (
+                    <>
+                        <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute inset-0 opacity-15 bg-[repeating-linear-gradient(-45deg,transparent,transparent_4px,#000_4px,#000_8px)]"
+                        />
+                        <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-sky-200/80 to-transparent"
+                        />
+                    </>
+                )}
 
                 <div className="skew-x-12 relative flex items-center justify-center">
-                    <span className="text-2xl sm:text-3xl md:text-4xl font-heading font-black text-primary-foreground tracking-tighter drop-shadow-sm">
+                    <span
+                        className={cn(
+                            'text-2xl sm:text-3xl md:text-4xl font-heading font-black text-white tracking-tighter',
+                            isRealGlass
+                                ? 'drop-shadow-[0_1px_6px_rgba(0,12,32,0.55)]'
+                                : 'drop-shadow-[0_2px_10px_rgba(56,189,248,0.35)]'
+                        )}
+                    >
                         {value}
                     </span>
                 </div>
             </div>
 
-            {/* Sleek Glassmorphic Label Panel */}
-            <div className="relative bg-card/95 backdrop-blur-xl border border-border shadow-xl rounded-r-xl rounded-l-[2.25rem] pl-8 sm:pl-10 pr-4 sm:pr-6 py-2.5 sm:py-3 md:py-4 flex flex-col justify-center min-w-[124px] sm:min-w-[144px]">
+            {/* Glassmorphic Label Panel */}
+            <div
+                className={cn(
+                    'relative overflow-hidden rounded-r-xl rounded-l-[2.25rem] pl-8 sm:pl-10 pr-4 sm:pr-6 py-2.5 sm:py-3 md:py-4 flex flex-col justify-center min-w-[124px] sm:min-w-[144px]',
+                    isRealGlass ? 'floating-stat-realglass' : 'floating-stat-glass'
+                )}
+            >
+                {isRealGlass ? (
+                    <div aria-hidden="true" className="floating-stat-realglass-sheen pointer-events-none absolute inset-0" />
+                ) : (
+                    <>
+                        <div aria-hidden="true" className="floating-stat-flare pointer-events-none absolute inset-0" />
+                        <div aria-hidden="true" className="nav-logo-plinth-dots pointer-events-none absolute inset-0" />
+                    </>
+                )}
+                <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px" />
+
                 {/* Decorative Status Dot */}
-                <div className="absolute top-2.5 right-3 sm:top-3 sm:right-4 flex items-center gap-1.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary/40 animate-ping motion-reduce:animate-none absolute" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary relative" />
+                <div className="absolute top-2.5 right-3 sm:top-3 sm:right-4 flex items-center gap-1.5 z-10">
+                    <div className="w-1.5 h-1.5 rounded-full bg-sky-400/50 animate-ping motion-reduce:animate-none absolute" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.9)] relative" />
                 </div>
 
-                <div className="text-[10px] sm:text-[11px] md:text-xs font-black uppercase tracking-[0.16em] text-foreground leading-snug max-w-[120px] mt-0.5">
+                <div
+                    className={cn(
+                        'relative z-10 text-[10px] sm:text-[11px] md:text-xs font-black uppercase tracking-[0.16em] leading-snug max-w-[120px] mt-0.5',
+                        isRealGlass
+                            ? 'text-white [text-shadow:0_1px_6px_rgba(0,10,28,0.7)]'
+                            : 'text-slate-100'
+                    )}
+                >
                     {label}
                 </div>
             </div>

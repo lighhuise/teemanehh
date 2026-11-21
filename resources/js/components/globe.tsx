@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useCallback, useState } from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import createGlobe from 'cobe';
-import { Eye, EyeOff } from 'lucide-react';
+import {Eye, EyeOff} from 'lucide-react';
 import Wrapper from '@/components/ui/misc/wrapper';
 import ResponsiveImage from '@/components/ui/misc/responsive-image';
-import { responsiveImages } from '@/lib/responsive-images';
+import {responsiveImages} from '@/lib/responsive-images';
 
 export interface GlobeMarker {
     id: string;
@@ -96,7 +96,7 @@ export const defaultArcs: GlobeArc[] = [
 ];
 
 const MARKER_ELEVATION = 0.02;
-const ARC_HEIGHT = 0.22;
+const ARC_HEIGHT = 0.32;
 
 function latLonToUnitVec(location: [number, number]): [number, number, number] {
     const latRad = (location[0] * Math.PI) / 180;
@@ -212,7 +212,7 @@ export default function Globe({
     markers = defaultMarkers,
     arcs = defaultArcs,
     className = '',
-    speed = 0.0022,
+    speed = 0.0322,
 }: GlobeProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const arcCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -548,7 +548,11 @@ export default function Globe({
     }, [markers, arcs, speed]);
 
     return (
-        <section className="relative overflow-hidden bg-[#030611] text-white min-h-[760px] sm:min-h-[860px] lg:min-h-[960px] flex items-center py-20 lg:py-28 border-y border-white/10 select-none">
+        <section className="relative overflow-hidden bg-[#030611] text-white min-h-[760px] sm:min-h-[860px] lg:min-h-[960px] flex items-center py-20 lg:py-28 border-y border-sky-400/15 select-none">
+            {/* Top & Bottom Luminous Horizon Hairlines */}
+            <div aria-hidden="true" className="scroll-divider-top-edge pointer-events-none absolute inset-x-0 top-0 z-30 h-px" />
+            <div aria-hidden="true" className="scroll-divider-top-edge pointer-events-none absolute inset-x-0 bottom-0 z-30 h-px opacity-75" />
+
             {/* Space Nebula Background Image */}
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
                 <ResponsiveImage
@@ -678,18 +682,21 @@ export default function Globe({
                                     fontWeight: m.isHq ? 700 : 500,
                                     textTransform: 'uppercase',
                                     color: '#ffffff',
-                                    backgroundColor: m.isHq ? '#F45300' : 'rgba(17, 17, 17, 0.88)',
+                                    background: m.isHq
+                                        ? 'linear-gradient(135deg, rgba(244, 83, 0, 0.92) 0%, rgba(210, 62, 0, 0.82) 100%)'
+                                        : 'linear-gradient(135deg, rgba(0, 16, 38, 0.78) 0%, rgba(1, 28, 62, 0.62) 100%)',
                                     border: m.isHq
-                                        ? '1px solid rgba(255, 209, 176, 0.65)'
-                                        : '1px solid rgba(255, 255, 255, 0.18)',
+                                        ? '1px solid rgba(255, 224, 198, 0.7)'
+                                        : '1px solid rgba(125, 211, 252, 0.32)',
                                     padding: m.isHq ? '5px 10px' : '3px 8px',
-                                    borderRadius: '4px',
+                                    borderRadius: '6px',
                                     letterSpacing: '0.06em',
                                     whiteSpace: 'nowrap',
                                     boxShadow: m.isHq
-                                        ? '0 0 18px rgba(244, 83, 0, 0.6)'
-                                        : '0 2px 8px rgba(0, 0, 0, 0.5)',
-                                    backdropFilter: 'blur(6px)',
+                                        ? 'inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 0 18px rgba(244, 83, 0, 0.62)'
+                                        : 'inset 0 1px 0 rgba(224, 242, 254, 0.24), 0 4px 12px rgba(0, 6, 18, 0.6)',
+                                    backdropFilter: 'blur(10px) saturate(155%)',
+                                    WebkitBackdropFilter: 'blur(10px) saturate(155%)',
                                 }}
                             >
                                 <span
@@ -711,9 +718,9 @@ export default function Globe({
             {/* Foreground Copy — Left Aligned over the Offscreen-Right Globe */}
             <Wrapper className="relative z-20 pointer-events-none">
                 <div className="max-w-xl lg:max-w-2xl space-y-6 pointer-events-auto">
-                    <div className="inline-flex items-center gap-3">
+                    <div className="emergency-cta-pill inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5">
                         <span className="size-2 rounded-full bg-[#F45300] shadow-[0_0_12px_#F45300]" />
-                        <span className="font-mono text-xs uppercase tracking-[0.22em] text-white/75">
+                        <span className="font-mono text-xs uppercase tracking-[0.22em] text-sky-100/90">
                             Continental Reach
                         </span>
                     </div>
@@ -732,142 +739,154 @@ export default function Globe({
                     {/* 3 Distinct Truck & Trailer CAD Line SVG Icons */}
                     <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
                         {/* 1. Gooseneck Lowbed Truck & Trailer */}
-                        <div className="group rounded-xl border border-white/12 bg-white/[0.03] hover:border-primary/60 hover:bg-primary/[0.08] px-4 py-3.5 backdrop-blur-md transition-all duration-300">
-                            <svg
-                                viewBox="0 0 180 54"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-full h-11 text-white/85 group-hover:text-white transition-colors"
-                                aria-label="Gooseneck Lowbed Truck and Trailer"
-                            >
-                                {/* Ground datum line */}
-                                <line x1="4" y1="48" x2="176" y2="48" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="3 3" />
-                                {/* Cab-over Prime Mover */}
-                                <path
-                                    d="M14 40V20C14 17.5 15.8 16 18 16H29V29H48V40H14Z"
-                                    stroke="currentColor"
-                                    strokeWidth="1.6"
-                                    strokeLinejoin="round"
-                                />
-                                {/* Windshield & cab detail */}
-                                <path d="M14 25H23V16" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
-                                <line x1="31" y1="14" x2="31" y2="29" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                                {/* Fifth wheel & gooseneck drop */}
-                                <path
-                                    d="M42 36H53L62 41H128L133 35H168V40H131L128 43H60L52 38H42"
-                                    stroke="#0064be"
-                                    strokeWidth="1.8"
-                                    strokeLinejoin="round"
-                                />
-                                {/* Oversized machinery payload block on lowbed */}
-                                <rect x="68" y="25" width="46" height="16" rx="2" stroke="currentColor" strokeOpacity="0.65" strokeWidth="1.4" />
-                                <line x1="78" y1="25" x2="78" y2="41" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1.2" />
-                                <line x1="102" y1="25" x2="102" y2="41" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1.2" />
-                                {/* Truck & Tri-axle lowbed wheels */}
-                                <circle cx="22" cy="42" r="5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="38" cy="42" r="5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="49" cy="42" r="5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="139" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="150" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="161" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                            </svg>
-                            <div className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-white/60 group-hover:text-white/90 transition-colors">
-                                Gooseneck Lowbed
+                        <div className="group globe-glass-card relative overflow-hidden rounded-xl px-4 py-3.5 transition-all duration-300 hover:-translate-y-0.5">
+                            <div aria-hidden="true" className="globe-glass-card-flare pointer-events-none absolute inset-0" />
+                            <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px opacity-80" />
+                            <div className="relative z-10">
+                                <svg
+                                    viewBox="0 0 180 54"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-full h-11 text-white/85 group-hover:text-white transition-colors"
+                                    aria-label="Gooseneck Lowbed Truck and Trailer"
+                                >
+                                    {/* Ground datum line */}
+                                    <line x1="4" y1="48" x2="176" y2="48" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="3 3" />
+                                    {/* Cab-over Prime Mover */}
+                                    <path
+                                        d="M14 40V20C14 17.5 15.8 16 18 16H29V29H48V40H14Z"
+                                        stroke="currentColor"
+                                        strokeWidth="1.6"
+                                        strokeLinejoin="round"
+                                    />
+                                    {/* Windshield & cab detail */}
+                                    <path d="M14 25H23V16" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                                    <line x1="31" y1="14" x2="31" y2="29" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                                    {/* Fifth wheel & gooseneck drop */}
+                                    <path
+                                        d="M42 36H53L62 41H128L133 35H168V40H131L128 43H60L52 38H42"
+                                        stroke="#38bdf8"
+                                        strokeWidth="1.8"
+                                        strokeLinejoin="round"
+                                    />
+                                    {/* Oversized machinery payload block on lowbed */}
+                                    <rect x="68" y="25" width="46" height="16" rx="2" stroke="currentColor" strokeOpacity="0.65" strokeWidth="1.4" />
+                                    <line x1="78" y1="25" x2="78" y2="41" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1.2" />
+                                    <line x1="102" y1="25" x2="102" y2="41" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1.2" />
+                                    {/* Truck & Tri-axle lowbed wheels */}
+                                    <circle cx="22" cy="42" r="5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="38" cy="42" r="5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="49" cy="42" r="5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="139" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="150" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="161" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                </svg>
+                                <div className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-sky-100/70 group-hover:text-white transition-colors">
+                                    Gooseneck Lowbed
+                                </div>
                             </div>
                         </div>
 
                         {/* 2. Step-Deck Extendable Flatbed Truck & Trailer */}
-                        <div className="group rounded-xl border border-white/12 bg-white/[0.03] hover:border-primary/60 hover:bg-primary/[0.08] px-4 py-3.5 backdrop-blur-md transition-all duration-300">
-                            <svg
-                                viewBox="0 0 180 54"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-full h-11 text-white/85 group-hover:text-white transition-colors"
-                                aria-label="Step-Deck Extendable Trailer"
-                            >
-                                {/* Ground datum line */}
-                                <line x1="4" y1="48" x2="176" y2="48" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="3 3" />
-                                {/* Heavy Prime Mover with headache rack */}
-                                <path
-                                    d="M12 40V22L16 15H27V29H46V40H12Z"
-                                    stroke="currentColor"
-                                    strokeWidth="1.6"
-                                    strokeLinejoin="round"
-                                />
-                                <path d="M13 23H22V15" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
-                                <line x1="29" y1="13" x2="29" y2="29" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-                                {/* Step-deck upper & lower beam */}
-                                <path
-                                    d="M40 31H66V36H168V39H63V34H40V31Z"
-                                    stroke="#0064be"
-                                    strokeWidth="1.7"
-                                    strokeLinejoin="round"
-                                />
-                                {/* Long structural steel truss/beam cargo */}
-                                <rect x="54" y="20" width="108" height="10" rx="1.5" stroke="currentColor" strokeOpacity="0.65" strokeWidth="1.4" />
-                                <path d="M58 30L72 20L86 30L100 20L114 30L128 20L142 30L156 20" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.1" strokeLinejoin="round" />
-                                {/* Wheels (6x4 tractor + 4-axle step-deck) */}
-                                <circle cx="20" cy="42" r="5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="35" cy="42" r="5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="46" cy="42" r="5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="126" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="137" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="148" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                                <circle cx="159" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.6" />
-                            </svg>
-                            <div className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-white/60 group-hover:text-white/90 transition-colors">
-                                Step-Deck Flatbed
+                        <div className="group globe-glass-card relative overflow-hidden rounded-xl px-4 py-3.5 transition-all duration-300 hover:-translate-y-0.5">
+                            <div aria-hidden="true" className="globe-glass-card-flare pointer-events-none absolute inset-0" />
+                            <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px opacity-80" />
+                            <div className="relative z-10">
+                                <svg
+                                    viewBox="0 0 180 54"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-full h-11 text-white/85 group-hover:text-white transition-colors"
+                                    aria-label="Step-Deck Extendable Trailer"
+                                >
+                                    {/* Ground datum line */}
+                                    <line x1="4" y1="48" x2="176" y2="48" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="3 3" />
+                                    {/* Heavy Prime Mover with headache rack */}
+                                    <path
+                                        d="M12 40V22L16 15H27V29H46V40H12Z"
+                                        stroke="currentColor"
+                                        strokeWidth="1.6"
+                                        strokeLinejoin="round"
+                                    />
+                                    <path d="M13 23H22V15" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                                    <line x1="29" y1="13" x2="29" y2="29" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+                                    {/* Step-deck upper & lower beam */}
+                                    <path
+                                        d="M40 31H66V36H168V39H63V34H40V31Z"
+                                        stroke="#38bdf8"
+                                        strokeWidth="1.7"
+                                        strokeLinejoin="round"
+                                    />
+                                    {/* Long structural steel truss/beam cargo */}
+                                    <rect x="54" y="20" width="108" height="10" rx="1.5" stroke="currentColor" strokeOpacity="0.65" strokeWidth="1.4" />
+                                    <path d="M58 30L72 20L86 30L100 20L114 30L128 20L142 30L156 20" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.1" strokeLinejoin="round" />
+                                    {/* Wheels (6x4 tractor + 4-axle step-deck) */}
+                                    <circle cx="20" cy="42" r="5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="35" cy="42" r="5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="46" cy="42" r="5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="126" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="137" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="148" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                    <circle cx="159" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.6" />
+                                </svg>
+                                <div className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-sky-100/70 group-hover:text-white transition-colors">
+                                    Step-Deck Flatbed
+                                </div>
                             </div>
                         </div>
 
                         {/* 3. Multi-Axle Modular Hydraulic Platform Trailer */}
-                        <div className="group rounded-xl border border-white/12 bg-white/[0.03] hover:border-primary/60 hover:bg-primary/[0.08] px-4 py-3.5 backdrop-blur-md transition-all duration-300">
-                            <svg
-                                viewBox="0 0 180 54"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="w-full h-11 text-white/85 group-hover:text-white transition-colors"
-                                aria-label="Multi-Axle Modular Hydraulic Trailer"
-                            >
-                                {/* Ground datum line */}
-                                <line x1="4" y1="48" x2="176" y2="48" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="3 3" />
-                                {/* 8x4 Ballasted Prime Mover */}
-                                <path
-                                    d="M10 40V19C10 16.8 11.6 15 14 15H25V28H54V40H10Z"
-                                    stroke="currentColor"
-                                    strokeWidth="1.6"
-                                    strokeLinejoin="round"
-                                />
-                                <path d="M10 24H19V15" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
-                                {/* Ballast box behind cab */}
-                                <rect x="27" y="19" width="22" height="9" rx="1" stroke="currentColor" strokeOpacity="0.6" strokeWidth="1.3" />
-                                {/* Drawbar & Hydraulic Modular Platform Deck */}
-                                <line x1="54" y1="36" x2="68" y2="36" stroke="#F45300" strokeWidth="1.8" />
-                                <rect x="68" y="33" width="102" height="4.5" rx="1" stroke="#0064be" strokeWidth="1.7" />
-                                {/* Heavy Industrial Vessel / Transformer Cargo */}
-                                <path
-                                    d="M78 33V17C78 15.3 79.3 14 81 14H154C155.7 14 157 15.3 157 17V33"
-                                    stroke="currentColor"
-                                    strokeOpacity="0.7"
-                                    strokeWidth="1.5"
-                                />
-                                <line x1="96" y1="14" x2="96" y2="33" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.2" />
-                                <line x1="118" y1="14" x2="118" y2="33" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.2" />
-                                <line x1="140" y1="14" x2="140" y2="33" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.2" />
-                                {/* 4 Tractor axles + 6 Modular hydraulic trailer axles */}
-                                <circle cx="17" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="27" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="39" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="49" cy="42" r="4.5" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="77" cy="42.5" r="3.8" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="93" cy="42.5" r="3.8" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="109" cy="42.5" r="3.8" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="125" cy="42.5" r="3.8" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="141" cy="42.5" r="3.8" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                                <circle cx="157" cy="42.5" r="3.8" fill="#030611" stroke="currentColor" strokeWidth="1.5" />
-                            </svg>
-                            <div className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-white/60 group-hover:text-white/90 transition-colors">
-                                Multi-Axle Modular
+                        <div className="group globe-glass-card relative overflow-hidden rounded-xl px-4 py-3.5 transition-all duration-300 hover:-translate-y-0.5">
+                            <div aria-hidden="true" className="globe-glass-card-flare pointer-events-none absolute inset-0" />
+                            <div aria-hidden="true" className="nav-logo-plinth-edge pointer-events-none absolute inset-y-0 right-0 w-px opacity-80" />
+                            <div className="relative z-10">
+                                <svg
+                                    viewBox="0 0 180 54"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-full h-11 text-white/85 group-hover:text-white transition-colors"
+                                    aria-label="Multi-Axle Modular Hydraulic Trailer"
+                                >
+                                    {/* Ground datum line */}
+                                    <line x1="4" y1="48" x2="176" y2="48" stroke="currentColor" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="3 3" />
+                                    {/* 8x4 Ballasted Prime Mover */}
+                                    <path
+                                        d="M10 40V19C10 16.8 11.6 15 14 15H25V28H54V40H10Z"
+                                        stroke="currentColor"
+                                        strokeWidth="1.6"
+                                        strokeLinejoin="round"
+                                    />
+                                    <path d="M10 24H19V15" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+                                    {/* Ballast box behind cab */}
+                                    <rect x="27" y="19" width="22" height="9" rx="1" stroke="currentColor" strokeOpacity="0.6" strokeWidth="1.3" />
+                                    {/* Drawbar & Hydraulic Modular Platform Deck */}
+                                    <line x1="54" y1="36" x2="68" y2="36" stroke="#F45300" strokeWidth="1.8" />
+                                    <rect x="68" y="33" width="102" height="4.5" rx="1" stroke="#38bdf8" strokeWidth="1.7" />
+                                    {/* Heavy Industrial Vessel / Transformer Cargo */}
+                                    <path
+                                        d="M78 33V17C78 15.3 79.3 14 81 14H154C155.7 14 157 15.3 157 17V33"
+                                        stroke="currentColor"
+                                        strokeOpacity="0.7"
+                                        strokeWidth="1.5"
+                                    />
+                                    <line x1="96" y1="14" x2="96" y2="33" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.2" />
+                                    <line x1="118" y1="14" x2="118" y2="33" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.2" />
+                                    <line x1="140" y1="14" x2="140" y2="33" stroke="currentColor" strokeOpacity="0.4" strokeWidth="1.2" />
+                                    {/* 4 Tractor axles + 6 Modular hydraulic trailer axles */}
+                                    <circle cx="17" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="27" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="39" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="49" cy="42" r="4.5" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="77" cy="42.5" r="3.8" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="93" cy="42.5" r="3.8" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="109" cy="42.5" r="3.8" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="125" cy="42.5" r="3.8" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="141" cy="42.5" r="3.8" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="157" cy="42.5" r="3.8" fill="#030c1d" stroke="currentColor" strokeWidth="1.5" />
+                                </svg>
+                                <div className="mt-2 font-mono text-[0.65rem] uppercase tracking-[0.16em] text-sky-100/70 group-hover:text-white transition-colors">
+                                    Multi-Axle Modular
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -878,14 +897,14 @@ export default function Globe({
             <div className="absolute right-5 bottom-6 z-30 flex flex-col items-center gap-2.5">
                 <label
                     title="Globe rotation speed"
-                    className="grid items-center justify-items-center gap-1.5 rounded-full border border-white/15 bg-black/60 px-2 py-2.5 text-[0.68rem] text-white backdrop-blur-md"
+                    className="globe-hud-glass grid items-center justify-items-center gap-1.5 rounded-full px-2 py-2.5 text-[0.68rem] text-white"
                     style={{
                         width: '2.4rem',
                         height: '9.5rem',
                         gridTemplateRows: 'auto minmax(0, 1fr) auto',
                     }}
                 >
-                    <span aria-hidden="true" className="text-sm leading-none text-white/80">
+                    <span aria-hidden="true" className="text-sm leading-none text-sky-200/85">
                         ↻
                     </span>
                     <input
@@ -903,7 +922,7 @@ export default function Globe({
                             accentColor: '#F45300',
                         }}
                     />
-                    <span className="font-mono text-[0.62rem] leading-none text-white/90">
+                    <span className="font-mono text-[0.62rem] leading-none text-sky-100/90">
                         {speedMultiplier.toFixed(1)}×
                     </span>
                 </label>
@@ -913,9 +932,9 @@ export default function Globe({
                     onClick={() => setLabelsVisible((v) => !v)}
                     aria-label="Toggle city labels"
                     title="Toggle city labels"
-                    className="flex size-9.5 items-center justify-center rounded-full border border-white/15 bg-black/60 text-white backdrop-blur-md transition-colors hover:bg-white/15 cursor-pointer"
+                    className="globe-hud-glass globe-hud-glass-btn flex size-9.5 items-center justify-center rounded-full text-sky-100 transition-all duration-200 cursor-pointer"
                 >
-                    {labelsVisible ? <Eye className="size-4" /> : <EyeOff className="size-4 text-white/60" />}
+                    {labelsVisible ? <Eye className="size-4" /> : <EyeOff className="size-4 text-sky-200/55" />}
                 </button>
             </div>
         </section>

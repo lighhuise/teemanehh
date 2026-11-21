@@ -524,24 +524,24 @@
     "hash": "3a9680f449cb98f3c059ff1d49f826d9"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\emergency-cta.tsx": {
-    "mtime": 1795125127.431,
-    "hash": "a0ddd4324e083b00346784b968dc1c07"
+    "mtime": 1795239139.09,
+    "hash": "2eb375c6ac0e226f3ac562d0fb055c74"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\footer.tsx": {
-    "mtime": 1795175596.7794926,
-    "hash": "45b01539b6e300d7b7dc28fe8ffedc8b"
+    "mtime": 1795210528.400174,
+    "hash": "a10e41c8952134ecfa3b60ccf5d6eb2c"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\globe.tsx": {
-    "mtime": 1795119924.0444827,
-    "hash": "a5ac72824744530f932d8d096555717f"
+    "mtime": 1795212268.562,
+    "hash": "0a1f5fe2fd44a406e646fff82c6f3af7"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\hero-simple-split.tsx": {
     "mtime": 1790171387.2029462,
     "hash": "ac249164cd735f0502a48bcec97c3c8c"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\hero.tsx": {
-    "mtime": 1795155378.259,
-    "hash": "4da5c1ae83da63317a8ad90e18b32f69"
+    "mtime": 1795245222.3111205,
+    "hash": "f9f221d08a9f1cb057050efa487b3e0a"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\hero2.tsx": {
     "mtime": 1795118886.3505747,
@@ -552,8 +552,8 @@
     "hash": "7e551fbcb7ea4fa14458de9bb798d555"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\map.tsx": {
-    "mtime": 1795139174.544,
-    "hash": "4aa1ca00d19335ff8b9bc662aa82e8b3"
+    "mtime": 1795244310.465,
+    "hash": "88b7b91b2a7c765378a295e596714f1b"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\mode-toggle.tsx": {
     "mtime": 1795120534.0364,
@@ -564,8 +564,8 @@
     "hash": "80f379b65eca2f0bfdc7f1d7e751461f"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\navigation2.tsx": {
-    "mtime": 1795169887.0107803,
-    "hash": "2f4ec909e02221155d1313f7374accf6"
+    "mtime": 1795183709.198,
+    "hash": "5c37d8c1bbe3bd910273f5286790c308"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\ParticleText.tsx": {
     "mtime": 1795121914.0952487,
@@ -580,8 +580,8 @@
     "hash": "ea52def9acd97f1c20f94cd583858716"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\service-card.tsx": {
-    "mtime": 1795125197.29,
-    "hash": "857f373b17b1e91edc74b4d31fa2ad2b"
+    "mtime": 1795244563.2948613,
+    "hash": "8e8b59671f5925e0e04e57f9f1996be5"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\SpotlightCard.tsx": {
     "mtime": 1795123337.4672606,
@@ -591,33 +591,41 @@
     "mtime": 1790171387.211547,
     "hash": "8acb75250c83f1993a7d417bbcc7be57"
   },
+  "C:\\www\\clients\\teemanehh\\resources\\js\\components\\TextLoop.tsx": {
+    "mtime": 1795212508.1603386,
+    "hash": "20e32bb61c39909edbeadbdcf9d9c8f4"
+  },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\theme-provider.tsx": {
     "mtime": 1790171387.211547,
     "hash": "3dd70cf398c35128b57069f488bde795"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\about-capabilities.tsx": {
-    "mtime": 1795124559.197,
-    "hash": "ebe7f678827fe936fa85386a8ac5acea"
+    "mtime": 1795243219.0564842,
+    "hash": "6f44483d6370f09105e765376ca46241"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\about-manifesto.tsx": {
     "mtime": 1795121068.0728688,
     "hash": "77495c482d13e8156de2e2b459e0093b"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\dark-cta.tsx": {
-    "mtime": 1795124731.5924542,
-    "hash": "bc5153315ef4996bb00d8df4e5fca0eb"
+    "mtime": 1795245085.3146226,
+    "hash": "04ed0e552acd4222b61dd9f3fecb93e7"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\home-intro-section.tsx": {
-    "mtime": 1795120713.0412402,
-    "hash": "deaa8c74a9786202cc594b6ed388f6a9"
+    "mtime": 1795244968.8594618,
+    "hash": "2d3a793e6b982682aa99049fa4314033"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\home-safety-section.tsx": {
-    "mtime": 1795120719.4677513,
-    "hash": "3a48d590bc4db1ce5bc1e8526133ef5b"
+    "mtime": 1795245030.974838,
+    "hash": "bdcedc18aa530f5c69ff10897c810b99"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\home-services-section.tsx": {
-    "mtime": 1795120715.7587101,
-    "hash": "eaa2f304d7a52fee2953172fd4e33f78"
+    "mtime": 1795244600.6528268,
+    "hash": "0921eafa8aca9b59da89a359beaaed78"
+  },
+  "C:\\www\\clients\\teemanehh\\resources\\js\\components\\sections\\icon-spacer.tsx": {
+    "mtime": 1795240945.8960547,
+    "hash": "f27cc17700ed069dd360ef7aebccaad1"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\ui\\accordion.tsx": {
     "mtime": 1790171387.2130506,
@@ -640,8 +648,8 @@
     "hash": "163598e8f236e284bad5463b7b02f217"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\ui\\divider-3.tsx": {
-    "mtime": 1795181346.6270916,
-    "hash": "855acabc03eb350963941ac540328b5b"
+    "mtime": 1795237883.793,
+    "hash": "42e0f94e2eb3c9958fbab5b7c45c7c7e"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\ui\\divider-surface.tsx": {
     "mtime": 1795181623.8114536,
@@ -672,8 +680,8 @@
     "hash": "7469f506a009b6bc53406af38fe67e51"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\ui\\misc\\floating-stat-card.tsx": {
-    "mtime": 1795124055.2365592,
-    "hash": "401cd452a1ae55c71cf31d45f6bba009"
+    "mtime": 1795184145.1693637,
+    "hash": "ae13dae2cfd518f158045831c447e5a6"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\components\\ui\\misc\\logo-mark.tsx": {
     "mtime": 1791820387.4323328,
@@ -708,7 +716,7 @@
     "hash": "3e32c00a1056df90d2fe8cca8e85c10f"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\layouts\\app-layout.tsx": {
-    "mtime": 1795120859.6020584,
+    "mtime": 1795212072.68,
     "hash": "556a836e3ae5f06f4ff23708e53e0690"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\lib\\responsive-images.ts": {
@@ -732,12 +740,12 @@
     "hash": "c2531ed101d69b516b78b5c3a6e6f51c"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\pages\\faq.tsx": {
-    "mtime": 1795121334.6971066,
-    "hash": "fd91c223bec46da6889c87dba6b4471c"
+    "mtime": 1795243550.3572023,
+    "hash": "572313d767514b7ddc9f8405249fa791"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\pages\\home.tsx": {
-    "mtime": 1795181730.474,
-    "hash": "9d5a06ab93a5a011617c529f1da0b6e9"
+    "mtime": 1795237204.39,
+    "hash": "0c00d91d2fb62c267fdb93ffad86420b"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\pages\\welcome.tsx": {
     "mtime": 1790171387.2362156,
@@ -760,12 +768,12 @@
     "hash": "227ed8fd68e43b4c5c8762c271c5c2ab"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\pages\\services\\index.tsx": {
-    "mtime": 1795121076.34211,
-    "hash": "86df283ae03d183b1e6b13053aaf4a7c"
+    "mtime": 1795248325.9177003,
+    "hash": "437eb948b67a429640fa1e3e0a55131b"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\pages\\services\\show.tsx": {
-    "mtime": 1795121140.1214595,
-    "hash": "8f3af55eb1c066a9728a624c6f377ede"
+    "mtime": 1795248592.0789647,
+    "hash": "fdd9f40605aa21ca7032f8fd4e320c60"
   },
   "C:\\www\\clients\\teemanehh\\resources\\js\\routes\\index.ts": {
     "mtime": 1790171387.2490053,
@@ -67398,6 +67406,26 @@
   "C:\\www\\clients\\teemanehh\\resources\\images\\volvo-FH16-abnormal-load-blueprint.webp": {
     "mtime": 1794843424.8117163,
     "hash": "6f9463af01ff640ce8a37bd11b801984"
+  },
+  "C:\\www\\clients\\teemanehh\\resources\\images\\fleet-icons\\gooseneck-lowbed.webp": {
+    "mtime": 1795238091.921,
+    "hash": "942ef3cc4be23d70629af05b036e0767"
+  },
+  "C:\\www\\clients\\teemanehh\\resources\\images\\fleet-icons\\multi-axle-modular.webp": {
+    "mtime": 1795238092.451,
+    "hash": "9d2d597e60afb8016985d7f5bee074e0"
+  },
+  "C:\\www\\clients\\teemanehh\\resources\\images\\fleet-icons\\step-deck-flatbed.webp": {
+    "mtime": 1795238092.202,
+    "hash": "de68e3e7a38d67e63ce77215d766d6ff"
+  },
+  "C:\\www\\clients\\teemanehh\\resources\\images\\fleet-icons\\telescopic-abnormal.webp": {
+    "mtime": 1795238092.968,
+    "hash": "ef0d9e7ba31046713b91a923190004f3"
+  },
+  "C:\\www\\clients\\teemanehh\\resources\\images\\fleet-icons\\vessel-bridge.webp": {
+    "mtime": 1795240789.492,
+    "hash": "506d738a97a459c56e42a68779e08f59"
   },
   "C:\\www\\clients\\teemanehh\\resources\\images\\responsive\\about-header-1024w.webp": {
     "mtime": 1795118482.734,

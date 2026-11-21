@@ -10,6 +10,7 @@ import {Building2, CalendarClock, ClipboardCheck, Clock, Compass, HardHat, Shiel
 import Divider3 from "@/components/ui/divider-3";
 import Globe from "@/components/globe";
 import {Service} from "@/components/service-card";
+import IconSpacer from "@/components/sections/icon-spacer";
 
 export default function Home({ services }: { services: Service[] }) {
     return (
@@ -74,6 +75,7 @@ export default function Home({ services }: { services: Service[] }) {
             />
 
             <HomeIntroSection />
+            <IconSpacer/>
             <HomeServicesSection services={services} />
             <Divider3 />
             <HomeSafetySection />
